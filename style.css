@@ -31,16 +31,27 @@ p{
 	background-color: #E2E0E3;
 }
 .home-hearder-container{
-	min-height: 360px;
+	min-height: 500px;
 	background-image: url("img/Heater_Opacity.png");
 	background-repeat: no-repeat;
 	background-position: center top;
+    background-size: 150%;
 }
-@media (max-width: 600px) {
+@media (max-width: 991px) {
 	.home-hearder-container{
-		background-size: contain;
+        min-height: 500px;
+        background-position: center;
 	}
 }
+
+@media (max-width: 320px) {
+	.home-hearder-container{
+        min-height: 300px;
+        background-position: center;
+        background-size: 200%;
+	}
+}
+
 .index-search{
 	padding-top:10px;
 }
@@ -135,9 +146,17 @@ select {
 	background-color: white;
 }
 .home-logo{
-	max-width:100%; max-height:100%;display: block;
+	max-width:40%; max-height:40%;
     margin: 0 auto;
 }
+ 
+@media (max-width: 767px) {
+    .home-logo{
+        max-width:80%; max-height:80%;display: block;
+        margin: 0 auto;
+    }
+}
+   
 .home-logo-container{
 	margin-bottom: 40px;
 	margin-top: 20px;
@@ -145,21 +164,41 @@ select {
 .center-content{
 	text-align: center;
 }
+
 .home-cate-logo{
 	max-height: 80px;
 	max-width: 100%;
 }
 .cate-row{
-	margin-top: 20px;
+	margin-top: 30px;
+    margin-bottom: 30px;
 }
 .cate-row h4{
-	margin: 5px -15px;
+	margin: 15px -15px;
+}
+@media (max-width: 767px) {
+    .cate-row h4{
+        font-size: 15px;
+    }
 }
 .cate-row p{
 	margin: 2px 0px;
 }
+.cate-row .sub-item{
+}
+.cate-col{
+    margin-bottom: 30px;
+}
+.cate-col a{
+    color: black;
+}
 .geo-form{
-	margin:10px 0;
+	margin:80px 0;
+}
+@media (max-width: 991px){
+    .geo-form{
+	   margin:10px 0;
+    }
 }
 #geo-form-inside{
 	text-align: center;
@@ -174,6 +213,17 @@ select {
 .geoform-select{
 	padding-left: 10px;
 }
+
+#cateselect{
+    width:100%;
+    margin-top: 5px;
+}
+
+#pac-input{
+    width:100%;
+    margin-top: 5px;
+}
+
 /* Tab */ 
 #accordion{
 	margin-top: 20px;
@@ -205,7 +255,7 @@ select {
     transition: all 0.5s ease 0s;
 }
 #accordion .panel-title a:before{
-    content: "\f0da";
+    content: "\f0d7";
 	font-family: 'FontAwesome';
 	color: #F26522;
     display: block;
@@ -220,7 +270,7 @@ select {
     transition: all 0.3s ease 0s;
 }
 #accordion .panel-title a.collapsed:before{
-    content: "\f0d7";
+    content: "\f0da";
 }
 #accordion .panel-body{
     font-size: 15px;
@@ -245,12 +295,14 @@ select {
 	margin: 5px -5px;
 	padding: 0 10px;
 }
-.listed-logo{
+.listed-header .listed-logo{
 	text-align:center;
+    padding-left: 0;
+    padding-right: 10px;
 }
 .listed-logo img{
 	max-width: 100%;
-	max-height: 100px;
+	max-height: 80px;
 	width: auto;
 	height: auto;
 	margin-left: auto;
@@ -264,11 +316,13 @@ select {
 	margin-top: 10px;
 }
 .listed-decoration{
-	height: 30px;
-	margin: 0 10px;
+	height: 25px;
+	margin:0 10px;
+    float: left;
 }
 .listed-contact p{
 	margin:5px 0;
+    min-height: 32px;
 }
 .listed-address-decoration{
 	margin-top:15px;

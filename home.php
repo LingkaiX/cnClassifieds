@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-6 col-xs-12 home-logo-container">
                 <a href=<?php echo get_site_url();?>>
-                    <img src="<?php echo get_template_directory_uri();?>/img/Logo_Version2.png" class="home-logo"></img>
+                    <img src="<?php echo get_template_directory_uri();?>/img/Logo_Version2.svg" class="home-logo"></img>
                 </a>
             </div>
         </div>

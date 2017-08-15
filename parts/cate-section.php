@@ -10,9 +10,10 @@
                         $href=get_site_url()."/category/".$cate["slug"];
                         echo '<a href="'.$href.'" class="col-md-12 col-xs-12">';
                             echo '<img class="home-cate-logo" src="'.get_template_directory_uri().'/img/'.$cate["imgsrc"].'"></img>';
+                            echo '<div class="clearfix"></div>';
                             echo '<h4 class="cate-h">'.$cate["name"].'</h4>';
                         echo '</a>';
-                        echo '<div class="col-md-12 hidden-xs">';
+                        echo '<div class="col-md-12 hidden-xs sub-item">';
                         foreach($cate["subcates"] as $subcate){
                             $href=get_site_url()."/category/".$subcate["slug"];
                             echo '<a href="'.$href.'"><p>'.$subcate["name"].'</p></a>';
