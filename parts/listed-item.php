@@ -13,10 +13,10 @@
                         <div class="listed-contact col-md-12 col-xs-12">
                             <?php
                                 if($mypost!=null){
-                                    if(!empty($mypost->phone)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Phone.png"></img>'.$mypost->phone.'</p>';
-                                    if(!empty($mypost->email)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Email.png"></img>'.$mypost->email.'</p>';
-                                    if(!empty($mypost->website)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Website.png"></img><a href="'.$mypost->website.'">'.$mypost->website.'</a></p>';
-                                    if(!empty($mypost->address)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Add.png"></img>'.$mypost->address.'</p>';
+                                    if(!empty($mypost->phone)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Phone.svg"></img>'.$mypost->phone.'</p>';
+                                    if(!empty($mypost->email)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Email.svg"></img>'.$mypost->email.'</p>';
+                                    if(!empty($mypost->website)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Website.svg"></img><a href="'.$mypost->website.'">'.$mypost->website.'</a></p>';
+                                    if(!empty($mypost->address)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Add.svg"></img>'.$mypost->address.'</p>';
                                 }
                             ?>
                         </div>

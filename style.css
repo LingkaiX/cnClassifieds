@@ -72,6 +72,7 @@ p{
 div .search-btn{
 	border-radius: 100px;
 	border: 1px solid #F26522;
+    margin-top: 5px;
 }
 .home{
 	padding: 0;
@@ -176,6 +177,11 @@ select {
 .cate-row h4{
 	margin: 15px -15px;
 }
+
+.cate-section{
+    margin-bottom: -30px;
+}
+
 @media (max-width: 767px) {
     .cate-row h4{
         font-size: 15px;
@@ -203,6 +209,8 @@ select {
 #geo-form-inside{
 	text-align: center;
 }
+
+
 @media (max-width: 991px) {
 	#geo-form-inside .form-group{
 		padding-left: 5px;
