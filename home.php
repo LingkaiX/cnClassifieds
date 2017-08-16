@@ -7,6 +7,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div class="site-content">
 <header class="index-header">
     <div class="container home-hearder-container">
         <div class="row">
@@ -30,6 +31,7 @@
 </header>
 <div class="cate-section">
     <?php include 'parts/cate-section.php';?>
+</div>
 </div>
 <?php get_footer("home"); ?>
 

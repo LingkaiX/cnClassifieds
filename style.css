@@ -10,7 +10,7 @@ p{
 }
 .site-content{
 	min-height: 100%;
-	margin-bottom: 120px;
+	padding-bottom: 120px;
 }
 .site-footer{
 	background-color: black;

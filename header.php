@@ -13,7 +13,7 @@
     <nav class="container">
         <div class="first-header row">
             <div class="col-md-1 col-sm-1 col-xs-1"><button onclick=history.go(-1) class="back-button">&#8249;</button></div>
-            <a href=<?php echo get_site_url();?> class="col-md-2 col-sm-2 col-xs-2 header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.png" style="height:30px;"></img></a>
+            <a href=<?php echo get_site_url();?> class="col-md-2 col-sm-2 col-xs-2 header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg" style="height:30px;"></img></a>
             <div id="geoform-md" class="col-md-7 hidden-sm hidden-xs"></div>
             <div class="col-md-2 col-sm-9 col-xs-8 header-form">
                 <form role="search" method="get" class="form-inline" action=<?php echo get_site_url()?>>
