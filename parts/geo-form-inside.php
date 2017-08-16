@@ -7,12 +7,12 @@
         </select>
     </div>
     <div class="form-group col-md-5 col-sm-5 col-xs-5">
-        <input id="pac-input" class="form-control" type="text" placeholder="请输入地址" name="gmw_address[]" autocomplete="off" style="width:100%;">
+        <input id="pac-input" class="form-control" type="text" placeholder="請輸入地址" name="gmw_address[]" autocomplete="off" style="width:100%;">
         <input type="hidden" name="gmw_distance" value="60">
         <input type="hidden" name="gmw_units" value="metric">
         <input type="hidden" id="gmw-form-id-1" class="gmw-form-id gmw-form-id-1" name="gmw_form" value="1"> 
         <input type="hidden" id="gmw-page-1" class="gmw-page gmw-page-1" name="paged" value="1"> 
-        <input type="hidden" id="gmw-per-page-1" class="gmw-per-page gmw-per-page-1" name="gmw_per_page" value="3">
+        <input type="hidden" id="gmw-per-page-1" class="gmw-per-page gmw-per-page-1" name="gmw_per_page" value="10">
         <input type="hidden" id="prev-address-1" class="prev-address prev-address-1" value="">
         <input type="hidden" id="gmw-lat-1" class="gmw-lat gmw-lat-1" name="gmw_lat" value="">
         <input type="hidden" id="gmw-long-1" class="gmw-lng gmw-long-1" name="gmw_lng" value="">

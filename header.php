@@ -7,15 +7,15 @@
 
 <?php wp_head(); ?>
 </head>
-
 <body <?php body_class(); ?>>
+<div class="site-content">
 <header id="site-header"class="site-header" role="banner">
     <nav class="container">
         <div class="first-header row">
             <div class="col-md-1 col-sm-1 col-xs-1"><button onclick=history.go(-1) class="back-button">&#8249;</button></div>
-            <a href=<?php echo get_site_url();?> class="col-md-2 col-sm-2 col-xs-2 "><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.png" style="height:30px;"></img></a>
+            <a href=<?php echo get_site_url();?> class="col-md-2 col-sm-2 col-xs-2 header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.png" style="height:30px;"></img></a>
             <div id="geoform-md" class="col-md-7 hidden-sm hidden-xs"></div>
-            <div class="col-md-2 col-sm-9 col-xs-8">
+            <div class="col-md-2 col-sm-9 col-xs-8 header-form">
                 <form role="search" method="get" class="form-inline" action=<?php echo get_site_url()?>>
                     <label>
                         <input type="search" class="input-little" placeholder="&#xF002; 全站搜索" style="font-family:Arial, FontAwesome" value="" name="s">
@@ -37,7 +37,6 @@ jQuery(document).ready(function() {
     currentww=initialww;
     //initialwh = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
     formposition=1; //geo form in geoform-sm
-    console.log(initialww);
 
     if(initialww>=992){
         jQuery('#geoform-md').append( jQuery('#geo-form-inside') );
@@ -54,8 +53,8 @@ jQuery(document).ready(function() {
             jQuery('#geoform-sm').append( jQuery('#geo-form-inside') );
             formposition=1;            
         }
+        jQuery('.second-header').removeClass('sticky-second-header');
     });
-
 
 });
 window.onload = function(){
@@ -63,10 +62,12 @@ window.onload = function(){
         console.log(formposition);
         var osTop = document.documentElement.scrollTop||document.body.scrollTop;
         if(formposition==0){
-        }else if (osTop>40) {
+        }else if (osTop>45) {
             jQuery('#geoform-sm').addClass('sticky-header');
+            jQuery('.second-header').addClass('sticky-second-header');
         }else{
             jQuery('#geoform-sm').removeClass('sticky-header');
+            jQuery('.second-header').removeClass('sticky-second-header');
         }
         isTop=false;
     };

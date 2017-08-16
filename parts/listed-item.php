@@ -7,6 +7,7 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <div class="row listed-header">
+                        <!-- <?php the_title( '<h3 class="entry-title"> <a href="'.get_permalink() . '">', '</a></h3>' ); ?>-->
                         <div class="col-md-8 col-xs-8"><?php the_title('<h3>', '</h3>'); ?></div>
                         <div class="listed-logo col-md-4 col-xs-4"><?php the_post_thumbnail( 'full', ['class' => 'in-listed-logo', 'title' => 'Feature image']); ?></div>
                         <div class="clearfix"></div>

@@ -1,6 +1,6 @@
 <div class="row geo-form">
-    <div class="col-md-2 hidden-xs"></div>
-    <div class="col-md-8 col-xs-12">
+    <div class="col-md-2 col-sm-1 hidden-xs"></div>
+    <div class="col-md-8 col-sm-10 col-xs-12">
         <form class="form-inline row" action= <?php echo get_site_url() .'/filter' ?> name="gmw_form" method="get">
             <div class="form-group col-md-5 col-sm-5 col-xs-12">
                 <input type="hidden" id="gmw-single-post-type-1" class="gmw-single-post-type gmw-single-post-type-1 " name="gmw_post" value="post">
@@ -9,12 +9,12 @@
                 </select>
             </div>
             <div class="form-group col-md-5 col-sm-5 col-xs-9">
-                <input id="pac-input" class="form-control" type="text" placeholder="请输入地址" name="gmw_address[]" autocomplete="off" style="width:100%;">
+                <input id="pac-input" class="form-control" type="text" placeholder="請輸入地址" name="gmw_address[]" autocomplete="off" style="width:100%;">
                 <input type="hidden" name="gmw_distance" value="60">
                 <input type="hidden" name="gmw_units" value="metric">
                 <input type="hidden" id="gmw-form-id-1" class="gmw-form-id gmw-form-id-1" name="gmw_form" value="1"> 
                 <input type="hidden" id="gmw-page-1" class="gmw-page gmw-page-1" name="paged" value="1"> 
-                <input type="hidden" id="gmw-per-page-1" class="gmw-per-page gmw-per-page-1" name="gmw_per_page" value="3">
+                <input type="hidden" id="gmw-per-page-1" class="gmw-per-page gmw-per-page-1" name="gmw_per_page" value="10">
                 <input type="hidden" id="prev-address-1" class="prev-address prev-address-1" value="">
                 <input type="hidden" id="gmw-lat-1" class="gmw-lat gmw-lat-1" name="gmw_lat" value="">
                 <input type="hidden" id="gmw-long-1" class="gmw-lng gmw-long-1" name="gmw_lng" value="">
@@ -27,7 +27,7 @@
             </div>
         </form>
     </div>
-    <div class="col-md-2 hidden-xs"></div>                    
+    <div class="col-md-2 col-sm-1 hidden-xs"></div>                    
 </div>
 <script>
 //address autocomplete by google map
