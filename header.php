@@ -59,7 +59,7 @@ jQuery(document).ready(function() {
 });
 window.onload = function(){
     window.onscroll=function() {
-        console.log(formposition);
+        //console.log(formposition);
         var osTop = document.documentElement.scrollTop||document.body.scrollTop;
         if(formposition==0){
         }else if (osTop>45) {
