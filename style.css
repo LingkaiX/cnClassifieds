@@ -5,6 +5,8 @@ Description: cnclassifieds
 Version: 1.0.1
 Text Domain: cnclassifieds
 */
+*{font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,STXihei,
+	Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif,Droid Sans;}
 p{
 	word-break: break-all; 
 }
