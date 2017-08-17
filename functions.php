@@ -54,5 +54,5 @@ function add_styles_and_scripts() {
 add_action( 'wp_enqueue_scripts', 'add_styles_and_scripts' );
 
 add_theme_support( 'post-thumbnails' ); 
-
+add_theme_support( 'title-tag' );
 
