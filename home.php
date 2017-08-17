@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <?php wp_head(); ?>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9173929910659094",
+    enable_page_level_ads: true
+  });
+</script>
+
 </head>
 <body <?php body_class(); ?>>
 <div class="site-content">
