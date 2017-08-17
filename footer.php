@@ -8,11 +8,11 @@
 				</a>
 			</div>
                 <div class="col-md-6 col-xs-12" style="margin:10px 0;">
-                    <a class="col-md-4 col-xs-4" href="#"><span>關於我們</span></a>
-                    <a class="col-md-4 col-xs-4" href="#"><span>免責聲明</span></a>
-                    <a class="col-md-4 col-xs-4" href="#"><span>聯繫我們</span></a>
-                    <a class="col-md-4 col-xs-4" href="#"><span>版權聲明</span></a>
-                    <a class="col-md-4 col-xs-4" href="#"><span>商家服務</span></a>
+                    <a class="col-md-4 col-xs-4" href="#"><span>关于我们</span></a>
+                    <a class="col-md-4 col-xs-4" href="#"><span>免责声明</span></a>
+                    <a class="col-md-4 col-xs-4" href="#"><span>联系我们</span></a>
+                    <a class="col-md-4 col-xs-4" href="#"><span>版权声明</span></a>
+                    <a class="col-md-4 col-xs-4" href="#"><span>商家服务</span></a>
                     <a class="col-md-4 col-xs-4" href="#"><span>CONTACT US</span></a>    
                 </div>
             <div class="col-md-3 col-xs-12" style="margin:10px 0;">
