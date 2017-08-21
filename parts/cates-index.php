@@ -1,13 +1,12 @@
 <?php
     $catesindex=array(
         array(
-            "name"=>"建築裝修",
+            "name"=>"建筑装修",
             "slug"=>"c1",
             "imgsrc"=>"ICON_SectionRevotion.svg",
             "subcates"=>array(
-                array("name"=>"空調","slug"=>"sc1"),  
+                array("name"=>"电工空调","slug"=>"electrician"),  
                 array("name"=>"木匠","slug"=>"#"),
-                array("name"=>"電工","slug"=>"#"),
                 array("name"=>"圍牆","slug"=>"#"),
                 array("name"=>"修理工","slug"=>"#"),
                 array("name"=>"油漆工","slug"=>"#"),
@@ -21,14 +20,13 @@
             "imgsrc"=>"ICON_SectionHome.svg",
             "subcates"=>array(
                 array("name"=>"花園","slug"=>"#"),
-                array("name"=>"搬家","slug"=>"#"),
-                array("name"=>"物流","slug"=>"#"),
-                array("name"=>"機場接送","slug"=>"#"),
+                array("name"=>"搬家物流","slug"=>"logistics"),
+                array("name"=>"机场接送","slug"=>"transfer"),
                 array("name"=>"老年護理","slug"=>"#"),
                 array("name"=>"清除垃圾","slug"=>"#"),
                 array("name"=>"家具用品","slug"=>"#"),
                 array("name"=>"家庭安防產品","slug"=>"#"),
-                array("name"=>"各類清潔服務","slug"=>"#"),
+                array("name"=>"清洁服务","slug"=>"clean"),
 
             ),
         ),
@@ -83,7 +81,7 @@
             "slug"=>"#",
             "imgsrc"=>"ICON_SectionCar.svg",
             "subcates"=>array(
-                array("name"=>"駕校","slug"=>"#"),
+                array("name"=>"驾校","slug"=>"driving"),
                 array("name"=>"洗車","slug"=>"#"),
                 array("name"=>"二手車","slug"=>"#"),
                 array("name"=>"新車銷售","slug"=>"#"),
