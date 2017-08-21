@@ -377,3 +377,6 @@ select {
 .search-no-result{
 	padding: 10px 10px;
 }
+.gmw-no-results-wrapper p::after{
+	content: ": 不好意思！我们没有找到你要的结果。";
+}
