@@ -4,6 +4,12 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
+<meta name="theme-color" content="#F26522" />
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#F26522">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <?php wp_head(); ?>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
