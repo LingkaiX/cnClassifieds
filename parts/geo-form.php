@@ -42,4 +42,10 @@ jQuery(document).ready(function($){
         input.value= autocomplete.getPlace().formatted_address;
     });
 });
+
+jQuery(document).ready(function($){
+    jQuery('#cateselect').select2({
+        placeholder: "Select a state",
+    });
+});
 </script>

@@ -51,4 +51,10 @@ window.onload = function(){
         isTop=false;
     }
 }
+
+jQuery(document).ready(function($){
+    jQuery('#cateselect').select2({
+        placeholder: "Select a state",
+    });
+});
 </script>
