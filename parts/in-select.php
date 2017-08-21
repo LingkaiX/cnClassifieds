@@ -1,4 +1,4 @@
-<option value=0>所有分類</option>
+<option value=0>所有分类</option>
 <?php 
     include 'cates-index.php';
     foreach ($catesindex as $cate){

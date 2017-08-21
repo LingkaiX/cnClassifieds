@@ -188,7 +188,9 @@ select {
 }
 @media (max-width: 767px) {
     .home-logo{
-        max-width:80%; max-height:80%;display: block;
+		max-width:80%;
+		max-height:80%;
+		display: block;
         margin: 0 auto;
     }
 }

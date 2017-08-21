@@ -45,7 +45,9 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($){
     jQuery('#cateselect').select2({
-        placeholder: "Select a state",
+        placeholder: "选择服务分类",
+        language: "zh-CN",
+        //theme: "bootstrap"
     });
 });
 </script>

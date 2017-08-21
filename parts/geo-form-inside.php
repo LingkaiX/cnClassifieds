@@ -37,24 +37,11 @@ jQuery(document).ready(function($){
         input.value= autocomplete.getPlace().formatted_address;
     });
 });
-window.onload = function(){
-    //var obtn = document.getElementById('btn');
-    var clientHeight = document.documentElement.clientHeight;
-    var isTop = true;
-    window.onscroll=function() {
-        var osTop = document.documentElement.scrollTop||document.body.scrollTop;
-        if (osTop>clientHeight) {
-            //obtn.style.display ='block';
-        }else{
-            //obtn.style.display = 'none';
-        }
-        isTop=false;
-    }
-}
 
 jQuery(document).ready(function($){
     jQuery('#cateselect').select2({
-        placeholder: "Select a state",
+        placeholder: "请选择服务分类",
+        language: "zh-CN",
     });
 });
 </script>
