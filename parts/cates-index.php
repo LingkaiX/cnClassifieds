@@ -2,7 +2,7 @@
     $catesindex=array(
         array(
             "name"=>"建筑装修",
-            "slug"=>"c1",
+            "slug"=>"builder",
             "imgsrc"=>"ICON_SectionRevotion.svg",
             "subcates"=>array(
                 array("name"=>"电工空调","slug"=>"electrician"),  
@@ -15,24 +15,24 @@
             ),
         ),
         array(
-            "name"=>"居家服務",
-            "slug"=>"c2",
+            "name"=>"居家服务",
+            "slug"=>"home-service",
             "imgsrc"=>"ICON_SectionHome.svg",
             "subcates"=>array(
                 array("name"=>"花園","slug"=>"#"),
-                array("name"=>"搬家物流","slug"=>"logistics"),
+                array("name"=>"搬运物流","slug"=>"logistics"),
                 array("name"=>"机场接送","slug"=>"transfer"),
                 array("name"=>"老年護理","slug"=>"#"),
                 array("name"=>"清除垃圾","slug"=>"#"),
                 array("name"=>"家具用品","slug"=>"#"),
                 array("name"=>"家庭安防產品","slug"=>"#"),
-                array("name"=>"清洁服务","slug"=>"clean"),
+                array("name"=>"清洁服务","slug"=>"cleaner"),
 
             ),
         ),
         array(
-            "name"=>"留學移民",
-            "slug"=>"#",
+            "name"=>"留学移民",
+            "slug"=>"immigrant-service",
             "imgsrc"=>"ICON_SectionImmigration.svg",
             "subcates"=>array(
                 array("name"=>"技術移民","slug"=>"#"),
@@ -48,8 +48,8 @@
             ),
         ),
         array(
-            "name"=>"理財法律",
-            "slug"=>"#",
+            "name"=>"理财法律",
+            "slug"=>"finance-and-law",
             "imgsrc"=>"ICON_SectionLawyer.svg",
             "subcates"=>array(
                 array("name"=>"律師","slug"=>"#"),
@@ -77,8 +77,8 @@
             ),
         ),
         array(
-            "name"=>"汽車",
-            "slug"=>"#",
+            "name"=>"汽车相关",
+            "slug"=>"vehicle",
             "imgsrc"=>"ICON_SectionCar.svg",
             "subcates"=>array(
                 array("name"=>"驾校","slug"=>"driving"),
