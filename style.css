@@ -211,6 +211,7 @@ select {
 }
 .cate-row h4{
 	margin: 15px -15px;
+	font-size: 18px;
 }
 .cate-section{
     margin-bottom: -30px;
@@ -240,8 +241,6 @@ select {
 	   margin:10px 0;
     }
 }
-#geo-form-inside{
-}
 #geo-form-inside .form-group{
 	margin-bottom: 5px;
 }
@@ -254,13 +253,21 @@ select {
 .geoform-select{
 	padding-left: 10px;
 }
-#cateselect{
-    width:100%;
-    margin-top: 5px;
-}
 #pac-input{
     width:100%;
     margin-top: 5px;
+}
+.layui-form .layui-input-block{
+	margin-left:0;
+	min-height: 34px
+}
+.layui-form-select{
+	height: 34px;
+	margin-top: 5px;
+}
+.layui-form .layui-input{
+	font-size: 14px;
+	height: 34px;
 }
 /* Tab */ 
 #accordion{

@@ -1,12 +1,14 @@
-<div class="row geo-form">
+<div class="row geo-form ">
     <div class="col-md-2 col-sm-1 hidden-xs"></div>
     <div class="col-md-8 col-sm-10 col-xs-12">
-        <form class="form-inline row" action= <?php echo get_site_url() .'/filter' ?> name="gmw_form" method="get">
+        <form class="form-inline row layui-form" action= <?php echo get_site_url() .'/filter' ?> name="gmw_form" method="get">
             <div class="form-group col-md-5 col-sm-5 col-xs-12">
                 <input type="hidden" id="gmw-single-post-type-1" class="gmw-single-post-type gmw-single-post-type-1 " name="gmw_post" value="post">
-                <select class="form-control" id="cateselect" name="tax_category" style="width:95%;">
-                    <?php include 'in-select.php'?>
-                </select>
+                <div class="layui-input-block">
+                    <select name="tax_category" style="width:95%;" lay-verify="" lay-search>
+                        <?php include 'in-select.php'?>
+                    </select>
+                </div>
             </div>
             <div class="form-group col-md-5 col-sm-5 col-xs-9">
                 <input id="pac-input" class="form-control" type="text" placeholder="请输入地址或区域" name="gmw_address[]" autocomplete="off" style="width:100%;">
@@ -40,14 +42,6 @@ jQuery(document).ready(function($){
         document.getElementById('gmw-lat-1').value=autocomplete.getPlace().geometry.location.lat();
         document.getElementById('gmw-long-1').value=autocomplete.getPlace().geometry.location.lng();
         input.value= autocomplete.getPlace().formatted_address;
-    });
-});
-
-jQuery(document).ready(function($){
-    jQuery('#cateselect').select2({
-        placeholder: "选择服务分类",
-        language: "zh-CN",
-        //theme: "bootstrap"
     });
 });
 </script>
