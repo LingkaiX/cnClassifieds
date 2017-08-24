@@ -22,12 +22,12 @@ add_filter('pre_get_posts','SearchFilter');
 //Enqueue scripts and styles.
 function add_styles_and_scripts() {
 
-	wp_enqueue_style( 'layui-css', get_template_directory_uri() . '/layui/css/layui.css', array(), '2.0.2', 'all' );
+	wp_enqueue_style( 'layui-style', get_template_directory_uri() . '/layui/css/layui.css', array(), '2.0.2', 'all' );
 	wp_enqueue_style( 'bootstrap-styles', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '3.3.7', 'all' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.7.0', 'all' );
 	//wp_enqueue_style( 'select2bs-css', get_template_directory_uri() . '/css/select2-bootstrap.min.css', array('select2-css'), '0.1.0', 'all' );
 	//wp_enqueue_style( 'select2-css', get_template_directory_uri() . '/css/select2.min.css', array(), '4.0.3', 'all' );
-	wp_enqueue_style( 'easylife-style', get_stylesheet_uri() );	
+	wp_enqueue_style( 'easylife-style', get_stylesheet_uri(), array(), '1.0.1', 'all');	
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.7', true );
 	//wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array('jquery'), '4.0.3', true );
@@ -59,3 +59,5 @@ add_action( 'wp_enqueue_scripts', 'add_styles_and_scripts' );
 add_theme_support( 'post-thumbnails' ); 
 add_theme_support( 'title-tag' );
 
+//remove version mark
+remove_action('wp_head', 'wp_generator');
