@@ -16,7 +16,7 @@
                                 if($mypost!=null){
                                     if(!empty($mypost->phone)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Phone.svg"></img>'.$mypost->phone.'</p>';
                                     if(!empty($mypost->email)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Email.svg"></img>'.$mypost->email.'</p>';
-                                    if(!empty($mypost->website)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Website.svg"></img><a href="'.$mypost->website.'">'.$mypost->website.'</a></p>';
+                                    if(!empty($mypost->website)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Website.svg"></img><a target="_blank" href="'.$mypost->website.'">'.$mypost->website.'</a></p>';
                                     if(!empty($mypost->address)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Add.svg"></img>'.$mypost->address.'</p>';
                                 }
                             ?>
