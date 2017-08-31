@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-12">
+    <nav class="col-md-12">
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <?php
                 include "cates-index.php";
@@ -28,5 +28,5 @@
             </div>
             <?php }?> 
         </div>
-    </div>
+    </nav>
 </div>
