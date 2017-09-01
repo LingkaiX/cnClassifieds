@@ -5,7 +5,8 @@
 			<?php include 'parts/cate-list.php';?>
 		</div>
 		<main class="col-md-7 col-sm-9 col-xs-12"> <!-- listing box-->
-			<?php 
+			<?php
+			//print_r($wp_query); 
 				if ( have_posts() ) : 
 					while ( have_posts() ) : 
 						the_post();

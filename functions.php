@@ -1,7 +1,8 @@
 <?php
 //拆分url
-function parsePath($path, $name, $plus){
+function parsePath($path, $name, $plus=0){
 	$value='';
+	if(strpos($path, "?")) $path = substr($path, 0, strpos($path, "?"));
 	$array=explode('/', trim($path, "/"));
 	if(!in_array($name, $array)) return $value;
 	for($x=1; $x<count($array); $x++){
@@ -61,3 +62,33 @@ add_theme_support( 'title-tag' );
 
 //remove version mark
 remove_action('wp_head', 'wp_generator');
+
+//filter posts by geolocations (lat and long) within 60km-far
+add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
+function add_geo_filter( $clauses, $query_object ){
+	if(isset($_GET['lat'])&&isset($_GET['long'])){
+		$lat=$_GET['lat'];
+		$long=$_GET['long'];
+		if($lat&&$long){
+			$join = &$clauses['join'];
+			if (! empty( $join ) ) $join .= ' ';
+			$join .= "JOIN wp_places_locator PL ON PL.post_id = wp_posts.ID";
+		
+			$fields = &$clauses['fields'];
+			$fields .= ", ROUND( 6371 * acos( cos( radians( {$lat} ) ) * cos( radians( PL.lat ) ) * cos( radians( PL.long ) - radians( {$long} ) ) + sin( radians( {$lat} ) ) * sin( radians( PL.lat) ) ),1 ) AS distance";
+			
+			$where = &$clauses['where'];
+			$where .= " AND (PL.lat != 0.000000 && PL.long != 0.000000)";
+			//$where .= " AND distance <= '60'";
+
+			$orderby = &$clauses['orderby'];
+			if (! empty( $orderby ) ) $orderby = ' ' . $orderby;
+			$orderby = "distance";
+
+			$groupby = &$clauses['groupby'];
+			if (! empty( $groupby ) ) $groupby = ' ' . $groupby; 
+			$groupby = "wp_posts.ID HAVING distance <= '60' OR distance IS NULL";
+		}
+	}
+	return $clauses;
+}

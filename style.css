@@ -253,7 +253,7 @@ select {
 .geoform-select{
 	padding-left: 10px;
 }
-#pac-input{
+.ggmap-auto{
     width:100%;
     margin-top: 5px;
 }

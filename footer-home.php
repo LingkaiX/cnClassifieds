@@ -24,7 +24,6 @@
 		</div>
 	</div>
 </footer><!-- #colophon -->
-<script src=<?php echo get_template_directory_uri() .'/js/myjs.js' ?>></script>
 <!-- 由于Geo WP 插件加载了：
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQWClP6rOf55if8uN7jXIs_K2gheMECSw&libraries=places&callback=initMap&language=en-us" async defer></script>-->
 <!-- Google Analytics -->

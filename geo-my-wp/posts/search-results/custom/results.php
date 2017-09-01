@@ -26,6 +26,7 @@
 									<div class="clearfix"></div>
 									<div class="listed-contact col-md-12 col-xs-12">
 										<?php
+										//gmw_directions_link( $post, $gmw, $gmw['labels']['search_results']['directions'] );
 											if(!empty($post->phone)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Phone.svg"></img>'.$post->phone.'</p>';
 											if(!empty($post->email)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Email.svg"></img>'.$post->email.'</p>';
 											if(!empty($post->website)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Website.svg"></img><a href="'.$post->website.'">'.$post->website.'</a></p>';

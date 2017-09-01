@@ -39,7 +39,7 @@
                 <img src="<?php echo get_template_directory_uri();?>/img/Logo_Version2.svg" class="home-logo"></img>
             </div>
         </div>
-        <?php include 'parts/geo-form.php';?>    
+        <?php include 'parts/geo-form-new.php';?>    
     </div>
 </header>
 <div class="cate-section">

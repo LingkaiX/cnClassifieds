@@ -13,6 +13,7 @@
                         <div class="clearfix"></div>
                         <div class="listed-contact col-md-12 col-xs-12">
                             <?php
+                            //echo $post->distance;
                                 if($mypost!=null){
                                     if(!empty($mypost->phone)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Phone.svg"></img>'.$mypost->phone.'</p>';
                                     if(!empty($mypost->email)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Email.svg"></img>'.$mypost->email.'</p>';
