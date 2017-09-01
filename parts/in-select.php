@@ -2,8 +2,8 @@
 <?php 
     include 'cates-index.php';
     $currentslug=parsePath($_SERVER['REQUEST_URI'],'category');
-    echo 'url:'.$_SERVER['REQUEST_URI'];
-    echo 'slug:'.$currentslug;
+    //echo 'url:'.$_SERVER['REQUEST_URI'];
+    //echo 'slug:'.$currentslug;
     $currentcate=-1;
     if($currentslug){
         foreach ($catesindex as $key=>$cate){
