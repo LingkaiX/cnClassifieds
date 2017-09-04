@@ -42,7 +42,7 @@
         <?php include 'parts/geo-form-new.php';?>    
     </div>
 </header>
-<div class="cate-section">
+<div class="cate-section container">
     <?php include 'parts/cate-section.php';?>
 </div>
 </div>

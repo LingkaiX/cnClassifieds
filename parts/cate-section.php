@@ -1,4 +1,3 @@
-<div class="container">
     <div class="row center-content cate-row">
         <?php
             include "cates-index.php";
@@ -27,4 +26,3 @@
             }
         ?>
     </div>
-</div>
