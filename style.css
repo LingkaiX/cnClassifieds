@@ -347,7 +347,7 @@ select {
 }
 .listed-logo img{
 	max-width: 100%;
-	max-height: 80px;
+	max-height: 60px;
 	width: auto;
 	height: auto;
 	margin-left: auto;
@@ -357,8 +357,8 @@ select {
 	margin-top:15px;
 	margin-bottom: 5px;
 }
-.listed-header h3{
-	margin-top: 10px;
+.listed-header .entry-title{
+	margin-top: 5px;
 }
 .listed-decoration{
 	height: 25px;
@@ -367,7 +367,8 @@ select {
 }
 .listed-contact p{
 	margin:5px 0;
-    min-height: 32px;
+	min-height: 32px;
+	vertical-align: middle;
 }
 .listed-address-decoration{
 	margin-top:15px;
@@ -386,4 +387,22 @@ select {
 }
 .gmw-no-results-wrapper p::after{
 	content: ": 不好意思！我们没有找到你要的结果。";
+}
+.site-main{
+	margin-top:10px;
+}
+.listed-cate{
+	margin-bottom: 10px;
+	margin-left:20px;
+}
+.listed-cate a{
+	margin:0 10px;
+	color: black;
+}
+.fa{
+	color:#F26420;
+}
+.listed-contact .fa{
+	margin: 0 20px;
+	font-size: 20px;
 }

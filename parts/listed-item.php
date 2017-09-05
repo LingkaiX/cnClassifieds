@@ -7,10 +7,17 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <div class="row listed-header">
-                        <!-- <?php the_title( '<h3 class="entry-title"> <a href="'.get_permalink() . '">', '</a></h3>' ); ?>-->
-                        <div class="col-md-8 col-xs-8"><?php the_title('<h3>', '</h3>'); ?></div>
-                        <div class="listed-logo col-md-4 col-xs-4"><?php the_post_thumbnail( 'full', ['class' => 'in-listed-logo', 'title' => 'Feature image']); ?></div>
-                        <div class="clearfix"></div>
+                        <?php 
+                            $img=get_the_post_thumbnail( null, 'full', ['class' => 'img-responsive', 'title' => 'Logo'] );
+                            if($img!=null){
+                                the_title( '<div class="col-md-8 col-xs-8"><h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4></div>' );
+                                echo '<div class="listed-logo col-md-4 col-xs-4">'.$img.'</div>';
+                            }else{
+                                the_title( '<div class="col-md-12 col-xs-12"><h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4></div>' );
+                            }
+                        ?>
+                    </div>
+                    <div class="row">
                         <div class="listed-contact col-md-12 col-xs-12">
                             <?php
                             //echo $post->distance;

@@ -13,7 +13,7 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<div class="site-content">
+<!-- The end is in th footer.php --><div class="site-content">
 <header id="site-header"class="site-header" role="banner">
     <nav class="container">
         <div class="first-header row">
