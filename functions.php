@@ -92,3 +92,10 @@ function add_geo_filter( $clauses, $query_object ){
 	}
 	return $clauses;
 }
+
+//根据用户角色向后台添加文件
+// function load_custom_wp_admin_style($hook) {
+// 	if(wp_get_current_user()->roles[0]==''); //add adminjs.js 
+// 	return;
+// }
+// add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
