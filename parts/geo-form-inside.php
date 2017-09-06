@@ -8,13 +8,13 @@
         </div>
     </div>
     <div class="form-group col-md-5 col-sm-5 col-xs-5">
-        <input id="ggmap-auto" class="form-control ggmap-auto" type="text" placeholder="请输入地址或区域" autocomplete="off" style="width:100%;">
+        <input id="ggmap-auto" class="form-control ggmap-auto input-theme input-round" type="text" placeholder="请输入地址或区域" autocomplete="off" style="width:100%;">
         <input type="hidden" id="geo-lat" name="lat" value="">
         <input type="hidden" id="geo-long" name="long" value="">
     </div>
 
     <div class="form-group col-md-2 col-sm-2 col-xs-2">
-        <button type="submit" class="search-btn btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+        <button type="submit" class="search-btn btn btn-default input-theme input-round"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
 </form>
 

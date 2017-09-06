@@ -29,7 +29,7 @@
             <div class="col-md-offset-9 col-md-3 col-xs-offset-1 col-xs-11 index-search">
                 <form role="search" method="get" class="form-inline" action=<?php echo get_site_url()?>>
                     <label>
-                        <input type="search" class="input-little" placeholder="&#xF002; 全站搜索" style="font-family:Arial, FontAwesome" value="" name="s">
+                        <input type="search" class="input-little input-round" placeholder="&#xF002; 全站搜索" style="font-family:Arial, FontAwesome" value="" name="s">
                     </label>
                 </form>
             </div>

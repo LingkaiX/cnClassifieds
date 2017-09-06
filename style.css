@@ -66,6 +66,7 @@ p{
 	right:5px;
 	top:0;
 	border-width:0 !important;
+	padding: 6px 12px;
 }
 .input-little:focus,
 .input-little:hover{
@@ -129,32 +130,11 @@ html, body{
 .header-logo, .header-form{
 	margin-top: 5px;
 }
-input[type="text"],
-input[type="email"],
-input[type="url"],
-input[type="password"],
-input[type="search"],
-input[type="number"],
-input[type="tel"],
-input[type="range"],
-input[type="date"],
-input[type="month"],
-input[type="week"],
-input[type="time"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="color"],
-textarea {
-	color: #666;
-	padding: 6px;
-	border-radius: 100px;
+.input-theme, .layui-form-select .layui-input{
 	border: 1px solid #F26522;
-	padding-left: 10px;
 }
-select {
-	border-radius: 100px !important;
-	border: 1px solid #F26522 !important;
-	background-color: white;
+.input-round, .layui-form-select .layui-input{
+	border-radius: 100px;	
 }
 /*** select2 ***/
 .select2-selection{
@@ -405,4 +385,10 @@ select {
 .listed-contact .fa{
 	margin: 0 20px;
 	font-size: 20px;
+}
+.wpcf7-form label{
+	width: 100%;
+}
+.wpcf7-form input[type=submit]{
+	float: right;
 }
