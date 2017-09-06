@@ -13,7 +13,7 @@ get_header(); ?>
             echo '<div class="col-md-12 col-xs-12 listed-cate">';
                 echo '<i class="fa fa-tags" aria-hidden="true"></i>';
                 foreach(get_the_category() as $cate){
-                    echo '<a href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
+                    echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
             get_the_category();
             echo '</div>';
