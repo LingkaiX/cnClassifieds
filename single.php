@@ -21,8 +21,8 @@ get_header(); ?>
                 $img=get_the_post_thumbnail( null, 'full', ['class' => 'img-responsive', 'title' => 'Logo', 'style' => 'float:left;max-height:60px;	width: auto;
                     height: auto; margin-right:20px'] );
                 echo $img;
-                the_excerpt(); 
-                
+                the_excerpt();
+                the_content();
         ?>
             </div>
             <div class="listed-contact col-md-12 col-xs-12">
@@ -38,7 +38,6 @@ get_header(); ?>
                     }
                 ?>
             </div>
-            <div class="col-md-12 col-xs-12"><?php the_content(); ?></div>
             <?php
                 endwhile;
             ?>
