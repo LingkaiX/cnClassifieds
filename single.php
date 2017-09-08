@@ -22,8 +22,9 @@ get_header(); ?>
                     $img=get_the_post_thumbnail( null, 'full', ['class' => 'img-responsive', 'title' => 'Logo', 'style' => 'float:left;max-height:60px;	width: auto;
                         height: auto; margin-right:20px'] );
                     echo $img;
-                    the_excerpt();
-                    //the_content();
+                    //the_excerpt();
+                    //echo $post->post_excerpt;
+                    echo apply_filters( 'the_excerpt', $post->post_excerpt );
             ?>
                 </div>
                 <div class="listed-contact col-md-12 col-xs-12">
