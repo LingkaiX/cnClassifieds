@@ -373,10 +373,10 @@ html, body{
 }
 .listed-cate{
 	margin-bottom: 10px;
-	margin-left:20px;
+	padding-left: 35px;
 }
 .listed-cate a{
-	margin:0 10px;
+	margin-left:10px;
 	color: black;
 }
 .fa{

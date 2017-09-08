@@ -99,3 +99,9 @@ function add_geo_filter( $clauses, $query_object ){
 // 	return;
 // }
 // add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+
+//excerpt: 280 English characters or 140 Chinese characters
+function chinese_excerpt($text,$lenth=286) {
+    return mb_strimwidth($text,0,$lenth,'...','utf-8'); //6 prefix, en * 1, ch * 2
+}
+add_filter('the_excerpt', 'chinese_excerpt');

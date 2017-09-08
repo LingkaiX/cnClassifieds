@@ -16,7 +16,8 @@
                                 echo '<div class="clearfix"></div>';
                                 echo '<h4 class="cate-h">'.$cate["name"].'</h4>';
                         echo '</a>';
-                            echo '<div class="col-md-12 hidden-xs sub-item">';
+                        //echo '<div class="clearfix"></div>';
+                            echo '<div class="col-md-12 hidden-sm hidden-xs sub-item">';
                             foreach($cate["subcates"] as $subcate){
                                 $href=get_site_url()."/category/".$subcate["slug"];
                                 echo '<a href="'.$href.'"><p>'.$subcate["name"].'</p></a>';

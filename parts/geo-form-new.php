@@ -4,7 +4,7 @@
         <form class="form-inline row layui-form" action= <?php echo get_site_url()?> name="geoform" method="get">
             <div class="form-group col-md-5 col-sm-5 col-xs-12">
                 <div class="layui-input-block">
-                    <select name="cat" style="width:95%;" lay-search>
+                    <select name="cat" style="width:95%;">
                         <?php include 'in-select.php'?>
                     </select>
                 </div>
