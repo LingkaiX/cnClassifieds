@@ -87,7 +87,8 @@ function add_geo_filter( $clauses, $query_object ){
 
 			$groupby = &$clauses['groupby'];
 			if (! empty( $groupby ) ) $groupby = ' ' . $groupby; 
-			$groupby = "wp_posts.ID HAVING distance <= '60' OR distance IS NULL";
+			$groupby = "wp_posts.ID";
+			//$groupby = "wp_posts.ID HAVING distance <= '60' OR distance IS NULL";
 		}
 	}
 	return $clauses;

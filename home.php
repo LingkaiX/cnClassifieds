@@ -46,6 +46,6 @@
     <?php include 'parts/cate-section.php';?>
 </div>
 </div>
-<?php get_footer("home"); ?>
+<?php get_footer(); ?>
 
 
