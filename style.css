@@ -17,76 +17,10 @@ html, body{
 p{
 	word-break: break-all; 
 }
+/*-------- site & header & footer --------*/
 .site-content{
 	min-height: 100%;
 	padding-bottom: 120px;
-}
-.site-footer{
-	background-color: #333;
-	color: white;
-	padding-top: 20px;
-	margin-top: -120px;
-	bottom: 0;
-}
-.site-footer span, .site-footer p{
-	color:white;
-}
-.search-form{
-	display: inline;
-}
-.search-field{
-	border-radius: 100px;
-	border:2px solid;
-	border-color: #ffcc00;
-}
-.index-header{
-	padding-top:5px;
-	background-color: #E2E0E3;
-}
-.home-hearder-container{
-	min-height: 500px;
-	background-image: url("img/Header.png");
-	background-repeat: no-repeat;
-	background-position: center 140px;
-    background-size: 90%;
-    background-attachment: fixed;
-}
-@media (max-width: 991px) {
-	.home-hearder-container{
-        min-height: 400px;
-        background-position: center top;
-	}
-}
-@media (max-width: 767px) {
-	.home-hearder-container{
-        min-height: 350px;
-        background-position: center;
-        background-size: 100%;
-	}
-}
-.index-search{
-	padding-top:10px;
-}
-.input-little{
-	height: 25px !important;
-	width: 100px;
-	position: absolute;
-	right:5px;
-	top:0;
-	border-width:0 !important;
-	padding: 6px 12px;
-}
-.input-little:focus,
-.input-little:hover{
-	width: 100% !important;
-	background-color: white;
-	left:0;
-}
-div .search-btn{
-	border-radius: 100px;
-	border: 1px solid #F26522;
-	margin-top: 5px;
-	float: right;
 }
 .home{
 	padding: 0;
@@ -94,12 +28,6 @@ div .search-btn{
 }
 .label{
 	color: black !important;
-}
-#content{
-	min-height: 100%;
-}
-html, body{
-	height: 100%;
 }
 .site-header{
 	background-color:#F26522;
@@ -138,14 +66,119 @@ html, body{
 .header-logo, .header-form{
 	margin-top: 5px;
 }
+.index-header{
+	padding-top:5px;
+	background-color: #E2E0E3;
+}
+.home-hearder-container{
+	min-height: 500px;
+	background-image: url("img/Header.png");
+	background-repeat: no-repeat;
+	background-position: center 140px;
+    background-size: 90%;
+    background-attachment: fixed;
+}
+@media (max-width: 991px) {
+	.home-hearder-container{
+        min-height: 400px;
+        background-position: center top;
+	}
+}
+@media (max-width: 767px) {
+	.home-hearder-container{
+        min-height: 350px;
+        background-position: center;
+        background-size: 100%;
+	}
+}
+.site-footer{
+	background-color: #333;
+	color: white;
+	padding-top: 20px;
+	margin-top: -120px;
+	bottom: 0;
+}
+.site-footer span, .site-footer p{
+	color:white;
+}
+/*-------- form & input &search-form & geo-form --------*/
+.search-form{
+	display: inline;
+}
+.search-field{
+	border-radius: 100px;
+	border:2px solid;
+	border-color: #ffcc00;
+}
+.index-search{
+	padding-top:10px;
+}
+.input-little{
+	height: 25px !important;
+	width: 100px;
+	position: absolute;
+	right:5px;
+	top:0;
+	border-width:0 !important;
+	padding: 6px 12px;
+}
+.input-little:focus,
+.input-little:hover{
+	width: 100% !important;
+	background-color: white;
+	left:0;
+}
+div .search-btn{
+	border-radius: 100px;
+	border: 1px solid #F26522;
+	margin-top: 5px;
+	float: right;
+}
 .input-theme, .layui-form-select .layui-input{
 	border: 1px solid #F26522;
 }
 .input-round, .layui-form-select .layui-input{
 	border-radius: 100px;	
 }
-/*** select2 ***/
-.select2-selection{
+.geo-form{
+	margin:60px 0;
+}
+@media (max-width: 991px){
+    .geo-form{
+	   margin:10px 0;
+    }
+}
+#geo-form-inside .form-group{
+	margin-bottom: 5px;
+}
+@media (max-width: 991px) {
+	#geo-form-inside .form-group{
+		padding-left: 5px;
+		padding-right:5px;
+	}
+}
+.geoform-select{
+	padding-left: 10px;
+}
+.ggmap-auto{
+    width:100%;
+    margin-top: 5px;
+}
+.layui-form .layui-input-block{
+	margin-left:0;
+	min-height: 34px
+}
+.layui-form-select{
+	height: 34px;
+	margin-top: 5px;
+}
+.layui-form .layui-input{
+	font-size: 14px;
+	height: 34px;
+	line-height: 20px
+}
+/*-------- select2 --------*/
+/* .select2-selection{
 	border-radius: 100px !important;
 	border: 1px solid #F26420 !important;
 	background-color: white;
@@ -167,8 +200,8 @@ html, body{
 .select2-search--dropdown{
 }
 .select2-search__field{
-}
-/*** select2 ***/
+} */
+/*-------- home.php --------*/
 .home-logo{
 	max-width:40%;
 	max-height:40%;
@@ -220,44 +253,7 @@ html, body{
 .cate-col a{
     color: black;
 }
-.geo-form{
-	margin:60px 0;
-}
-@media (max-width: 991px){
-    .geo-form{
-	   margin:10px 0;
-    }
-}
-#geo-form-inside .form-group{
-	margin-bottom: 5px;
-}
-@media (max-width: 991px) {
-	#geo-form-inside .form-group{
-		padding-left: 5px;
-		padding-right:5px;
-	}
-}
-.geoform-select{
-	padding-left: 10px;
-}
-.ggmap-auto{
-    width:100%;
-    margin-top: 5px;
-}
-.layui-form .layui-input-block{
-	margin-left:0;
-	min-height: 34px
-}
-.layui-form-select{
-	height: 34px;
-	margin-top: 5px;
-}
-.layui-form .layui-input{
-	font-size: 14px;
-	height: 34px;
-	line-height: 20px
-}
-/* Tab */ 
+/*-------- cate-tab --------*/ 
 #accordion{
 	margin-top: 20px;
 }
@@ -315,7 +311,7 @@ html, body{
     border: none;
     padding: 1px 20px 1px 20px;
 } 
-/*********/
+/*--------  --------*/
 .screen-reader-text{
 	display: none;
 }
@@ -405,7 +401,7 @@ html, body{
 	float: right;
 }
 
-/****Single.php****/
+/*-------- Single.php --------*/
 h2:after {
     display: block;
     height: 2px;
@@ -449,17 +445,6 @@ h2:after {
 	float: right;
 	width: auto;
     height: auto;
-}
-
-
-/* -------------------------------------------------------------*/
-/* HEADER */
-/* -------------------------------------------------------------*/
-
-.ads-header {
-    background-color: #F26522;
-    height: 50px;
-    width: 100%;
 }
 
 /* -------------------------------------------------------------*/
