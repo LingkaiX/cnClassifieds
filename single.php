@@ -22,27 +22,15 @@ get_header(); ?>
         </section>
         <section class="row contact-info ad-contact">
             <div class="ad-contact-small">
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <label for="email"><i class="fa fa-envelope-o icon-small" aria-hidden="true"></i><span>info@alfiondeco.com.au</span></label>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <label for="phone"><i class="fa fa-phone icon-small" aria-hidden="true"></i><span>03 9314 0602 / 0433 292 160</span></label>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <label for="web"><i class="fa fa-globe icon-small" aria-hidden="true"></i><span>http://alfiondeco.com.au</span></label>
-                </div>
-                <div class="col-xs-12 col-sm-6 col-md-6">
-                    <label for="adress"><i class="fa fa-map-marker icon-small" aria-hidden="true"></i><span>Melbourne, VIC 3000</span></label>
-                </div>
                 <?php
                     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
                     if($mypost!=null){
-                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-6 col-md-6> <i class="fa fa-phone icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
-                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6> <i class="fa fa-globe icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
+                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-phone icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
+                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></label>';
-                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-6 col-md-6> <i class="fa fa-globe icon-small" aria-hidden="true"></i><a target="_blank" href="'
+                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a target="_blank" href="'
                             .$mypost->website.'"><span>'.$mypost->website.'</span></a></label>';
-                        if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-6 col-md-6> <i class="fa fa-map-marker icon-small" aria-hidden="true"></i><span>'.$mypost->address
+                        if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-map-marker icon-small" aria-hidden="true"></i><span>'.$mypost->address
                             .'</span><a style="margin-left:10px;" target="_blank" href="https://www.google.com/maps?daddr='
                             .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></label>';
                     }
