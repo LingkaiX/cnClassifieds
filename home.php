@@ -22,7 +22,7 @@
 
 </head>
 <body <?php body_class(); ?>>
-<div class="site-content">
+<div class="site-content" style="background-color: white;">
 <header class="index-header">
     <div class="container home-hearder-container">
         <div class="row">

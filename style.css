@@ -6,7 +6,14 @@ Version: 1.0.1
 Text Domain: cnclassifieds
 */
 *{font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,STXihei,
-	Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif,Droid Sans;}
+	Noto Sans CJK SC,WenQuanYi Micro Hei,Arial,sans-serif,Droid Sans;
+}
+html, body{
+	height: 100%;
+	font-size: 16px;
+    font-weight: 300;
+    background-color: #e6e6e5;
+}
 p{
 	word-break: break-all; 
 }
@@ -395,4 +402,156 @@ html, body{
 }
 .wpcf7-form input[type=submit]{
 	float: right;
+}
+
+/****Single.php****/
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #F26522;
+    content: " ";
+    width: 100px;
+    margin: 0;
+    margin-top: 15px;
+}
+
+
+/* ------------ ICONS ------------------*/
+.icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #0582d0;
+    font-size: 120%;
+    margin-right: 10px;
+    line-height: 25px; 
+}
+
+.icon {
+    display: inline-block;
+    padding-left: 20px;
+    text-align: center;
+    color: #F26522;
+    font-size: 80%;
+    margin-right: 10px;
+    line-height: 25px;
+}
+
+/* ------------ LOGO ------------------*/
+
+.logo {
+    max-width: 75px;
+    max-height: 75px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+	float: right;
+	width: auto;
+    height: auto;
+}
+
+
+/* -------------------------------------------------------------*/
+/* HEADER */
+/* -------------------------------------------------------------*/
+
+.ads-header {
+    background-color: #F26522;
+    height: 50px;
+    width: 100%;
+}
+
+/* -------------------------------------------------------------*/
+/* COMPANY NAME */
+/* -------------------------------------------------------------*/
+.company-name {
+    font-weight: 400;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    font-size: 20px;
+    background-color: #fff;
+    padding-bottom: 10px;
+    word-spacing: 2px;
+    text-transform: uppercase;
+}
+
+
+.title {
+    margin-top: 25px;
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+.abstract {
+    font-size: 15px;
+    color: #868585;
+}
+
+.tag {
+    font-size: 14px;
+    color: #868585;
+}
+
+
+
+/* -------------------------------------------------------------*/
+/* CONTACT */
+/* -------------------------------------------------------------*/
+
+
+.ad-contact {
+    padding: 15px 20px 15px 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin-bottom: 20px;
+    color: #0582d0;
+    word-spacing: 2px;
+    word-break: break-all;
+}
+
+.ad-contact span,
+.icon-small {
+    font-size: 17px;
+}
+
+.ad-contact-small {
+    padding-top: 5px;
+}
+
+/* -------------------------------------------------------------*/
+/* INFORMATION */
+/* -------------------------------------------------------------*/
+
+.ad-information {
+    padding: 10px 20px 15px 20px;
+}
+
+.information {
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    word-spacing: 5px;
+}
+/* Small phones: from 0 t0 480px */
+@media only screen and (max-width: 480px) {
+    .logo {
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+    }   
+    .title {
+        margin-top: 15px;
+        float: none;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    
 }
