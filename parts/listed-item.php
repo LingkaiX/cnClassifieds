@@ -3,7 +3,7 @@
 ?>
 <div class="row">
     <div class="col-md-12 col-xs-12">
-        <div class="basic-listing post-<?php echo $post->ID; ?>">
+        <div class="basic-listing box-round-shadow post-<?php echo $post->ID; ?>">
             <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <div class="row listed-header">

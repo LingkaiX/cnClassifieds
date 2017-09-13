@@ -5,7 +5,7 @@
 get_header(); ?>
 <main id="main" class="site-main container" role="main">
     <?php while (have_posts()) : the_post(); ?>
-        <section class="row company-name">
+        <section class="row company-name box-round-shadow">
             <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
             <?php the_title( '<h2 class="title">', '</h2>' ); ?>
             <div class="tag">
@@ -20,7 +20,7 @@ get_header(); ?>
                 <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
             </div>
         </section>
-        <section class="row contact-info ad-contact">
+        <section class="row contact-info ad-contact box-round-shadow">
             <div class="ad-contact-small">
                 <?php
                     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
@@ -37,7 +37,7 @@ get_header(); ?>
                 ?>
             </div>
         </section>
-        <article class="row information ad-information">
+        <article class="row information ad-information box-round-shadow">
             <?php the_content(); ?>
         </article>
         <?php endwhile; ?>
