@@ -101,6 +101,35 @@ p{
 .site-footer span, .site-footer p{
 	color:white;
 }
+
+
+/*-------- pagination --------*/
+
+.page-numbers {
+    display: block;
+    float: left;
+    padding: 4px 10px 4px 10px;
+    margin-right: 3px;
+    color: #F26522;
+    background: #FFF;
+    border-radius: 5px;
+    border: solid 1px;
+    font-weight: bold;
+}
+
+span.page-numbers.current {
+    color: #FFF;
+    background-color: #F26522;
+    border: solid 1px #F26522;
+}
+
+a.page-numbers:hover,
+a.page-numbers:focus {
+    color: #FFF;
+    background-color: #F26522;
+    border: solid 1px #F26522;
+}
+
 /*-------- form & input &search-form & geo-form --------*/
 .search-form{
 	display: inline;
