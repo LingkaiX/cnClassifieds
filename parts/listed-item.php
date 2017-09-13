@@ -34,7 +34,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12 col-xs-12">
-                    <?php the_excerpt(); ?>
+                    <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
                 </div>
             </div>
         </div>
