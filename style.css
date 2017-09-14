@@ -74,13 +74,7 @@ p{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    opacity: 0.8;
-    filter:alpha(opacity=80)
-}
 
-.index-header:hover {
-    opacity: 1;
-    filter:alpha(opacity=100)
 }
 
 .home-hearder-container{
