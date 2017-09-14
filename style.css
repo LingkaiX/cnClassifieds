@@ -69,14 +69,24 @@ p{
 .index-header{
 	padding-top:5px;
 	background-color: #E2E0E3;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0,-0.3)),to(rgba(0, 0, 0, 0.2))),url(img/header-photo.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/header-photo.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    filter:alpha(opacity=80)
 }
+
+.index-header:hover {
+    opacity: 1;
+    filter:alpha(opacity=100)
+}
+
 .home-hearder-container{
 	min-height: 500px;
-	background-image: url("img/Header.png");
-	background-repeat: no-repeat;
-	background-position: center 140px;
-    background-size: 90%;
-    background-attachment: fixed;
+	
+    
 }
 @media (max-width: 991px) {
 	.home-hearder-container{
