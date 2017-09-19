@@ -587,7 +587,8 @@ h2:after {
 /* ------------ SEARCH-RESULT-BOX ------------------*/
 
 .bg-warning {
-    background-color: #fff;    
+    background-color: #fff;
+    color: #656565
     border-radius: 30px;
     border: solid 1px;
     border-color: #F26522;
@@ -597,6 +598,7 @@ h2:after {
 
 .bg-danger {
     background-color: #e6e6e6;
+    color: #656565
     min-height: 100px;
     border-radius: 5px;
     border: solid 1px;
