@@ -585,7 +585,7 @@ h2:after {
 }
 
 .bg-warning {
-    color: #fff;    
+    background-color: #fff;    
     border-radius: 30px;
     border: solid 1px;
     border-color: #F26522;
