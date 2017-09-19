@@ -21,8 +21,8 @@
 			<?php 
 				the_posts_pagination( array(
 					'mid_size' => 1,
-					'prev_text' => __( 'Prev', 'h' ),
-					'next_text' => __( 'Next', 'q' ),
+					'prev_text' => __( '<<<', 'Prev' ),
+					'next_text' => __( '>>>', 'Next' ),
 					'screen_reader_text' => '这你也能找到？',
 				)); 
 			?> 
