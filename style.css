@@ -584,6 +584,8 @@ h2:after {
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
+/* ------------ SEARCH-RESULT-BOX ------------------*/
+
 .bg-warning {
     background-color: #fff;    
     border-radius: 30px;
@@ -592,3 +594,15 @@ h2:after {
     -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
 }
+
+.bg-danger {
+    background-color: #e6e6e6;
+    min-height: 100px;
+    border-radius: 5px;
+    border: solid 1px;
+    border-color: #d9d9d9;
+}
+
+
+
+
