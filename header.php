@@ -10,6 +10,14 @@
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- Google AdSense -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-9173929910659094",
+    enable_page_level_ads: true
+  });
+</script>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
