@@ -23,66 +23,32 @@
 <body <?php body_class(); ?>>
 <!-- The end is in th footer.php --><div class="site-content">
 <header id="site-header"class="site-header" role="banner">
-    <nav class="container">
+    <div class="container header-container">
         <div class="first-header row">
-            <div class="col-md-1 col-sm-1 col-xs-1"><button onclick=history.go(-1) class="back-button">&#8249;</button></div>
-            <a href=<?php echo get_site_url();?> class="col-md-2 col-sm-2 col-xs-2 header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg" style="height:30px;"></img></a>
-            <div id="geoform-md" class="col-md-7 hidden-sm hidden-xs"></div>
-            <div class="col-md-2 col-sm-9 col-xs-8 header-form">
-                <form role="search" method="get" class="form-inline" action=<?php echo get_site_url()?>>
-                    <label>
-                        <input type="search" class="input-little input-round" placeholder="&#xF002; 关键字搜索" style="font-family:Arial, FontAwesome" value="" name="s">
-                    </label>
-                </form>
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <button onclick=history.go(-1) class="back-button"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                <a href=<?php echo get_site_url();?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg"></img></a>
+                <button class="search-button" x-stat="closed"><i class="fa fa-search" aria-hidden="true"></i></button>
             </div>
         </div>
-        <div class="second-header row">
-        <div id="geoform-sm" class="col-sm-12 col-xs-12 hidden-md hidden-lg"><?php include 'parts/geo-form-inside.php';?></div>
-        </div>
-    </nav>
+        <div id="search-row" style="display:none;"><?php include 'parts/search-form.php'; ?></div>
+    </div>
 </header>
+<div style="width:100%;height:50px"></div>
+
 <script>
-var initialww, currentww, initialwh, currentwh;
-var formposition;
-
-jQuery(document).ready(function() {
-    initialww = window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
-    currentww=initialww;
-    //initialwh = window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;
-    formposition=1; //geo form in geoform-sm
-
-    if(initialww>=992){
-        jQuery('#geoform-md').append( jQuery('#geo-form-inside') );
-        formposition=0; //geo form in geoform-md
-    }
-
-    jQuery(window).resize(function() {
-        currentww=window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth;
-        if(currentww>=992&&formposition==1){
-            jQuery('#geoform-md').append( jQuery('#geo-form-inside') );
-            formposition=0;
-        }
-        if(currentww<992&&formposition==0){
-            jQuery('#geoform-sm').append( jQuery('#geo-form-inside') );
-            formposition=1;            
-        }
-        jQuery('.second-header').removeClass('sticky-second-header');
-    });
-
-});
-window.onload = function(){
-    window.onscroll=function() {
-        //console.log(formposition);
-        var osTop = document.documentElement.scrollTop||document.body.scrollTop;
-        if(formposition==0){
-        }else if (osTop>45) {
-            jQuery('#geoform-sm').addClass('sticky-header');
-            jQuery('.second-header').addClass('sticky-second-header');
+jQuery(document).ready(function($){
+    var iclose= '<i class="fa fa-times" aria-hidden="true"></i>';
+    var isearch='<i class="fa fa-search" aria-hidden="true"></i>';
+    $('.search-button').click(function(){
+        if($(this).attr('x-stat')=='closed'){
+            $(this).html(iclose).attr('x-stat','open');
+            $('#search-row').css('display','block');
         }else{
-            jQuery('#geoform-sm').removeClass('sticky-header');
-            jQuery('.second-header').removeClass('sticky-second-header');
+            $(this).html(isearch).attr('x-stat','closed');
+            $('#search-row').css('display','none');
         }
-        isTop=false;
-    };
-};
+    });
+    
+});
 </script>

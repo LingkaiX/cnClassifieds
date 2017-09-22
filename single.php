@@ -7,7 +7,7 @@ get_header(); ?>
     <?php while (have_posts()) : the_post(); ?>
         <section class="row company-name box-round-shadow">
             <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
-            <?php the_title( '<h2 class="title">', '</h2>' ); ?>
+            <?php the_title( '<h3 class="title">', '</h3>' ); ?>
             <div class="tag">
                 <i class="fa fa-tags icon" aria-hidden="true"></i>
                 <?php 
