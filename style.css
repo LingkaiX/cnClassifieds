@@ -17,6 +17,18 @@ html, body{
 p{
 	word-break: break-all; 
 }
+.fa{
+	color:#F26420;
+}
+h2:after {
+    display: block;
+    height: 2px;
+    background-color: #F26522;
+    content: " ";
+    width: 100px;
+    margin: 0;
+    margin-top: 15px;
+}
 /*-------- site & header & footer --------*/
 .site-content{
 	min-height: 100%;
@@ -73,8 +85,7 @@ p{
 .header-logo img{
     /*margin-top: 5px;*/
     height: 35px;
-    margin: 0 auto;
-    
+    margin: 0 auto;   
 }
 .index-header{
 	padding-top:5px;
@@ -84,9 +95,7 @@ p{
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-
 }
-
 .home-hearder-container{
 	min-height: 500px;
 }
@@ -113,10 +122,7 @@ p{
 .site-footer span, .site-footer p{
 	color:white;
 }
-
-
 /*-------- pagination --------*/
-
 .page-numbers {
     display: block;
     float: left;
@@ -128,121 +134,17 @@ p{
     border: solid 1px;
     font-weight: bold;
 }
-
 span.page-numbers.current {
     color: #FFF;
     background-color: #F26522;
     border: solid 1px #F26522;
 }
-
 a.page-numbers:hover,
 a.page-numbers:focus {
     color: #FFF;
     background-color: #F26522;
     border: solid 1px #F26522;
 }
-
-/*-------- form & input &search-form & geo-form --------*/
-.search-form{
-	display: inline;
-}
-.search-field{
-	border-radius: 100px;
-	border:2px solid;
-	border-color: #ffcc00;
-}
-.index-search{
-	padding-top:10px;
-}
-.input-little{
-	height: 25px !important;
-	width: 120px;
-	position: absolute;
-	right:5px;
-	top:0;
-	border-width:0 !important;
-	padding: 6px 12px;
-	font-size: 12px
-}
-.input-little:focus,
-.input-little:hover{
-	width: 100% !important;
-	background-color: white;
-	left:0;
-}
-div .search-btn{
-	border-radius: 100px;
-	border: 1px solid #F26522;
-	margin-top: 5px;
-	float: right;
-}
-.input-theme, .layui-form-select .layui-input{
-	border: 1px solid #F26522;
-}
-.input-round, .layui-form-select .layui-input{
-	border-radius: 100px;	
-}
-.geo-form{
-	margin:60px 0;
-}
-@media (max-width: 991px){
-    .geo-form{
-	   margin:10px 0;
-    }
-}
-#geo-form-inside .form-group{
-	margin-bottom: 5px;
-}
-@media (max-width: 991px) {
-	#geo-form-inside .form-group{
-		padding-left: 5px;
-		padding-right:5px;
-	}
-}
-.geoform-select{
-	padding-left: 10px;
-}
-.ggmap-auto{
-    width:100%;
-    margin-top: 5px;
-}
-.layui-form .layui-input-block{
-	margin-left:0;
-	min-height: 34px
-}
-.layui-form-select{
-	height: 34px;
-	margin-top: 5px;
-}
-.layui-form .layui-input{
-	font-size: 14px;
-	height: 34px;
-	line-height: 20px
-}
-/*-------- select2 --------*/
-/* .select2-selection{
-	border-radius: 100px !important;
-	border: 1px solid #F26420 !important;
-	background-color: white;
-	margin-top: 5px;
-	height: 34px !important;
-	vertical-align: middle;
-	font-size: 14px;
-}
-.select2-selection__arrow{
-	display: none !important;
-}
-.select2-selection__rendered{
-	padding-top:6px;
-	padding-bottom: 6px;
-	padding-left: 10px !important;
-	padding-right: 6px !important;
-	line-height: 20px  !important;
-}
-.select2-search--dropdown{
-}
-.select2-search__field{
-} */
 /*-------- home.php --------*/
 .home-logo{
 	max-width:40%;
@@ -279,7 +181,6 @@ div .search-btn{
 .cate-section{
     margin-bottom: -30px;
 }
-
 @media (max-width: 767px) {
     .cate-row h4{
         font-size: 15px;
@@ -288,7 +189,6 @@ div .search-btn{
 .cate-row p{
 	margin: 2px 0px;
 }
-
 .cate-col{
     margin-bottom: 30px;
 }
@@ -353,7 +253,7 @@ div .search-btn{
     border: none;
     padding: 1px 20px 1px 20px;
 } 
-/*--------  --------*/
+/*-------- result && result list --------*/
 .screen-reader-text{
 	display: none;
 }
@@ -429,9 +329,6 @@ div .search-btn{
 	margin-left:10px;
 	color: black;
 }
-.fa{
-	color:#F26420;
-}
 .listed-contact .fa{
 	margin: 0 20px;
 	font-size: 20px;
@@ -442,19 +339,6 @@ div .search-btn{
 .wpcf7-form input[type=submit]{
 	float: right;
 }
-
-/*-------- Single.php --------*/
-h2:after {
-    display: block;
-    height: 2px;
-    background-color: #F26522;
-    content: " ";
-    width: 100px;
-    margin: 0;
-    margin-top: 15px;
-}
-
-
 /* ------------ ICONS ------------------*/
 .icon-small {
     display: inline-block;
@@ -465,7 +349,6 @@ h2:after {
     margin-right: 10px;
     line-height: 25px; 
 }
-
 .icon {
     display: inline-block;
     padding-left: 20px;
@@ -475,9 +358,7 @@ h2:after {
     margin-right: 10px;
     line-height: 25px;
 }
-
 /* ------------ LOGO ------------------*/
-
 .logo {
     max-width: 75px;
     max-height: 75px;
@@ -488,10 +369,7 @@ h2:after {
 	width: auto;
     height: auto;
 }
-
-/* -------------------------------------------------------------*/
-/* COMPANY NAME */
-/* -------------------------------------------------------------*/
+/*-------- COMPANY NAME --------*/
 .company-name {
     font-weight: 400;
     margin-bottom: 10px;
@@ -499,19 +377,15 @@ h2:after {
     background-color: #fff;
     /*text-transform: uppercase;*/
 }
-
-
 .title {
     padding-left: 15px;
     font-weight: 400;
 }
-
 .abstract {
     font-size: 15px;
     color: #868585;
     padding: 5px 15px;
 }
-
 .tag {
     font-size: 14px;
     color: #868585;
@@ -519,13 +393,7 @@ h2:after {
 .tag a{
 	padding-right: 5px;
 }
-
-
-/* -------------------------------------------------------------*/
-/* CONTACT */
-/* -------------------------------------------------------------*/
-
-
+/*-------- CONTACT --------*/
 .ad-contact {
     padding-top: 10px;
     background-color: #fff;
@@ -533,21 +401,14 @@ h2:after {
     color: #0582d0;
     word-break: break-all;
 }
-
 .ad-contact span,
 .icon-small {
     font-size: 17px;
 }
-
-
-/* -------------------------------------------------------------*/
-/* INFORMATION */
-/* -------------------------------------------------------------*/
-
+/*-------- INFORMATION --------*/
 .ad-information {
     padding: 10px 20px 15px 20px;
 }
-
 .information {
     background-color: #fff;
     color: #000;
@@ -570,20 +431,15 @@ h2:after {
         display: inline-block;
         font-weight: 500;
         font-size: 25px;
-    }
-    
+    } 
 }
-
 /* ------------ BOX-ROUND-SHADOW ------------------*/
-
 .box-round-shadow {
     border-radius: 10px;
     -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
-
 /* ------------ SEARCH-RESULT-BOX ------------------*/
-
 .bg-warning {
     background-color: #fff;
     color: #656565;
@@ -591,7 +447,6 @@ h2:after {
     -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
 }
-
 .bg-danger {
     background-color: #e6e6e6;
     color: #656565;
@@ -634,4 +489,8 @@ h2:after {
 .search-submit{
     float: right;
     left: -40px;
+}
+/*-------- ads --------*/
+.cate-ad-container{
+    margin-top: 20px;
 }

@@ -17,6 +17,8 @@
                 array("name"=>"翻新改建","slug"=>"renovation-and-extensions"),
                 array("name"=>"建材瓷砖","slug"=>"tiles-and-building-materials"),
                 array("name"=>"围栏门窗","slug"=>"fencing-and-gate"),
+                array("name"=>"窗帘百页窗","slug"=>"curtain"),
+                array("name"=>"太阳能","slug"=>"solar-energy"),
             ),
         ),
         array(
@@ -36,6 +38,7 @@
                 array("name"=>"装锁开锁","slug"=>"lock-smith"),
                 array("name"=>"家居家具","slug"=>"furniture"),
                 array("name"=>"家用电器","slug"=>"electronics-appliances"),
+                array("name"=>"机场接送","slug"=>"airport-transfer"),
             ),
         ),
         array(
@@ -119,7 +122,6 @@
                 array("name"=>"名片印刷","slug"=>"business-cards-and-stationery-printing"),
                 array("name"=>"物流仓储","slug"=>"logistics-and-storage"),
                 array("name"=>"报关通关","slug"=>"customs-clearance"),
-                array("name"=>"会计税务","slug"=>"accountancy-and-tax"),
                 array("name"=>"安防监控","slug"=>"surveillance-and-alarms"),
             ),
         ),

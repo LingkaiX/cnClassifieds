@@ -15,7 +15,7 @@
 				endif; 
 			?>
 		</main>
-		<div class="col-md-3 col-sm-3 col-xs-12">
+		<div class="col-md-3 col-sm-3 col-xs-12 cate-ad-container">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- cate page ad -->
 			<ins class="adsbygoogle"
