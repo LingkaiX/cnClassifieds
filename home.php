@@ -24,8 +24,7 @@
 <body <?php body_class(); ?>>
 <div class="site-content" style="background-color: white;">
 <header class="index-header">
-    <div class="container home-hearder-container">
- 
+    <div class="container home-hearder-container"> 
         <div class="row">
             <div class="col-md-6 col-xs-12 home-logo-container">
                 <img src="<?php echo get_template_directory_uri();?>/img/Logo_Version2.svg" class="home-logo"></img>
