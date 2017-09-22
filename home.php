@@ -25,21 +25,18 @@
 <div class="site-content" style="background-color: white;">
 <header class="index-header">
     <div class="container home-hearder-container">
-        <div class="row">
-            <div class="col-md-offset-9 col-md-3 col-xs-offset-1 col-xs-11 index-search">
-                <form role="search" method="get" class="form-inline" action=<?php echo get_site_url()?>>
-                    <label>
-                        <input type="search" class="input-little input-round" placeholder="&#xF002; 关键字搜索" style="font-family:Arial, FontAwesome" value="" name="s">
-                    </label>
-                </form>
-            </div>
-        </div>    
+ 
         <div class="row">
             <div class="col-md-6 col-xs-12 home-logo-container">
                 <img src="<?php echo get_template_directory_uri();?>/img/Logo_Version2.svg" class="home-logo"></img>
             </div>
         </div>
-        <?php include 'parts/geo-form-new.php';?>    
+        <div class="row">
+            <div class="col-md-2 col-sm-1 hidden-xs"></div>
+            <div class="col-md-8 col-sm-10 col-xs-12"> 
+                <?php include 'parts/search-form.php';?>     
+            </div>
+        </div>
     </div>
 </header>
 <div class="cate-section container">

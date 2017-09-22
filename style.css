@@ -79,8 +79,6 @@ p{
 
 .home-hearder-container{
 	min-height: 500px;
-	
-    
 }
 @media (max-width: 991px) {
 	.home-hearder-container{
@@ -594,7 +592,33 @@ h2:after {
     border: solid 1px;
     border-color: #d9d9d9;
 }
-
-
-
-
+/*-------- search-form --------*/
+.search-form-container{
+    position: relative;    
+}
+#search-suggestion{
+    max-height: 100px;
+    overflow-y: auto;
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    top: 40px;
+    z-index: 999;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.12);
+}
+.sugg-item:hover{
+    background-color: #F26000;
+}
+.search-item{
+    display: inline-block;
+}
+.auto-map{
+    display: inline-block;
+}
+.search-submit{
+    float: right;
+    left: -40px;
+}

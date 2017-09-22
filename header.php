@@ -37,7 +37,7 @@
             </div>
         </div>
         <div class="second-header row">
-        <div id="geoform-sm" class="col-sm-12 col-xs-12 hidden-md hidden-lg"><?php include 'parts/geo-form-inside.php';?></div>
+        <div id="geoform-sm" class="col-sm-12 col-xs-12 hidden-md hidden-lg"><?php include 'parts/search-form.php';?></div>
         </div>
     </nav>
 </header>
