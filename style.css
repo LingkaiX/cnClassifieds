@@ -497,7 +497,7 @@ h2:after {
     margin-bottom: 10px;
     font-size: 20px;
     background-color: #fff;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 
