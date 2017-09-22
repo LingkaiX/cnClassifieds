@@ -21,7 +21,18 @@
 				} else include 'parts/no-result.php';
 			?>
 		</div>
-		<div class="col-md-3 col-sm-3 col-xs-12"></div>
+		<div class="col-md-3 col-sm-3 col-xs-12">
+			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<!-- cate page ad -->
+			<ins class="adsbygoogle"
+				style="display:block"
+				data-ad-client="ca-pub-9173929910659094"
+				data-ad-slot="8848782100"
+				data-ad-format="auto"></ins>
+			<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+		</div>
 		<div class="clearfix"></div>
 		<div class="listing-pagination col-md-12 col-xs-12">
 			<?php 

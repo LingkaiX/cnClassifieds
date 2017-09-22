@@ -34,7 +34,7 @@ function add_styles_and_scripts() {
 	//wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array('jquery'), '4.0.3', true );
 	//wp_enqueue_script( 'select2-js-cn', get_template_directory_uri() . '/js/i18n/zh-CN.js', array('select2-js'), '4.0.3', true );
 	//wp_enqueue_script( 'layui-js', get_template_directory_uri() . '/layui/layui.js', array(), '2.0.2', true );
-	wp_enqueue_script( 'my-js', get_template_directory_uri() . '/js/myjs.js', array('jquery','layui-js'), '1.0.1', true );
+	wp_enqueue_script( 'my-js', get_template_directory_uri() . '/js/myjs.js', array('jquery'), '1.0.1', true );
 	
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {

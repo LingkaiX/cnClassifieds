@@ -15,5 +15,5 @@
 ?>
 <script type="text/javascript">
     var catesJson = <?php echo json_encode($catesindex) ?>;
-    console.log(catesJson);
+    //console.log(catesJson);
 </script>
