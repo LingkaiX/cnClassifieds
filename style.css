@@ -605,7 +605,7 @@ h2:after {
     position: relative;    
 }
 #search-suggestion{
-    max-height: 100px;
+    max-height: 250px;
     overflow-y: auto;
     position: absolute;
     left: 15px;
