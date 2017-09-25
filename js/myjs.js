@@ -1,9 +1,15 @@
-//layui form 
-// jQuery(document).ready(function($){
-//     layui.use('form', function(){
-//     var form = layui.form; //只有执行了这一步，部分表单元素才会自动修饰成功
-//   }); 
-// }); 
+//登陆的时候header下移
+jQuery(document).ready(function($){
+  console.log('adminh');
+  var h=parseInt($('#wpadminbar').css('height'));
+  if(h){ 
+    console.log(h);
+    var header=$('.first-header');
+    if(header) {
+      header.css('margin-top', h);
+    }
+  }
+}); 
 
 //get geolocation automatically and then append to geoform and category links
 var lat, long;

@@ -34,7 +34,7 @@
         <div id="search-row" style="display:none;"><?php include 'parts/search-form.php'; ?></div>
     </div>
 </header>
-<div style="width:100%;height:50px"></div>
+<div id="for-header" style="width:100%;height:50px"></div>
 
 <script>
 jQuery(document).ready(function($){

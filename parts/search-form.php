@@ -2,7 +2,7 @@
 <div class="row search-form-container">
     <form role="search" method="get" id="search-form" class="search-form" action=<?php echo get_site_url()?>>
         <div class="col-md-6 col-sm-6 col-xs-12" style="position:relative;">
-            <input type="text" id="search-item" class="form-control search-item" placeholder="请输入关键字" autocomplete="off">
+            <input type="text" id="search-item" class="form-control search-item" placeholder="请选择分类或输入关键字" autocomplete="off">
             <div id="search-suggestion"></div>
         </div>
         <div class="col-md-5 col-sm-5 col-xs-10">
@@ -16,18 +16,15 @@
         <input type="hidden" id="geo-long" name="long" value="">
     </form>
 </div>
+<?php include 'catesdom-in-form.php'; ?>
 <script>
-var selectSuggestion,catesDom;
+var catesDom= '<?php echo $catesDom ?>';
+var selectSuggestion;
 jQuery(document).ready(function($){
     selectSuggestion=function(e){
         $("#search-item").val($(e).text());
         $("#search-suggestion").replaceWith( '<div id="search-suggestion"></div>' );
     }
-    catesDom='<div id="search-suggestion">';
-    Object.keys(catesJson).map(function(key){
-        catesDom=catesDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].name+'</p>';
-    });
-    catesDom+='</div>';
 
     function addSuggestion(e){
         var input=$("#search-item").val();

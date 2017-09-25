@@ -94,12 +94,23 @@ function add_geo_filter( $clauses, $query_object ){
 	return $clauses;
 }
 
+$role = get_role( 'author' );
+$role->remove_cap( 'publish_posts' );
+$role->remove_cap( 'delete_published_posts' );
+$role->add_cap('edit_published_posts');
 //根据用户角色向后台添加文件
-// function load_custom_wp_admin_style($hook) {
-// 	if(wp_get_current_user()->roles[0]==''); //add adminjs.js 
-// 	return;
+//  function load_custom_wp_admin_style($hook) {
+// 	 print_r(wp_get_current_user()->roles);
+//  	if(wp_get_current_user()->roles[0]=='author'&&$hook=='post.php') wp_enqueue_script( 'customer-admin-script', get_template_directory_uri() . '/js/customer-admin.js' );
 // }
 // add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
+function load_custom_wp_admin_style() {
+	if(wp_get_current_user()->roles[0]=='author'){
+		wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+		wp_enqueue_style( 'custom_wp_admin_css' );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
 //excerpt: 280 English characters or 140 Chinese characters
 //mb_strimwidth() on ubuntu need 'sudo apt install php-mbstring'
