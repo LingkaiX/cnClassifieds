@@ -413,6 +413,7 @@ a.page-numbers:focus {
     background-color: #fff;
     color: #000;
     word-spacing: 5px;
+    margin-bottom: 10px;
 }
 /* Small phones: from 0 t0 480px */
 @media only screen and (max-width: 480px) {
@@ -496,4 +497,7 @@ a.page-numbers:focus {
 /*-------- ads --------*/
 .cate-ad-container{
     margin-top: 20px;
+}
+.single-page-ad-container{
+    margin-bottom: 10px;
 }
