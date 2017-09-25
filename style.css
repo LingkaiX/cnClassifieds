@@ -149,7 +149,7 @@ a.page-numbers:focus {
 .home-logo{
 	max-width:40%;
 	max-height:40%;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 @media (max-width: 767px) {
     .home-logo{
@@ -457,7 +457,8 @@ a.page-numbers:focus {
 }
 /*-------- search-form --------*/
 .search-form-container{
-    position: relative;    
+    position: relative;
+    margin-top: 120px;
 }
 #search-suggestion{
     max-height: 250px;
@@ -467,9 +468,11 @@ a.page-numbers:focus {
     right: 15px;
     top: 40px;
     z-index: 999;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
     border-radius: 2px;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.12);
     box-shadow: 0 2px 4px rgba(0,0,0,.12);
 }
 .sugg-item:hover{
