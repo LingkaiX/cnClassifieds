@@ -1,3 +1,4 @@
+<!-- 已不再使用 -->
 <footer id="colophon" class="site-footer" role="contentinfo" style="background-color: #F26522;">
 	<div class="container">
 		<div class="row center-content">
