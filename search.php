@@ -1,12 +1,12 @@
 <?php get_header(); ?>
 <div class="container">
-	<div class="row">
+	<!-- <div class="row">
 		<div class="show-search-query col-md-10 col-md-offset-1 col-xs-12">
 			<h4 class="bg-warning">
 				<?php printf( esc_html__( '搜索： %s', 'cnclassifieds' ), '<span>' . get_search_query() . '</span>' ); ?>
 			</h4>
 		</div>
-	</div>
+	</div> -->
 	<div class="row">
 		<div class="col-md-2 hidden-sm hidden-xs">
 			<?php include 'parts/cate-list.php';?>

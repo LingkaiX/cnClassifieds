@@ -1,9 +1,7 @@
 //登陆的时候header下移
 jQuery(document).ready(function($){
-  console.log('adminh');
   var h=parseInt($('#wpadminbar').css('height'));
   if(h){ 
-    console.log(h);
     var header=$('.first-header');
     if(header) {
       header.css('margin-top', h);
@@ -24,7 +22,7 @@ if (navigator.geolocation) {
       //console.log(items[i]);
       items[i].href+="?lat="+lat+"&long="+long;
     }
-    console.log("got geolocation");
+    //console.log("got geolocation");
   },function(error){
     console.log('error:',error);
   });

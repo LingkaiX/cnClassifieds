@@ -18,3 +18,6 @@ label[for=categorydiv-hide], label[for=tagsdiv-post_tag-hide]{
     display: none !important;
 }
 /*---- edit.php for author role ----*/
+.editinline{
+    display: none !important;
+}
