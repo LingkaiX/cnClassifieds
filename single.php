@@ -40,6 +40,20 @@ get_header(); ?>
         <article class="row information ad-information box-round-shadow">
             <?php the_content(); ?>
         </article>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 single-page-ad-container">
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- single page bottom ad -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-9173929910659094"
+                    data-ad-slot="3923311372"
+                    data-ad-format="auto"></ins>
+                <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
         <?php endwhile; ?>
 </main>
 <?php
