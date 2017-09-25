@@ -372,7 +372,7 @@ a.page-numbers:focus {
 /*-------- COMPANY NAME --------*/
 .company-name {
     font-weight: 400;
-    margin-bottom: 10px;
+    margin: 0 -5px 10px -5px;
     font-size: 20px;
     background-color: #fff;
     /*text-transform: uppercase;*/
@@ -397,7 +397,7 @@ a.page-numbers:focus {
 .ad-contact {
     padding-top: 10px;
     background-color: #fff;
-    margin-bottom: 10px;
+    margin: 0 -5px 10px -5px;
     color: #0582d0;
     word-break: break-all;
 }
@@ -413,7 +413,7 @@ a.page-numbers:focus {
     background-color: #fff;
     color: #000;
     word-spacing: 5px;
-    margin-bottom: 10px;
+    margin: 0 -5px 10px -5px;
 }
 /* Small phones: from 0 t0 480px */
 @media only screen and (max-width: 480px) {
