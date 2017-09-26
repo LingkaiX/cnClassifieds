@@ -252,7 +252,11 @@ a.page-numbers:focus {
     line-height: 25px;
     border: none;
     padding: 1px 20px 1px 20px;
-} 
+}
+.selected-item{
+    color: #F26522;
+    font-weight: 900;
+}
 /*-------- result && result list --------*/
 .screen-reader-text{
 	display: none;
@@ -341,12 +345,12 @@ a.page-numbers:focus {
 	margin: 0 20px;
 	font-size: 20px;
 }
-.wpcf7-form label{
+/* .wpcf7-form label{
 	width: 100%;
 }
 .wpcf7-form input[type=submit]{
 	float: right;
-}
+} */
 /* ------------ ICONS ------------------*/
 .icon-small {
     display: inline-block;
