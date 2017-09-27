@@ -3,14 +3,18 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <?php
                 include "cates-index.php";
+                $cateSlug=parsePath($_SERVER['REQUEST_URI'],'category');
+                $subcateSlug=parsePath($_SERVER['REQUEST_URI'],'category',1);
+                $clickId=0;
                 $catecount=0;
                 foreach ($catesindex as $cate){
                     $catecount++;
+                    $clickId=($cateSlug==$cate["slug"])?$catecount:$clickId;
             ?> 
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading<?php echo $catecount?>">
                     <h4 class="panel-title">
-                        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $catecount?>" aria-expanded="false" aria-controls="collapse<?php echo $catecount?>">
+                        <a id="a<?php echo $catecount?>" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $catecount?>" aria-expanded="false" aria-controls="collapse<?php echo $catecount?>">
                             <?php echo $cate["name"]?>
                         </a>
                     </h4>
@@ -19,8 +23,9 @@
                     <div class="panel-body">
                         <?php 
                             foreach($cate["subcates"] as $subcate){
-                                $href=get_site_url()."/category/".$subcate["slug"];
-                                echo '<p><a href="'.$href.'">'.$subcate["name"].'</a></p>';
+                                $href=get_site_url()."/category/".$cate["slug"]."/".$subcate["slug"];
+                                $str= ($subcateSlug==$subcate["slug"])?'class="selected-item"':'';
+                                echo '<p><a href="'.$href.'"'.$str.'>'.$subcate["name"].'</a></p>';
                             }
                         ?> 
                     </div>
@@ -30,3 +35,10 @@
         </div>
     </nav>
 </div>
+<script>
+    var clickId=<?php echo $clickId ?>;
+    console.log('#a'+clickId);
+    jQuery(document).ready(function($){
+        if(clickId) $('#a'+clickId).click();
+    });
+</script>
