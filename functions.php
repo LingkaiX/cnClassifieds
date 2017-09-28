@@ -121,3 +121,22 @@ function chinese_excerpt($text,$lenth=286) {
     return mb_strimwidth($text,0,$lenth,'...','utf-8'); //6 prefix, en * 1, ch * 2
 }
 add_filter('the_excerpt', 'chinese_excerpt');
+
+function my_awesome_func( $data ) {
+	$to = "somebody@example.com";
+	$subject = "My subject";
+	$txt = "Hello world!";
+	$headers = "From: webmaster@example.com" . "\r\n" .
+	"CC: somebodyelse@example.com";
+	mail($to,$subject,$txt,$headers);
+	
+	return  $data['id'].'fgsdgfsde';
+  }
+
+  add_action( 'rest_api_init', function () {
+	register_rest_route( 'myplugin/v1', '/author/(?P<id>\d+)', array(
+	  'methods' => 'GET',
+	  'callback' => 'my_awesome_func',
+	) );
+  } );
+
