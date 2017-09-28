@@ -123,13 +123,13 @@ function chinese_excerpt($text,$lenth=286) {
 add_filter('the_excerpt', 'chinese_excerpt');
 
 function my_awesome_func( $data ) {
-	$to = "somebody@example.com";
+	$to = "lingkai.xu@gmail.com";
 	$subject = "My subject";
 	$txt = "Hello world!";
-	$headers = "From: webmaster@example.com" . "\r\n" .
-	"CC: somebodyelse@example.com";
+	$headers = "From: yoo@auads.com.au" . "\r\n" .
+	"CC: xlk910728@gmail.com";
 	mail($to,$subject,$txt,$headers);
-	
+
 	return  $data['id'].'fgsdgfsde';
   }
 
