@@ -512,6 +512,9 @@ a.page-numbers:focus {
     float: right;
     left: -40px;
 }
+#gmw-cl-form-wrapper{
+    display: none !important;
+}
 /*-------- ads --------*/
 .cate-ad-container{
     margin-top: 20px;

@@ -6,7 +6,7 @@ function parsePath($path, $name, $plus=0){
 	$array=explode('/', trim($path, "/"));
 	if(!in_array($name, $array)) return $value;
 	for($x=0; $x<(count($array)-1); $x++){
-		if($array[$x]==$name){
+		if($array[$x]==$name&&((count($array))>($x+1+$plus))){
 			return $array[$x+1+$plus];
 		}
 	}
