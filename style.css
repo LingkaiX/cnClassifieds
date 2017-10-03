@@ -527,23 +527,81 @@ a.page-numbers:focus {
     display: none;
     z-index: auto;
 }
-
 .enquiry-form-container-open{
     display: block;
-    background-color: rgba(0, 0, 0, 0.1);  
+    background-color: rgba(0, 0, 0, 0.5);  
     z-index: 999;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    overflow:scroll;
+}
+.enquiry-form-content{
+    width: 66%;
+    margin: 0 auto;
+    margin-top: 100px;
+    background-color: #f5f5f5;
+    border: 1px solid #F26522;
 }
 .enquiry-form-header{
-    margin-top: 100px;
-    height: 50px;
+    height: 45px;
     background-color: #F26522;
-
+}
+.enquiry-form-header span{
+    float: left;
+    font-size: 21px;
+    color: white;
+    font-weight: 500;
+    margin-left: 20px;
+}
+.btn-close{
+    float: right;
+    border: 0;
+    background-color: #F26522;
+    margin-right: 10px;
+}
+.enquiry-form-header .fa{
+    font-size: 24px;
+    color: white;
+    margin: 8px 5px;
 }
 .enquiry-form-body{
-    text-align: center;
+    position: relative;
+    margin: 10px;
+}
+.enquiry-form-body label{
+    margin-left: 10%;
+    font-size: 15px;
+}
+.enquiry-form-body .input-text{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+.enquiry-form-body div{
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 6px;
+    text-align: right;
+}
+@media only screen and (max-width: 767px) {
+    .enquiry-form-content{
+        width: 100%;
+        margin-top: 0;
+        height: 100vh;        
+    }
+    .enquiry-form-body .input-text,
+    .enquiry-form-body div{
+        width: 90%;
+    }
+    .enquiry-form-body label{
+        margin-left: 5%;
+    }
+}
+.enquiry-btn{
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
 }
