@@ -522,3 +522,28 @@ a.page-numbers:focus {
 .single-page-ad-container{
     margin-bottom: 10px;
 }
+/*-------- enquiry-form --------*/
+.enquiry-form-container{
+    display: none;
+    z-index: auto;
+}
+
+.enquiry-form-container-open{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.1);  
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.enquiry-form-header{
+    margin-top: 100px;
+    height: 50px;
+    background-color: #F26522;
+
+}
+.enquiry-form-body{
+    text-align: center;
+}

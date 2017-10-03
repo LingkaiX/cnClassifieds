@@ -35,6 +35,7 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
+                    <?php include 'enquiry-form.php'; ?>
                 </div>
             </div>
         </div>

@@ -19,6 +19,7 @@ get_header(); ?>
             <div class="abstract">
                 <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
             </div>
+            <?php include 'parts/enquiry-form.php'; ?>
         </section>
         <section class="row contact-info ad-contact box-round-shadow">
             <div class="ad-contact-small">
