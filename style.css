@@ -608,6 +608,7 @@ a.page-numbers:focus {
 .empty-input{
     border-color: red;
     outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255,51,51,.6);
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(255,51,51,.6);
 }
 /* contact & company information form */
@@ -621,6 +622,7 @@ form.wpcf7-form label {
     color: #fff;
     float: right;
     margin-right: 15%;
+}
 @media only screen and (max-width: 767px) {
     .wpcf7-form-control.wpcf7-submit.btn {
     margin-right: 2.5%;  
