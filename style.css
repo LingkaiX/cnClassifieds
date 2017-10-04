@@ -623,9 +623,9 @@ form.wpcf7-form label {
     margin-right: 15%;
 @media only screen and (max-width: 767px) {
     .wpcf7-form-control.wpcf7-submit.btn {
-    margin-right: 5%;  
+    margin-right: 2.5%;  
     }
     form.wpcf7-form label {
-    width: 90%;
+    width: 95%;
 }
 }
