@@ -10,9 +10,9 @@
                 <div class="col-md-6 col-xs-12" style="margin:10px 0;">
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>关于我们</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>免责声明</span></a>
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>联系我们</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href=" https://auads.com.au/contact-us"><span>联系我们</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>版权声明</span></a>
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>商家服务</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href=" https://auads.com.au/publish-busines"><span>免费发布</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>CONTACT US</span></a>    
                 </div>
             <div class="col-md-3 col-xs-12" style="margin:10px 0;">

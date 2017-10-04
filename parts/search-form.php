@@ -111,7 +111,7 @@ jQuery(document).ready(function($){
             return true;
         }else{
             //提示空行
-            $("#search-item").css("border-color","red");
+            $("#search-item").addClass('empty-input');
             return false;
         }
     });

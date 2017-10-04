@@ -1,5 +1,5 @@
 <!-- muast be used in loop -->
-<?php if(get_post_meta($post->ID,'email-to-business',true)){ ?>
+<?php if(get_post_meta($post->ID,'email-to-business',true)){?>
 <div class="enquiry-form-container" id="<?php echo 'enquiry-form-container-'.$post->ID ?>">
     <div class="enquiry-form-content">
         <div class="enquiry-form-header">
@@ -25,6 +25,18 @@
 
 <script>
         function submitEnquiry(e, id){
+            if(!jQuery('#enquiry-form-container-'+id+' [name="name"]').val()){
+                jQuery('#enquiry-form-container-'+id+' [name="name"]').addClass('empty-input');
+                return false;
+            }
+            if(!jQuery('#enquiry-form-container-'+id+' [name="mail"]').val()){
+                jQuery('#enquiry-form-container-'+id+' [name="mail"]').addClass('empty-input');
+                return false;
+            }
+            if(!jQuery('#enquiry-form-container-'+id+' [name="enquiry"]').val()){
+                jQuery('#enquiry-form-container-'+id+' [name="enquiry"]').addClass('empty-input');
+                return false;
+            }
             jQuery('#enquiry-form-container-'+id).removeClass('enquiry-form-container-open').addClass('enquiry-form-container');
             jQuery.post(jQuery(e).attr('action'), jQuery(e).serialize(), function(response){
                  console.log(response);
