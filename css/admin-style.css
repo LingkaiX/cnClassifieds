@@ -5,3 +5,12 @@
 #excerpt{
     height: 14em;
 }
+
+.gmw-location-section.autocomplete{
+    width: 100%;
+    float: right;
+    display: block !important;
+}
+.gmw-location-section, .gmw-location-section.current-location, .gmw-location-manually-wrappe{
+    display: none;
+}
