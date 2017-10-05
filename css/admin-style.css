@@ -11,6 +11,6 @@
     float: right;
     display: block !important;
 }
-.gmw-location-section, .gmw-location-section.current-location, .gmw-location-manually-wrappe{
+.inside.map, .gmw-location-section.current-location, .inside.gmw-location-manually-wrappe{
     display: none;
 }
