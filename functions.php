@@ -105,9 +105,11 @@ $role->add_cap('edit_published_posts');
 // }
 // add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 function load_custom_wp_admin_style() {
+	wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
+	wp_enqueue_style( 'custom_wp_admin_css' );
 	if(wp_get_current_user()->roles[0]=='author'){
-		wp_register_style( 'custom_wp_admin_css', get_template_directory_uri() . '/css/admin-style.css', false, '1.0.0' );
-		wp_enqueue_style( 'custom_wp_admin_css' );
+		wp_register_style( 'custom_wp_author_css', get_template_directory_uri() . '/css/author-style.css', false, '1.0.0' );
+		wp_enqueue_style( 'custom_wp_author_css' );
 	}
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );

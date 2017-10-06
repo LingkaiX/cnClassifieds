@@ -1,23 +1,16 @@
-/*---- post.php for author role ----*/
-#categorydiv{
-    display: none !important;
+
+.categorydiv div.tabs-panel, .customlinkdiv div.tabs-panel, .posttypediv div.tabs-panel, .taxonomydiv div.tabs-panel, .wp-tab-panel{
+    max-height: 600px;
 }
-#tagsdiv-post_tag{
-    display: none !important;
+#excerpt{
+    height: 14em;
 }
-label[for=categorydiv-hide], label[for=tagsdiv-post_tag-hide]{
-    display: none !important;
-}
-#screen-options-wrap, #screen-options-link-wrap{
-    display: none !important;
-}
-#postexcerpt, #slugdiv{
+
+.gmw-location-section.autocomplete{
+    width: 100%;
+    float: right;
     display: block !important;
 }
-#trackbacksdiv, #postcustom, #commentstatusdiv, #commentsdiv{
-    display: none !important;
-}
-/*---- edit.php for author role ----*/
-.editinline{
-    display: none !important;
+.inside.map, .gmw-location-section.current-location, .inside.gmw-location-manually-wrappe{
+    display: none;
 }
