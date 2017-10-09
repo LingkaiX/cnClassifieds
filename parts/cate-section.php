@@ -20,7 +20,7 @@
                             echo '<div class="col-md-12 hidden-sm hidden-xs sub-item">';
                             foreach($cate["subcates"] as $subcate){
                                 $href=get_site_url()."/category/".$cate["slug"]."/".$subcate["slug"];
-                                echo '<a href="'.$href.'"><p>'.$subcate["name"].'</p></a>';
+                                echo '<a class="needLatAndLong" href="'.$href.'"><p>'.$subcate["name"].'</p></a>';
                             }
                 echo '</div></div></div>';
                 if($catecount%4==0) echo '<div class="clearfix hidden-xs"></div>';    
