@@ -91,7 +91,7 @@ h2:after {
 	padding-top:5px;
 	background-color: #E2E0E3;
     background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0,-0.3)),to(rgba(0, 0, 0, 0.2))),url(img/header-photo.png);
-    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/header-photo.png);
+    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/Header.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
