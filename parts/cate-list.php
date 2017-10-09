@@ -24,8 +24,8 @@
                         <?php 
                             foreach($cate["subcates"] as $subcate){
                                 $href=get_site_url()."/category/".$cate["slug"]."/".$subcate["slug"];
-                                $str= ($subcateSlug==$subcate["slug"])?'class="selected-item"':'';
-                                echo '<p><a class="needLatAndLong" href="'.$href.'"'.$str.'>'.$subcate["name"].'</a></p>';
+                                $str= ($subcateSlug==$subcate["slug"])?'class="selected-item needLatAndLong"':'class="needLatAndLong"';
+                                echo '<p><a href="'.$href.'"'.$str.'>'.$subcate["name"].'</a></p>';
                             }
                         ?> 
                     </div>
