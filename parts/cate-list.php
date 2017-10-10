@@ -24,7 +24,7 @@
                         <?php 
                             foreach($cate["subcates"] as $subcate){
                                 $href=get_site_url()."/category/".$cate["slug"]."/".$subcate["slug"];
-                                $str= ($subcateSlug==$subcate["slug"])?'class="selected-item"':'';
+                                $str= ($subcateSlug==$subcate["slug"])?'class="selected-item needLatAndLong"':'class="needLatAndLong"';
                                 echo '<p><a href="'.$href.'"'.$str.'>'.$subcate["name"].'</a></p>';
                             }
                         ?> 
@@ -37,7 +37,7 @@
 </div>
 <script>
     var clickId=<?php echo $clickId ?>;
-    console.log('#a'+clickId);
+    //console.log('#a'+clickId);
     jQuery(document).ready(function($){
         if(clickId) $('#a'+clickId).click();
     });
