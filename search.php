@@ -38,8 +38,8 @@
 			<?php 
 				the_posts_pagination( array(
 					'mid_size' => 1,
-					'prev_text' => __( '<<<', 'h' ),
-					'next_text' => __( '>>>', 'q' ),
+					'prev_text' => __( '<<', 'h' ),
+					'next_text' => __( '>>', 'q' ),
 				)); 
 			?> 
 		</div>
