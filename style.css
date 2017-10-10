@@ -177,6 +177,8 @@ a.page-numbers:focus {
 .cate-row h4{
 	margin: 15px -15px;
 	font-size: 18px;
+    font-weight: bold;
+    word-spacing: 3px;
 }
 .cate-section{
     margin-bottom: -30px;
