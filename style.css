@@ -501,7 +501,8 @@ a.page-numbers:focus {
     margin-bottom: 0;
 }
 .search-item{
-    display: inline-block; 
+    display: inline-block;
+    height: 40px;
 }
 @media only screen and (max-width: 767px) {
     .search-item{
@@ -510,10 +511,12 @@ a.page-numbers:focus {
 }
 .auto-map{
     display: inline-block;
+    height: 40px;
 }
 .search-submit{
     float: right;
     left: -40px;
+    font-size: larger;
 }
 #gmw-cl-form-wrapper{
     display: none !important;
