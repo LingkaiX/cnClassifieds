@@ -300,7 +300,7 @@ a.page-numbers:focus {
 }
 .listed-decoration{
 	height: 25px;
-	margin:0 10px;
+    margin-right: 10px;
     float: left;
 }
 .listed-contact p{
