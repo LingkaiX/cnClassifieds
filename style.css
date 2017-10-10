@@ -596,6 +596,13 @@ a.page-numbers:focus {
 .enquiry-btn {
     background-color: #F26522;
     color: #fff;
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+.enquiry-btn:hover {
+    color: #fff;
+    background-color: rgba(242, 101, 34, 0.75);
 }
 @media only screen and (max-width: 767px) {
     .enquiry-form-content{
@@ -610,11 +617,6 @@ a.page-numbers:focus {
     .enquiry-form-body label{
         margin-left: 5%;
     }
-}
-.enquiry-btn{
-    float: right;
-    margin-right: 20px;
-    margin-bottom: 10px;
 }
 .empty-input{
     border-color: red;
