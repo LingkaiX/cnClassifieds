@@ -292,17 +292,13 @@ a.page-numbers:focus {
     position: relative;
 }
 .listed-header .entry-title{
-<<<<<<< HEAD
-	margin-top: 5px;
-    font-weight: bold;
-=======
     float: left;
     margin-top: 5px;
+    font-weight: bold;
 }
 .listed-header .en-title{
     float: left;
     margin-top: 5px;
->>>>>>> e46f18f90ad7719d1e09ba75e3d504892facf5a1
 }
 .listed-decoration{
 	height: 25px;
