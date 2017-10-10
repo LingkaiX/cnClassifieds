@@ -179,7 +179,7 @@ a.page-numbers:focus {
 	margin: 15px -15px;
 	font-size: 18px;
     font-weight: bold;
-    word-spacing: 3px;
+    letter-spacing: 2px;
 }
 .cate-section{
     margin-bottom: -30px;
