@@ -12,6 +12,11 @@ function parsePath($path, $name, $plus=0){
 	}
 	return $value;
 }
+//去掉网址中的http://或https://
+function removeScheme($url){
+	$pieces = explode("://", $url);
+	return count($pieces)>1?$pieces[1]:'';
+}
 //search只搜索post
 function SearchFilter($query) {
 	if ($query->is_search) {

@@ -7,7 +7,11 @@ get_header(); ?>
     <?php while (have_posts()) : the_post(); ?>
         <section class="row company-name box-round-shadow">
             <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
-            <?php the_title( '<h3 class="title">', '</h3>' ); ?>
+            <?php
+                the_title( '<h3 class="title">', '</h3>' ); 
+                $enTitle=get_post_meta($post->ID,'title-en',true);
+                if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';  
+            ?>
             <div class="tag">
                 <i class="fa fa-tags icon" aria-hidden="true"></i>
                 <?php 
