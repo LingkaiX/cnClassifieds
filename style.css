@@ -382,10 +382,14 @@ a.page-numbers:focus {
     margin: 0 auto;
 }
 @media (max-width: 767px) {
-    width: 90%;
+    .main-company-information {
+        width: 90%;
+    }   
 }
 @media (max-width: 480px) {
-    width:100%;
+    .main-company-information {
+        width: 100%;
+    }
 }
 /* ------------ LOGO ------------------*/
 .logo {
