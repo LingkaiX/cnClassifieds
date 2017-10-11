@@ -51,6 +51,10 @@ h2:after {
     top: 0;
     z-index: 100;
 }
+.search-form-box {
+    height: 100px;
+    background-color: rgba(247, 148, 29, 0.8);
+}
 .first-header{
     min-height: 40px;
     text-align: center;
