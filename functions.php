@@ -71,6 +71,19 @@ remove_action('wp_head', 'wp_generator');
 //filter posts by geolocations (lat and long) within 60km-far
 add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
 function add_geo_filter( $clauses, $query_object ){
+	if(is_search()&&isset($_GET['s'])){
+		global $wpdb;
+		
+		$join = &$clauses['join'];
+		if (! empty( $join ) ) $join .= ' ';
+		$join .= "JOIN wp_postmeta PM ON PM.post_id = wp_posts.ID";
+
+		$clauses['where'] = sprintf(
+			" AND ( %s OR %s ) ",
+			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%')", $_GET['s']),
+			mb_substr( $clauses['where'], 5, mb_strlen( $clauses['where'] ) )
+		);
+	}
 	if(isset($_GET['lat'])&&isset($_GET['long'])){
 		$lat=$_GET['lat'];
 		$long=$_GET['long'];
