@@ -376,6 +376,10 @@ a.page-numbers:focus {
     margin-right: 10px;
     line-height: 25px;
 }
+/* ------------ third page ------------------*/
+.main-company-information {
+    width: 66%;
+}
 /* ------------ LOGO ------------------*/
 .logo {
     max-width: 175px;

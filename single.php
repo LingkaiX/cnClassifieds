@@ -4,6 +4,7 @@
  */
 get_header(); ?>
 <main id="main" class="site-main container" role="main">
+    <div class="main-company-information">
     <?php while (have_posts()) : the_post(); ?>
         <section class="row company-name box-round-shadow">
             <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
@@ -60,6 +61,7 @@ get_header(); ?>
             </div>
         </div>
         <?php endwhile; ?>
+    </div>
 </main>
 <?php
 //get_sidebar();
