@@ -18,7 +18,7 @@ p{
 	word-break: break-all; 
 }
 .fa{
-	color:#F26420;
+	color:#fff;
     font-size: initial;
 }
 h2:after {
@@ -50,6 +50,10 @@ h2:after {
     right: 0;
     top: 0;
     z-index: 100;
+}
+.search-form-box {
+    height: 100px;
+    background-color: rgba(247, 148, 29, 0.8);
 }
 .first-header{
     min-height: 40px;
@@ -91,8 +95,8 @@ h2:after {
 .index-header{
 	padding-top:5px;
 	background-color: #E2E0E3;
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0,-0.3)),to(rgba(0, 0, 0, 0.2))),url(img/Header.png);
-    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/Header.png);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0,-0.3)),to(rgba(0, 0, 0, 0.2))),url(img/background-2.png);
+    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/background-2.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -493,7 +497,7 @@ a.page-numbers:focus {
 .search-form-container{
     position: relative;
     margin-bottom: 5px;
-    margin-top: 5px;
+    margin-top: 27px;
 }
 #search-suggestion{
     max-height: 250px;
@@ -521,6 +525,8 @@ a.page-numbers:focus {
 .search-item{
     display: inline-block;
     height: 40px;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
 }
 @media only screen and (max-width: 767px) {
     .search-item{
@@ -530,11 +536,21 @@ a.page-numbers:focus {
 .auto-map{
     display: inline-block;
     height: 40px;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
 }
 .search-submit{
     float: right;
     left: -40px;
     font-size: larger;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #F26522;
+    color: #fff;
+    border-color: #F26522;
 }
 #gmw-cl-form-wrapper{
     display: none !important;
