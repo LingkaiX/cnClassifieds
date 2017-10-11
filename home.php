@@ -44,4 +44,4 @@
 </div>
 <?php get_footer(); ?>
 
-
+<?php include 'parts/subscribe-message.php';?>
