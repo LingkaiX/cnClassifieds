@@ -378,7 +378,14 @@ a.page-numbers:focus {
 }
 /* ------------ third page ------------------*/
 .main-company-information {
-    width: 66%;
+    width: 75%;
+    margin: 0 auto;
+}
+@media (max-width: 767px) {
+    width: 90%;
+}
+@media (max-width: 480px) {
+    width:100%;
 }
 /* ------------ LOGO ------------------*/
 .logo {
