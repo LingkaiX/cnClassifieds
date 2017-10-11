@@ -39,7 +39,7 @@
             }
             jQuery('#enquiry-form-container-'+id).removeClass('enquiry-form-container-open').addClass('enquiry-form-container');
             jQuery.post(jQuery(e).attr('action'), jQuery(e).serialize(), function(response){
-                 console.log(response);
+                 //console.log(response);
             });
             //console.log(e);
             jQuery('#enquiry-btn-'+id).html('已发送');
