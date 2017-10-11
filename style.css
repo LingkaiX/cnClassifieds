@@ -497,7 +497,7 @@ a.page-numbers:focus {
 .search-form-container{
     position: relative;
     margin-bottom: 5px;
-    margin-top: 5px;
+    margin-top: 27px;
 }
 #search-suggestion{
     max-height: 250px;
