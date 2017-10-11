@@ -545,6 +545,12 @@ a.page-numbers:focus {
     font-size: larger;
     -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    background-color: #F26522;
+    color: #fff;
+    border-color: #F26522;
 }
 #gmw-cl-form-wrapper{
     display: none !important;
