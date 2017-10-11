@@ -32,7 +32,7 @@
         </div>
         <div class="row">
             <div class="col-md-2 col-sm-1 hidden-xs"></div>
-            <div class="col-md-8 col-sm-10 col-xs-12"> 
+            <div class="col-md-8 col-sm-10 col-xs-12 search-form-box"> 
                 <?php include 'parts/search-form.php';?>     
             </div>
         </div>
