@@ -55,6 +55,7 @@ h2:after {
     height: 100px;
     background-color: rgba(247, 148, 29, 0.8);
 }
+
 .first-header{
     min-height: 40px;
     text-align: center;
@@ -166,7 +167,10 @@ a.page-numbers:focus {
 		display: block;
         margin: 0 auto;
     }
-    .search-form-box {height: 145px;}
+    .search-form-box {
+        height: 145px;
+        background-color: rgba(0, 0, 0, 0.0);
+    }
 }
 .home-logo-container{
 	margin-bottom: 40px;
