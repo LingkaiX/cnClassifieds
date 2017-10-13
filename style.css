@@ -173,6 +173,10 @@ a.page-numbers:focus {
     .search-form-box {
         height: 145px;
         background-color: rgba(0, 0, 0, 0.0);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 90%;
+        margin-left: 5%;
     }
 }
 .home-logo-container{
