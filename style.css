@@ -533,8 +533,8 @@ a.page-numbers:focus {
 .search-item{
     display: inline-block;
     height: 40px;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 767px) {
     .search-item{
@@ -544,8 +544,8 @@ a.page-numbers:focus {
 .auto-map{
     display: inline-block;
     height: 40px;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
 }
 .search-submit{
     float: right;
