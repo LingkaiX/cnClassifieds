@@ -1,3 +1,3 @@
 # cnclassifieds
 
-from Justina.....
+By Simon, Sophia and Justina
