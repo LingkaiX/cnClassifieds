@@ -554,14 +554,18 @@ a.page-numbers:focus {
     float: right;
     left: -40px;
     font-size: larger;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
     padding: 0px;
     width: 40px;
     height: 40px;
     background-color: #F26522;
     color: #fff;
     border-color: #F26522;
+}
+.search-submit:hover {
+    background-color: rgba(242, 101, 34, 0.8);
+    border-color: rgba(242, 101, 34, 0.8);
 }
 #gmw-cl-form-wrapper{
     display: none !important;
