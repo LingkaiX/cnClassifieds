@@ -10,12 +10,14 @@
                         $img=get_the_post_thumbnail( null, 'full', ['class' => 'listed-logo', 'title' => 'Logo'] );
                         $enTitle=get_post_meta($post->ID,'title-en',true); 
                         if($img!=null){
-                            the_title( '<h4 class="entry-title" style="margin-right: 200px;"><a href="'.get_permalink().'">', '</a></h4>' );                                               
-                            echo $img;                            
-                            if($enTitle) echo '<h5 class="en-title" style="margin-right: 200px;">'.$enTitle.'</h5>';  
+                            echo $img;
+                            echo '<div style="margin-right: 200px;">';
+                            the_title( '<h4 class="entry-title" ><a href="'.get_permalink().'">', '</a></h4>' );                                                                                                    
+                            if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';
+                            echo '</div>';
                         }else{
                             the_title( '<h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4>' );                                               
-                            if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';  
+                            if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>'; 
                         }                    
   
                         //the_title( '<div class="col-md-12 col-xs-12"><h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4></div>' );                       

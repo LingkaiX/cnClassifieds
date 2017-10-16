@@ -311,12 +311,10 @@ a.page-numbers:focus {
     position: relative;
 }
 .listed-header .entry-title{
-    float: left;
     margin-top: 5px;
     font-weight: bold;
 }
 .listed-header .en-title{
-    float: left;
     margin-top: 5px;
 }
 .listed-decoration{
