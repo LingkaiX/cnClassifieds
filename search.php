@@ -3,7 +3,9 @@
 	<!-- <div class="row">
 		<div class="show-search-query col-md-10 col-md-offset-1 col-xs-12">
 			<h4 class="bg-warning">
-				<?php print_r($wp_query); printf( esc_html__( '搜索： %s', 'cnclassifieds' ), '<span>' . get_search_query() . '</span>' ); ?>
+				<?php 
+				//print_r($wp_query); 
+				printf( esc_html__( '搜索： %s', 'cnclassifieds' ), '<span>' . get_search_query() . '</span>' ); ?>
 			</h4>
 		</div>
 	</div> -->
