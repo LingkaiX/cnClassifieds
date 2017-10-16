@@ -71,6 +71,10 @@ remove_action('wp_head', 'wp_generator');
 //filter posts by geolocations (lat and long) within 60km-far
 add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
 function add_geo_filter( $clauses, $query_object ){
+	$join = &$clauses['join'];
+	if (! empty( $join ) ) $join .= ' ';
+	$join .= "JOIN wp_places_locator PL ON PL.post_id = wp_posts.ID";
+
 	if(is_search()&&isset($_GET['s'])){
 		global $wpdb;
 		
@@ -80,7 +84,7 @@ function add_geo_filter( $clauses, $query_object ){
 
 		$clauses['where'] = sprintf(
 			" AND ( %s OR %s ) ",
-			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%')", $_GET['s']),
+			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%') OR (PL.phone like '%%%s%%')", $_GET['s']),
 			mb_substr( $clauses['where'], 5, mb_strlen( $clauses['where'] ) )
 		);
 	}
@@ -88,9 +92,6 @@ function add_geo_filter( $clauses, $query_object ){
 		$lat=$_GET['lat'];
 		$long=$_GET['long'];
 		if($lat&&$long){
-			$join = &$clauses['join'];
-			if (! empty( $join ) ) $join .= ' ';
-			$join .= "JOIN wp_places_locator PL ON PL.post_id = wp_posts.ID";
 		
 			$fields = &$clauses['fields'];
 			$fields .= ", ROUND( 6371 * acos( cos( radians( {$lat} ) ) * cos( radians( PL.lat ) ) * cos( radians( PL.long ) - radians( {$long} ) ) + sin( radians( {$lat} ) ) * sin( radians( PL.lat) ) ),1 ) AS distance";
