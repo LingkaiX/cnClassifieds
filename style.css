@@ -19,7 +19,7 @@ p{
 }
 .fa{
 	color:#fff;
-    font-size: initial;
+    font-size: large;
 }
 h2:after {
     display: block;
@@ -52,8 +52,11 @@ h2:after {
     z-index: 100;
 }
 .search-form-box {
-    height: 100px;
-    background-color: rgba(247, 148, 29, 0.8);
+    height: 95px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
 .first-header{
@@ -96,8 +99,8 @@ h2:after {
 .index-header{
 	padding-top:5px;
 	background-color: #E2E0E3;
-    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0,-0.3)),to(rgba(0, 0, 0, 0.2))),url(img/background-2.png);
-    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/background-2.png);
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0, 0, 0,-0.3)),to(rgba(0, 0, 0, 0.2))),url(img/backgroud-1.png);
+    background-image: linear-gradient(rgba(0, 0, 0,-0.3),rgba(0, 0, 0, 0.2)),url(img/backgroud-1.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -119,7 +122,7 @@ h2:after {
 	}
 }
 .site-footer{
-	background-color: #333;
+	background-color: #333333;
 	color: white;
 	padding-top: 20px;
 	margin-top: -122px;
@@ -170,6 +173,10 @@ a.page-numbers:focus {
     .search-form-box {
         height: 145px;
         background-color: rgba(0, 0, 0, 0.0);
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 90%;
+        margin-left: 5%;
     }
 }
 .home-logo-container{
@@ -533,8 +540,8 @@ a.page-numbers:focus {
 .search-item{
     display: inline-block;
     height: 40px;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
 }
 @media only screen and (max-width: 767px) {
     .search-item{
@@ -544,21 +551,25 @@ a.page-numbers:focus {
 .auto-map{
     display: inline-block;
     height: 40px;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
 }
 .search-submit{
     float: right;
     left: -40px;
     font-size: larger;
-    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
-    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.5);
     padding: 0px;
     width: 40px;
     height: 40px;
     background-color: #F26522;
     color: #fff;
     border-color: #F26522;
+}
+.search-submit:hover {
+    background-color: rgba(242, 101, 34, 0.8);
+    border-color: rgba(242, 101, 34, 0.8);
 }
 #gmw-cl-form-wrapper{
     display: none !important;
@@ -676,6 +687,7 @@ form.wpcf7-form label {
     color: #fff;
     float: right;
     margin-right: 15%;
+    margin-bottom: 10px;
 }
 @media only screen and (max-width: 767px) {
     .wpcf7-form-control.wpcf7-submit.btn {
