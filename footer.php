@@ -11,7 +11,7 @@
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>关于我们</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>免责声明</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href=" https://auads.com.au/contact-us"><span>联系我们</span></a>
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>版权声明</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj"><span>订阅邮件</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href=" https://auads.com.au/publish-busines"><span>免费发布</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>CONTACT US</span></a>    
                 </div>
@@ -41,3 +41,6 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+
+<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"1665e4aa7ceb3a6e717fe90ab","lid":"0ebc78af25"}) })</script>
