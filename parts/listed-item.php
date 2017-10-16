@@ -11,7 +11,7 @@
                         $enTitle=get_post_meta($post->ID,'title-en',true); 
                         if($img!=null){
                             echo $img;
-                            echo '<div style="margin-right: 200px;">';
+                            echo '<div>';
                             the_title( '<h4 class="entry-title" ><a href="'.get_permalink().'">', '</a></h4>' );                                                                                                    
                             if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';
                             echo '</div>';
