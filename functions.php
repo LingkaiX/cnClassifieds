@@ -83,8 +83,9 @@ function add_geo_filter( $clauses, $query_object ){
 		$join .= "JOIN wp_postmeta PM ON PM.post_id = wp_posts.ID";
 
 		$clauses['where'] = sprintf(
-			" AND ( %s OR %s ) ",
-			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%') OR (PL.phone like '%%%s%%')", $_GET['s']),
+			" AND ( %s OR %s OR %s) ",
+			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%')", $_GET['s']),
+			$wpdb->prepare( "(PL.phone like '%%%s%%')", $_GET['s']),
 			mb_substr( $clauses['where'], 5, mb_strlen( $clauses['where'] ) )
 		);
 	}
