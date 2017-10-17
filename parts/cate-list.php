@@ -14,10 +14,9 @@
             <div class="panel panel-default">
                 <div class="panel-heading" role="tab" id="heading<?php echo $catecount?>">
                     <h4 class="panel-title">
-                        <a id="a<?php echo $catecount?>" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $catecount?>" aria-expanded="false" aria-controls="collapse<?php echo $catecount?>">
-                            <?php echo $cate["name"]?>
-                        </a>
-                        
+                        <a id="a<?php echo $catecount?>" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 
+                            href="#collapse<?php echo $catecount?>" aria-expanded="false" aria-controls="collapse<?php echo $catecount?>"></a>
+                        <a class="needLatAndLong" href="<?php echo get_site_url()."/category/".$cate["slug"]?>"><?php echo $cate["name"]?></a>
                     </h4>
                 </div>
                 <div id="collapse<?php echo $catecount?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $catecount?>">

@@ -6,7 +6,7 @@
 		</div>
 		<main class="col-md-7 col-sm-9 col-xs-12"> <!-- listing box-->
 			<?php
-			//print_r($wp_query); 
+				//print_r($wp_query); 
 				if ( have_posts() ) : 
 					while ( have_posts() ) : 
 						the_post();
@@ -19,7 +19,7 @@
 			<div id="app">
 				<ol>
 					<li v-for="result in results">
-					<a v-bind:href="result.link" target="_blank" rel="nofollow">{{ result.title.rendered }}</a>
+					<a v-bind:href="result.link" target="_blank" rel="nofollow">{{ decodeHtml(result.title.rendered) }}</a>
 					</li>
 				</ol>
 			</div>
@@ -50,16 +50,64 @@
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://unpkg.com/vue"></script>
 <script>
+(function(window){
+	window.htmlentities = {
+		/**
+		 * Converts a string to its html characters completely.
+		 *
+		 * @param {String} str String with unescaped HTML characters
+		 **/
+		encode : function(str) {
+			var buf = [];
+			
+			for (var i=str.length-1;i>=0;i--) {
+				buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+			}
+			
+			return buf.join('');
+		},
+		/**
+		 * Converts an html characterSet into its original character.
+		 *
+		 * @param {String} str htmlSet entities
+		 **/
+		decode : function(str) {
+			return str.replace(/&#(\d+);/g, function(match, dec) {
+				return String.fromCharCode(dec);
+			});
+		}
+	};
+})(window);
+
 	var app = new Vue({
 		el: '#app',
 		data: {
 			results: []
 		},
+		methods: {
+			decodeHtml: function (html) {
+				var txt = document.createElement("textarea");
+				txt.innerHTML = html;
+				return txt.value;
+			},
+			encode: function(str) {
+				var buf = [];				
+				for (var i=str.length-1;i>=0;i--) {
+					buf.unshift(['&#', str[i].charCodeAt(), ';'].join(''));
+				}				
+				return buf.join('');
+			},
+			decode: function(str) {
+				return str.replace(/&#(\d+);/g, function(match, dec) { return String.fromCharCode(dec);});
+			}
+		},
 		mounted() {
 			axios.get("https://www.auliving.com.au/wp-json/wp/v2/posts")
-			.then(response => {this.results = response.data})
+			.then(response => {this.results =response.data})
+			//.then(response => {this.results = JSON.parse(htmlentities.decode(JSON.stringify(response.data)))})
 			
 		}
+
 	});
 </script>
 
