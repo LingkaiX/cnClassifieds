@@ -317,7 +317,10 @@ a.page-numbers:focus {
 }
 .listed-header .en-title{
     float: left;
-    margin-top: 5px;
+    color: #337ab7;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 0;
 }
 .listed-decoration{
 	height: 25px;
