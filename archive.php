@@ -16,6 +16,13 @@
 			?>
 		</main>
 		<div class="col-md-3 col-sm-3 col-xs-12 cate-ad-container">
+			<div id="app">
+				<ol>
+					<li v-for="result in results">
+					<a v-bind:href="result.link" target="_blank" rel="nofollow">{{ result.title.rendered }}</a>
+					</li>
+				</ol>
+			</div>
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- cate page ad -->
 			<ins class="adsbygoogle"
@@ -40,5 +47,20 @@
 		</div>
 	</div>
 </div>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script>
+	var app = new Vue({
+		el: '#app',
+		data: {
+			results: []
+		},
+		mounted() {
+			axios.get("https://www.auliving.com.au/wp-json/wp/v2/posts")
+			.then(response => {this.results = response.data})
+			
+		}
+	});
+</script>
 
 <?php get_footer(); ?>

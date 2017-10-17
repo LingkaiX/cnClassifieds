@@ -17,6 +17,7 @@
                         <a id="a<?php echo $catecount?>" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse<?php echo $catecount?>" aria-expanded="false" aria-controls="collapse<?php echo $catecount?>">
                             <?php echo $cate["name"]?>
                         </a>
+                        
                     </h4>
                 </div>
                 <div id="collapse<?php echo $catecount?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $catecount?>">

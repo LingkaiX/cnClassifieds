@@ -34,7 +34,7 @@
                 array("name"=>"砍树修树","slug"=>"arborist"),
                 array("name"=>"杀虫灭鼠","slug"=>"pest-control"),
                 array("name"=>"电器维修","slug"=>"electrical-maintenance"),
-                array("name"=>"监控安防","slug"=>"surveillance-and-alarms"),
+                //array("name"=>"监控安防","slug"=>"surveillance-and-alarms"),
                 array("name"=>"装锁开锁","slug"=>"lock-smith"),
                 array("name"=>"家居家具","slug"=>"furniture"),
                 array("name"=>"家用电器","slug"=>"electronics-appliances"),
