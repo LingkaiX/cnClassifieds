@@ -69,7 +69,7 @@ add_theme_support( 'title-tag' );
 remove_action('wp_head', 'wp_generator');
 
 //filter posts by geolocations (lat and long) within 60km-far
-//add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
+add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
 function add_geo_filter( $clauses, $query_object ){
 	$join = &$clauses['join'];
 	if (! empty( $join ) ) $join .= ' ';
