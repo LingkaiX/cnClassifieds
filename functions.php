@@ -71,6 +71,8 @@ remove_action('wp_head', 'wp_generator');
 //filter posts by geolocations (lat and long) within 60km-far
 add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
 function add_geo_filter( $clauses, $query_object ){
+
+if(!is_admin()){
 	if((isset($_GET['lat'])&&isset($_GET['long'])) || is_search()){
 		$join = &$clauses['join'];
 		if (! empty( $join ) ) $join .= ' ';
@@ -114,6 +116,7 @@ function add_geo_filter( $clauses, $query_object ){
 			//$groupby = "wp_posts.ID HAVING distance <= '60' OR distance IS NULL";
 		}
 	}
+}
 	return $clauses;
 }
 
