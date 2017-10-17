@@ -323,6 +323,11 @@ a.page-numbers:focus {
     font-weight: bold;
 }
 .listed-header .en-title{
+    float: left;
+    color: #056dc6;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 0;
     margin-top: 5px;
 }
 .listed-decoration{
