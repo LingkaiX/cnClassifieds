@@ -71,10 +71,13 @@ remove_action('wp_head', 'wp_generator');
 //filter posts by geolocations (lat and long) within 60km-far
 add_filter( 'posts_clauses', 'add_geo_filter', 10, 2 );
 function add_geo_filter( $clauses, $query_object ){
-	$join = &$clauses['join'];
-	if (! empty( $join ) ) $join .= ' ';
-	$join .= "JOIN wp_places_locator PL ON PL.post_id = wp_posts.ID";
+	if((isset($_GET['lat'])&&isset($_GET['long'])) || is_search()){
+		$join = &$clauses['join'];
+		if (! empty( $join ) ) $join .= ' ';
+		$join .= "JOIN wp_places_locator PL ON PL.post_id = wp_posts.ID";	
+	}
 
+	//Add en-title and phone into search result
 	if(is_search()&&isset($_GET['s'])){
 		global $wpdb;
 		
