@@ -322,6 +322,9 @@ a.page-numbers:focus {
     margin-top: 5px;
     font-weight: bold;
 }
+.entry-title a {
+    color: #124ea0;
+}
 .listed-header .en-title{
     float: left;
     color: #056dc6;
