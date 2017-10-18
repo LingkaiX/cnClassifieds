@@ -17,11 +17,11 @@
 		</main>
 		<div class="col-md-3 col-sm-3 col-xs-12 cate-ad-container">
 			<div id="app">
-				<ol>
+				<ul>
 					<li v-for="result in results">
 					<a v-bind:href="result.link" target="_blank" rel="nofollow">{{ decodeHtml(result.title.rendered) }}</a>
 					</li>
-				</ol>
+				</ul>
 			</div>
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- cate page ad -->
@@ -39,8 +39,8 @@
 			<?php 
 				the_posts_pagination( array(
 					'mid_size' => 1,
-					'prev_text' => __( '<<', 'Prev' ),
-					'next_text' => __( '>>', 'Next' ),
+					'prev_text' => __( '<', 'Prev' ),
+					'next_text' => __( '>', 'Next' ),
 					'screen_reader_text' => '这你也能找到？',
 				)); 
 			?> 
@@ -102,7 +102,7 @@
 			}
 		},
 		mounted() {
-			axios.get("https://www.auliving.com.au/wp-json/wp/v2/posts")
+			axios.get("https://www.auliving.com.au/wp-json/wp/v2/posts?per_page=5")
 			.then(response => {this.results =response.data})
 			//.then(response => {this.results = JSON.parse(htmlentities.decode(JSON.stringify(response.data)))})
 			
