@@ -22,7 +22,7 @@
 			</div>
 			<div id="app">
 
-				<div class="linkToAuliving" v-for="result in results">
+				<div class="linkToAuliving" v-for="result in results"  v-cloak>
 					<a v-bind:href="result.link" target="_blank" rel="nofollow">{{ decodeHtml(result.title.rendered) }}</a>
 				</div>
 			</div>
@@ -51,7 +51,7 @@
 	</div>
 </div>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-<script src="https://unpkg.com/vue"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.1/vue.min.js"></script>
 <script>
 (function(window){
 	window.htmlentities = {

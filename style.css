@@ -748,3 +748,7 @@ form.wpcf7-form label {
     overflow: hidden;
     margin-top: 2px;
 }
+
+[v-cloak] {
+    display: none;
+  }
