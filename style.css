@@ -321,6 +321,7 @@ a.page-numbers:focus {
 .listed-header .entry-title{
     margin-top: 5px;
     font-weight: bold;
+    color: #124ea0;
 }
 .listed-header .en-title{
     float: left;
