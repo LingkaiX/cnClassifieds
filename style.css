@@ -708,3 +708,40 @@ form.wpcf7-form label {
     width: 95%;
 }
 }
+
+/* article list on right sidebar */
+#app{
+    box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 4px solid #F26522;
+}
+#app .linkToAuliving {
+    border-bottom: 1px solid #e2e2e2;
+    padding: 4px 0;
+}
+#app a {
+    color: dimgray;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    padding-bottom: 4px;
+}
+.widget-top {
+    padding: 8px 0;
+}
+.widget-top h6 {
+    float: left;
+    margin-right: 10px;
+    font-size: 17px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+}
+.stripe-line {
+    background: url(https://www.auliving.com.au/wp-content/themes/sahifa/images/stripe.png);
+    height: 12px;
+    overflow: hidden;
+    margin-top: 2px;
+}

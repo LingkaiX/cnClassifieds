@@ -16,12 +16,15 @@
 			?>
 		</main>
 		<div class="col-md-3 col-sm-3 col-xs-12 cate-ad-container">
+			<div class="widget-top">
+				<h6>文章推荐</h6>
+				<div class="stripe-line"></div>
+			</div>
 			<div id="app">
-				<ul>
-					<li v-for="result in results">
+
+				<div class="linkToAuliving" v-for="result in results">
 					<a v-bind:href="result.link" target="_blank" rel="nofollow">{{ decodeHtml(result.title.rendered) }}</a>
-					</li>
-				</ul>
+				</div>
 			</div>
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- cate page ad -->
