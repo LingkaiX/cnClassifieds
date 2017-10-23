@@ -13,7 +13,7 @@
 		<div class="col-md-2 hidden-sm hidden-xs">
 			<?php include 'parts/cate-list.php';?>
 		</div>
-		<div class="col-md-7 col-sm-9 col-xs-12"> <!-- listing box-->
+		<main class="col-md-7 col-sm-9 col-xs-12"> <!-- listing box-->
 			<?php 
 				if ( have_posts() ){
 					while ( have_posts() ) : 
@@ -22,7 +22,7 @@
 					endwhile;
 				} else include 'parts/no-result.php';
 			?>
-		</div>
+		</main>
 		<div class="col-md-3 col-sm-3 col-xs-12 cate-ad-container">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- cate page ad -->
