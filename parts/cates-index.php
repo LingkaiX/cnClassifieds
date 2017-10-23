@@ -19,6 +19,7 @@
                 array("name"=>"围栏门窗","slug"=>"fencing-and-gate"),
                 array("name"=>"窗帘百页窗","slug"=>"curtain"),
                 array("name"=>"太阳能","slug"=>"solar-energy"),
+                array("name"=>"水泥工程","slug"=>"cement-works"),
             ),
         ),
         array(
@@ -69,6 +70,8 @@
                 array("name"=>"验光配镜","slug"=>"optometrist"),
                 array("name"=>"西医药房","slug"=>"pharmacy"),
                 array("name"=>"医疗保险","slug"=>"health-insurance"),
+                array("name"=>"护理养老院","slug"=>"nursing-homes"),
+                array("name"=>"药房保健品","slug"=>"pharmacy-and-health-products"),
             ),
         ),
         array(
@@ -120,9 +123,11 @@
             "subcates"=>array(
                 array("name"=>"招牌广告","slug"=>"signage-and-banners"),
                 array("name"=>"名片印刷","slug"=>"business-cards-and-stationery-printing"),
+                array("name"=>"制服商标","slug"=>"uniforms-and-signs-and-logos"),
                 array("name"=>"物流仓储","slug"=>"logistics-and-storage"),
                 array("name"=>"报关通关","slug"=>"customs-clearance"),
                 array("name"=>"安防监控","slug"=>"surveillance-and-alarms"),
+                array("name"=>"商业装潢","slug"=>"shop-fitting"),
             ),
         ),
         array(
@@ -166,11 +171,17 @@
             ),
         ),
         array(
-            "name"=>"其他",
+            "name"=>"其他行业",
             "slug"=>"others",
             "imgsrc"=>"ICON_SectionOther.svg",
             "subcates"=>array(
-                array("name"=>"其他","slug"=>"others"),
+                array("name"=>"殡葬服务","slug"=>"funeral-services"),
+                array("name"=>"翻译服务","slug"=>"translation-services"),
+                array("name"=>"婚介服务","slug"=>"dating-and-marriage-and-celebrants"),
+                array("name"=>"珠宝行","slug"=>"jewellery"),
+                array("name"=>"拍卖行","slug"=>"auctioneer"),
+                array("name"=>"食品批零","slug"=>"food-distributors-and-retailers"),
+                array("name"=>"各类超市","slug"=>"supermarkets"),
             ),
         ),
     
