@@ -120,7 +120,7 @@ jQuery(document).ready(function($){
     var autocomplete = new google.maps.places.Autocomplete(input,{componentRestrictions:{country: "AU"}});
     autocomplete.addListener('place_changed', function() {
         //console.log(autocomplete.getPlace());
-        document.getElementById('auto-map').value=autocomplete.getPlace().name;
+        //document.getElementById('auto-map').value=autocomplete.getPlace().name;
         document.getElementById('geo-lat').value=autocomplete.getPlace().geometry.location.lat();
         document.getElementById('geo-long').value=autocomplete.getPlace().geometry.location.lng();
         input.value= autocomplete.getPlace().formatted_address;
