@@ -35,7 +35,7 @@ get_header(); ?>
                         if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></label>';
                         if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a target="_blank" href="'
-                            .$mypost->website.'"><span>'.$mypost->website.'</span></a></label>';
+                            .$mypost->website.'"><span>'.removeScheme($mypost->website).'</span></a></label>';
                         if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-map-marker icon-small" aria-hidden="true"></i><span>'.$mypost->address
                             .'</span><a style="margin-left:10px;" target="_blank" href="https://www.google.com/maps?daddr='
                             .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></label>';
