@@ -448,10 +448,6 @@ a.page-numbers:focus {
     background-color: #fff;
     /*text-transform: uppercase;*/
 }
-h5.en-title {
-    padding: 5px 15px;
-    font-weight: 600;
-}
 .title {
     padding-left: 15px;
     font-weight: 400;
