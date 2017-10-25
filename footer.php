@@ -25,8 +25,7 @@
 		</div>
 	</div>
 </footer><!-- #colophon -->
-<!-- //由于Geo WP 插件加载了：
-        no async loading-->
+<!-- no async loading -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQWClP6rOf55if8uN7jXIs_K2gheMECSw&libraries=places&region=AU&language=en-us" defer></script>
 <!-- Google Analytics -->
 <script>
