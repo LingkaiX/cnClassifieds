@@ -12,7 +12,7 @@
                         if($img!=null){
                             echo $img;
                             echo '<div>';
-                            the_title( '<h4 class="entry-title" ><a href="'.get_permalink().'">'.$post->ID, '</a></h4>' );                                                                                                    
+                            the_title( '<h4 class="entry-title" ><a href="'.get_permalink().'">', '</a></h4>' );                                                                                                    
                             if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';
                             echo '</div>';
                         }else{
