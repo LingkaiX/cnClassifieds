@@ -8,11 +8,11 @@
 				</a>
 			</div>
                 <div class="col-md-6 col-xs-12" style="margin:10px 0;">
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>关于我们</span></a>
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="#"><span>免责声明</span></a>
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href=" https://auads.com.au/contact-us"><span>联系我们</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/about-us"><span>关于我们</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers"><span>免责声明</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/contact-us"><span>联系我们</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj"><span>订阅邮件</span></a>
-                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href=" https://auads.com.au/publish-busines"><span>免费发布</span></a>
+                    <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/publish-busines"><span>免费发布</span></a>
                     <a class="col-md-4 col-xs-4" target="_blank" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>CONTACT US</span></a>    
                 </div>
             <div class="col-md-3 col-xs-12" style="margin:10px 0;">
@@ -25,8 +25,7 @@
 		</div>
 	</div>
 </footer><!-- #colophon -->
-<!-- //由于Geo WP 插件加载了：
-        no async loading-->
+<!-- no async loading -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQWClP6rOf55if8uN7jXIs_K2gheMECSw&libraries=places&region=AU&language=en-us" defer></script>
 <!-- Google Analytics -->
 <script>

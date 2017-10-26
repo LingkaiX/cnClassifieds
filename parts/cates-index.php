@@ -171,9 +171,9 @@
             "slug"=>"others",
             "imgsrc"=>"ICON_SectionOther.svg",
             "subcates"=>array(
-                array("name"=>"殡葬服务","slug"=>"funeral-services"),
-                array("name"=>"翻译服务","slug"=>"translation-services"),
                 array("name"=>"婚介服务","slug"=>"dating-and-marriage-and-celebrants"),
+                array("name"=>"翻译服务","slug"=>"translation-services"),                
+                array("name"=>"殡葬服务","slug"=>"funeral-services"),
                 array("name"=>"珠宝行","slug"=>"jewellery"),
                 array("name"=>"拍卖行","slug"=>"auctioneer"),
                 array("name"=>"食品批零","slug"=>"food-distributors-and-retailers"),
