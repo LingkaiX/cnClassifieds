@@ -87,6 +87,10 @@ if(!is_admin()){
 		if (! empty( $join ) ) $join .= ' ';
 		$join .= "JOIN wp_postmeta PM ON PM.post_id = wp_posts.ID";
 
+		$groupby = &$clauses['groupby'];
+		if (! empty( $groupby ) ) $groupby = ' ' . $groupby; 
+		$groupby = "wp_posts.ID";
+
 		$clauses['where'] = sprintf(
 			" AND ( %s OR %s OR %s) ",
 			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%')", $_GET['s']),
