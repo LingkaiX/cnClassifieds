@@ -374,16 +374,19 @@ a.page-numbers:focus {
 /* .gmw-no-results-wrapper p::after{
 	content: ": 抱歉！我们没有找到你要的结果。";
 } */
-.site-main{
+.site-main {
+    margin-top: 10px;
+}
+#primary .site-main{
 	width: 50%;
     margin: 35px auto;
 }
-.site-main strong {
+#primary .site-main strong {
     font-size: large;
     color: brown;
     margin-bottom: 20px;
 }
-.site-main p {
+#primary .site-main p {
     word-break: none;
 }
 .listed-cate{
