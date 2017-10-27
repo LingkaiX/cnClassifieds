@@ -758,3 +758,8 @@ form.wpcf7-form label {
 [v-cloak] {
     display: none;
   }
+/* EDM form */
+#templateBody {
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
