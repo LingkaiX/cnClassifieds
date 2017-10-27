@@ -383,6 +383,9 @@ a.page-numbers:focus {
     color: brown;
     margin-bottom: 35px;
 }
+.site-main p {
+    word-break: none;
+}
 .listed-cate{
 	margin-bottom: 10px;
 	padding-left: 35px;
