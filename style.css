@@ -381,6 +381,12 @@ a.page-numbers:focus {
 	width: 50%;
     margin: 35px auto;
 }
+@media only screen and (max-width: 767px){
+    #primary .site-main {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
 #primary .site-main strong {
     font-size: large;
     color: brown;
