@@ -460,6 +460,10 @@ a.page-numbers:focus {
     background-color: #fff;
     /*text-transform: uppercase;*/
 }
+.company-name .en-title {
+    padding-left: 15px;
+    font-weight: bold;
+}
 .title {
     padding-left: 15px;
     font-weight: 400;
