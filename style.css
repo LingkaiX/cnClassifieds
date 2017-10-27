@@ -378,6 +378,11 @@ a.page-numbers:focus {
 	width: 50%;
     margin: 35px auto;
 }
+.site-main strong {
+    font-size: large;
+    color: brown;
+    margin-bottom: 35px;
+}
 .listed-cate{
 	margin-bottom: 10px;
 	padding-left: 35px;
