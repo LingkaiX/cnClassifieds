@@ -375,7 +375,8 @@ a.page-numbers:focus {
 	content: ": 抱歉！我们没有找到你要的结果。";
 } */
 .site-main{
-	margin-top:10px;
+	width: 50%;
+    margin: 35px auto;
 }
 .listed-cate{
 	margin-bottom: 10px;
