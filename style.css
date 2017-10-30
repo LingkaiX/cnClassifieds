@@ -317,7 +317,12 @@ a.page-numbers:focus {
 	width: auto;
     height: auto;
 }
-
+@media only screen and (max-width: 480px) {
+    .listed-header .listed-logo {
+       max-width: 100px;
+	   max-height: 40px;
+    }
+}
 .listed-header{
 	margin-top:15px;
     margin-bottom: 5px;
