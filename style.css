@@ -317,7 +317,12 @@ a.page-numbers:focus {
 	width: auto;
     height: auto;
 }
-
+@media only screen and (max-width: 480px) {
+    .listed-header .listed-logo {
+       max-width: 100px;
+	   max-height: 40px;
+    }
+}
 .listed-header{
 	margin-top:15px;
     margin-bottom: 5px;
@@ -374,8 +379,26 @@ a.page-numbers:focus {
 /* .gmw-no-results-wrapper p::after{
 	content: ": 抱歉！我们没有找到你要的结果。";
 } */
-.site-main{
-	margin-top:10px;
+.site-main {
+    margin-top: 10px;
+}
+#primary .site-main{
+	width: 50%;
+    margin: 35px auto;
+}
+@media only screen and (max-width: 767px){
+    #primary .site-main {
+        width: 100%;
+        margin: 10px auto;
+    }
+}
+#primary .site-main strong {
+    font-size: large;
+    color: brown;
+    margin-bottom: 20px;
+}
+#primary .site-main p {
+    word-break: none;
 }
 .listed-cate{
 	margin-bottom: 10px;
@@ -447,6 +470,10 @@ a.page-numbers:focus {
     font-size: 20px;
     background-color: #fff;
     /*text-transform: uppercase;*/
+}
+.company-name .en-title {
+    padding-left: 15px;
+    font-weight: bold;
 }
 .title {
     padding-left: 15px;
@@ -758,3 +785,8 @@ form.wpcf7-form label {
 [v-cloak] {
     display: none;
   }
+/* EDM form */
+#templateBody {
+    -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+}
