@@ -385,6 +385,7 @@ a.page-numbers:focus {
 #primary .site-main{
 	width: 50%;
     margin: 35px auto;
+    word-break: keep-all;
 }
 @media only screen and (max-width: 767px){
     #primary .site-main {
