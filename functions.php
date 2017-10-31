@@ -92,8 +92,9 @@ if(!is_admin()){
 		$groupby = "wp_posts.ID";
 
 		$clauses['where'] = sprintf(
-			" AND ( %s OR %s OR %s) ",
+			" AND ( %s OR %s OR %s OR %s) ",
 			$wpdb->prepare( "(PM.meta_key='title-en' AND PM.meta_value like '%%%s%%')", $_GET['s']),
+			$wpdb->prepare( "(PM.meta_key='ex-words' AND PM.meta_value like '%%%s%%')", $_GET['s']),
 			$wpdb->prepare( "(PL.phone like '%%%s%%')", $_GET['s']),
 			mb_substr( $clauses['where'], 5, mb_strlen( $clauses['where'] ) )
 		);
