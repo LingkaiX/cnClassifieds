@@ -45,6 +45,16 @@ get_header(); ?>
         </section>
         <article class="row information ad-information box-round-shadow">
             <?php the_content(); ?>
+            <div id="map" style="height: 400px;  width: 100%;"></div>
+            <script>
+                jQuery(document).ready(function($){
+                    var uluru = {lat: <?php echo $mypost->lat; ?>, lng: <?php echo $mypost->long; ?>};
+                    var map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: uluru });
+                    var marker = new google.maps.Marker({ position: uluru, map: map });
+                });
+            </script>
+ 
+
         </article>
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 single-page-ad-container">
