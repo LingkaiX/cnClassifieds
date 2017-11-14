@@ -1,5 +1,6 @@
 <?php
-//拆分url
+//拆分url,返回下一（plus+1）个/后的值
+//ex: parsePath($_SERVER['REQUEST_URI'],'category');
 function parsePath($path, $name, $plus=0){
 	$value='';
 	if(strpos($path, "?")) $path = substr($path, 0, strpos($path, "?"));

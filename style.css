@@ -791,3 +791,18 @@ form.wpcf7-form label {
     -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
 }
+
+/* ADS */
+/* copied from Google */
+._mB {
+    background-color: #fff;
+    border-radius: 3px;
+    color: #006621;
+    display: inline-block;
+    font-size: 11px;
+    border: 1px solid #006621;
+    padding: 1px 3px 0 2px;
+    line-height: 11px;
+    vertical-align: top;
+    margin-left: 5px;
+}

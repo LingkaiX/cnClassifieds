@@ -7,6 +7,15 @@
 		<main class="col-md-7 col-sm-9 col-xs-12"> <!-- listing box-->
 			<?php
 				//print_r($wp_query); 
+				$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
+				$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => get_category_by_slug($cate_name)->term_id));
+				if ( $ad_query->have_posts() ) {
+					while ( $ad_query->have_posts() ) {
+						$ad_query->the_post();
+						include 'parts/ad-listed-item.php';
+					}
+				}
+				wp_reset_postdata();
 				if ( have_posts() ) : 
 					while ( have_posts() ) : 
 						the_post();
