@@ -806,3 +806,18 @@ form.wpcf7-form label {
     vertical-align: top;
     margin-left: 5px;
 }
+/* homepage banner */
+#hp-banner {
+    position:fixed; 
+    top:0; 
+    left:0; 
+    right:0; 
+    min-height:50px; 
+    background-color:dimgray; 
+    display:none;
+    z-index:999; 
+    text-align:center;
+}
+.top-banner-info {
+    
+}
