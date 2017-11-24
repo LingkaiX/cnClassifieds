@@ -830,3 +830,7 @@ form.wpcf7-form label {
     color: #F26522;
     font-size: medium;
 }
+.free-send-info:hover {
+    color: #F26522;
+    text-decoration: none;
+}
