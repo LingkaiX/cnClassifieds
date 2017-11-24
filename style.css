@@ -813,11 +813,19 @@ form.wpcf7-form label {
     left:0; 
     right:0; 
     min-height:50px; 
-    background-color:dimgray; 
+    background-color:rgba(255, 255, 255, 0.98); 
     display:none;
     z-index:999; 
     text-align:center;
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef;
 }
 .top-banner-info {
-    
+    float: right;
+    margin-right: 40px;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+.top-banner-info .fa-phone {
+    color: #F26522;
 }

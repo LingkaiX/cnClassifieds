@@ -1,5 +1,5 @@
 <div id="hp-banner">
-    <span class="top-banner-info"> 联系我们 : <i class="fa fa-phone" aria-hidden="true"></i> 1300 638 939 或 <a href="https://auads.com.au/publish-busines" class="free-send-info">免费发布信息</a></span>
+    <span class="top-banner-info"> 联系我们 : &nbsp <i class="fa fa-phone" aria-hidden="true"></i> 1300 638 939 或 <a href="https://auads.com.au/publish-busines" class="free-send-info">免费发布信息</a></span>
 </div>
 <script>
     //pasted from http://www.howtocreate.co.uk/tutorials/javascript/browserwindow
