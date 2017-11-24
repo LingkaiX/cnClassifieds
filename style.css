@@ -823,9 +823,10 @@ form.wpcf7-form label {
 .top-banner-info {
     float: right;
     margin-right: 40px;
-    margin-top: 15px;
+    margin-top: 18px;
     font-weight: bolder;
 }
 .top-banner-info .fa-phone {
     color: #F26522;
+    font-size: medium;
 }
