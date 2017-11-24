@@ -22,8 +22,9 @@
 
 </head>
 <body <?php body_class(); ?>>
+<?php include 'parts/homepage-banner.php';?>  
 <div class="site-content" style="background-color: white;">
-<header class="index-header">
+<header class="index-header" id="index-header">
     <div class="container home-hearder-container"> 
         <div class="row">
             <div class="col-md-6 col-xs-12 home-logo-container">
