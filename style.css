@@ -834,3 +834,10 @@ form.wpcf7-form label {
     color: #F26522;
     text-decoration: none;
 }
+/* Small phones: from 0 t0 480px */
+@media only screen and (max-width: 480px){
+    .top-banner-info {
+        font-size: x-small;
+        margin-right: 5px;
+    }
+}
