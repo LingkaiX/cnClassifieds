@@ -806,3 +806,38 @@ form.wpcf7-form label {
     vertical-align: top;
     margin-left: 5px;
 }
+/* homepage banner */
+#hp-banner {
+    position:fixed; 
+    top:0; 
+    left:0; 
+    right:0; 
+    min-height:50px; 
+    background-color:rgba(255, 255, 255, 0.98); 
+    display:none;
+    z-index:999; 
+    text-align:center;
+    -webkit-box-shadow: 0 2px 2px #efefef;
+    box-shadow: 0 2px 2px #efefef;
+}
+.top-banner-info {
+    float: right;
+    margin-right: 40px;
+    margin-top: 18px;
+    font-weight: bolder;
+}
+.top-banner-info .fa-phone {
+    color: #F26522;
+    font-size: medium;
+}
+.free-send-info:hover {
+    color: #F26522;
+    text-decoration: none;
+}
+/* Small phones: from 0 t0 480px */
+@media only screen and (max-width: 480px){
+    .top-banner-info {
+        font-size: x-small;
+        margin-right: 5px;
+    }
+}
