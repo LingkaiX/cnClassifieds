@@ -810,7 +810,6 @@ form.wpcf7-form label {
     right:0; 
     min-height:50px; 
     background-color:rgba(242, 101, 34, 0.9);
-    display:none;
     z-index:999; 
     text-align:center;
     -webkit-box-shadow: 0 2px 2px #efefef;
