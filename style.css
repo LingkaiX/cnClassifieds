@@ -809,7 +809,7 @@ form.wpcf7-form label {
     left:0; 
     right:0; 
     min-height:50px; 
-    background-color:rgba(255, 255, 255, 0.98); 
+    background-color:rgba(242, 101, 34, 0.9);
     display:none;
     z-index:999; 
     text-align:center;
@@ -820,16 +820,30 @@ form.wpcf7-form label {
     float: right;
     margin-right: 40px;
     margin-top: 18px;
-    font-weight: bolder;
+    font-weight: bold;
+    color: #fff;
 }
 .top-banner-info .fa-phone {
-    color: #F26522;
+    color: #fff;
     font-size: medium;
 }
 .free-send-info:hover {
-    color: #F26522;
     text-decoration: none;
+    color: grey;
 }
+.top-banner-info .free-send-info {
+    color: #fff;
+    text-decoration: underline;
+}
+.background-free-send-info {
+    display: inline-block;
+}
+.background-free-send-info:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    padding: 3px 5px;
+}
+
 /* Small phones: from 0 t0 480px */
 @media only screen and (max-width: 480px){
     .top-banner-info {
