@@ -163,7 +163,7 @@ a.page-numbers:focus {
 .home-logo{
 	max-width:40%;
 	max-height:40%;
-    margin: 60px auto 70px auto;
+    margin: 50px auto 70px auto;
 }
 @media (max-width: 992px) {
     .home-logo {margin: 50px auto 20px auto;} 
@@ -173,7 +173,7 @@ a.page-numbers:focus {
 		max-width:60%;
 		max-height:60%;
 		display: block;
-        margin: 60px auto 0 auto;
+        margin: 40px auto 0 auto;
     }
     .search-form-box {
         height: 145px;
@@ -808,38 +808,29 @@ form.wpcf7-form label {
     top:0; 
     left:0; 
     right:0; 
-    min-height:50px; 
-    background-color:#606060;
+    min-height:40px; 
+    background-color:rgba(255, 255, 255, 0.8);
     z-index:999; 
     text-align:center;
+    box-shadow: 0 1px 1px #a5a5a5;
 }
 .top-banner-info {
     float: right;
     margin-right: 40px;
-    margin-top: 18px;
+    margin-top: 11px;
     font-weight: bold;
-    color: #fff;
+    color: #f26522;
 }
 .top-banner-info .fa-phone {
-    color: #fff;
+    color: #f26522;
     font-size: medium;
 }
 .top-banner-info .free-send-info {
-    color: #fff;
+    color: #F26522;
     text-decoration: underline;
-    margin: 0 5px;
-}
-.top-banner-info .free-send-info:hover {
-    text-decoration: none;
-    color: #333333;
 }
 .background-free-send-info {
     display: inline-block;
-}
-.background-free-send-info:hover {
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    padding: 3px 5px;
 }
 
 /* Small phones: from 0 t0 480px */
@@ -849,3 +840,4 @@ form.wpcf7-form label {
         margin-right: 5px;
     }
 }
+rgba(255, 255, 255, 0.89)
