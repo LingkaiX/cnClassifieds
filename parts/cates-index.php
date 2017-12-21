@@ -160,7 +160,7 @@
             "subcates"=>array(
                 array("name"=>"餐馆饭店","slug"=>"restaurants"),
                 array("name"=>"旅行社","slug"=>"travel-agents"),
-                array("name"=>"特价机票","slug"=>"budget-fare"),
+                //array("name"=>"特价机票","slug"=>"budget-fare"),
                 array("name"=>"旅游景点","slug"=>"tour-attraction"),
                 array("name"=>"俱乐部","slug"=>"clubs"),
                 array("name"=>"礼品店","slug"=>"gift-shop"),
