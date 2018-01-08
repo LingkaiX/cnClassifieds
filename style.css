@@ -71,21 +71,30 @@ h2:after {
 }
 .back-button, .search-button{
 	text-decoration: none;
-    float: left;
 	width: 40px;
 	height: 40px;
 	font-size: 24px;
 	border-width: 0;
     padding: 0;
     background-color:#F26522;
-    text-align: center;
-    vertical-align: middle;
+}
+.back-button{
+    float: left;
 }
 .back-button:hover, .search-button:hover{
     background-color: #F26000;;
 }
-.search-button{
+.search-button-box{
     float: right;
+}
+.cnc-link{
+    width: 40px;
+    height: 40px; 
+    font-size: 16px;
+    padding: 0;
+    font-weight: 600; 
+    color: white; 
+    padding-top: 8px;
 }
 .header-logo{
     display: inline-block;

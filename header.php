@@ -28,7 +28,10 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <button onclick=history.go(-1) class="back-button"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
                 <a href=<?php echo get_site_url();?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg"></img></a>
-                <button class="search-button" x-stat="closed"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <div class="search-button-box">
+                    <?php include 'parts/cn-conversation-link.php'; ?>
+                    <button class="search-button" x-stat="closed"><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>
             </div>
         </div>
         <div id="search-row" style="display:none;"><?php include 'parts/search-form.php'; ?></div>
