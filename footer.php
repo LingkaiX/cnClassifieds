@@ -37,12 +37,7 @@
   ga('send', 'pageview');
 </script>
 <!-- Google Analytics -->
-<?php wp_footer(); 
-$home = parse_url(home_url());
-echo home_url().'/n';
-echo $home["path"];
-
-?>
+<?php wp_footer(); ?>
 </body>
 </html>
 
