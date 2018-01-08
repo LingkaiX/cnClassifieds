@@ -65,7 +65,7 @@ add_action( 'wp_enqueue_scripts', 'add_styles_and_scripts' );
 
 add_theme_support( 'post-thumbnails' ); 
 add_theme_support( 'title-tag' );
-
+add_theme_support( 'menus' );
 //remove version mark
 remove_action('wp_head', 'wp_generator');
 
@@ -155,3 +155,15 @@ function chinese_excerpt($text,$lenth=286) {
     return mb_strimwidth($text,0,$lenth,'...','utf-8'); //6 prefix, en * 1, ch * 2
 }
 add_filter('the_excerpt', 'chinese_excerpt');
+
+
+//wp_nav_menu( array( 'theme_location' => 'header-menu' ) )
+function register_my_menus() {
+	register_nav_menus(
+	  array(
+		'header-menu' => __( 'Header Menu' ),
+		'extra-menu' => __( 'Extra Menu' )
+	  )
+	);
+  }
+  add_action( 'init', 'register_my_menus' );
