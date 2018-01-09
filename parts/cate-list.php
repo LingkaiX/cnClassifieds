@@ -3,6 +3,7 @@
         <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
             <?php
                 include "cates-index.php";
+                $baseUrl=getBaseUrl();
                 $cateSlug=parsePath($_SERVER['REQUEST_URI'],'category');
                 $subcateSlug=parsePath($_SERVER['REQUEST_URI'],'category',1);
                 $clickId=0;
@@ -16,14 +17,14 @@
                     <h4 class="panel-title">
                         <a id="a<?php echo $catecount?>" class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" 
                             href="#collapse<?php echo $catecount?>" aria-expanded="false" aria-controls="collapse<?php echo $catecount?>"></a>
-                        <a class="needLatAndLong" href="<?php echo getBaseUrl()."/category/".$cate["slug"]?>"><?php echo $cate["name"]?></a>
+                        <a class="needLatAndLong" href="<?php $baseUrl."/category/".$cate["slug"]?>"><?php echo $cate["name"]?></a>
                     </h4>
                 </div>
                 <div id="collapse<?php echo $catecount?>" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading<?php echo $catecount?>">
                     <div class="panel-body">
                         <?php 
                             foreach($cate["subcates"] as $subcate){
-                                $href=getBaseUrl()."/category/".$cate["slug"]."/".$subcate["slug"];
+                                $href=$baseUrl."/category/".$cate["slug"]."/".$subcate["slug"];
                                 $str= ($subcateSlug==$subcate["slug"])?'class="selected-item needLatAndLong"':'class="needLatAndLong"';
                                 echo '<p><a href="'.$href.'"'.$str.'>'.$subcate["name"].'</a></p>';
                             }

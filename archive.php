@@ -6,7 +6,8 @@
 		</div>
 		<main class="col-md-7 col-sm-9 col-xs-12"> <!-- listing box-->
 			<?php
-				//print_r($wp_query); 
+				//print_r($wp_query);
+				include 'parts/switch-city.php';
 				$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
 				if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
 				//echo $cate_name;

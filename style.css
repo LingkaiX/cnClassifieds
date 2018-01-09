@@ -626,6 +626,9 @@ a.page-numbers:focus {
     background-color: rgba(242, 101, 34, 0.8);
     border-color: rgba(242, 101, 34, 0.8);
 }
+.search-submit .fa{
+    color: #fff;
+}
 #gmw-cl-form-wrapper{
     display: none !important;
 }
