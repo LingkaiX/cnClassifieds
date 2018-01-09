@@ -4,7 +4,7 @@
             <?php
                 include "cates-index.php";
                 $baseUrl=getBaseUrl();
-                echo $baseUrl;
+                //echo $baseUrl;
                 $cateSlug=parsePath($_SERVER['REQUEST_URI'],'category');
                 $subcateSlug=parsePath($_SERVER['REQUEST_URI'],'category',1);
                 $clickId=0;

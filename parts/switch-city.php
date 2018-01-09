@@ -1,13 +1,12 @@
 <?php
     $baseUrl=get_site_url();
-    echo $_SERVER['REQUEST_URI'];
     $reqUrl=$_SERVER['REQUEST_URI'];
-    $reqUrl=substr($reqUrl, 0, strpos($reqUrl, "?"));
+    if(strpos($reqUrl, "?")) $reqUrl=substr($reqUrl, 0, strpos($reqUrl, "?"));
     $pagenum=parsePath($reqUrl,'page',0);
     if ($pagenum){
         $reqUrl=substr($reqUrl, 0, strpos($reqUrl, "/page"));
     }
-    echo '1424'.$reqUrl;
+    
 ?>
 <div class="btn-group" role="group" style="float: right;">
     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
