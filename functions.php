@@ -169,3 +169,20 @@ function register_my_menus() {
 	);
   }
   add_action( 'init', 'register_my_menus' );
+
+  function putAbnSignal($hasAbn){
+	if($hasAbn){
+        return '<abbr title="ABN Checked" style="margin-right:3px;"><i class="fa fa-id-card-o" aria-hidden="true"></i></abbr>';
+    }else{
+        return null;
+    }
+  }
+
+  function getBaseUrl(){
+	$url=get_site_url();
+	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'){
+		return $url.'/zh-tw';
+	}else{
+		return $url;
+	}
+  }

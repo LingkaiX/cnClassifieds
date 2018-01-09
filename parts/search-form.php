@@ -30,14 +30,8 @@
         }
     }
     if($currentcate!=-1){
-        //$cateObj = get_category_by_slug($catesindex[$currentcate]['slug']);
         $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$catesindex[$currentcate]["name"].'</p>';
-        //echo '<option value="'.$cateObj->term_id.'">'.$catesindex[$currentcate]["name"].'</option>';
         foreach($catesindex[$currentcate]['subcates'] as $subcate){
-            // $cateObj = get_category_by_slug($subcate["slug"]);
-            // if($cateObj!=false){
-            //     echo '<option value="'.$cateObj->term_id.'">'.$subcate["name"].'</option>';
-            // }
             $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$subcate["name"].'</p>';
         } 
     }else{
@@ -47,13 +41,13 @@
     }
     $catesDom=$catesDom.'</div>';
 ?>
-<script>
+<!-- <script>
     catesDom='<div id="search-suggestion">';
     Object.keys(catesJson).map(function(key){
         catesDom=catesDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].name+'</p>';
     });
     catesDom+='</div>';
-</script>
+</script> -->
 <script>
 var catesDom= '<?php echo $catesDom ?>';
 var selectSuggestion;
@@ -87,6 +81,7 @@ jQuery(document).ready(function($){
              $("#search-suggestion").replaceWith( '<div id="search-suggestion"></div>' );
      });
 
+     //提交前判断是搜索还是类别
     $("#search-form").submit(function(){
         var input=$("#search-item").val();
         var isCat=false;
@@ -120,7 +115,6 @@ jQuery(document).ready(function($){
     var autocomplete = new google.maps.places.Autocomplete(input,{componentRestrictions:{country: "AU"}});
     autocomplete.addListener('place_changed', function() {
         //console.log(autocomplete.getPlace());
-        //document.getElementById('auto-map').value=autocomplete.getPlace().name;
         document.getElementById('geo-lat').value=autocomplete.getPlace().geometry.location.lat();
         document.getElementById('geo-long').value=autocomplete.getPlace().geometry.location.lng();
         input.value= autocomplete.getPlace().formatted_address;

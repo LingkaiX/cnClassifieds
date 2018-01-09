@@ -9,7 +9,8 @@ get_header(); ?>
         <section class="row company-name box-round-shadow">
             <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
             <?php
-                the_title( '<h3 class="title">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'</small></h3>' ); 
+                $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
+                the_title( '<h3 class="title">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h3>' );
                 $enTitle=get_post_meta($post->ID,'title-en',true);
                 if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';  
             ?>
