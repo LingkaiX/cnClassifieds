@@ -1,5 +1,7 @@
 //登陆的时候header下移
 jQuery(document).ready(function($){
+  $('img').on('dragstart', function(event) { event.preventDefault(); });
+
   var h=parseInt($('#wpadminbar').css('height'));
   if(h){ 
     var header=$('.first-header');

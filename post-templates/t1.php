@@ -1,9 +1,20 @@
-<?php
-/**
- * @author Sophia???
- */
-get_header(); ?>
-<main id="main" class="site-main container" role="main">
+<?php 
+/*
+Template Name: Template 1
+Template Post Type: post 
+*/
+get_header();?>
+<link href='<?php echo get_template_directory_uri();?>./css/simplelightbox.css' rel='stylesheet'/>
+<style>
+    .main-company-information{
+        width:100%
+    }
+    .responsive-tabs li, .tabcontent {
+        border-radius: 10px !important;
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2) !important;
+    }
+</style>
+<main id="main-t1" class="site-main container" role="main">
     <div class="main-company-information">
     <?php while (have_posts()) : the_post(); ?>
         <section class="row company-name box-round-shadow">
@@ -22,10 +33,7 @@ get_header(); ?>
                     }
                 ?>
             </div>
-            <div class="abstract">
-                <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
-            </div>
-            <?php include 'parts/enquiry-form.php'; ?>
+            <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
         </section>
         <section class="row contact-info ad-contact box-round-shadow">
             <div class="ad-contact-small">
@@ -44,37 +52,16 @@ get_header(); ?>
                 ?>
             </div>
         </section>
-        <article class="row information ad-information box-round-shadow">
+        <article class="row">
             <?php the_content(); ?>
-            <div id="map" style="height: 400px;  width: 100%;"></div>
-            <script>
-                jQuery(document).ready(function($){
-                    var uluru = {lat: <?php echo $mypost->lat; ?>, lng: <?php echo $mypost->long; ?>};
-                    var map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: uluru });
-                    var marker = new google.maps.Marker({ position: uluru, map: map });
-                });
-            </script>
- 
-
         </article>
-        <?php include 'parts/disqus.php'; ?>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 single-page-ad-container">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- single page bottom ad -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-9173929910659094"
-                    data-ad-slot="3923311372"
-                    data-ad-format="auto"></ins>
-                <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </div>
+        <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
+        <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
         <?php endwhile; ?>
     </div>
 </main>
+<script src="<?php echo get_template_directory_uri();?>./js/simple-lightbox.js"></script>
+<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 <?php
 //get_sidebar();
 get_footer();

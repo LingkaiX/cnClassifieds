@@ -1,4 +1,5 @@
 <!-- must be used in loop -->
+<!-- 联系商家按钮 -->
 <?php if(get_post_meta($post->ID,'email-to-business',true)){?>
 <div class="enquiry-form-container" id="<?php echo 'enquiry-form-container-'.$post->ID ?>">
     <div class="enquiry-form-content">

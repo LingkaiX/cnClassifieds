@@ -170,19 +170,68 @@ function register_my_menus() {
   }
   add_action( 'init', 'register_my_menus' );
 
-  function putAbnSignal($hasAbn){
+function putAbnSignal($hasAbn){
 	if($hasAbn){
-        return '<abbr title="ABN Checked" style="margin-right:3px;"><i class="fa fa-id-card-o" aria-hidden="true"></i></abbr>';
-    }else{
-        return null;
-    }
-  }
+		return '<abbr title="ABN Checked" style="margin-right:3px;"><i class="fa fa-id-card-o" aria-hidden="true"></i></abbr>';
+	}else{
+		return null;
+	}
+}
 
-  function getBaseUrl(){
+function getBaseUrl(){
 	$url=get_site_url();
 	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'){
 		return $url.'/zh-tw';
 	}else{
 		return $url;
 	}
-  }
+}
+
+function xTabStart( $atts ) {
+	$id = uniqid('x');
+	$a = shortcode_atts( array(
+		'id' => $id
+	), $atts );
+	$s='<script>
+	jQuery(document).ready(function($){var app = new Vue({
+	 	el: "#'.$a['id'].'",
+	  	data: {
+			s: "1"
+	  	}
+		})});
+	</script>';
+	$s=$s.'<div id="'.$a['id'].'"><div v-cloak>';
+	return $s;
+}
+add_shortcode( 'x-tab-start', 'xTabStart' );
+function xTabEnd( $atts ) {
+	$s='</div></div></div>';
+	return $s;
+}
+add_shortcode( 'x-tab-end', 'xTabEnd' );
+function xTabItemStart( $atts ) {
+	$id = uniqid('x');
+	$a = shortcode_atts( array(
+		'id' => $id,
+		'name' => 'x-tab'
+	), $atts );
+	$s='<div style="display:inline-block; width:500px; height:50px" v-on:click= "s==';
+	$s=$s."'".$a['id']."'?s=0:s=";
+	$s=$s."'".$a['id']."'";
+	$s=$s.'"><a href="#">'.$a['name'].'</a></div><div v-if="s==';
+	$s=$s."'".$a['id']."'";
+	$s=$s.'">';
+
+	//$s=`<a href="#" v-on:click= "s==0?s='`.$a['id'].`':s=0">`.$a['name'].`</a><div v-if="s=='`.$a['id'].`'">`;
+	return $s;
+}
+add_shortcode( 'x-tab-item-start', 'xTabItemStart' );
+function xTabItemEnd( $atts ) {
+	$s='</div><div style="clear:both"></div>';
+	return $s;
+}
+add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
+
+remove_filter( 'the_content', 'wpautop' );
+add_filter( 'the_content', 'wpautop' , 99 );
+add_filter( 'the_content', 'shortcode_unautop', 100 );
