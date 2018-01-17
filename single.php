@@ -33,7 +33,7 @@ get_header(); ?>
                     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
                     if($mypost!=null){
                         if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-phone icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
-                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
+                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-envelope icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></label>';
                         if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a target="_blank" href="'
                             .$mypost->website.'"><span>'.removeScheme($mypost->website).'</span></a></label>';

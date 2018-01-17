@@ -1,8 +1,12 @@
 <style>
+    .g-section{
+        background-color: transparent;
+    }
     .g-wrap {
         overflow: hidden;
         width: 100%;
         position: relative;
+        padding: 0 5px;
     }
 
     .gallery {
@@ -13,7 +17,7 @@
 
     .gallery a {
         width: 160px;
-        height: 160px;
+        height: 150px;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
@@ -27,11 +31,10 @@
 
     .nav-last, .nav-next{
         position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 40px;
+        top: 40%;
         background-color: rgba(0, 0, 0, 0.4);
         z-index: 99;
+        border: none;
     }
     .nav-last{
         left: 0;
@@ -39,13 +42,16 @@
     .nav-next {
         right: 0;
     }
+    .fa-chevron-left, .fa-chevron-right{
+        padding-top: 5px;
+    }
 </style>
 <?php
     $images = get_field('g1');
     if( $images ): ?>
-    <section class="row">
+    <section class="row g-section">
         <div class="g-wrap">
-            <button class="nav-last" onclick="go(160)"></button>
+            <button class="nav-last" onclick="go(160)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
             <div class="gallery" id='gallery'>
             <?php foreach( $images as $image ): ?>          
                 <a href="<?php echo $image['url']; ?>">
@@ -54,7 +60,7 @@
                 </a>                
             <?php endforeach; ?>
             </div>
-            <button class="nav-next" onclick="go(-160)"></button>
+            <button class="nav-next" onclick="go(-160)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
         </div>
     </section>
 <?php endif; ?>

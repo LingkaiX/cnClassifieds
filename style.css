@@ -437,15 +437,7 @@ a.page-numbers:focus {
     margin-right: 10px;
     line-height: 25px; 
 }
-.icon {
-    display: inline-block;
-    padding-left: 20px;
-    text-align: center;
-    color: #F26522;
-    font-size: 80%;
-    margin-right: 10px;
-    line-height: 25px;
-}
+
 /* ------------ third page ------------------*/
 .main-company-information {
     width: 75%;
@@ -480,13 +472,16 @@ a.page-numbers:focus {
     background-color: #fff;
     /*text-transform: uppercase;*/
 }
-.company-name .en-title {
+.en-title {
     padding-left: 15px;
     font-weight: bold;
 }
 .title {
     padding-left: 15px;
     font-weight: 400;
+}
+.title small{
+    display: inline-block;
 }
 .abstract {
     font-size: 15px;
@@ -496,9 +491,20 @@ a.page-numbers:focus {
 .tag {
     font-size: 14px;
     color: #868585;
+    margin-top: -5px;
+    margin-bottom: 10px;
 }
 .tag a{
 	padding-right: 5px;
+}
+.tag .icon {
+    display: inline-block;
+    padding-left: 25px;
+    text-align: center;
+    color: #F26522;
+    font-size: 80%;
+    margin-right: 10px;
+    line-height: 25px;
 }
 /*-------- CONTACT --------*/
 .ad-contact {

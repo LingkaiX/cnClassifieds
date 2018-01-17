@@ -200,12 +200,12 @@ function xTabStart( $atts ) {
 	  	}
 		})});
 	</script>';
-	$s=$s.'<div id="'.$a['id'].'"><div v-cloak>';
+	$s=$s.'<div class="x-tab-wrap" id="'.$a['id'].'"><div v-cloak>';
 	return $s;
 }
 add_shortcode( 'x-tab-start', 'xTabStart' );
 function xTabEnd( $atts ) {
-	$s='</div></div></div>';
+	$s='</div></div>';
 	return $s;
 }
 add_shortcode( 'x-tab-end', 'xTabEnd' );
@@ -215,10 +215,10 @@ function xTabItemStart( $atts ) {
 		'id' => $id,
 		'name' => 'x-tab'
 	), $atts );
-	$s='<div style="display:inline-block; width:500px; height:50px" v-on:click= "s==';
+	$s='<div class="x-tab-item-wrap"><div class="x-tab-item-head" v-on:click= "s==';
 	$s=$s."'".$a['id']."'?s=0:s=";
 	$s=$s."'".$a['id']."'";
-	$s=$s.'"><a href="#">'.$a['name'].'</a></div><div v-if="s==';
+	$s=$s.'"><a href="#">'.$a['name'].'</a></div><div class="x-tab-item-body" v-if="s==';
 	$s=$s."'".$a['id']."'";
 	$s=$s.'">';
 
@@ -227,7 +227,7 @@ function xTabItemStart( $atts ) {
 }
 add_shortcode( 'x-tab-item-start', 'xTabItemStart' );
 function xTabItemEnd( $atts ) {
-	$s='</div><div style="clear:both"></div>';
+	$s='</div></div><div style="clear:both"></div>';
 	return $s;
 }
 add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
