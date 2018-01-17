@@ -149,7 +149,7 @@ get_header();?>
         <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
 </main>
 <script src="<?php echo get_template_directory_uri();?>/js/simple-lightbox.js"></script>
-<script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
+<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
 <?php
 //get_sidebar();
 get_footer();
