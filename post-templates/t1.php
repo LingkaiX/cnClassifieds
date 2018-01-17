@@ -4,7 +4,7 @@ Template Name: Template 1
 Template Post Type: post 
 */
 get_header();?>
-<link href='<?php echo get_template_directory_uri();?>./css/simplelightbox.css' rel='stylesheet'/>
+<link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <style>
     .main-company-information{
         width:100%
@@ -148,7 +148,7 @@ get_header();?>
             <?php endwhile; ?>
         <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
 </main>
-<script src="<?php echo get_template_directory_uri();?>./js/simple-lightbox.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/js/simple-lightbox.js"></script>
 <script type="text/javascript" src="http://hammerjs.github.io/dist/hammer.min.js"></script>
 <?php
 //get_sidebar();
