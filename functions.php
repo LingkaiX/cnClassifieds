@@ -218,7 +218,7 @@ function xTabItemStart( $atts ) {
 	$s='<div class="x-tab-item-wrap"><div class="x-tab-item-head" v-on:click= "s==';
 	$s=$s."'".$a['id']."'?s=0:s=";
 	$s=$s."'".$a['id']."'";
-	$s=$s.'"><a href="#">'.$a['name'].'</a></div><div class="x-tab-item-body" v-if="s==';
+	$s=$s.'"><a href="#">'.$a['name'].'</a></div><transition name="slide-fade"><div class="x-tab-item-body" v-if="s==';
 	$s=$s."'".$a['id']."'";
 	$s=$s.'">';
 
@@ -227,7 +227,7 @@ function xTabItemStart( $atts ) {
 }
 add_shortcode( 'x-tab-item-start', 'xTabItemStart' );
 function xTabItemEnd( $atts ) {
-	$s='</div></div><div style="clear:both"></div>';
+	$s='</div></transition></div><div style="clear:both"></div>';
 	return $s;
 }
 add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
