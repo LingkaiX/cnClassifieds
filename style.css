@@ -47,7 +47,7 @@ abbr[title] {
     direction: ltr;
     left: 0;
     overflow: hidden;
-    position: absolute;
+    position: fixed;
     right: 0;
     top: 0;
     z-index: -1;
