@@ -12,10 +12,19 @@ html, body{
 	height: 100%;
 	font-size: 16px;
     font-weight: 300;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
 }
 p{
 	word-wrap: break-word; 
+}
+.theme-color{
+    color:#F26522;
+}
+.theme-color-back{
+    background-color:#F26522;
+}
+.theme-color-border{
+    border-color:#F26522;
 }
 .fa{
 	color:#F26522;
@@ -32,7 +41,24 @@ p{
 } */
 abbr[title] {
     border-bottom: none !important;
-  }
+}
+.VYMape{
+    bottom: 0;
+    direction: ltr;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    background: #e0e0e0;
+}
+.VYMape svg{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    display: block;
+}
 /*-------- site & header & footer --------*/
 .site-content{
 	min-height: 100%;

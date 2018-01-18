@@ -120,8 +120,8 @@ if(!is_admin()){
 
 			$groupby = &$clauses['groupby'];
 			if (! empty( $groupby ) ) $groupby = ' ' . $groupby; 
-			$groupby = "wp_posts.ID";
-			//$groupby = "wp_posts.ID HAVING distance <= '60' OR distance IS NULL";
+			//$groupby = "wp_posts.ID";
+			$groupby = "wp_posts.ID HAVING distance <= '100' OR distance IS NULL";
 		}
 	}
 }
