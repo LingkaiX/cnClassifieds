@@ -17,10 +17,10 @@ html, body{
 p{
 	word-wrap: break-word; 
 }
-.theme-color{
+.theme-color-font{
     color:#F26522;
 }
-.theme-color-back{
+.theme-color-background{
     background-color:#F26522;
 }
 .theme-color-border{
@@ -33,7 +33,6 @@ p{
 /* h2:after {
     display: block;
     height: 2px;
-    background-color: #F26522;
     content: " ";
     width: 100px;
     margin: 0;
@@ -72,7 +71,6 @@ abbr[title] {
 	color: black !important;
 }
 .site-header{
-	background-color:#F26522;
     padding:5px 0;
     position: fixed;
     left: 0;
@@ -105,7 +103,6 @@ abbr[title] {
 	font-size: 24px;
 	border-width: 0;
     padding: 0;
-    background-color:#F26522;
 }
 .back-button{
     float: left;
@@ -527,7 +524,6 @@ a.page-numbers:focus {
     display: inline-block;
     padding-left: 25px;
     text-align: center;
-    color: #F26522;
     font-size: 80%;
     margin-right: 10px;
     line-height: 25px;
@@ -650,9 +646,7 @@ a.page-numbers:focus {
     padding: 0px;
     width: 40px;
     height: 40px;
-    background-color: #F26522;
     color: #fff;
-    border-color: #F26522;
 }
 .search-submit:hover {
     background-color: rgba(242, 101, 34, 0.8);
@@ -696,7 +690,6 @@ a.page-numbers:focus {
 }
 .enquiry-form-header{
     height: 45px;
-    background-color: #F26522;
 }
 .enquiry-form-header span{
     float: left;
@@ -708,7 +701,6 @@ a.page-numbers:focus {
 .btn-close{
     float: right;
     border: 0;
-    background-color: #F26522;
     margin-right: 10px;
 }
 .enquiry-form-header .fa{
@@ -736,7 +728,6 @@ a.page-numbers:focus {
     text-align: right;
 }
 .enquiry-btn {
-    background-color: #F26522;
     color: #fff;
     float: right;
     margin-right: 20px;

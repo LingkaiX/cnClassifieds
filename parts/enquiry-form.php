@@ -2,10 +2,10 @@
 <!-- 联系商家按钮 -->
 <?php if(get_post_meta($post->ID,'email-to-business',true)){?>
 <div class="enquiry-form-container" id="<?php echo 'enquiry-form-container-'.$post->ID ?>">
-    <div class="enquiry-form-content">
-        <div class="enquiry-form-header">
+    <div class="enquiry-form-content theme-color-border">
+        <div class="enquiry-form-header theme-color-background">
             <span><i class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp;联系商家</span>
-            <button class="btn-close" onClick="closeEnquiry('<?php echo $post->ID ?>')"><i class="fa fa-times" aria-hidden="true"></i></button>
+            <button class="btn-close theme-color-background" onClick="closeEnquiry('<?php echo $post->ID ?>')"><i class="fa fa-times" aria-hidden="true"></i></button>
         </div>
         <div class="enquiry-form-body">
             <form action=<?php echo get_site_url().'/wp-json/cnx/v1/mailtobusiness/'.$post->ID?> id="<?php echo 'enquiry-form-'.$post->ID ?>" onSubmit="return submitEnquiry(this,'<?php echo $post->ID ?>')" method="post">
@@ -22,7 +22,7 @@
         </div>
     </div>
 </div>
-<button class="btn enquiry-btn" id="<?php echo 'enquiry-btn-'.$post->ID ?>" onClick="openEnquiry('<?php echo $post->ID ?>')">联系商家</button>
+<button class="btn enquiry-btn theme-color-background" id="<?php echo 'enquiry-btn-'.$post->ID ?>" onClick="openEnquiry('<?php echo $post->ID ?>')">联系商家</button>
 
 <script>
         function submitEnquiry(e, id){

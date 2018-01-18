@@ -24,6 +24,8 @@
 						the_post();
 						include 'parts/listed-item.php';
 					endwhile;
+				else:
+					include 'parts/no-result.php';
 				endif; 
 			?>
 		</main>
