@@ -84,18 +84,13 @@ get_header();?>
             float:right;
         }
     }
+    .v-leave { opacity: 1; }
+    .v-leave-active {  transition: all 3s;}
+    .v-leave-to { height: 0; opacity: 0;}
+    .v-enter { height: 0; opacity: 0;}
+    .v-enter-active {  transition: all 3s;}
+    .v-enter-to { opacity: 1;}
 
-    .slide-fade-enter-active {
-        transition: all .3s ease;
-      }
-      .slide-fade-leave-active {
-        transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
-      }
-      .slide-fade-enter, .slide-fade-leave-to
-      /* .slide-fade-leave-active for below version 2.1.8 */ {
-        transform: translateX(10px);
-        opacity: 0;
-      }
 </style>
 <main id="main-t1" class="container site-main" role="main">
     <div class="main-company-information">
@@ -142,8 +137,10 @@ get_header();?>
             <?php endwhile; ?>
         <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
 </main>
+
+<?php
+    //get_sidebar();
+    get_footer();
+?>
 <script src="<?php echo get_template_directory_uri();?>/js/simple-lightbox.js"></script>
 <script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
-<?php
-//get_sidebar();
-get_footer();

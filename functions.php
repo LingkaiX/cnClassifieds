@@ -186,7 +186,7 @@ function getBaseUrl(){
 		return $url;
 	}
 }
-
+// Tab for template 1
 function xTabStart( $atts ) {
 	$id = uniqid('x');
 	$a = shortcode_atts( array(
@@ -218,7 +218,7 @@ function xTabItemStart( $atts ) {
 	$s='<div class="x-tab-item-wrap"><div class="x-tab-item-head" v-on:click= "s==';
 	$s=$s."'".$a['id']."'?s=0:s=";
 	$s=$s."'".$a['id']."'";
-	$s=$s.'"><a href="#">'.$a['name'].'</a></div><transition name="slide-fade"><div class="x-tab-item-body" v-if="s==';
+	$s=$s.'"><a href="#">'.$a['name'].'</a></div><transition><div class="x-tab-item-body" v-show="s==';
 	$s=$s."'".$a['id']."'";
 	$s=$s.'">';
 
@@ -231,6 +231,23 @@ function xTabItemEnd( $atts ) {
 	return $s;
 }
 add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
+
+// Tab for template 2
+function xTab2Start( $atts ) {
+	$a = shortcode_atts( array(
+		'title' => 'title'
+	), $atts );
+	$s='<div class="acc-wrap"><button class="company-accordion"><strong>'
+		.$a['title'].'</strong></button><div class="t2-panel">';
+	return $s;
+}
+add_shortcode( 'x-tab2-start', 'xTab2Start' );
+
+function xTab2End( $atts ) {
+	$s='</div></div>';
+	return $s;
+}
+add_shortcode( 'x-tab2-end', 'xTabEnd' );
 
 remove_filter( 'the_content', 'wpautop' );
 add_filter( 'the_content', 'wpautop' , 99 );

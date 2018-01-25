@@ -47,7 +47,7 @@
     }
 </style>
 <?php
-    $images = get_field('g1');
+    $images = get_field('t1-g1');
     if( $images ): ?>
     <section class="row g-section">
         <div class="g-wrap">
