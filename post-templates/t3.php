@@ -13,10 +13,15 @@ get_header();?>
 ?>
 <style>
     .animated {
-        animation-duration: 3s;
+        animation-duration: 2s;
         opacity: 1;
     }
-
+    section{
+        opacity: 0;
+    }
+    .top-section{
+        opacity: 1;
+    }
     .theme-color-font {
         color: <?php echo $themeColor ?>;
     }
@@ -166,7 +171,6 @@ get_header();?>
     }
 
     .content-section {
-        opacity: 0;
         padding: 30px;
     }
 
@@ -219,7 +223,7 @@ get_header();?>
 <?php // print_r( get_field('t3-header-img') ); ?>
 <main id="t3">
     <section class="top-section">
-        <div class="container">
+        <div class="container animated fadeIn">
             <div class="row">
                 <div class="col-md-7 col-md-push-5 col-sm-12">
                     <img src="<?php echo get_field('t3-header-img')['url']; ?>" title="" class="">
@@ -260,7 +264,7 @@ get_header();?>
         </div>
     </section>
     <div class="container">
-        <section class="row excerpt-section">
+        <section class="row excerpt-section animated fadeIn">
             <div class="col-md-8 col-md-offset-2">
                 <blockquote class="theme-color-border">
                     <p><strong>关于我们</strong></p>
@@ -340,16 +344,36 @@ get_header();?>
         </section>
         <?php endif; ?>
     </div>
-<div class="container"><?php include dirname(__DIR__).'/parts/disqus.php'; ?></div>
+<div class="container"><?php //include dirname(__DIR__).'/parts/disqus.php'; ?></div>
 
 </main>
 <script>
     jQuery(document).ready(function ($) {
+        $('.product-section').waypoint(function (direction) {
+            $('.product-section').addClass('animated fadeIn');
+            }, {
+                offset: '90%'
+            });
         $('.content-section').waypoint(function (direction) {
             $('.content-section').addClass('animated fadeIn');
-        }, {
-                offset: '75%'
+            }, {
+                offset: '90%'
             });
+        $('.gallery-section').waypoint(function (direction) {
+            $('.gallery-section').addClass('animated fadeIn');
+            }, {
+                offset: '90%'
+        });
+        $('.map-section').waypoint(function (direction) {
+            $('.map-section').addClass('animated fadeIn');
+            }, {
+                offset: '90%'
+        });
+        $('.review-section').waypoint(function (direction) {
+            $('.review-section').addClass('animated fadeIn');
+            }, {
+                offset: '90%'
+        });
     });
 
 </script>
