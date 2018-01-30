@@ -86,8 +86,8 @@ get_header();?>
     } */
 
 </style>
-<main id="main-t1" class=" site-main" role="main">
-    <div class="container main-company-information">
+<main id="main-t1" class="container site-main" role="main">
+    <div class="main-company-information">
         <?php while (have_posts()) : the_post(); ?>
             <section class="row t1-wrap">
                 <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
@@ -124,7 +124,7 @@ get_header();?>
                 <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
                 <div style="clear:both"></div>
             </section>
-            <div class="container">
+        
 
                 <article class="row t1-wrap">
                 <h4>公司介绍</h4>
@@ -152,7 +152,7 @@ get_header();?>
                 </script>
                 <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
 
-            </div>
+            
 
             <?php endwhile; ?>
         <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
