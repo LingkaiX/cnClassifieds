@@ -131,7 +131,7 @@ get_header();?>
                     <?php the_content(); ?>
                 </article>
 
-                <section class="row review-section">
+                <section class="row product-section">
                     <?php 
                         $reviews = get_field('t1-products');
                         foreach( $reviews as $key => $review ): 
@@ -141,7 +141,15 @@ get_header();?>
                         <p class="comment-card-content"><?php echo $review['content'] ?></p>
                     </div>
                     <?php endforeach; ?>
+
                 </section>
+                <script>
+                    jQuery(document).ready(function ($) {
+                        jQuery('.product-section').masonry({
+                            itemSelector: '.comment-card',
+                        });
+                    }); 
+                </script>
                 <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
 
             </div>
@@ -149,6 +157,7 @@ get_header();?>
             <?php endwhile; ?>
         <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
 </main>
+<script src="<?php echo get_template_directory_uri();?>/js/masonry.min.js"></script>
 
 <?php
     //get_sidebar();
