@@ -19,7 +19,7 @@ get_header();?>
     article p{
         margin: 5px 0 5px 10px;
     }
-    .x-tab-wrap p{
+    /* .x-tab-wrap p{
         display:none;
     }
     .x-tab-item-wrap p{
@@ -44,7 +44,7 @@ get_header();?>
         border-top-left-radius: 3px;
         border-top-right-radius: 3px;
         border-bottom: 1px solid #ddd;
-    }
+    } */
 
     #main-t1 .t1-wrap{
         box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -60,7 +60,7 @@ get_header();?>
     .ad-contact-small span{
         padding: 0 10px;
     }
-    .main-post{
+    /* .main-post{
         margin-right: 320px;
     }
     .myads{
@@ -83,17 +83,11 @@ get_header();?>
             background-color: black;
             float:right;
         }
-    }
-    .v-leave { opacity: 1; }
-    .v-leave-active {  transition: all 3s;}
-    .v-leave-to { height: 0; opacity: 0;}
-    .v-enter { height: 0; opacity: 0;}
-    .v-enter-active {  transition: all 3s;}
-    .v-enter-to { opacity: 1;}
+    } */
 
 </style>
-<main id="main-t1" class="container site-main" role="main">
-    <div class="main-company-information">
+<main id="main-t1" class=" site-main" role="main">
+    <div class="container main-company-information">
         <?php while (have_posts()) : the_post(); ?>
             <section class="row t1-wrap">
                 <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
@@ -130,10 +124,28 @@ get_header();?>
                 <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
                 <div style="clear:both"></div>
             </section>
-            <article class="row t1-wrap">
-                <?php the_content(); ?>
-            </article>
-            <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
+            <div class="container">
+
+                <article class="row t1-wrap">
+                <h4>公司介绍</h4>
+                    <?php the_content(); ?>
+                </article>
+
+                <section class="row review-section">
+                    <?php 
+                        $reviews = get_field('t1-products');
+                        foreach( $reviews as $key => $review ): 
+                    ?>
+                    <div class="col-md-4 col-xs-12 comment-card">
+                        <strong class="comment-card-title"><?php echo $review['title'] ?></strong>
+                        <p class="comment-card-content"><?php echo $review['content'] ?></p>
+                    </div>
+                    <?php endforeach; ?>
+                </section>
+                <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
+
+            </div>
+
             <?php endwhile; ?>
         <?php //include dirname(__DIR__).'/parts/disqus.php'; ?>
 </main>
