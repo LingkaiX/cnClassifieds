@@ -6,6 +6,8 @@ Template Post Type: post
 get_header();?>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
+<link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
+
 <?php while (have_posts()) : 
     the_post();
     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
@@ -98,7 +100,6 @@ get_header();?>
         font-weight: 300;
         margin-top: 0;
         margin-bottom: .5rem;
-
     }
 
     .company-subtilte {
@@ -236,7 +237,8 @@ get_header();?>
 
     }
 </style>
-<?php // print_r( get_field('t3-header-img') ); 
+<?php
+    $headmeta=get_field("t3-head");
     $g1 = get_field('t3-g1');
     $g2 = get_field('t3-g2');
     $foot = get_field('t3-foot');
@@ -248,14 +250,15 @@ get_header();?>
             <div class="row">
                 <div class="col-md-7 col-md-push-5 col-sm-12">
                     <div class="embed-container">
-                    <?php 
-                        $headmeta=get_field("t3-head");
-                        if($headmeta['has-video']==0){
-                            echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
-                        }else{
-                            echo $headmeta['video'];
-                        }
-                    ?>
+                        <?php 
+                            if($headmeta['has-video']==0){
+                                echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
+                            }else{
+                                echo '<a data-fancybox href="'.$headmeta["youtube-url"].'">';
+                                    echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
+                                echo '</a>';
+                            }
+                        ?>                 
                     </div>
                 </div>
                 <div class="col-md-5 col-md-pull-7 col-sm-12">
@@ -438,3 +441,4 @@ get_header();?>
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri();?>/js/simple-lightbox.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/jquery.waypoints.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
