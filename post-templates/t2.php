@@ -73,12 +73,6 @@ get_header();?>
             padding: 5px 15px 10px 15px;
         }
     }
-    .va-helper{
-        display: inline-block;
-        height: 100%;
-        vertical-align: middle;
-        margin-left: -4px;
-    }
 
     /* Style the buttons that are used to open and close the accordion t2-panel */
     article p{

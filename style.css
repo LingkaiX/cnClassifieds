@@ -61,6 +61,12 @@ abbr[title] {
   width: 100%;
   display: block;
 }
+.va-helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-left: -4px;
+}
 /*-------- site & header & footer --------*/
 .site-content {
   min-height: 100%;

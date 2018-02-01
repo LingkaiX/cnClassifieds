@@ -47,9 +47,10 @@ get_header();?>
         font-family: 'Rubik', sans-serif;
     }
 
-    img {
+    main img {
         max-width: 100%;
         max-height: 100%;
+        object-fit: cover;
     }
 
     blockquote {
@@ -69,6 +70,19 @@ get_header();?>
         padding-top: 1rem;
         padding-bottom: 4rem;
         color:white;
+    }
+
+    .embed-container { 
+        width: 100%;
+        height: 100%;
+        padding-top: 100%;
+        position: relative;
+    } 
+    .embed-container iframe, .embed-container object, .embed-container embed,.embed-container img { 
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
     }
     .top-section a{
         color:white;
@@ -120,6 +134,8 @@ get_header();?>
         bottom: 0;
         left: 0;
         right: 0;
+        width: 100%;
+        height: 100%;
     }
 
     .gallery-section,
@@ -220,14 +236,27 @@ get_header();?>
 
     }
 </style>
-<?php // print_r( get_field('t3-header-img') ); ?>
+<?php // print_r( get_field('t3-header-img') ); 
+    $g1 = get_field('t3-g1');
+    $g2 = get_field('t3-g2');
+    $foot = get_field('t3-foot');
+?>
 
 <main id="t3">
     <section class="top-section">
         <div class="container animated fadeIn">
             <div class="row">
                 <div class="col-md-7 col-md-push-5 col-sm-12">
-                    <img src="<?php echo get_field('t3-header-img')['url']; ?>" title="" class="">
+                    <div class="embed-container">
+                    <?php 
+                        $headmeta=get_field("t3-head");
+                        if($headmeta['has-video']==0){
+                            echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
+                        }else{
+                            echo $headmeta['video'];
+                        }
+                    ?>
+                    </div>
                 </div>
                 <div class="col-md-5 col-md-pull-7 col-sm-12">
                     <div class="main-info">
@@ -274,11 +303,8 @@ get_header();?>
             </div>
         </section>
         <section class="row product-section">
-        <?php
-            $images = get_field('t3-g1');
-            foreach( $images as $image ):
-        ?>
-            <div class="col-md-3 col-sm-6 col-xs-12 product-card">
+        <?php foreach( $g1["gallery"] as $key => $image ): ?>
+            <div class="col-md-<?php echo 12/$g1["col"]; ?> col-sm-6 col-xs-12 product-card" data="<?php echo $key; ?>">
                 <div class="card-img">
                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" title="<?php echo $image['alt']; ?>">
                 </div>
@@ -287,18 +313,22 @@ get_header();?>
                     <p class=""><?php echo $image['caption']; ?></p>
                 </div>
             </div>
-        <?php endforeach; ?>
+        <?php 
+            if (((12/$g1["col"])*($key+1))%12==0) echo '<div style="clear:both"></div>';
+            endforeach;
+        ?>
         </section>
-        <section class="row content-section">
+        <!-- <section class="row content-section">
             <div class="col-md-8 col-md-offset-2">
                 <?php the_content(); ?>
             </div>
-        </section>
+        </section> -->
+        <?php if ($g2["has-image"]==1): ?>
         <section class="row gallery-section">
             <div class="col-md-12 gallery" id='gallery'>
                 <div class="row">
                 <?php
-                    $images = get_field('t3-g2');
+                    $images =$g2["gallery"];
                     foreach( $images as $key => $image ):
                 ?>
                     <a href="<?php echo $image['url']; ?>" class="col-md-3 col-sm-6 col-xs-12 a-wrap" id="g2-item-<?php echo $key ?>">
@@ -315,6 +345,8 @@ get_header();?>
                 });
             </script>
         </section>
+        <?php endif; ?>
+        <?php if ($foot["has-map"]==1): ?>
         <section class="row map-section">
             <div id="map" style="height:400px;" class="col-md-12"></div>
             <script>
@@ -322,16 +354,13 @@ get_header();?>
                     var uluru = {lat: <?php echo $mypost->lat; ?>, lng: <?php echo $mypost->long; ?>};
                     var map = new google.maps.Map(document.getElementById('map'), { zoom: 15, center: uluru });
                     var marker = new google.maps.Marker({ position: uluru, map: map });
-
                 }); 
             </script>
         </section>
-        <?php
-            $reviews = get_field('t3-review');
-            if($reviews):
-        ?>
+        <?php endif; ?>
+        <?php if ($foot["has-review"]==1): ?>
         <section class="row review-section">
-            <?php foreach( $reviews as $key => $review ): ?>
+            <?php foreach( $foot["review"] as $key => $review ): ?>
             <div class="col-md-6 col-xs-12 comment-card">
                 <p class="comment-card-head">
                     <span class="comment-card-decoration">
@@ -344,6 +373,23 @@ get_header();?>
             <?php endforeach; ?>
         </section>
         <?php endif; ?>
+        <?php if ($foot["has-image"]==1): ?>
+        <section class="row foot-img">
+            <img src="<?php echo $foot["image"]['url']; ?>" alt="<?php echo $foot["image"]['alt']; ?>" style="width:100%">
+        </section>
+        <?php endif; ?>
+        <section class="row foot-info">
+            <div class="col-md-6 col-xs-12 info-box">
+                <p><?php echo $mypost->address; ?></p>
+                <p><?php echo $mypost->email.' | '. $mypost->phone; ?></p>
+            </div>
+            <div class="col-md-push-3 col-md-3 col-xs-12 social-box">
+                <div style="float:right">
+                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-facebook-square"></i></a>
+                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
     </div>
 <div class="container"><?php //include dirname(__DIR__).'/parts/disqus.php'; ?></div>
 
@@ -355,11 +401,11 @@ get_header();?>
             }, {
                 offset: '90%'
             });
-        $('.content-section').waypoint(function (direction) {
-            $('.content-section').addClass('animated fadeIn');
-            }, {
-                offset: '90%'
-            });
+        // $('.content-section').waypoint(function (direction) {
+        //     $('.content-section').addClass('animated fadeIn');
+        //     }, {
+        //         offset: '90%'
+        //     });
         $('.gallery-section').waypoint(function (direction) {
             $('.gallery-section').addClass('animated fadeIn');
             }, {
@@ -372,6 +418,16 @@ get_header();?>
         });
         $('.review-section').waypoint(function (direction) {
             $('.review-section').addClass('animated fadeIn');
+            }, {
+                offset: '90%'
+        });
+        $('.foot-img').waypoint(function (direction) {
+            $('.foot-img').addClass('animated fadeIn');
+            }, {
+                offset: '90%'
+        });
+        $('.foot-info').waypoint(function (direction) {
+            $('.foot-info').addClass('animated fadeIn');
             }, {
                 offset: '90%'
         });
