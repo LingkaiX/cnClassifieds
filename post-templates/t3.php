@@ -20,9 +20,12 @@ get_header();?>
     }
     section{
         opacity: 0;
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
+        margin-bottom: 30px;
     }
     .top-section{
         opacity: 1;
+        box-shadow:none;
     }
     .theme-color-font {
         color: <?php echo $themeColor ?>;
@@ -73,14 +76,16 @@ get_header();?>
         padding-bottom: 50px;
         color:white;
     }
-
+    .sub-info small{
+        float:right
+    }
     .embed-container { 
         width: 100%;
         height: 70%;
         padding-top: 70%;
         position: relative;
     } 
-    .embed-container iframe, .embed-container object, .embed-container embed,.embed-container img { 
+    .embed-container img { 
         position: absolute;
         top: 0;
         width: 100%;
@@ -89,16 +94,19 @@ get_header();?>
     .top-section a{
         color:white;
     }
+    .contact-info .fa{
+        padding-right:10px;
+        font-size: 20px;
+    }
+    @media (max-width:991px) {
+        .main-info{
+            padding-top:20px;
+        }
+    }
     .company-title {
         text-align: center;
-        font-size: 2.6rem;
-        font-style: normal;
-        line-height: 1.2;
         word-break: break-word;
         word-wrap: break-word;
-        margin-top: 0;
-        margin-bottom: .5rem;
-        font-weight: 500;
     }
 
     .company-subtilte {
@@ -112,15 +120,15 @@ get_header();?>
         margin-top: 0;
         margin-bottom: .5rem;
     }
-
-    .excerpt-section {
-        padding: 2rem 0;
+    @media (min-width:1200px) {
+        .enquiry-btn{
+            margin-top: 50px;
+        }
     }
 
     .product-section {
         background-color: #f0f0f0;
         padding: 25px 15px;
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
 
     .card-img {
@@ -141,8 +149,7 @@ get_header();?>
 
     .gallery-section,
     .review-section {
-        padding-top: 15px;
-        padding-bottom: 30px;
+        padding: 15px 0;
         background-color: #f9f9f9;
     }
     .review-section{
@@ -153,7 +160,7 @@ get_header();?>
     }
 
     .gallery .row:last-child {
-        padding-bottom: 2.5rem;
+        padding-bottom: 20px;
     }
 
     .a-wrap {
@@ -233,8 +240,14 @@ get_header();?>
             padding-left: 57px;
         }
     }
-    #t3 .contact-info{
 
+    .social-box{
+        font-size: 36px;
+        text-align: center;
+    }
+    .info-box p{
+        font-weight: bolder;
+        margin: 5px 0;
     }
 </style>
 <?php
@@ -262,25 +275,25 @@ get_header();?>
                     </div>
                 </div>
                 <div class="col-md-5 col-md-pull-7 col-sm-12">
+                    <?php 
+                        $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
+                        $str= '<div class="sub-info"><small>'.$abn.'ID: '.$post->ID.'</small></div>';                
+                    ?>
                     <div class="main-info">
-                        <?php 
-                            the_title( '<h1 class="company-title">', '</h1>' );                      
+                        <?php
+                            the_title( '<h2 class="company-title">', '</h2>' );                    
                             $enTitle=get_post_meta($post->ID,'title-en',true);
                             if($enTitle) echo '<h3 class="company-subtilte">'.$enTitle.'</h3>'; 
-                        ?>
-                    </div>
-                    <div class="sub-info">                   
-                        <?php
-                            $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
-                            echo '<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small>';
+
                         ?>
                     </div>
                     <div class="contact-info">
-                        <i class="fa fa-tags" aria-hidden="true"></i>
+                        <p><i class="fa fa-tags" aria-hidden="true"></i>
                     <?php 
                         foreach(get_the_category() as $cate){
                             echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                         }
+                        echo "</p>";
                         if(!empty($mypost->phone)) echo '<p><i class="fa fa-phone" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
                         if(!empty($mypost->email)) echo '<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></p>';
@@ -297,13 +310,13 @@ get_header();?>
         </div>
     </section>
     <div class="container">
-        <section class="row excerpt-section animated fadeIn">
+        <article class="row excerpt-section animated fadeIn">
             <div class="col-md-8 col-md-offset-2">      
                 <blockquote class="theme-color-border">
                     <?php the_content(); ?>
                 </blockquote>
             </div>
-        </section>
+        </article>
         <section class="row product-section">
         <?php foreach( $g1["gallery"] as $key => $image ): ?>
             <div class="col-md-<?php echo 12/$g1["col"]; ?> col-sm-6 col-xs-12 product-card" data="<?php echo $key; ?>">
@@ -381,14 +394,14 @@ get_header();?>
         </section>
         <?php endif; ?>
         <section class="row foot-info">
-            <div class="col-md-6 col-xs-12 info-box">
+            <div class="col-md-6 col-sm-6 col-xs-12 info-box">
                 <p><?php echo $mypost->address; ?></p>
                 <p><?php echo $mypost->email.' | '. $mypost->phone; ?></p>
             </div>
-            <div class="col-md-push-3 col-md-3 col-xs-12 social-box">
-                <div style="float:right">
-                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-facebook-square"></i></a>
-                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-instagram"></i></a>
+            <div class="col-md-push-3 col-md-3 col-sm-6 col-xs-12 social-box">
+                <div style="display: inline-block;vertical-align: middle;">
+                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-facebook-square" style="color: #3B5998"></i></a>
+                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-instagram" style="color: #8D42AD"></i></a>
                 </div>
             </div>
         </section>
