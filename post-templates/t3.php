@@ -70,14 +70,14 @@ get_header();?>
         background-color: #686565;
         background: linear-gradient(45deg, #686565, #c1c1c1);
         padding-top: 40px;
-        padding-bottom: 4rem;
+        padding-bottom: 50px;
         color:white;
     }
 
     .embed-container { 
         width: 100%;
-        height: 100%;
-        padding-top: 100%;
+        height: 70%;
+        padding-top: 70%;
         position: relative;
     } 
     .embed-container iframe, .embed-container object, .embed-container embed,.embed-container img { 
@@ -120,6 +120,7 @@ get_header();?>
     .product-section {
         background-color: #f0f0f0;
         padding: 25px 15px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
 
     .card-img {
