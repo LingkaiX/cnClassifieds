@@ -67,7 +67,7 @@ get_header();?>
     .top-section {
         background-color: #686565;
         background: linear-gradient(45deg, #686565, #c1c1c1);
-        padding-top: 1rem;
+        padding-top: 40px;
         padding-bottom: 4rem;
         color:white;
     }
@@ -94,10 +94,9 @@ get_header();?>
         line-height: 1.2;
         word-break: break-word;
         word-wrap: break-word;
-        padding-bottom: 1rem!important;
-        font-weight: 300;
         margin-top: 0;
         margin-bottom: .5rem;
+        font-weight: 500;
 
     }
 
