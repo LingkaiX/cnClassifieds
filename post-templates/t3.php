@@ -6,6 +6,8 @@ Template Post Type: post
 get_header();?>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
+<link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
+
 <?php while (have_posts()) : 
     the_post();
     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
@@ -97,7 +99,6 @@ get_header();?>
         margin-top: 0;
         margin-bottom: .5rem;
         font-weight: 500;
-
     }
 
     .company-subtilte {
@@ -235,7 +236,8 @@ get_header();?>
 
     }
 </style>
-<?php // print_r( get_field('t3-header-img') ); 
+<?php
+    $headmeta=get_field("t3-head");
     $g1 = get_field('t3-g1');
     $g2 = get_field('t3-g2');
     $foot = get_field('t3-foot');
@@ -247,14 +249,15 @@ get_header();?>
             <div class="row">
                 <div class="col-md-7 col-md-push-5 col-sm-12">
                     <div class="embed-container">
-                    <?php 
-                        $headmeta=get_field("t3-head");
-                        if($headmeta['has-video']==0){
-                            echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
-                        }else{
-                            echo $headmeta['video'];
-                        }
-                    ?>
+                        <?php 
+                            if($headmeta['has-video']==0){
+                                echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
+                            }else{
+                                echo '<a data-fancybox href="'.$headmeta["youtube-url"].'">';
+                                    echo '<img src="'.$headmeta['img']['url'].'" title="" class="">';
+                                echo '</a>';
+                            }
+                        ?>                 
                     </div>
                 </div>
                 <div class="col-md-5 col-md-pull-7 col-sm-12">
@@ -265,18 +268,18 @@ get_header();?>
                             if($enTitle) echo '<h3 class="company-subtilte">'.$enTitle.'</h3>'; 
                         ?>
                     </div>
-                    <div class="sub-info">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <div class="sub-info">                   
                         <?php
                             $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
                             echo '<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small>';
-                            foreach(get_the_category() as $cate){
-                                echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
-                            }
                         ?>
                     </div>
                     <div class="contact-info">
+                        <i class="fa fa-tags" aria-hidden="true"></i>
                     <?php 
+                        foreach(get_the_category() as $cate){
+                            echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
+                        }
                         if(!empty($mypost->phone)) echo '<p><i class="fa fa-phone" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
                         if(!empty($mypost->email)) echo '<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></p>';
@@ -294,10 +297,9 @@ get_header();?>
     </section>
     <div class="container">
         <section class="row excerpt-section animated fadeIn">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2">      
                 <blockquote class="theme-color-border">
-                    <p><strong>关于我们</strong></p>
-                    <p><?php echo $post->post_excerpt; ?></p>
+                    <?php the_content(); ?>
                 </blockquote>
             </div>
         </section>
@@ -437,3 +439,4 @@ get_header();?>
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri();?>/js/simple-lightbox.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/js/jquery.waypoints.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
