@@ -269,18 +269,18 @@ get_header();?>
                             if($enTitle) echo '<h3 class="company-subtilte">'.$enTitle.'</h3>'; 
                         ?>
                     </div>
-                    <div class="sub-info">
-                    <i class="fa fa-tags" aria-hidden="true"></i>
+                    <div class="sub-info">                   
                         <?php
                             $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
                             echo '<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small>';
-                            foreach(get_the_category() as $cate){
-                                echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
-                            }
                         ?>
                     </div>
                     <div class="contact-info">
+                        <i class="fa fa-tags" aria-hidden="true"></i>
                     <?php 
+                        foreach(get_the_category() as $cate){
+                            echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
+                        }
                         if(!empty($mypost->phone)) echo '<p><i class="fa fa-phone" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
                         if(!empty($mypost->email)) echo '<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></p>';
