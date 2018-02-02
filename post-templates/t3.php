@@ -298,10 +298,9 @@ get_header();?>
     </section>
     <div class="container">
         <section class="row excerpt-section animated fadeIn">
-            <div class="col-md-8 col-md-offset-2">
+            <div class="col-md-8 col-md-offset-2">      
                 <blockquote class="theme-color-border">
-                    <p><strong>关于我们</strong></p>
-                    <p><?php echo $post->post_excerpt; ?></p>
+                    <?php the_content(); ?>
                 </blockquote>
             </div>
         </section>
