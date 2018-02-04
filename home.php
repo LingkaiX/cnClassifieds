@@ -19,7 +19,17 @@
     enable_page_level_ads: true
   });
 </script>
-
+<script type='text/javascript'>
+    // CHATRIFY LIVE CHAT
+    var __ac = {};
+    __ac.uid = "e4cd38a03281a7a582ef1379971e76db";
+    __ac.server = "secure.chatrify.com";
+    (function() {
+    var ac = document.createElement('script'); ac.type = 'text/javascript'; ac.async = true;
+    ac.src = 'https://cdn.chatrify.com/go.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ac, s);
+    })();
+</script>
 </head>
 <body <?php body_class(); ?>>
 <?php include 'parts/homepage-banner.php';?>  
