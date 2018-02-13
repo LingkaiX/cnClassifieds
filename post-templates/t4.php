@@ -67,6 +67,7 @@ get_header();?>
         @media (max-width:991px) {
             .info{
                 margin-top: 30px;
+                padding-bottom: 80px;
             }
         }
     </style>
@@ -102,6 +103,7 @@ get_header();?>
     }
     .info {
         padding: 30px 30px;
+        position: relative;
     }
     .info a{
         color:rgb(51, 51, 51);
@@ -156,10 +158,9 @@ get_header();?>
     }
     .with-ion span:last-child{
         vertical-align: middle;
-        font-weight: bold;
+        font-weight: 400;
     }
     .with-ion span:before {
-        padding-right: 20px;
         font-family: "Ionicons";
         color: #f05a24;
         font-size: 30px;
@@ -168,30 +169,34 @@ get_header();?>
     }
     .with-ion .phone:before{
         content: "\f4b8";
+        padding-right: 20px;
     }
     .with-ion .phone:hover::before{
         content: "\f4b9";
     }
     .with-ion .email:before{
         content: "\f422";
+        padding-right: 20px;
     }
     .with-ion .email:hover::before{
         content: "\f423";
     }
     .with-ion .website:before{
         content: "\f4d2";
+        padding-right: 19px;
     }
     .with-ion .website:hover::before{
         content: "\f4d3";
     }
     .with-ion .address:before{
         content: "\f46d";
+        padding-right: 19px;
     }
     .with-ion .address:hover::before{
         content: "\f46e";
     }
     .enquiry-btn{
-        width: 70%;
+        width: 100%;
         font-size: 20px;
         float: none;
         margin-right: auto;
@@ -199,7 +204,7 @@ get_header();?>
         margin-top: 30px;
     }
     .goto-google{
-        width: 70%;
+        width: 100%;
         background-color: #858484;
         color: white !important;
         margin-bottom: 10px;
@@ -207,14 +212,18 @@ get_header();?>
         border-radius: 6px;
     }
     .qr-code{
-        max-width: 300px;
-        max-height: 400px;
+        max-width: 200px;
+        max-height: 250px;
         text-align: center;
         display: inline-block;
     }
     .social-box{
-        text-align:center;
+        text-align: center;
         font-size: 30px;
+        position: absolute;
+        bottom: 20px;
+        left: 0;
+        right: 0;
     }
     </style>
     <section class="row sect-contact">
@@ -283,6 +292,10 @@ get_header();?>
             padding-right: 50px;
             color: #F05A24;
         }
+        .article h1:first-child,.article h2:first-child,.article h3:first-child,
+        .article h4:first-child,.article h5:first-child{
+            margin-top: 10px;
+        }
         .article p{
             padding-left: 50px;
             padding-right: 50px;
@@ -293,6 +306,12 @@ get_header();?>
         .p-abn-2{
 
         }
+        img.little-man{
+            height: 60px;
+            margin: 10px 0;
+            padding-right: 15px;
+            vertical-align: middle;
+        }
     </style>
     <section class="row sect-content">
         <div class="col-md-8"><div class="article">
@@ -300,9 +319,12 @@ get_header();?>
         </div></div>
         <div class="col-md-4 hidden-sm hidden-xs"><div style="text-align:center;">           
         <?php 
-            if($hasAbn) echo '<div class="solid-boder abn-box"><p class="p-abn"><span>ABN CHECKED</span><img class="img-abn" src="'
-                .get_template_directory_uri().'/img/ABN-CHECKED.svg"></img></p></div>';
-            echo '<div class="qr-code" style="padding: 30px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+            if($hasAbn) echo '<div class="solid-boder abn-box"><p class="p-abn">
+                <img class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg"></img>
+                <span>ABN CHECKED</span>
+                <img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></img>
+                </p></div>';
+            echo '<div class="qr-code" style="margin-top:30px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
         ?>
         </div></div>
     </section>
