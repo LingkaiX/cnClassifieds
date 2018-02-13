@@ -468,14 +468,14 @@ get_header();?>
             <span style="white-space:pre;">  </span><span class="txt">顾客反馈</span>  
             <span style="white-space:pre;">  </span><span class="line"></span>
         </div>
-        <?php foreach( $foot["reviews"] as $key => $review ): ?>
+        <?php if($foot["has-reviews"]==1){ foreach( $foot["reviews"] as $key => $review ): ?>
             <div class="col-md-6 col-xs-12"><div class="review-box">
                 <p class="review-content">
                     <?php echo $review['content'] ?>
                 </p>
                 <p class="review-title"><strong><?php echo $review['title'] ?></strong></p>
             </div></div>
-        <?php endforeach; ?>
+        <?php endforeach;} ?>
     </section>
     <style>
         .sect-bottom .box-left{
