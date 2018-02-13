@@ -396,10 +396,11 @@ get_header();?>
                     startId=0
                     return
                 }
-                jQuery("#item-"+(startId+showCount)).hide( "slow", function() {
-                });
-                jQuery("#item-"+startId).show( "slow", function() { })
-
+                // jQuery("#item-"+(startId+showCount)).hide( "fast", function() {
+                // });
+                // jQuery("#item-"+startId).show( "slow", function() { })
+                jQuery("#item-"+(startId+showCount)).hide()
+                jQuery("#item-"+startId).show()
             }
             function showNext(){
                 startId+=1
@@ -407,10 +408,11 @@ get_header();?>
                     startId-=1
                     return
                 }
-                jQuery("#item-"+(startId-1)).hide( "slow", function() {
-                });
-                jQuery("#item-"+(startId+showCount-1)).show( "slow", function() { })
-
+                // jQuery("#item-"+(startId-1)).hide( "fast", function() {
+                // });
+                // jQuery("#item-"+(startId+showCount-1)).show( "slow", function() { })
+                jQuery("#item-"+(startId-1)).hide()
+                jQuery("#item-"+(startId+showCount-1)).show()
             }
         </script>
     </section>
@@ -469,7 +471,7 @@ get_header();?>
             <span style="white-space:pre;">  </span><span class="txt">顾客反馈</span>  
             <span style="white-space:pre;">  </span><span class="line"></span>
         </div>
-        <?php if($foot["has-reviews"]==1){ foreach( $foot["reviews"] as $key => $review ): ?>
+        <?php foreach( $foot["reviews"] as $key => $review ): ?>
             <div class="col-md-6 col-xs-12"><div class="review-box">
                 <p class="review-content">
                     <?php echo $review['content'] ?>
