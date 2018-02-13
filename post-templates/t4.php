@@ -7,6 +7,7 @@ get_header();?>
 <link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
+<link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
 
 <style>
     html, body{
@@ -306,9 +307,10 @@ get_header();?>
         </div></div>
     </section>
     <style>
-    /* .product-card{
-        transition:width 1s, height 1s;
-    } */
+    .product-card{
+        transition: opacity 1s;
+
+    }
     .card-img {
         width: 100%;
         padding-top: 100%;
@@ -416,7 +418,9 @@ get_header();?>
                 // });
                 // jQuery("#item-"+startId).show( "slow", function() { })
                 jQuery("#item-"+(startId+showCount)).hide()
-                jQuery("#item-"+startId).show()
+                jQuery("#item-"+startId).show().addClass('animated fadeIn')
+
+                
             }
             function showNext(){
                 startId+=1
@@ -428,7 +432,7 @@ get_header();?>
                 // });
                 // jQuery("#item-"+(startId+showCount-1)).show( "slow", function() { })
                 jQuery("#item-"+(startId-1)).hide()
-                jQuery("#item-"+(startId+showCount-1)).show()
+                jQuery("#item-"+(startId+showCount-1)).show().addClass('animated fadeIn')
             }
         </script>
     </section>
