@@ -4,7 +4,7 @@ Template Name: Template 4
 Template Post Type: post 
 */
 get_header();?>
-<link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'/>
+<link href='<?php echo get_template_directory_uri();?>/css/ionicons.min.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
@@ -552,4 +552,4 @@ get_header();?>
 <?php endwhile; ?>
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="https://hammerjs.github.io/dist/hammer.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/hammer.min.js"></script>
