@@ -421,6 +421,7 @@ get_header();?>
         <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
     </section>
     <?php endif; ?>
+    <?php if($foot["has-reviews"]==1): ?>
     <style>
         @media (max-width:991px) {
         .sect-review{
@@ -475,8 +476,9 @@ get_header();?>
                 </p>
                 <p class="review-title"><strong><?php echo $review['title'] ?></strong></p>
             </div></div>
-        <?php endforeach;} ?>
+        <?php endforeach; ?>
     </section>
+    <?php endif; ?>
     <style>
         .sect-bottom .box-left{
             padding:30px;
