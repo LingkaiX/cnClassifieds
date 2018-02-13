@@ -4,7 +4,7 @@ Template Name: Template 4
 Template Post Type: post 
 */
 get_header();?>
-<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'/>
+<link href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
 
@@ -208,6 +208,10 @@ get_header();?>
         text-align: center;
         display: inline-block;
     }
+    .social-box{
+        text-align:center;
+        font-size: 30px;
+    }
     </style>
     <section class="row sect-contact">
         <div class="col-md-8"><div class="slider solid-boder">
@@ -233,11 +237,21 @@ get_header();?>
                 if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span>'.$mypost->address.'</span></p>';
             }
         ?>
-        <div style="text-align:center;">
-            <div class="hidden-md hidden-lg qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
-            <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
-            <a class="btn goto-google" target="_blank" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
-        </div></div></div>
+            <div style="text-align:center;">
+                <div class="hidden-md hidden-lg qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+                <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
+                <a class="btn goto-google" target="_blank" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
+            
+            </div>
+            <div class="social-box">
+                <?php if($social['has-facebook']): ?>
+                    <a target="_blank" href="<?php echo $social["facebook"]; ?>"<i class="fa fa-facebook-square" style="color: #3B5998"></i></a>
+                <?php endif; ?>
+                <?php if($social['has-instagram']): ?>
+                    <a target="_blank" href="<?php echo $social["instagram"]; ?>"<i class="fa fa-instagram" style="color: #8D42AD"></i></a>
+                <?php endif; ?>
+            </div>
+        </div></div>
         <script>
             var showingId=0;
             jQuery(document).ready(function($){
@@ -353,9 +367,7 @@ get_header();?>
                     <p class=""><?php echo $item['content']; ?></p>
                 </div>
             </div>
-            <?php 
-                endforeach; 
-            ?>
+            <?php endforeach; ?>
         </div>
         <button class="btn btn-last" onclick="showLast()">
             <i class="ion-android-arrow-back"></i>
@@ -497,11 +509,20 @@ get_header();?>
                 if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span>'.$mypost->address.'</span></p>';
             }
         ?>
-        <div style="text-align:center;">
-            <div class="hidden-md hidden-lg qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
-            <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
-            <a class="btn goto-google" target="_blank" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
-        </div></div></div>
+            <div style="text-align:center;">
+                <div class="hidden-md hidden-lg qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+                <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
+                <a class="btn goto-google" target="_blank" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
+            </div>
+            <div class="social-box">
+                <?php if($social['has-facebook']): ?>
+                    <a target="_blank" href="<?php echo $social["facebook"]; ?>"<i class="fa fa-facebook-square" style="color: #3B5998"></i></a>
+                <?php endif; ?>
+                <?php if($social['has-instagram']): ?>
+                    <a target="_blank" href="<?php echo $social["instagram"]; ?>"<i class="fa fa-instagram" style="color: #8D42AD"></i></a>
+                <?php endif; ?>
+            </div>
+        </div></div>
     </section>
 </main>
 <?php endwhile; ?>
