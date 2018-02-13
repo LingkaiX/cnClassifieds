@@ -102,6 +102,9 @@ get_header();?>
     .info {
         padding: 30px 30px;
     }
+    .info a{
+        color:rgb(51, 51, 51);
+    }
     .info a:hover{
         text-decoration: none;
     }
@@ -197,7 +200,7 @@ get_header();?>
     .goto-google{
         width: 70%;
         background-color: #858484;
-        color: white;
+        color: white !important;
         margin-bottom: 10px;
         font-size: 20px;
         border-radius: 6px;
@@ -387,8 +390,21 @@ get_header();?>
             console.log(showCount)
             jQuery(document).ready(function($){
                 for (var i=showCount; i < 4; i++){
-                    jQuery("#item-"+i).css("display","none")
+                    jQuery("#item-"+i).hide()
                 }
+            });
+            jQuery(window).resize(function() {
+                var w = window.innerWidth;
+                if(w<768) showCount=1
+                else if(w<992) showCount=2
+                else showCount=4
+                for(var i=0; i<showCount; i++){
+                    jQuery("#item-"+i).show()
+                }
+                for (var i=showCount; i < <?php echo sizeOf($items); ?>; i++){
+                    jQuery("#item-"+i).hide()
+                }
+                startId=0
             });
             function showLast(){
                 startId-=1
