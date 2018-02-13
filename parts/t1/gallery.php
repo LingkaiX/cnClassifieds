@@ -37,9 +37,13 @@
     }
     .nav-last{
         left: 15px;
+        padding-right: 10px;
+        padding-top: 4px;
     }
     .nav-next {
         right: 15px;
+        padding-left: 10px;
+        padding-top: 4px;
     }
     .fa-chevron-left, .fa-chevron-right{
         padding-top: 5px;
