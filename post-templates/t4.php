@@ -64,12 +64,6 @@ get_header();?>
         .en-title-t4{
             margin-top: 15px;
         }
-        @media (max-width:991px) {
-            .info{
-                margin-top: 30px;
-                padding-bottom: 80px;
-            }
-        }
     </style>
     <section class="row sect-top"><div class="col-md-12">
         <div class="logo-t4"><?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );?></div>
@@ -104,6 +98,12 @@ get_header();?>
     .info {
         padding: 30px 30px;
         position: relative;
+    }
+    @media (max-width:991px) {
+        .info{
+            margin-top: 30px;
+            padding-bottom: 80px;
+        }
     }
     .info a{
         color:rgb(51, 51, 51);
@@ -527,6 +527,7 @@ get_header();?>
         .sect-bottom .box-left{
             padding:30px;
             background : #EFEFEF;
+            text-align: center;
         }
     </style>
     <section class="row sect-bottom">
