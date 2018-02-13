@@ -59,14 +59,12 @@ get_header();?>
     }
 
     blockquote {
-        font-style: italic;
-        padding: 10px 0 20px 20px;
-        font-size: 1.09rem;
+        padding: 15px 0 20px 20px;
+        font-size: 16px;
         position: relative;
         border-width: 3px;
         margin: 0 2rem;
-        margin-bottom: 2.3125rem;
-        color: #767676;
+        margin-bottom: 45px;
     }
 
     .top-section {
@@ -104,13 +102,11 @@ get_header();?>
         }
     }
     .company-title {
-        text-align: center;
         word-break: break-word;
         word-wrap: break-word;
     }
 
     .company-subtilte {
-        text-align: center;
         font-size: 1.6rem;
         line-height: 1.3;
         font-weight: 300;
@@ -130,7 +126,13 @@ get_header();?>
         background-color: #f0f0f0;
         padding: 25px 15px;
     }
-
+    .card-box h4 {
+        font-size: 16px;
+        font-weight: 600;
+    }
+    .card-box p {
+        font-size: 14.5px;
+    }
     .card-img {
         width: 100%;
         padding-top: 100%;
@@ -192,8 +194,15 @@ get_header();?>
         width: 90%;
         margin: auto;
         object-fit: cover;
+        transform: scale(1.0);
+        transition: transform 0.5s, opacity 0.5s;
+        opacity: 0.7;
     }
-
+    .a-wrap img:hover{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+     
     .content-section {
         padding: 30px;
     }
@@ -245,9 +254,15 @@ get_header();?>
         font-size: 36px;
         text-align: center;
     }
+    .social-box .fa:hover {
+        transform: scale(1.05);
+        text-decoration: none;
+    }
     .info-box p{
-        font-weight: bolder;
-        margin: 5px 0;
+        font-weight: 600;
+        margin: 6px 0;
+        color: #5d5d5d;
+        font-size: 15px;
     }
 </style>
 <?php

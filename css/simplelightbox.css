@@ -10,8 +10,8 @@ body.hidden-scroll {
   right: 0;
   top: 0;
   bottom: 0;
-  background: #fff;
-  opacity: 0.7;
+  background: #464646;
+  opacity: 0.9;
   display: none;
   z-index: 1000000030;
 }
