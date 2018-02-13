@@ -29,15 +29,17 @@
     .nav-last, .nav-next{
         position: absolute;
         top: 40%;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(255, 255, 255, 1);
         z-index: 99;
         border: none;
+        font-size: 30px;
+        opacity: 0.7;
     }
     .nav-last{
-        left: 0;
+        left: 15px;
     }
     .nav-next {
-        right: 0;
+        right: 15px;
     }
     .fa-chevron-left, .fa-chevron-right{
         padding-top: 5px;

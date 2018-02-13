@@ -342,7 +342,7 @@ get_header();?>
         background-color:#efefef;
         padding:15px;
     }
-    .card-box h3{
+    .card-box h4{
         margin-top:0;
         /* padding-top:10px; */
         color:#f26522;
@@ -363,7 +363,7 @@ get_header();?>
                     <?php endforeach; ?>
                 </div>
                 <div class="card-box">
-                    <h3 class=""><?php echo $item['title']; ?></h3>
+                    <h4 class=""><?php echo $item['title']; ?></h4>
                     <p class=""><?php echo $item['content']; ?></p>
                 </div>
             </div>
