@@ -70,7 +70,7 @@ get_header();?>
         <div class="logo-t4"><?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );?></div>
         <?php
             $abn=null;
-            
+            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></img></abbr>';
             the_title( '<h1 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h1>' );
             $enTitle=get_post_meta($post->ID,'title-en',true);
             if($enTitle) echo '<h3 class="en-title-t4">'.$enTitle.'</h3>'; 
@@ -98,8 +98,16 @@ get_header();?>
     }
     @media (max-width:767px) {
         .slider{
-            margin-top: 30px;
             padding: 0;
+        }
+        .title-t4{
+            font-size:28px;
+        }
+        .en-title-t4{
+            font-size:20px;
+        }
+        .p-abn {
+            font-weight: 200;
         }
     }
     .info {
