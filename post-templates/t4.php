@@ -16,7 +16,7 @@ get_header();?>
     .VYMape {
         display: none;
     }
-    main img{
+    .qr-code img,.box-left img{
         max-width: 100%;
         max-height: 100%;
     }

@@ -22,8 +22,9 @@
     }
 
     .gallery a img {
-        max-width: 250px;
-        max-height: 250px
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
     }
 
     .nav-last, .nav-next{
@@ -55,7 +56,7 @@
     <div class="gallery" id='gallery'>
     <?php foreach( $images as $image ): ?>          
         <a href="<?php echo $image['url']; ?>" data-fancybox="group-g">
-            <img src="<?php echo $image['sizes']['thumbnail']; ?>"
+            <img src="<?php echo $image['sizes']['large']; ?>"
                 alt="<?php echo $image['alt'];?>" title="<?php echo $image['caption']; ?>"/>
         </a>                
     <?php endforeach; ?>
