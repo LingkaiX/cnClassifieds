@@ -231,6 +231,10 @@ get_header();?>
         left: 0;
         right: 0;
     }
+    img.img-social{
+        height:30px;
+        padding: 0 15px;
+    }
     </style>
     <section class="row sect-contact">
         <div class="col-md-8"><div class="slider solid-boder">
@@ -245,32 +249,9 @@ get_header();?>
             }?>
             </div>
         </div></div>
-        <div class="col-md-4"><div class="info solid-boder">
-        <?php
-            if($mypost!=null){
-                if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span>'.$mypost->phone.'</span></p>';
-                if(!empty($mypost->email)) echo '<p class="with-ion"><a href="mailto:#"><span class="email"></span><span>'
-                    .$mypost->email.'</span></a></p>';
-                if(!empty($mypost->website)) echo '<p class="with-ion"><a target="_blank" href="'
-                    .$mypost->website.'"><span class="website"></span><span>'.removeScheme($mypost->website).'</span></a></p>';
-                if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span>'.$mypost->address.'</span></p>';
-            }
-        ?>
-            <div style="text-align:center;">
-                <div class="hidden-md hidden-lg qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
-                <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
-                <a class="btn goto-google" target="_blank" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
-            
-            </div>
-            <div class="social-box">
-                <?php if($social['has-facebook']): ?>
-                    <a target="_blank" href="<?php echo $social["facebook"]; ?>"<i class="fa fa-facebook-square" style="color: #3B5998"></i></a>
-                <?php endif; ?>
-                <?php if($social['has-instagram']): ?>
-                    <a target="_blank" href="<?php echo $social["instagram"]; ?>"<i class="fa fa-instagram" style="color: #8D42AD"></i></a>
-                <?php endif; ?>
-            </div>
-        </div></div>
+        <div class="col-md-4 hidden-sm">
+            <?php include dirname(__DIR__).'/parts/t4/info.php'; ?>
+        </div>
         <script>
             var showingId=0;
             jQuery(document).ready(function($){
@@ -320,7 +301,7 @@ get_header();?>
         }
     </style>
     <section class="row sect-content">
-        <div class="col-md-8"><div class="article">
+        <div class="col-md-8 col-sm-6 col-xs-12"><div class="article">
         <?php the_content(); ?>
         </div></div>
         <div class="col-md-4 hidden-sm hidden-xs"><div style="text-align:center;">           
@@ -333,6 +314,9 @@ get_header();?>
             echo '<div class="qr-code" style="margin-top:30px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
         ?>
         </div></div>
+        <div class="col-sm-6 visible-sm-inline-block" style="margin-top: -30px;">
+            <?php include dirname(__DIR__).'/parts/t4/info.php'; ?>
+        </div>
     </section>
     <style>
     .product-card{
@@ -468,7 +452,9 @@ get_header();?>
     </style>
     <?php if($gallery['show-gallery']==1): $images=$gallery['imgs']  ?>
     <section class="row sect-gallery">
+    <div class="col-md-12">
         <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
+    </div>
     </section>
     <?php endif; ?>
     <?php if($foot["has-reviews"]==1): ?>
@@ -556,31 +542,9 @@ get_header();?>
                 </script>
             <?php endif; ?>
         </div></div>
-        <div class="col-md-4"><div class="info solid-boder">
-        <?php
-            if($mypost!=null){
-                if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span>'.$mypost->phone.'</span></p>';
-                if(!empty($mypost->email)) echo '<p class="with-ion"><a href="mailto:#"><span class="email"></span><span>'
-                    .$mypost->email.'</span></a></p>';
-                if(!empty($mypost->website)) echo '<p class="with-ion"><a target="_blank" href="'
-                    .$mypost->website.'"><span class="website"></span><span>'.removeScheme($mypost->website).'</span></a></p>';
-                if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span>'.$mypost->address.'</span></p>';
-            }
-        ?>
-            <div style="text-align:center;">
-                <div class="hidden-md hidden-lg qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
-                <?php include dirname(__DIR__).'/parts/enquiry-form.php'; ?>
-                <a class="btn goto-google" target="_blank" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
-            </div>
-            <div class="social-box">
-                <?php if($social['has-facebook']): ?>
-                    <a target="_blank" href="<?php echo $social["facebook"]; ?>"<i class="fa fa-facebook-square" style="color: #3B5998"></i></a>
-                <?php endif; ?>
-                <?php if($social['has-instagram']): ?>
-                    <a target="_blank" href="<?php echo $social["instagram"]; ?>"<i class="fa fa-instagram" style="color: #8D42AD"></i></a>
-                <?php endif; ?>
-            </div>
-        </div></div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <?php include dirname(__DIR__).'/parts/t4/info.php'; ?>
+        </div>
     </section>
 </main>
 <?php endwhile; ?>

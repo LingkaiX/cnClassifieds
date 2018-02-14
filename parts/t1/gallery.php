@@ -13,8 +13,8 @@
     }
 
     .gallery a {
-        width: 260px;
-        height: 250px;
+        width: 210px;
+        height: 200px;
         display: table-cell;
         text-align: center;
         vertical-align: middle;
@@ -22,8 +22,8 @@
     }
 
     .gallery a img {
-        width: 250px;
-        height: 250px;
+        width: 200px;
+        height: 200px;
         object-fit: cover;
     }
 
@@ -52,7 +52,7 @@
 </style>
 <?php // NEND DATA: $images ?>
 <div class="g-wrap">
-    <button class="nav-last" onclick="go(260)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="nav-last" onclick="go(210)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
     <div class="gallery" id='gallery'>
     <?php foreach( $images as $image ): ?>          
         <a href="<?php echo $image['url']; ?>" data-fancybox="group-g">
@@ -61,13 +61,13 @@
         </a>                
     <?php endforeach; ?>
     </div>
-    <button class="nav-next" onclick="go(-260)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    <button class="nav-next" onclick="go(-210)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
 </div>
 
 <script>
     var imgCount= parseInt(<?php echo sizeof($images); ?>);
     
-    var endOffset = jQuery('.g-wrap').width() - imgCount * 260;
+    var endOffset = jQuery('.g-wrap').width() - imgCount * 210;
     //console.log(endOffset, 'off')
     var pos=0, posTemp;
     if(endOffset>=0) {
@@ -77,7 +77,7 @@
     function go(gogo) {
         pos = pos + gogo;
         if (pos > 0) pos = endOffset;
-        if (pos+260 < endOffset) pos = 0;
+        if (pos+210 < endOffset) pos = 0;
         jQuery('.gallery').css('transform', 'translate(' + pos + 'px)')
     }
     // jQuery(function () {
