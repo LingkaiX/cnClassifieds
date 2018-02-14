@@ -95,6 +95,12 @@ get_header();?>
     .slider{
         padding: 45px 30px 60px 30px
     }
+    @media (max-width:767px) {
+        .slider{
+            margin-top: 30px;
+            padding: 0;
+        }
+    }
     .info {
         padding: 30px 30px;
         position: relative;
@@ -150,7 +156,7 @@ get_header();?>
         border: 1px solid #ccc!important;
         border-radius: 50%;
         text-align: center;
-        background-color: transparent;
+        background-color: lightgray;
         display: inline-block;
     }
     .dot-show, .dot:hover{
@@ -528,6 +534,11 @@ get_header();?>
             padding:30px;
             background : #EFEFEF;
             text-align: center;
+        }
+        @media (max-width:767px) {
+            .sect-bottom .box-left{
+                padding:15px;
+            }
         }
     </style>
     <section class="row sect-bottom">
