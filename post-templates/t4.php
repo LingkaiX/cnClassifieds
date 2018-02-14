@@ -54,6 +54,7 @@ get_header();?>
         }
         .logo-t4 img{
             max-height: 100%;
+            max-width: 100%;
             width: auto;
             bottom: 0;
             position: absolute;
