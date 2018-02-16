@@ -56,8 +56,9 @@
     <div class="gallery" id='gallery'>
     <?php foreach( $images as $image ): ?>          
         <a href="<?php echo $image['url']; ?>" data-fancybox="group-g">
-            <img src="<?php echo $image['sizes']['large']; ?>"
-                alt="<?php echo $image['alt'];?>" title="<?php echo $image['caption']; ?>"/>
+            <img data-src="<?php echo $image['sizes']['large']; ?>"
+                alt="<?php echo $image['alt'];?>" title="<?php echo $image['caption']; ?>" 
+                class="lazyload" src="<?php echo $loadingUrl; ?>"/>
         </a>                
     <?php endforeach; ?>
     </div>
@@ -106,5 +107,6 @@ jQuery(document).ready(function($){
         //console.log(posTemp)
         jQuery('.gallery').css('transform', 'translate(' + posTemp + 'px)')
     });
+
 });
 </script>

@@ -41,6 +41,7 @@ get_header();?>
     $gallery = get_field('t4-gallery');
     $foot = get_field('t4-foot');
     //print_r($gallery);
+    $loadingUrl=get_template_directory_uri().'/img/Loader.svg';
 ?>
 <main id="t4" class="container">
     <style>
@@ -249,7 +250,7 @@ get_header();?>
         <div class="col-md-8"><div class="slider solid-boder">
             <div class="img">
             <?php foreach($slider as $key => $img){
-                echo '<img src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'">';
+                echo '<img data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'">';
             }?>
             </div>
             <div class="dots">
@@ -383,8 +384,9 @@ get_header();?>
                 <div class="card-img">
                     <?php foreach( $item['img'] as $skey => $image ): ?>
                         <a href="<?php echo $image['url']; ?>" data-fancybox="group-<?php echo $key; ?>">
-                            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
-                                style="<?php if($skey==0) echo 'z-index:10;'; ?>">
+                            <img data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"
+                                style="<?php if($skey==0) echo 'z-index:10;'; ?>"
+                                class="lazyload" src="<?php echo $loadingUrl; ?>">
                         </a>
                     <?php endforeach; ?>
                 </div>
@@ -539,7 +541,7 @@ get_header();?>
     <section class="row sect-bottom">
         <div class="col-md-8"><div class="slider box-left">
             <?php if($foot["has-img"]==1): ?>
-                <img src="<?php echo $foot['img']['url']; ?>" title="" class="">
+                <img data-src="<?php echo $foot['img']['url']; ?>" alt="" class="lazyload" src="<?php echo $loadingUrl; ?>">
             <?php else: ?>
                 <div id="map" style="height: 400px;  width: 100%;"></div>
                 <script>
@@ -560,3 +562,4 @@ get_header();?>
 <?php get_footer(); ?>
 <script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/hammer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
