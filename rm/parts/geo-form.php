@@ -26,7 +26,7 @@
             </div>
 
             <div class="form-group col-md-2 col-sm-2 col-xs-3">
-                <button type="submit" class="search-btn btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button type="submit" class="search-btn btn btn-default"><i class="ionicon ion-search" aria-hidden="true"></i></button>
             </div>
         </form>
     </div>

@@ -96,7 +96,7 @@ class GMW_PT_Admin {
                 ) );
 
         if ( empty( $location ) ) {
-            echo '<i class="fa fa-times-circle" style="color:red;margin-right:5px;"></i>'.__( 'No location found', "GMW" );
+            echo '<i class="ionicon ion-close-circled" style="color:red;margin-right:5px;"></i>'.__( 'No location found', "GMW" );
             return;
         }
         
@@ -111,7 +111,7 @@ class GMW_PT_Admin {
         }
         
         $address = ( $address_ok == true ) ? '<a href="http://maps.google.com/?q='.$address.'" target="_blank" title="location">'.$address.'</a>' : '<span style="color:red">'.$address.'</span>';
-        echo '<i class="fa fa-check-circle" style="color:green;margin-right:5px;" style="color:green"></i>'. $address;
+        echo '<i class="ionicon ion-checkmark-circled" style="color:green;margin-right:5px;" style="color:green"></i>'. $address;
 
     }
 

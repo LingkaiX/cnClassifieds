@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia
 Description: cnclassifieds
-Version: 1.0.2
+Version: 1.0.3
 Text Domain: cnclassifieds
 */
 * {
@@ -32,6 +32,15 @@ p {
 .fa {
   color: #f26522;
   /* font-size: large; */
+}
+.ionicon {
+  color: #f26522;
+  display: inline-block;
+  font: normal normal normal 14px/1 Ionicons;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 /* h2:after {
     display: block;
@@ -99,10 +108,11 @@ abbr[title] {
   min-height: 40px;
   text-align: center;
 }
-.first-header .fa {
+.first-header .ionicon {
   color: white;
+  padding-top: 5px;
 }
-.first-header .fa:hover {
+.first-header .ionicon:hover {
   color: black;
 }
 .back-button,
@@ -131,7 +141,7 @@ abbr[title] {
   padding: 0;
   font-weight: 600;
   color: white;
-  padding-top: 8px;
+  padding-top: 4px;
 }
 .header-logo {
   display: inline-block;
@@ -317,8 +327,8 @@ a.page-numbers:focus {
   height: 32px;
 }
 #accordion .panel-title a:first-child:before {
-  content: "\f0d7";
-  font-family: "FontAwesome";
+  content: "\f35f";
+  font-family: "Ionicons";
   color: #f26522;
   display: block;
   width: 30px;
@@ -333,7 +343,7 @@ a.page-numbers:focus {
   transition: all 0.3s ease 0s;
 }
 #accordion .panel-title a.collapsed:first-child:before {
-  content: "\f0da";
+  content: "\f363";
 }
 #accordion .panel-title a:nth-child(2) {
   padding-bottom: 5px;
@@ -386,6 +396,7 @@ a.page-numbers:focus {
   position: relative;
 }
 .listed-header .entry-title {
+  padding-left: 5px;
   margin-top: 5px;
   font-weight: bold;
 }
@@ -462,7 +473,7 @@ a.page-numbers:focus {
   margin-left: 10px;
   color: black;
 }
-.listed-contact .fa {
+.listed-contact .ionicon {
   margin: 0 20px;
   font-size: 20px;
 }
@@ -518,7 +529,7 @@ a.page-numbers:focus {
   /*text-transform: uppercase;*/
 }
 .en-title {
-  padding-left: 15px;
+  padding-left: 5px;
   font-weight: bold;
 }
 .title {
@@ -674,7 +685,7 @@ a.page-numbers:focus {
   background-color: rgba(242, 101, 34, 0.8);
   border-color: rgba(242, 101, 34, 0.8);
 }
-.search-submit .fa {
+.search-submit .ionicon {
   color: #fff;
 }
 #gmw-cl-form-wrapper {
@@ -726,7 +737,7 @@ a.page-numbers:focus {
   border: 0;
   margin-right: 10px;
 }
-.enquiry-form-header .fa {
+.enquiry-form-header .ionicon {
   font-size: 24px;
   color: white;
   margin: 8px 5px;
@@ -884,7 +895,7 @@ form.wpcf7-form label {
   font-weight: bold;
   color: #f26522;
 }
-.top-banner-info .fa-phone {
+.top-banner-info .ionicon {
   color: #f26522;
   font-size: medium;
 }

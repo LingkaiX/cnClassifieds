@@ -15,7 +15,7 @@ get_header(); ?>
                 if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';  
             ?>
             <div class="tag">
-                <i class="fa fa-tags icon" aria-hidden="true"></i>
+                <i class="ionicon ion-pricetags icon" aria-hidden="true"></i>
                 <?php 
                     foreach(get_the_category() as $cate){
                         echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
@@ -32,12 +32,12 @@ get_header(); ?>
                 <?php
                     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
                     if($mypost!=null){
-                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-phone icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
-                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-envelope icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
+                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="ionicon ion-ios-telephone icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
+                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="ionicon ion-ios-email-outline icon-small" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></label>';
-                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-globe icon-small" aria-hidden="true"></i><a target="_blank" href="'
+                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="ionicon ion-ios-world-outline icon-small" aria-hidden="true"></i><a target="_blank" href="'
                             .$mypost->website.'"><span>'.removeScheme($mypost->website).'</span></a></label>';
-                        if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="fa fa-map-marker icon-small" aria-hidden="true"></i><span>'.$mypost->address
+                        if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-6 col-md-6"><i class="ionicon ion-ios-navigate-outline icon-small" aria-hidden="true"></i><span>'.$mypost->address
                             .'</span><a style="margin-left:10px;" target="_blank" href="https://www.google.com/maps?daddr='
                             .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></label>';
                     }

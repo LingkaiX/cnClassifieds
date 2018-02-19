@@ -9,7 +9,7 @@
             <input type="text" id="auto-map" class="form-control auto-map" placeholder="请输入地址或区域" autocomplete="off">
         </div>
         <div class="col-md-1 col-sm-1 col-xs-2">
-            <button type="submit" class="btn btn-default search-submit theme-color-background theme-color-border"><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button type="submit" class="btn btn-default search-submit theme-color-background theme-color-border"><i class="ionicon ion-search" aria-hidden="true"></i></button>
         </div>
         <input type="hidden" id="s-or-cat" name="sorcat" value="">
         <input type="hidden" id="geo-lat" name="lat" value="">

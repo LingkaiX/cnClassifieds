@@ -40,19 +40,21 @@
         left: 15px;
         padding-right: 10px;
         padding-top: 4px;
+        padding-left: 7px;
     }
     .nav-next {
         right: 15px;
         padding-left: 10px;
         padding-top: 4px;
+        padding-right: 7px;
     }
-    .fa-chevron-left, .fa-chevron-right{
+    .ion-chevron-left, .ion-chevron-right{
         padding-top: 5px;
     }
 </style>
 <?php // NEND DATA: $images ?>
 <div class="g-wrap">
-    <button class="nav-last" onclick="go(210)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+    <button class="nav-last" onclick="go(210)"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
     <div class="gallery" id='gallery'>
     <?php foreach( $images as $image ): ?>          
         <a href="<?php echo $image['url']; ?>" data-fancybox="group-g">
@@ -62,7 +64,7 @@
         </a>                
     <?php endforeach; ?>
     </div>
-    <button class="nav-next" onclick="go(-210)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+    <button class="nav-next" onclick="go(-210)"><i class="ionicon ion-chevron-right" aria-hidden="true"></i></button>
 </div>
 
 <script>

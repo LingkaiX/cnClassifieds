@@ -4,7 +4,6 @@ Template Name: Template 4
 Template Post Type: post 
 */
 get_header();?>
-<link href='<?php echo get_template_directory_uri();?>/css/ionicons.min.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
@@ -23,7 +22,6 @@ get_header();?>
     section{
         margin-bottom: 60px;
     }
-
     .solid-boder{
         border-style : Solid;
         border-color : #F16522;
@@ -72,12 +70,12 @@ get_header();?>
         <?php
             $abn=null;
             //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></img></abbr>';
-            the_title( '<h1 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h1>' );
+            the_title( '<h2 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h2>' );
             $enTitle=get_post_meta($post->ID,'title-en',true);
             if($enTitle) echo '<h3 class="en-title-t4">'.$enTitle.'</h3>'; 
         ?>
         <div class="tag-t4">
-            <i class="fa fa-tags icon" aria-hidden="true"></i>
+            <i class="ionicon ion-pricetags icon" aria-hidden="true"></i>
             <?php 
                 foreach(get_the_category() as $cate){
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
@@ -275,6 +273,13 @@ get_header();?>
                 jQuery("#slider-dot-"+showingId).removeClass("dot-show")
                 showingId=id
             }
+            var sliderCount=<?php echo sizeof($slider); ?>;
+            var nextToShow=1
+            setInterval(function(){ 
+                showImg(nextToShow)
+                nextToShow++;
+                if(nextToShow >= sliderCount) nextToShow=0
+             }, 5000);
         </script>
     </section>
     <style>
@@ -360,7 +365,7 @@ get_header();?>
         top: 40%;
         z-index: 12;
         background-color: rgba(255,255,255,1);
-        font-size: 50px;
+        font-size: 40px;
         color: #f26522;
         opacity: 0.7;
         border-radius: 0;
@@ -397,9 +402,9 @@ get_header();?>
             </div>
             <?php endforeach; ?>
         </div>
-        <button class="btn btn-last" onclick="showLast()">
+        <div class="btn btn-last" onclick="showLast()">
             <i class="ion-android-arrow-back"></i>
-        </button>
+        </div>
         <button class="btn btn-next" onclick="showNext(1)">
             <i class="ion-android-arrow-forward"></i>
         </botton>

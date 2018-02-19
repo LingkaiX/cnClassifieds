@@ -40,11 +40,11 @@
     <div class="container header-container">
         <div class="first-header row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-                <button onclick=history.go(-1) class="back-button theme-color-background"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+                <button onclick=history.go(-1) class="back-button theme-color-background"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
                 <a href=<?php echo get_site_url();?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg"></img></a>
                 <div class="search-button-box">
                     <?php include 'parts/cn-conversation-link.php'; ?>
-                    <button class="search-button theme-color-background" x-stat="closed"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    <button class="search-button theme-color-background" x-stat="closed"><i class="ionicon ion-search" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
@@ -55,8 +55,8 @@
 
 <script>
 jQuery(document).ready(function($){
-    var iclose= '<i class="fa fa-times" aria-hidden="true"></i>';
-    var isearch='<i class="fa fa-search" aria-hidden="true"></i>';
+    var iclose= '<i class="ionicon ion-close-round" aria-hidden="true"></i>';
+    var isearch='<i class="ionicon ion-search" aria-hidden="true"></i>';
     $('.search-button').click(function(){
         if($(this).attr('x-stat')=='closed'){
             $(this).html(iclose).attr('x-stat','open');

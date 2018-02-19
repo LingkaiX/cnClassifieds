@@ -303,18 +303,18 @@ get_header();?>
                         ?>
                     </div>
                     <div class="contact-info">
-                        <p><i class="fa fa-tags" aria-hidden="true"></i>
+                        <p><i class="ionicon ion-pricetags" aria-hidden="true"></i>
                     <?php 
                         foreach(get_the_category() as $cate){
                             echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                         }
                         echo "</p>";
-                        if(!empty($mypost->phone)) echo '<p><i class="fa fa-phone" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
-                        if(!empty($mypost->email)) echo '<p><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:#"><span>'
+                        if(!empty($mypost->phone)) echo '<p><i class="ionicon ion-ios-telephone" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
+                        if(!empty($mypost->email)) echo '<p><i class="ionicon ion-ios-email-outline" aria-hidden="true"></i><a href="mailto:#"><span>'
                             .$mypost->email.'</span></a></p>';
-                        if(!empty($mypost->website)) echo '<p><i class="fa fa-globe" aria-hidden="true"></i><a target="_blank" href="'
+                        if(!empty($mypost->website)) echo '<p><i class="ionicon ion-ios-world-outline" aria-hidden="true"></i><a target="_blank" href="'
                             .$mypost->website.'"><span>'.removeScheme($mypost->website).'</span></a></p>';
-                        if(!empty($mypost->address)) echo '<p><i class="fa fa-map-marker" aria-hidden="true"></i><span>'.$mypost->address
+                        if(!empty($mypost->address)) echo '<p><i class="ionicon ion-ios-navigate-outline" aria-hidden="true"></i><span>'.$mypost->address
                             .'</span><a style="margin-left:10px;" target="_blank" href="https://www.google.com/maps?daddr='
                             .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></p>';
                     ?>
@@ -394,7 +394,7 @@ get_header();?>
             <div class="col-md-6 col-xs-12 comment-card">
                 <p class="comment-card-head">
                     <span class="comment-card-decoration">
-                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                        <i class="ionicon ion-android-star-outline" aria-hidden="true"></i>
                     </span>
                     <strong class="comment-card-title"><?php echo $review['title'] ?></strong>
                 </p>
@@ -415,8 +415,8 @@ get_header();?>
             </div>
             <div class="col-md-push-3 col-md-3 col-sm-6 col-xs-12 social-box">
                 <div style="display: inline-block;vertical-align: middle;">
-                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-facebook-square" style="color: #3B5998"></i></a>
-                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="fa fa-instagram" style="color: #8D42AD"></i></a>
+                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="ionicon ion-social-facebook" style="color: #3B5998"></i></a>
+                    <a target="_blank" href="<?php echo $foot["facebook"]; ?>"<i class="ionicon ion-social-instagram" style="color: #8D42AD"></i></a>
                 </div>
             </div>
         </section>

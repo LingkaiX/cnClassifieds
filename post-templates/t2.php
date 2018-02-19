@@ -274,12 +274,12 @@ get_header();?>
         <?php
             $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
             if($mypost!=null){
-                if(!empty($mypost->phone)) echo '<p ><i class="fa fa-phone contact-icon" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
-                if(!empty($mypost->email)) echo '<p ><i class="fa fa-envelope contact-icon" aria-hidden="true"></i><a href="mailto:#"><span>'
+                if(!empty($mypost->phone)) echo '<p ><i class="ionicon ion-ios-telephone contact-icon" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
+                if(!empty($mypost->email)) echo '<p ><i class="ionicon ion-ios-email-outline contact-icon" aria-hidden="true"></i><a href="mailto:#"><span>'
                     .$mypost->email.'</span></a></p>';
-                if(!empty($mypost->website)) echo '<p ><i class="fa fa-globe contact-icon" aria-hidden="true"></i><a target="_blank" href="'
+                if(!empty($mypost->website)) echo '<p ><i class="ionicon ion-ios-world-outline contact-icon" aria-hidden="true"></i><a target="_blank" href="'
                     .$mypost->website.'"><span>'.removeScheme($mypost->website).'</span></a></p>';
-                if(!empty($mypost->address)) echo '<p ><i class="fa fa-map-marker contact-icon" aria-hidden="true"></i><span>'.$mypost->address
+                if(!empty($mypost->address)) echo '<p ><i class="ionicon ion-ios-navigate-outline contact-icon" aria-hidden="true"></i><span>'.$mypost->address
                     .'</span><a target="_blank" style="margin-left:10px;" href="https://www.google.com/maps?daddr='
                     .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></p>';
             }
