@@ -7,7 +7,8 @@ get_header();?>
 <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
 <link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
-
+<link href="<?php echo get_template_directory_uri();?>/css/owl.carousel.min.css" rel="stylesheet">
+<link href="<?php echo get_template_directory_uri();?>/css/owl.theme.default.min.css" rel="stylesheet">
 <style>
     html, body{
         background-color: #fff;
@@ -464,13 +465,104 @@ get_header();?>
             }
         </script>
     </section>
-    <style>
-    </style>
     <?php if($gallery['show-gallery']==1): $images=$gallery['imgs']  ?>
+    <style>
+    .g-wrap {
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+        padding: 0;
+    }
+
+    .gallery {
+        width: 100%;
+    }
+
+    .gallery a {
+        width: 200px;
+        height: 200px;
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        padding: 0;
+    }
+
+    .gallery a img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .nav-last, .nav-next{
+        position: absolute;
+        top: 40%;
+        background-color: rgba(255, 255, 255, 1);
+        z-index: 99;
+        border: none;
+        font-size: 30px;
+        opacity: 0.7;
+    }
+    .nav-last{
+        left: 15px;
+        padding-right: 10px;
+        padding-top: 4px;
+        padding-left: 7px;
+    }
+    .nav-next {
+        right: 15px;
+        padding-left: 10px;
+        padding-top: 4px;
+        padding-right: 7px;
+    }
+    .ion-chevron-left, .ion-chevron-right{
+        padding-top: 5px;
+    }
+    </style>
     <section class="row sect-gallery">
-    <div class="col-md-12">
-        <?php include dirname(__DIR__).'/parts/t1/gallery.php'; ?>
-    </div>
+        <div class="col-md-12">
+            <div class="g-wrap">
+                <button class="nav-last" onclick="gLast()"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
+                <div class="gallery owl-carousel owl-theme" id='gallery'>
+                <?php foreach( $images as $image ): ?>          
+                    <a href="<?php echo $image['url']; ?>" data-fancybox class="item">
+                        <img data-src="<?php echo $image['sizes']['large']; ?>"
+                            alt="<?php echo $image['alt'];?>" title="<?php echo $image['caption']; ?>" 
+                            class="lazyload" src="<?php echo $loadingUrl; ?>"/>
+                    </a>                
+                <?php endforeach; ?>
+                </div>
+                <button class="nav-next" onclick="gNext()"><i class="ionicon ion-chevron-right" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <script>
+            var owl;
+            function gLast(){
+                owl.trigger('prev.owl.carousel');
+            }
+            function gNext(){
+                owl.trigger('next.owl.carousel');
+            }
+            jQuery(document).ready(function($){
+
+                owl=jQuery('#gallery');
+                owl.owlCarousel({
+                    loop:true,
+                    margin:10,
+                    dots:false,
+                    responsive:{
+                        0:{
+                            items:2
+                        },
+                        600:{
+                            items:3
+                        },
+                        1000:{
+                            items:5
+                        }
+                    }
+                })
+            });
+        </script>
     </section>
     <?php endif; ?>
     <?php if($foot["has-reviews"]==1): ?>
@@ -565,6 +657,5 @@ get_header();?>
 </main>
 <?php endwhile; ?>
 <?php get_footer(); ?>
-<script src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/hammer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-beta.2/lazyload.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel.min.js"></script>
