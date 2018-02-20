@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia
 Description: cnclassifieds
-Version: 1.0.4
+Version: 1.0.5
 Text Domain: cnclassifieds
 */
 * {
@@ -699,7 +699,7 @@ a.page-numbers:focus {
 .enquiry-form-container-open {
   display: block;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 2000000001;
   position: fixed;
   top: 0;
   bottom: 0;
