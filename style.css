@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia
 Description: cnclassifieds
-Version: 1.0.3
+Version: 1.0.4
 Text Domain: cnclassifieds
 */
 * {
@@ -36,8 +36,8 @@ p {
 .ionicon {
   color: #f26522;
   display: inline-block;
-  font: normal normal normal 14px/1 Ionicons;
-  font-size: inherit;
+  font: normal normal normal 24px/1 Ionicons;
+  /* font-size: inherit; */
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -369,7 +369,7 @@ a.page-numbers:focus {
 }
 .basic-listing {
   background: #fff;
-  font-size: 15px;
+  font-size: 16px;
   -webkit-box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
@@ -411,14 +411,17 @@ a.page-numbers:focus {
   margin-top: 0;
   margin-top: 5px;
 }
-.listed-decoration {
-  height: 25px;
-  margin-right: 10px;
-  float: left;
-}
 .listed-contact p {
   margin: 5px 0;
-  min-height: 32px;
+  min-height: 28px;
+}
+.listed-contact p a,
+.listed-contact p span {
+  vertical-align: middle;
+}
+.listed-contact .ionicon {
+  padding: 0px 10px 0px 5px;
+  font-size: 24px;
   vertical-align: middle;
 }
 .listed-address-decoration {
@@ -472,26 +475,6 @@ a.page-numbers:focus {
 .listed-cate a {
   margin-left: 10px;
   color: black;
-}
-.listed-contact .ionicon {
-  margin: 0 20px;
-  font-size: 20px;
-}
-/* .wpcf7-form label{
-	width: 100%;
-}
-.wpcf7-form input[type=submit]{
-	float: right;
-} */
-/* ------------ ICONS ------------------*/
-.icon-small {
-  display: inline-block;
-  width: 30px;
-  text-align: center;
-  color: #0582d0;
-  font-size: 120%;
-  margin-right: 10px;
-  line-height: 25px;
 }
 
 /* ------------ third page ------------------*/
@@ -569,10 +552,20 @@ a.page-numbers:focus {
   color: #0582d0;
   word-break: break-all;
 }
-.ad-contact span,
-.icon-small {
-  font-size: 17px;
+.ad-contact label a,
+.ad-contact label span {
+  vertical-align: middle;
 }
+.icon-small {
+  display: inline-block;
+  width: 30px;
+  text-align: center;
+  color: #0582d0;
+  margin-right: 10px;
+  line-height: 25px;
+  vertical-align: middle;
+}
+
 /*-------- INFORMATION --------*/
 .ad-information {
   padding: 10px 20px 15px 20px;

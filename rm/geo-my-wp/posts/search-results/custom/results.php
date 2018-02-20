@@ -26,11 +26,11 @@
 									<div class="clearfix"></div>
 									<div class="listed-contact col-md-12 col-xs-12">
 										<?php
-										//gmw_directions_link( $post, $gmw, $gmw['labels']['search_results']['directions'] );
-											if(!empty($post->phone)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Phone.svg"></img>'.$post->phone.'</p>';
-											if(!empty($post->email)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Email.svg"></img>'.$post->email.'</p>';
-											if(!empty($post->website)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Website.svg"></img><a href="'.$post->website.'">'.$post->website.'</a></p>';
-											if(!empty($post->address)) echo '<p><img class="listed-decoration" src="'.get_template_directory_uri().'/img/Add.svg"></img>'.$post->address.'</p>';
+											//gmw_directions_link( $post, $gmw, $gmw['labels']['search_results']['directions'] );
+											if(!empty($mypost->phone)) echo '<p><i class="ionicon ion-ios-telephone-outline" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
+											if(!empty($mypost->email)) echo '<p><i class="ionicon ion-ios-email-outline" aria-hidden="true"></i><span>'.$mypost->email.'</span></p>';
+											if(!empty($mypost->website)) echo '<p><i class="ionicon ion-ios-world-outline" aria-hidden="true"></i><a target="_blank" href="'.$mypost->website.'">'.removeScheme($mypost->website).'</a></p>';
+											if(!empty($mypost->address)) echo '<p><i class="ionicon ion-ios-navigate-outline" aria-hidden="true"></i><span>'.$mypost->address.'</span></p>';
 										?>
 									</div>
 								</div>
