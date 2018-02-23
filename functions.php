@@ -188,7 +188,7 @@ function isTCN{
 }
 function getBaseUrl(){
 	$url=get_site_url();
-	if (isTCN())){
+	if (isTCN()){
 		return $url.'/zh-tw';
 	}else{
 		return $url;
