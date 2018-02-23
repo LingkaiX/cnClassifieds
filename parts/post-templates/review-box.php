@@ -2,12 +2,24 @@
     #review-box{
         padding: 30px;
     }
+    #review-box ol{
+        padding-left: 0;
+        display: flex;
+    }
     #review-box ul{
         background-color: gray;
         color: white;
-        margin-right: 10px;
+        margin: 0 10px;
         font-weight: 600;
         margin-bottom: 10px;
+        padding: 15px;
+        flex: 1;
+        border-radius: 100px;
+    }
+    @media (max-width: 991px){
+        #review-box ul{
+            width: 200px;
+        }
     }
     #review-box .r-title{
         text-align:center;

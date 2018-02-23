@@ -114,9 +114,11 @@ get_header();?>
         }
     }
     .img {
-        width: 100%;
+        width: 99%;
         padding-top: 60%;
         position: relative;
+        vertical-align: middle;
+        display: inline-block;
     }
     .img img {
         transition: all 1s;
@@ -162,6 +164,7 @@ get_header();?>
     </style>
     <section class="row sect-contact">
         <div class="col-md-8"><div class="slider solid-border">
+            <div class="va-helper"></div>
             <div class="img">
             <?php foreach($slider as $key => $img){
                 echo '<img data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'">';

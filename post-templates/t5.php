@@ -46,16 +46,12 @@ get_header();?>
             margin-bottom: 10px;
         }
         .logo-t4{
-            height:78px;
             margin-top: 20px;
-            position: relative;
         }
         .logo-t4 img{
-            max-height: 100%;
+            max-height: 78px;
             max-width: 100%;
             width: auto;
-            bottom: 0;
-            position: absolute;
         }
         .tag-t4 a{
             margin-right: 5px;
@@ -90,7 +86,7 @@ get_header();?>
     <style>
     .faceimg img{
         width: 100%;
-        height: 500px;
+        height: 420px;
         object-fit: cover;
     }
     </style>
@@ -122,7 +118,6 @@ get_header();?>
         }
         .article{
             border-left: 3px solid #F05A24;
-            background-color: #efefef;
             padding: 15px 0;
         }
         .article h1,.article h2,.article h3,.article h4,.article h5{
@@ -179,6 +174,11 @@ get_header();?>
             padding: 15px 30px;
             border-bottom: 2px solid #F05A24;
         }
+        .q-item strong{
+            color: gray;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
         .q-item:last-child{
             border-bottom: none;
             padding-bottom: 40px;
@@ -222,6 +222,11 @@ get_header();?>
         #read-more i{
             vertical-align: middle;
         }
+        @media (min-width: 992px){
+            .info {
+                height: 450px !important;
+            }
+        }
     </style>
     <section class="row sect-content">
         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -254,7 +259,7 @@ get_header();?>
                 <?php endforeach; ?>
                 </div>
                 <div class="sleepy">
-                    <div class="" id="read-more" onclick="readMore()"><span>阅读更多</span><i class="ionicon ion-android-add-circle"></i></div>
+                    <div class="" id="read-more"><span onclick="readMore()">阅读更多</span><i class="ionicon ion-android-add-circle"></i></div>
                 </div>
             </div>
             <script>
@@ -294,7 +299,7 @@ get_header();?>
             <!-- 最下面一版 -->
             <div class="bottom row">
                 <div class="col-md-5 col-md-push-7 col-sm-12" style="margin-bottom: 30px;">
-                    <div id="map" style="height: 500px;" ></div>
+                    <div id="map" style="height: 450px;" ></div>
                 </div>
                 <script>
                     jQuery(document).ready(function($){
@@ -356,6 +361,9 @@ get_header();?>
                         }
                     }
                 })
+                setInterval(function(){ 
+                    owlChara.trigger('next.owl.carousel');
+                }, 5000);
             });
         </script>
     </section>
