@@ -41,6 +41,6 @@
 </body>
 </html>
 <script src="<?php echo get_template_directory_uri();?>/js/axios.min.js"></script>
-<script src="<?php echo get_template_directory_uri();?>/js/vue.min.js"></script>
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/vue.min.js"></script>
 <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
 <script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"1665e4aa7ceb3a6e717fe90ab","lid":"0ebc78af25"}) })</script>

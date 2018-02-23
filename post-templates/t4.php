@@ -4,7 +4,7 @@ Template Name: Template 4
 Template Post Type: post 
 */
 get_header();?>
-<link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/>
+<!-- <link href='<?php echo get_template_directory_uri();?>/css/simplelightbox.css' rel='stylesheet'/> -->
 <link href='<?php echo get_template_directory_uri();?>/css/jquery.fancybox.min.css' rel="stylesheet"/>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
 <link href="<?php echo get_template_directory_uri();?>/css/owl.carousel.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@ get_header();?>
     section{
         margin-bottom: 60px;
     }
-    .solid-boder{
+    .solid-border{
         border-style : Solid;
         border-color : #F16522;
         border-width : 1px;
@@ -67,7 +67,10 @@ get_header();?>
         }
     </style>
     <section class="row sect-top"><div class="col-md-12">
-        <div class="logo-t4"><?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );?></div>
+        <?php          
+            $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );
+            if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
+        ?>
         <?php
             $abn=null;
             //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></img></abbr>';
@@ -110,28 +113,11 @@ get_header();?>
             font-weight: 200;
         }
     }
-    .info {
-        padding: 30px 30px;
-        position: relative;
-    }
-    @media (max-width:991px) {
-        .info{
-            margin-top: 30px;
-            padding-bottom: 80px;
-        }
-    }
-    .info a{
-        color:rgb(51, 51, 51);
-    }
-    .info a:hover{
-        text-decoration: none;
-    }
     .img {
         width: 100%;
         padding-top: 60%;
         position: relative;
     }
-
     .img img {
         transition: all 1s;
         position: absolute;
@@ -139,10 +125,12 @@ get_header();?>
         bottom: 0;
         left: 0;
         right: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+        /* object-fit: cover; */
         opacity: 0;
+        margin: 0 auto;
+        vertical-align: middle;
     }
     .img-show{
         /* z-index:10!important; */
@@ -171,82 +159,9 @@ get_header();?>
     .dot-show, .dot:hover{
         background-color: #f26522!important;
     }
-    .with-ion span:last-child{
-        vertical-align: middle;
-        font-weight: 400;
-    }
-    .with-ion span:before {
-        font-family: "Ionicons";
-        color: #f05a24;
-        font-size: 30px;
-        vertical-align: middle;
-        font-weight: bolder;
-    }
-    .with-ion .phone:before{
-        content: "\f4b8";
-        padding-right: 20px;
-    }
-    .with-ion .phone:hover::before{
-        content: "\f4b9";
-    }
-    .with-ion .email:before{
-        content: "\f422";
-        padding-right: 20px;
-    }
-    .with-ion .email:hover::before{
-        content: "\f423";
-    }
-    .with-ion .website:before{
-        content: "\f4d2";
-        padding-right: 19px;
-    }
-    .with-ion .website:hover::before{
-        content: "\f4d3";
-    }
-    .with-ion .address:before{
-        content: "\f46d";
-        padding-right: 19px;
-    }
-    .with-ion .address:hover::before{
-        content: "\f46e";
-    }
-    .enquiry-btn{
-        width: 100%;
-        font-size: 20px;
-        float: none;
-        margin-right: auto;
-        border-radius: 6px;
-        margin-top: 30px;
-    }
-    .goto-google{
-        width: 100%;
-        background-color: #858484;
-        color: white !important;
-        margin-bottom: 10px;
-        font-size: 20px;
-        border-radius: 6px;
-    }
-    .qr-code{
-        max-width: 200px;
-        max-height: 250px;
-        text-align: center;
-        display: inline-block;
-    }
-    .social-box{
-        text-align: center;
-        font-size: 30px;
-        position: absolute;
-        bottom: 20px;
-        left: 0;
-        right: 0;
-    }
-    img.img-social{
-        height:30px;
-        padding: 0 15px;
-    }
     </style>
     <section class="row sect-contact">
-        <div class="col-md-8"><div class="slider solid-boder">
+        <div class="col-md-8"><div class="slider solid-border">
             <div class="img">
             <?php foreach($slider as $key => $img){
                 echo '<img data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'">';
@@ -259,7 +174,7 @@ get_header();?>
             </div>
         </div></div>
         <div class="col-md-4 hidden-sm">
-            <?php include dirname(__DIR__).'/parts/t4/info.php'; ?>
+            <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
         </div>
         <script>
             var showingId=0;
@@ -306,9 +221,6 @@ get_header();?>
         .article hr {
             border-color: #f05a24;
         }
-        .p-abn-2{
-
-        }
         img.little-man{
             height: 60px;
             margin: 10px 0;
@@ -322,7 +234,7 @@ get_header();?>
         </div></div>
         <div class="col-md-4 hidden-sm hidden-xs"><div style="text-align:center;">           
         <?php 
-            if($hasAbn) echo '<div class="solid-boder abn-box"><p class="p-abn">
+            if($hasAbn) echo '<div class="solid-border abn-box"><p class="p-abn">
                 <img class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg"></img>
                 <span>ABN CHECKED</span>
                 <img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></img>
@@ -331,7 +243,7 @@ get_header();?>
         ?>
         </div></div>
         <div class="col-sm-6 visible-sm-inline-block" style="margin-top: -30px;">
-            <?php include dirname(__DIR__).'/parts/t4/info.php'; ?>
+            <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
         </div>
     </section>
     <style>
@@ -386,7 +298,6 @@ get_header();?>
             <?php foreach( $items as $key => $item ): ?>
             <div class="col-md-3 col-sm-6 col-xs-12 product-card" data="<?php echo $key; ?>" 
                 id="item-<?php echo $key; ?>" <?php if($key>3) echo 'style="display: none;"'; ?>>
-
                 <div class="card-img">
                     <?php foreach( $item['img'] as $skey => $image ): ?>
                         <a href="<?php echo $image['url']; ?>" data-fancybox="group-<?php echo $key; ?>">
@@ -467,116 +378,19 @@ get_header();?>
     </section>
     <?php if($gallery['show-gallery']==1): $images=$gallery['imgs']  ?>
     <style>
-    .g-wrap {
-        overflow: hidden;
-        width: 100%;
-        position: relative;
-        padding: 0;
-    }
-
-    .gallery {
-        width: 100%;
-    }
-
-    .gallery a {
-        width: 200px;
-        height: 200px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: middle;
-        padding: 0;
-    }
-
-    .gallery a img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .nav-last, .nav-next{
-        position: absolute;
-        top: 35%;
-        background-color: rgba(255, 255, 255, 1);
-        z-index: 99;
-        border: none;
-        font-size: 30px;
-        opacity: 0.7;
-    }
-    .nav-last{
-        left: 15px;
-        padding-right: 15px;
-        padding-top: 5px;
-        padding-left: 10px;
-        padding-bottom: 5px;
-    }
-    .nav-next {
-        right: 15px;
-        padding-left: 15px;
-        padding-top: 5px;
-        padding-right: 10px;
-        padding-bottom: 5px;
-    }
-    .ion-chevron-left, .ion-chevron-right{
-        padding-top: 5px;
-    }
     </style>
     <section class="row sect-gallery">
         <div class="col-md-12">
-            <div class="g-wrap">
-                <button class="nav-last" onclick="gLast()"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
-                <div class="gallery owl-carousel owl-theme" id='gallery'>
-                <?php foreach( $images as $image ): ?>          
-                    <a href="<?php echo $image['url']; ?>" data-fancybox class="item">
-                        <img data-src="<?php echo $image['sizes']['large']; ?>"
-                            alt="<?php echo $image['alt'];?>" title="<?php echo $image['caption']; ?>" 
-                            class="lazyload" src="<?php echo $loadingUrl; ?>"/>
-                    </a>                
-                <?php endforeach; ?>
-                </div>
-                <button class="nav-next" onclick="gNext()"><i class="ionicon ion-chevron-right" aria-hidden="true"></i></button>
-            </div>
+            <?php include dirname(__DIR__).'/parts/post-templates/gallery.php'; ?>
         </div>
-        <script>
-            var owl;
-            function gLast(){
-                owl.trigger('prev.owl.carousel');
-            }
-            function gNext(){
-                owl.trigger('next.owl.carousel');
-            }
-            jQuery(document).ready(function($){
-
-                owl=jQuery('#gallery');
-                owl.owlCarousel({
-                    loop:true,
-                    margin:10,
-                    dots:false,
-                    center:true,
-                    responsive:{
-                        0:{
-                            items:2
-                        },
-                        600:{
-                            items:3
-                        },
-                        992:{
-                            items:5
-                        },
-                        1200:{
-                            items:6
-                        }
-                    }
-                })
-            });
-        </script>
     </section>
     <?php endif; ?>
     <?php if($foot["has-reviews"]==1): ?>
     <style>
         @media (max-width:991px) {
-        .sect-review{
-            margin-bottom: 30px;
-        }
+            .sect-review{
+                margin-bottom: 30px;
+            }
         }
         .review-head{
             font-family : Source Han Sans CN;
@@ -635,6 +449,11 @@ get_header();?>
             background : #EFEFEF;
             text-align: center;
         }
+        @media (max-width:991px) {
+            .box-left{
+                margin-bottom: 30px;
+            }
+        }
         @media (max-width:767px) {
             .sect-bottom .box-left{
                 padding:15px;
@@ -657,7 +476,7 @@ get_header();?>
             <?php endif; ?>
         </div></div>
         <div class="col-md-4 col-sm-6 col-xs-12">
-            <?php include dirname(__DIR__).'/parts/t4/info.php'; ?>
+            <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
         </div>
     </section>
 </main>

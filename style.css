@@ -17,6 +17,9 @@ body {
   font-weight: 300;
   /* background-color: #f4f4f4; */
 }
+[v-cloak] {
+  display: none;
+}
 p {
   word-wrap: break-word;
 }
@@ -844,10 +847,6 @@ form.wpcf7-form label {
   height: 12px;
   overflow: hidden;
   margin-top: 2px;
-}
-
-[v-cloak] {
-  display: none;
 }
 /* EDM form */
 #templateBody {

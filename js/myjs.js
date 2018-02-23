@@ -217,7 +217,8 @@ if (navigator.geolocation) {
     return LazyLoad;
   }
 );
-
+var ll;
 jQuery(document).ready(function($) {
-  jQuery("img.lazyload").lazyload();
+  ll = lazyload();
+  ll.loadImages();
 });

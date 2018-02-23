@@ -121,8 +121,8 @@ if(!is_admin()){
 
 			$groupby = &$clauses['groupby'];
 			if (! empty( $groupby ) ) $groupby = ' ' . $groupby; 
-			//$groupby = "wp_posts.ID";
-			$groupby = "wp_posts.ID HAVING distance <= '100' OR distance IS NULL";
+			$groupby = "wp_posts.ID";
+			//$groupby = "wp_posts.ID HAVING distance <= '100' OR distance IS NULL";
 		}
 	}
 }
@@ -183,7 +183,7 @@ function putAbnSignal($hasAbn){
 function getBaseUrl(){
 	$url=get_site_url();
 	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'){
-		return $url.'/zh-tw';
+		return $url.'/zh-tw'.'/';
 	}else{
 		return $url;
 	}
