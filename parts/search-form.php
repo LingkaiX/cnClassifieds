@@ -1,6 +1,6 @@
 <?php include 'cates-index-with-id.php'; ?>
 <div class="row search-form-container">
-    <form role="search" method="get" id="search-form" class="search-form" action=<?php echo get_site_url()?>>
+    <form role="search" method="get" id="search-form" class="search-form" action=<?php echo getBaseUrl()?>>
         <div class="col-md-6 col-sm-6 col-xs-12" style="position:relative;">
             <input type="text" id="search-item" class="form-control search-item" placeholder="请选择分类或输入关键字" autocomplete="off">
             <div id="search-suggestion"></div>
@@ -17,7 +17,9 @@
     </form>
 </div>
 <!-- generate default catesDom -->
+<!-- 加入tname用于繁体搜索 -->
 <?php 
+    $nameOrTname=parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw' ? 'tname':'name';
     $currentslug=parsePath($_SERVER['REQUEST_URI'],'category');
     $currentcate=-1;
     $catesDom='<div id="search-suggestion">';
@@ -30,24 +32,17 @@
         }
     }
     if($currentcate!=-1){
-        $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$catesindex[$currentcate]["name"].'</p>';
+        $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$catesindex[$currentcate][$nameOrTname].'</p>';
         foreach($catesindex[$currentcate]['subcates'] as $subcate){
-            $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$subcate["name"].'</p>';
+            $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$subcate[$nameOrTname].'</p>';
         } 
     }else{
         foreach ($catesindex as $cate){
-            $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$cate["name"].'</p>';
+            $catesDom=$catesDom.'<p onclick="selectSuggestion(this)" class="sugg-item">'.$cate[$nameOrTname].'</p>';
         }
     }
     $catesDom=$catesDom.'</div>';
 ?>
-<!-- <script>
-    catesDom='<div id="search-suggestion">';
-    Object.keys(catesJson).map(function(key){
-        catesDom=catesDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].name+'</p>';
-    });
-    catesDom+='</div>';
-</script> -->
 <script>
 var catesDom= '<?php echo $catesDom ?>';
 var selectSuggestion;
@@ -62,11 +57,11 @@ jQuery(document).ready(function($){
         if(input){
             var suggDom='<div id="search-suggestion">';
             Object.keys(catesJson).map(function(key){
-                if(catesJson[key].name.indexOf(input)!== -1)
-                    suggDom=suggDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].name+'</p>';
+                if(catesJson[key].<?php echo $nameOrTname ?>.indexOf(input)!== -1)
+                    suggDom=suggDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].<?php echo $nameOrTname ?>+'</p>';
                 Object.keys(catesJson[key].subcates).map(function(skey){
-                    if(catesJson[key].subcates[skey].name.indexOf(input)!== -1)
-                        suggDom=suggDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].subcates[skey].name+'</p>';
+                    if(catesJson[key].subcates[skey].<?php echo $nameOrTname ?>.indexOf(input)!== -1)
+                        suggDom=suggDom+'<p onclick="selectSuggestion(this)" class="sugg-item">'+catesJson[key].subcates[skey].<?php echo $nameOrTname ?>+'</p>';
                 });
             });
             suggDom+='</div>'
@@ -88,13 +83,13 @@ jQuery(document).ready(function($){
         if(input){
             Object.keys(catesJson).map(function(key){
                 if(isCat) return;
-                if(catesJson[key].name.localeCompare(input) == 0){
+                if(catesJson[key].<?php echo $nameOrTname ?>.localeCompare(input) == 0){
                     $("#s-or-cat").attr("name","cat").val(catesJson[key].cid);
                     isCat=true;
                     return;
                 }                   
                 Object.keys(catesJson[key].subcates).map(function(skey){
-                    if(catesJson[key].subcates[skey].name.localeCompare(input) == 0){
+                    if(catesJson[key].subcates[skey].<?php echo $nameOrTname ?>.localeCompare(input) == 0){
                         $("#s-or-cat").attr("name","cat").val(catesJson[key].subcates[skey].cid);
                         isCat=true;
                         return;

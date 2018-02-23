@@ -10,7 +10,7 @@
                         // print_r($category_id);
                         // $href=get_category_link( $category_id->term_id );
                         echo '<div class="row">';
-                            $href=get_site_url()."/category/".$cate["slug"];
+                            $href=getBaseUrl()."/category/".$cate["slug"];
                             echo '<a href="'.$href.'" class="col-md-12 col-xs-12 needLatAndLong">';
                                 echo '<img class="home-cate-logo" src="'.get_template_directory_uri().'/img/'.$cate["imgsrc"].'"></img>';
                                 echo '<div class="clearfix"></div>';
@@ -19,7 +19,7 @@
                         //echo '<div class="clearfix"></div>';
                             echo '<div class="col-md-12 hidden-sm hidden-xs sub-item">';
                             foreach($cate["subcates"] as $subcate){
-                                $href=get_site_url()."/category/".$cate["slug"]."/".$subcate["slug"];
+                                $href=getBaseUrl()."/category/".$cate["slug"]."/".$subcate["slug"];
                                 echo '<a class="needLatAndLong" href="'.$href.'"><p>'.$subcate["name"].'</p></a>';
                             }
                 echo '</div></div></div>';

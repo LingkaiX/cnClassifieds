@@ -14,8 +14,6 @@
     }
 ?>
 <script type="text/javascript">
-    var catesJson = <?php 
-    	global $zh2Hant;
-        echo strtr(json_encode($catesindex), $zh2Hant ); ?>;
+    var catesJson = <?php echo json_encode($catesindex) ?>;
     //console.log(catesJson);
 </script>
