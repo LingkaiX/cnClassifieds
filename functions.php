@@ -179,7 +179,7 @@ function putAbnSignal($hasAbn){
 		return null;
 	}
 }
-function isTCN{
+function isTCN(){
 	if (isset($_GET['variant'])) {
 		if ($_GET["variant"]=='zh-tw') return true;
 	}
