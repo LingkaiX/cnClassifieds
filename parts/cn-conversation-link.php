@@ -1,6 +1,6 @@
 <?php
 $url='';
-if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'){
+if (isTCN()){
     $url=home_url().substr($_SERVER['REQUEST_URI'],6);
     echo '<a href='.$url.' class="btn cc-link">简体</a>';
 }else{

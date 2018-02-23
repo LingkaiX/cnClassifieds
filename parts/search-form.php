@@ -96,9 +96,10 @@ jQuery(document).ready(function($){
                     }                       
                 });
             });
+            //判断是否是繁体页面的搜索
+            if("<?php echo $nameOrTname ?>"=="tname") jQuery("#search-form").append('<input type="hidden" id="variant" name="variant" value="zh-tw">');
             if(isCat) return true;;
             $("#s-or-cat").attr("name","s").val(input);
-            if("<?php echo $nameOrTname ?>"=="tname") jQuery("search-form").append('<input type="hidden" id="variant" name="variant" value="zh-tw">');
             return true;
         }else{
             //提示空行
