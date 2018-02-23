@@ -29,7 +29,7 @@
         <div class="first-header row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <button onclick=history.go(-1) class="back-button theme-color-background"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
-                <a href=<?php echo getBaseUrl();?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg"></img></a>
+                <a href=<?php echo getBaseUrl().'/';?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg"></img></a>
                 <div class="search-button-box">
                     <?php include 'parts/cn-conversation-link.php'; ?>
                     <button class="search-button theme-color-background" x-stat="closed"><i class="ionicon ion-search" aria-hidden="true"></i></button>
