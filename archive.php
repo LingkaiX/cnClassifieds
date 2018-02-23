@@ -8,10 +8,15 @@
 			<?php
 				//print_r($wp_query);
 				include 'parts/switch-city.php';
-				$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
-				if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
-				//echo $cate_name;
-				$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => get_category_by_slug($cate_name)->term_id));
+				if(isset($_GET['cat']){
+					$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => $_GET['cat']));
+				}
+				else{				
+					$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
+					if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
+					//echo $cate_name;
+					$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => get_category_by_slug($cate_name)->term_id));
+				}
 				if ( $ad_query->have_posts() ) {
 					while ( $ad_query->have_posts() ) {
 						$ad_query->the_post();
