@@ -8,7 +8,7 @@
 			<?php
 				//print_r($wp_query);
 				include 'parts/switch-city.php';
-				if(isset($_GET['cat']){
+				if(isset($_GET['cat'])){
 					$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => $_GET['cat']));
 				}
 				else{				
