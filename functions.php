@@ -182,7 +182,7 @@ function putAbnSignal($hasAbn){
 
 function getBaseUrl(){
 	$url=get_site_url();
-	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'){
+	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'||$_GET["variant"]=='zh-tw'){
 		return $url.'/zh-tw';
 	}else{
 		return $url;

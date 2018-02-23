@@ -19,7 +19,7 @@
 <!-- generate default catesDom -->
 <!-- 加入tname用于繁体搜索 -->
 <?php 
-    $nameOrTname=parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw' ? 'tname':'name';
+    $nameOrTname=parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'||$_GET["variant"]=='zh-tw' ? 'tname':'name';
     $currentslug=parsePath($_SERVER['REQUEST_URI'],'category');
     $currentcate=-1;
     $catesDom='<div id="search-suggestion">';
@@ -98,6 +98,7 @@ jQuery(document).ready(function($){
             });
             if(isCat) return true;;
             $("#s-or-cat").attr("name","s").val(input);
+            if("<?php echo $nameOrTname ?>"=="tname") jQuery("search-form").append('<input type="hidden" id="variant" name="variant" value="zh-tw">');
             return true;
         }else{
             //提示空行
