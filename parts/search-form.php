@@ -19,7 +19,7 @@
 <!-- generate default catesDom -->
 <!-- 加入tname用于繁体搜索 -->
 <?php 
-    $nameOrTname=parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'||(isset($_GET['variant'])&&$_GET["variant"]=='zh-tw') ? 'tname':'name';
+    $nameOrTname= isTCN() ? 'tname':'name';
     $currentslug=parsePath($_SERVER['REQUEST_URI'],'category');
     $currentcate=-1;
     $catesDom='<div id="search-suggestion">';

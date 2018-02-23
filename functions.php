@@ -179,10 +179,16 @@ function putAbnSignal($hasAbn){
 		return null;
 	}
 }
-
+function isTCN{
+	if (isset($_GET['variant'])) {
+		if ($_GET["variant"]=='zh-tw') return true;
+	}
+	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw') return true;
+	return false;
+}
 function getBaseUrl(){
 	$url=get_site_url();
-	if (parsePath($_SERVER['REQUEST_URI'],'',-1)=='zh-tw'||(isset($_GET['variant'])&&$_GET["variant"]=='zh-tw')){
+	if (isTCN())){
 		return $url.'/zh-tw';
 	}else{
 		return $url;
