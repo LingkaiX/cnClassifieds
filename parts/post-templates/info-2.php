@@ -81,6 +81,13 @@
         color: white !important;
         float: right;
     }
+    @media (max-width:991px){
+        .info-2 .enquiry-btn, .info-2 .goto-google{
+            float: none;
+            margin: 10px 0;
+            /* width: 100%; */
+        }
+    }
     .info-2 .qr-code{
         max-width: 200px;
         max-height: 250px;
