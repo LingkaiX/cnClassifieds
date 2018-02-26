@@ -67,22 +67,18 @@
             bottom: 80px;
         }
     }
-    .info-2 .enquiry-btn{
-        width: 100%;
+    .info-2 .enquiry-btn, .info-2 .goto-google{
+        margin: 10px 30px;
         font-size: 20px;
-        float: none;
         border-radius: 6px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        width: 100%;
+    }
+    .info-2 .enquiry-btn{
+        float: none;
     }
     .info-2 .goto-google{
-        width: 100%;
         background-color: #858484;
         color: white !important;
-        font-size: 20px;
-        border-radius: 6px;
-        margin-top: 10px;
-        margin-bottom: 10px;
     }
     .info-2 .qr-code{
         max-width: 200px;

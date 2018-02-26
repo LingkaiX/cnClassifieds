@@ -155,7 +155,7 @@ function chinese_excerpt($text,$lenth=286) {
 	if(is_single()){
 		return $text;
 	}
-    return mb_strimwidth($text,0,$lenth,'...','utf-8'); //6 prefix, en * 1, ch * 2
+    return mb_strimwidth($text,0,$lenth,'... ...','utf-8'); //6 prefix, en * 1, ch * 2
 }
 add_filter('the_excerpt', 'chinese_excerpt');
 
@@ -179,6 +179,7 @@ function putAbnSignal($hasAbn){
 		return null;
 	}
 }
+//判断是否是繁体地址
 function isTCN(){
 	if (isset($_GET['variant'])) {
 		if ($_GET["variant"]=='zh-tw') return true;
@@ -195,68 +196,68 @@ function getBaseUrl(){
 	}
 }
 // Tab for template 1
-function xTabStart( $atts ) {
-	$id = uniqid('x');
-	$a = shortcode_atts( array(
-		'id' => $id
-	), $atts );
-	$s='<script>
-	jQuery(document).ready(function($){var app = new Vue({
-	 	el: "#'.$a['id'].'",
-	  	data: {
-			s: "1"
-	  	}
-		})});
-	</script>';
-	$s=$s.'<div class="x-tab-wrap" id="'.$a['id'].'"><div v-cloak>';
-	return $s;
-}
-add_shortcode( 'x-tab-start', 'xTabStart' );
-function xTabEnd( $atts ) {
-	$s='</div></div>';
-	return $s;
-}
-add_shortcode( 'x-tab-end', 'xTabEnd' );
-function xTabItemStart( $atts ) {
-	$id = uniqid('x');
-	$a = shortcode_atts( array(
-		'id' => $id,
-		'name' => 'x-tab'
-	), $atts );
-	$s='<div class="x-tab-item-wrap"><div class="x-tab-item-head" v-on:click= "s==';
-	$s=$s."'".$a['id']."'?s=0:s=";
-	$s=$s."'".$a['id']."'";
-	$s=$s.'"><a href="#">'.$a['name'].'</a></div><transition><div class="x-tab-item-body" v-show="s==';
-	$s=$s."'".$a['id']."'";
-	$s=$s.'">';
+// function xTabStart( $atts ) {
+// 	$id = uniqid('x');
+// 	$a = shortcode_atts( array(
+// 		'id' => $id
+// 	), $atts );
+// 	$s='<script>
+// 	jQuery(document).ready(function($){var app = new Vue({
+// 	 	el: "#'.$a['id'].'",
+// 	  	data: {
+// 			s: "1"
+// 	  	}
+// 		})});
+// 	</script>';
+// 	$s=$s.'<div class="x-tab-wrap" id="'.$a['id'].'"><div v-cloak>';
+// 	return $s;
+// }
+// add_shortcode( 'x-tab-start', 'xTabStart' );
+// function xTabEnd( $atts ) {
+// 	$s='</div></div>';
+// 	return $s;
+// }
+// add_shortcode( 'x-tab-end', 'xTabEnd' );
+// function xTabItemStart( $atts ) {
+// 	$id = uniqid('x');
+// 	$a = shortcode_atts( array(
+// 		'id' => $id,
+// 		'name' => 'x-tab'
+// 	), $atts );
+// 	$s='<div class="x-tab-item-wrap"><div class="x-tab-item-head" v-on:click= "s==';
+// 	$s=$s."'".$a['id']."'?s=0:s=";
+// 	$s=$s."'".$a['id']."'";
+// 	$s=$s.'"><a href="#">'.$a['name'].'</a></div><transition><div class="x-tab-item-body" v-show="s==';
+// 	$s=$s."'".$a['id']."'";
+// 	$s=$s.'">';
 
-	//$s=`<a href="#" v-on:click= "s==0?s='`.$a['id'].`':s=0">`.$a['name'].`</a><div v-if="s=='`.$a['id'].`'">`;
-	return $s;
-}
-add_shortcode( 'x-tab-item-start', 'xTabItemStart' );
-function xTabItemEnd( $atts ) {
-	$s='</div></transition></div><div style="clear:both"></div>';
-	return $s;
-}
-add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
+// 	//$s=`<a href="#" v-on:click= "s==0?s='`.$a['id'].`':s=0">`.$a['name'].`</a><div v-if="s=='`.$a['id'].`'">`;
+// 	return $s;
+// }
+// add_shortcode( 'x-tab-item-start', 'xTabItemStart' );
+// function xTabItemEnd( $atts ) {
+// 	$s='</div></transition></div><div style="clear:both"></div>';
+// 	return $s;
+// }
+// add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
 
-// Tab for template 2
-function xTab2Start( $atts ) {
-	$a = shortcode_atts( array(
-		'title' => 'title'
-	), $atts );
-	$s='<div class="acc-wrap"><button class="company-accordion"><strong>'
-		.$a['title'].'</strong></button><div class="t2-panel">';
-	return $s;
-}
-add_shortcode( 'x-tab2-start', 'xTab2Start' );
+// // Tab for template 2
+// function xTab2Start( $atts ) {
+// 	$a = shortcode_atts( array(
+// 		'title' => 'title'
+// 	), $atts );
+// 	$s='<div class="acc-wrap"><button class="company-accordion"><strong>'
+// 		.$a['title'].'</strong></button><div class="t2-panel">';
+// 	return $s;
+// }
+// add_shortcode( 'x-tab2-start', 'xTab2Start' );
 
-function xTab2End( $atts ) {
-	$s='</div></div>';
-	return $s;
-}
-add_shortcode( 'x-tab2-end', 'xTabEnd' );
+// function xTab2End( $atts ) {
+// 	$s='</div></div>';
+// 	return $s;
+// }
+// add_shortcode( 'x-tab2-end', 'xTabEnd' );
 
-remove_filter( 'the_content', 'wpautop' );
-add_filter( 'the_content', 'wpautop' , 99 );
-add_filter( 'the_content', 'shortcode_unautop', 100 );
+// remove_filter( 'the_content', 'wpautop' );
+// add_filter( 'the_content', 'wpautop' , 99 );
+// add_filter( 'the_content', 'shortcode_unautop', 100 );
