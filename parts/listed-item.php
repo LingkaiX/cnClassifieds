@@ -41,7 +41,10 @@
             <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
-                    <?php include 'enquiry-form.php'; ?>
+                    <div>
+                        <a class="btn btn btn-primary" href="<?php echo get_permalink() ?>" style="float: right; margin-bottom: 10px;">更多详情...</a>
+                        <?php include 'enquiry-form.php'; ?>
+                    </div>
                 </div>
             </div>
         </div>

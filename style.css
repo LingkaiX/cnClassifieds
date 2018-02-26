@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia
 Description: cnclassifieds
-Version: 1.0.5
+Version: 1.0.6
 Text Domain: cnclassifieds
 */
 * {
@@ -880,6 +880,14 @@ form.wpcf7-form label {
   text-align: center;
   box-shadow: 0 1px 1px #a5a5a5;
 }
+.cn-conv {
+  float: left;
+  margin-left: 40px;
+  margin-top: 11px;
+  font-weight: bold;
+  color: #f26522;
+  text-decoration: underline;
+}
 .top-banner-info {
   float: right;
   margin-right: 40px;
@@ -887,11 +895,11 @@ form.wpcf7-form label {
   font-weight: bold;
   color: #f26522;
 }
-.top-banner-info .ionicon {
+#hp-banner .ionicon {
   color: #f26522;
   font-size: medium;
 }
-.top-banner-info .free-send-info {
+#hp-banner .free-send-info {
   color: #f26522;
   text-decoration: underline;
 }
@@ -904,6 +912,9 @@ form.wpcf7-form label {
   .top-banner-info {
     font-size: x-small;
     margin-right: 5px;
+  }
+  .cn-conv {
+    margin-left: 15px;
   }
 }
 
