@@ -68,17 +68,18 @@
         }
     }
     .info-2 .enquiry-btn, .info-2 .goto-google{
-        margin: 10px 30px;
+        margin: 10px 45px;
         font-size: 20px;
         border-radius: 6px;
-        width: 100%;
+        width: 85%;
     }
     .info-2 .enquiry-btn{
-        float: none;
+        float: left;
     }
     .info-2 .goto-google{
         background-color: #858484;
         color: white !important;
+        float: right;
     }
     .info-2 .qr-code{
         max-width: 200px;
@@ -123,7 +124,7 @@
     <div class="col-md-5" style="text-align:center;">
         <div class="hidden-sm hidden-xs qr-code"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
     </div>
-    <div style="margin-top: 20px;" class="btns">
+    <div style="margin-top: 20px;" class="row btns">
         <div class="col-md-6 col-sm-12" style="text-align:center;">
             <?php include dirname(__DIR__).'/enquiry-form.php'; ?>
         </div>

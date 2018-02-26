@@ -16,7 +16,7 @@ get_header();?>
         display: none;
     }
     section{
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
     .solid-border{
         border-style : Solid;
