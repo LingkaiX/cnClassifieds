@@ -308,7 +308,7 @@ get_header();?>
             </div>
             <!-- 最下面一版 -->
             <div class="bottom row">
-                <div class="col-md-5 col-md-push-7 col-sm-12" style="margin-bottom: 30px;">
+                <div class="col-lg-6 col-lg-push-6 col-md-5 col-md-push-7 col-sm-12" style="margin-bottom: 30px;">
                     <div id="map" style="height: 450px;" ></div>
                 </div>
                 <script>
@@ -318,7 +318,7 @@ get_header();?>
                         var marker = new google.maps.Marker({ position: uluru, map: map });
                     });
                 </script>
-                <div class="col-md-7 col-md-pull-5 hidden-sm col-xs-12">
+                <div class="col-lg-6 col-lg-pull-6 col-md-7 col-md-pull-5 hidden-sm col-xs-12">
                     <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
                 </div>
             </div>
