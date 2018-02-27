@@ -245,7 +245,7 @@ get_header();?>
             echo '<div class="qr-code" style="margin-top:30px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
         ?>
         </div></div>
-        <div class="col-sm-6 visible-sm-inline-block" style="margin-top: -30px;">
+        <div class="col-sm-6 visible-sm-inline-block">
             <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
         </div>
     </section>
@@ -460,6 +460,9 @@ get_header();?>
         @media (max-width:767px) {
             .sect-bottom .box-left{
                 padding:15px;
+            }
+            .slider{
+                margin-bottom: 30px;
             }
         }
     </style>

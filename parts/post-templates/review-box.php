@@ -30,9 +30,10 @@
     #review-box .r-item{
         padding-top: 10px;
         font-size: 14px;
+        margin-bottom: 20px;
     }
 </style>
-<div id="review-box"><div v-cloak>
+<div id="review-box" class="reviews shadow-border"><div v-cloak>
     <ol class="hidden-sm hidden-xs">
         <ul v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</ul>
     </ol>

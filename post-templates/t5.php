@@ -227,6 +227,11 @@ get_header();?>
                 height: 450px !important;
             }
         }
+        @media (min-width:768px) and (max-width:991px){
+            .justina-container{
+                margin-bottom: 30px;
+            }
+        }
     </style>
     <section class="row sect-content">
         <div class="col-md-8 col-sm-12 col-xs-12">
@@ -290,12 +295,17 @@ get_header();?>
                 <?php endforeach; ?>
             </div>
             <?php endif; ?>
-            <!-- 客户评价 -->
-            <?php if(get_field('t5-has-reviews')==1): ?>
-            <div class="reviews shadow-border">
-                <?php include dirname(__DIR__).'/parts/post-templates/review-box.php'; ?>
+            <div class="row justina-container">
+                <!-- 客户评价 -->
+                <?php if(get_field('t5-has-reviews')==1): ?>
+                <div class="col-md-12 col-sm-6">
+                    <?php include dirname(__DIR__).'/parts/post-templates/review-box.php'; ?>
+                </div>
+                <?php endif; ?>
+                <div class="hidden-lg hidden-md col-sm-6 hidden-xs">
+                    <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
+                </div>
             </div>
-            <?php endif; ?>
             <!-- 最下面一版 -->
             <div class="bottom row">
                 <div class="col-md-5 col-md-push-7 col-sm-12" style="margin-bottom: 30px;">
@@ -308,7 +318,7 @@ get_header();?>
                         var marker = new google.maps.Marker({ position: uluru, map: map });
                     });
                 </script>
-                <div class="col-md-7 col-md-pull-5 col-sm-12 col-xs-12">
+                <div class="col-md-7 col-md-pull-5 hidden-sm col-xs-12">
                     <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
                 </div>
             </div>
