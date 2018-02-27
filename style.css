@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia
 Description: cnclassifieds
-Version: 1.0.6
+Version: 1.0.7
 Text Domain: cnclassifieds
 */
 * {
@@ -450,6 +450,9 @@ a.page-numbers:focus {
   text-align: center;
   padding: 100px;
 }
+.basic-listing .excerpt-container p {
+  margin-left: 5px;
+}
 /* .gmw-no-results-wrapper p::after{
 	content: ": 抱歉！我们没有找到你要的结果。";
 } */
@@ -761,7 +764,7 @@ a.page-numbers:focus {
   color: #fff;
   float: right;
   margin-right: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 .enquiry-btn:hover {
   color: #fff;
