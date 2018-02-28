@@ -85,7 +85,7 @@
         .info-2 .enquiry-btn, .info-2 .goto-google{
             float: none;
             margin: 10px 0;
-            /* width: 100%; */
+            width: 100%;
         }
     }
     .info-2 .qr-code{
@@ -98,6 +98,9 @@
         .info-2 .qr-code-small{
             max-width: 160px;
             max-height: 200px;
+        }
+        .info-2 .info-contacts{
+            padding: 0 0 0 0;
         }
     }
     .info-2 .qr-code img{
@@ -118,7 +121,7 @@
     }
 </style>
 <div class="row info-2 solid-border">
-    <div class="col-md-7 col-sm-8">
+    <div class="col-md-7 col-sm-8 info-contacts">
     <?php
         if($mypost!=null){
             if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span>'.$mypost->phone.'</span></p>';
