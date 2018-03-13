@@ -1,40 +1,3 @@
-//登陆的时候header下移
-jQuery(document).ready(function($) {
-  $("img").on("dragstart", function(event) {
-    event.preventDefault();
-  });
-
-  var h = parseInt($("#wpadminbar").css("height"));
-  if (h) {
-    var header = $(".first-header");
-    if (header) {
-      header.css("margin-top", h);
-    }
-  }
-});
-
-//get geolocation automatically and then append to geoform and category links
-var lat, long;
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(
-    function(position) {
-      lat = position.coords.latitude;
-      long = position.coords.longitude;
-      document.getElementById("geo-lat").value = lat;
-      document.getElementById("geo-long").value = long;
-      var items = document.getElementsByClassName("needLatAndLong");
-      for (var i = 0; i < items.length; i++) {
-        //console.log(items[i]);
-        items[i].href += "?lat=" + lat + "&long=" + long;
-      }
-      //console.log("got geolocation");
-    },
-    function(error) {
-      console.log("error:", error);
-    }
-  );
-}
-
 /*!
  * Lazy Load - JavaScript plugin for lazy loading images
  *
@@ -217,8 +180,45 @@ if (navigator.geolocation) {
     return LazyLoad;
   }
 );
+/****** Lazy Load End******/
 var ll;
 jQuery(document).ready(function($) {
   ll = lazyload();
   ll.loadImages();
 });
+//登陆的时候header下移
+jQuery(document).ready(function($) {
+  $("img").on("dragstart", function(event) {
+    event.preventDefault();
+  });
+
+  var h = parseInt($("#wpadminbar").css("height"));
+  if (h) {
+    var header = $(".first-header");
+    if (header) {
+      header.css("margin-top", h);
+    }
+  }
+});
+
+//get geolocation automatically and then append to geoform and category links
+var lat, long;
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(
+    function(position) {
+      lat = position.coords.latitude;
+      long = position.coords.longitude;
+      document.getElementById("geo-lat").value = lat;
+      document.getElementById("geo-long").value = long;
+      var items = document.getElementsByClassName("needLatAndLong");
+      for (var i = 0; i < items.length; i++) {
+        //console.log(items[i]);
+        items[i].href += "?lat=" + lat + "&long=" + long;
+      }
+      //console.log("got geolocation");
+    },
+    function(error) {
+      console.log("error:", error);
+    }
+  );
+}
