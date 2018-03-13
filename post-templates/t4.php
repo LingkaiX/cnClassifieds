@@ -322,7 +322,7 @@ get_header();?>
         </div>
         <button class="btn btn-next" onclick="showNext(1)">
             <i class="ion-android-arrow-forward"></i>
-        </botton>
+        </button>
         <script>
             var itemCount=<?php echo sizeof($items); ?>;
             var showCount=4;
