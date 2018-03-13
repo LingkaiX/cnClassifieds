@@ -183,20 +183,25 @@
   }
 );
 /****** Lazy Load End******/
-var ll;
+// var ll;
+// jQuery(document).ready(function($) {
+//   ll = lazyload();
+//   ll.loadImages();
+// });
 jQuery(document).ready(function($) {
-  ll = lazyload();
-  ll.loadImages();
+  jQuery("img.lazyload").each(function(index) {
+    jQuery(this).attr("src", jQuery(this).attr("data-src"));
+  });
 });
 //登陆的时候header下移
 jQuery(document).ready(function($) {
-  $("img").on("dragstart", function(event) {
+  jQuery("img").on("dragstart", function(event) {
     event.preventDefault();
   });
 
-  var h = parseInt($("#wpadminbar").css("height"));
+  var h = parseInt(jQuery("#wpadminbar").css("height"));
   if (h) {
-    var header = $(".first-header");
+    var header = jQuery(".first-header");
     if (header) {
       header.css("margin-top", h);
     }
