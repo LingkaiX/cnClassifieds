@@ -67,7 +67,7 @@ get_header();?>
         ?>
         <?php
             $abn=null;
-            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></img></abbr>';
+            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></abbr>';
             the_title( '<h2 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h2>' );
             $enTitle=get_post_meta($post->ID,'title-en',true);
             if($enTitle) echo '<h3 class="en-title-t4">'.$enTitle.'</h3>'; 
@@ -79,7 +79,7 @@ get_header();?>
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
                 if($hasAbn) echo '<p class="p-abn"><span>ABN CHECKED</span><img class="img-abn" src="'
-                .get_template_directory_uri().'/img/ABN-CHECKED.svg"></img></p>';
+                .get_template_directory_uri().'/img/ABN-CHECKED.svg"></p>';
             ?>
         </div>   
     </div></section>

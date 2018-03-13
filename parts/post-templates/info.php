@@ -112,11 +112,11 @@
     <div class="social-box">
         <?php if($social['has-facebook']): ?>
             <a target="_blank" href="<?php echo $social["facebook"]; ?>">
-            <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></img></a>
+            <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
         <?php endif; ?>
         <?php if($social['has-instagram']): ?>
             <a target="_blank" href="<?php echo $social["instagram"]; ?>">
-            <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></img></a>
+            <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
         <?php endif; ?>
     </div>
 </div>

@@ -12,7 +12,7 @@
                         echo '<div class="row">';
                             $href=getBaseUrl()."/category/".$cate["slug"];
                             echo '<a href="'.$href.'" class="col-md-12 col-xs-12 needLatAndLong">';
-                                echo '<img class="home-cate-logo" src="'.get_template_directory_uri().'/img/'.$cate["imgsrc"].'"></img>';
+                                echo '<img class="home-cate-logo" src="'.get_template_directory_uri().'/img/'.$cate["imgsrc"].'">';
                                 echo '<div class="clearfix"></div>';
                                 echo '<h4 class="cate-h">'.$cate["name"].'</h4>';
                         echo '</a>';

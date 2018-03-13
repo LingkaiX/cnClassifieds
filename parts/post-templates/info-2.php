@@ -149,8 +149,8 @@
     </div>
     <div class="social-box">
         <a target="_blank" href="<?php echo $social['has-facebook']?$social["facebook"]:"#"; ?>">
-        <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></img></a>
+        <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
         <a target="_blank" href="<?php echo $social['has-instagram']?$social["instagram"]:"#"; ?>">
-        <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></img></a>
+        <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
     </div>
 </div>
