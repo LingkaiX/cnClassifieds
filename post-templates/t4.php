@@ -101,7 +101,10 @@ get_header();?>
     }
     @media (max-width:767px) {
         .slider{
-            padding: 0;
+            padding: 10px 0;
+        }
+        .va-helper{
+            display: none !important;
         }
         .title-t4{
             font-size:28px;
