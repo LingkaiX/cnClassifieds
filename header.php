@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang=zh-cmn-Hans>
 <head>
+<link rel="manifest" href="<?php echo get_template_directory_uri();?>/manifest.json">
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<meta name="theme-color" content="#F26522" />
+<meta name="theme-color" content="#ff6363" />
 <!-- Windows Phone -->
-<meta name="msapplication-navbutton-color" content="#F26522">
+<meta name="msapplication-navbutton-color" content="#ff6363">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -18,7 +19,59 @@
     enable_page_level_ads: true
   });
 </script>
-<?php wp_head(); ?>    				
+<?php wp_head(); ?>
+<style>
+    .header-logo {
+        display: inline-block;
+        padding-top: 3px;
+    }
+    .header-logo img {
+        /*margin-top: 5px;*/
+        height: 35px;
+        margin: 0 auto;
+    }
+    .site-header {
+        padding: 5px 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 100;
+    }
+    .first-header {
+        min-height: 40px;
+        text-align: center;
+    }
+    .first-header .ionicon {
+        color: white;
+        padding-top: 5px;
+    }
+    .first-header .ionicon:hover {
+        color: black;
+    }
+    .back-button,
+    .search-button {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        font-size: 24px;
+        border-width: 0;
+        padding: 0;
+    }
+    .back-button {
+        float: left;
+    }
+    .back-button:hover,
+    .search-button:hover {
+        background-color: #f26000;
+    }
+    .search-button-box {
+        float: right;
+    }
+    #search-row{
+
+    }
+</style>
 </head>
 <body <?php body_class(); ?>>
 <!-- The end is in th footer.php --><div class="site-content">
@@ -29,14 +82,14 @@
         <div class="first-header row">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <button onclick=history.go(-1) class="back-button theme-color-background"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
-                <a href=<?php echo getBaseUrl().'/';?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/Logo_White.svg"></a>
+                <a href=<?php echo getBaseUrl().'/';?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo-light.svg"></a>
                 <div class="search-button-box">
                     <?php include 'parts/cn-conversation-link.php'; ?>
                     <button class="search-button theme-color-background" x-stat="closed"><i class="ionicon ion-search" aria-hidden="true"></i></button>
                 </div>
             </div>
         </div>
-        <div id="search-row" style="display:none;"><?php include 'parts/search-form.php'; ?></div>
+        <div id="search-row" style="display:none;margin-top: 27px;margin-bottom: 5px;" class="hidden-sm hidden-xs"><?php include 'parts/search-form.php'; ?></div>
     </div>
 </header>
 <div id="for-header" style="width:100%;height:50px"></div>

@@ -4,7 +4,7 @@
             "name"=>"建筑装修",
             "tname"=>"建築裝修",
             "slug"=>"building",
-            "imgsrc"=>"ICON_SectionRevotion.svg",
+            "imgsrc"=>"building.svg",
             "subcates"=>array(
                 array("name"=>"水管煤气","slug"=>"plumbing-and-pipes","tname"=>"水管煤氣"),
                 array("name"=>"电工电器","slug"=>"electrical","tname"=>"電工電器"),
@@ -27,7 +27,7 @@
             "name"=>"居家服务",
             "tname"=>"居家服務",
             "slug"=>"home-and-garden",
-            "imgsrc"=>"ICON_SectionHome.svg",
+            "imgsrc"=>"home.svg",
             "subcates"=>array(
                 array("name"=>"搬家运输","slug"=>"removalists","tname"=>"搬家運輸"),
                 array("name"=>"清洁服务","slug"=>"cleaning-services","tname"=>"清潔服務"),
@@ -48,7 +48,7 @@
             "name"=>"留学移民",
             "tname"=>"留學移民",
             "slug"=>"immigration",
-            "imgsrc"=>"ICON_SectionImmigration.svg",
+            "imgsrc"=>"studying-immigrant.svg",
             "subcates"=>array(
                 array("name"=>"技术移民","slug"=>"skilled-immigration","tname"=>"技術移民"),
                 array("name"=>"投资移民","slug"=>"investment-immigration","tname"=>"投資移民"),
@@ -62,7 +62,7 @@
             "name"=>"医疗保健",
             "tname"=>"醫療保健",
             "slug"=>"health",
-            "imgsrc"=>"ICON_SectionMedical.svg",
+            "imgsrc"=>"medical-insurance.svg",
             "subcates"=>array(
                 array("name"=>"牙医诊所","slug"=>"dental","tname"=>"牙醫診所"),
                 array("name"=>"美容整形","slug"=>"beauty-and-cosmetics","tname"=>"美容整形"),
@@ -78,7 +78,7 @@
             "name"=>"汽车",
             "tname"=>"汽車",
             "slug"=>"auto",
-            "imgsrc"=>"ICON_SectionCar.svg",
+            "imgsrc"=>"car.svg",
             "subcates"=>array(
                 array("name"=>"新车销售","slug"=>"new-car-sales","tname"=>"新車銷售"),
                 array("name"=>"二手车行","slug"=>"second-hand-cars","tname"=>"二手車行"),
@@ -94,7 +94,7 @@
             "name"=>"财经法律",
             "tname"=>"財經法律",
             "slug"=>"finance-and-legal",
-            "imgsrc"=>"ICON_SectionLawyer.svg",
+            "imgsrc"=>"financial-law.svg",
             "subcates"=>array(
                 array("name"=>"法律服务","slug"=>"legal-services","tname"=>"法律服務"),
                 array("name"=>"会计税务","slug"=>"accountancy-and-tax","tname"=>"會計稅務"),
@@ -108,7 +108,7 @@
             "name"=>"地产投资",
             "tname"=>"地產投資",
             "slug"=>"property-and-investments",
-            "imgsrc"=>"ICON_SectionInvest.svg",
+            "imgsrc"=>"realestate-investment.svg",
             "subcates"=>array(
                 array("name"=>"地产中介","slug"=>"real-estate-agents","tname"=>"地產中介"),
                 array("name"=>"地产开发","slug"=>"property-development","tname"=>"地產開發"),
@@ -123,7 +123,7 @@
             "name"=>"商业服务",
             "tname"=>"商業服務",
             "slug"=>"commercial-services",
-            "imgsrc"=>"ICON_SectionHire.svg",
+            "imgsrc"=>"business-services.svg",
             "subcates"=>array(
                 array("name"=>"招牌广告","slug"=>"signage-and-banners","tname"=>"招牌廣告"),
                 array("name"=>"名片印刷","slug"=>"business-cards-and-stationery-printing","tname"=>"名片印刷"),
@@ -138,7 +138,7 @@
             "name"=>"电脑通讯",
             "tname"=>"電腦通訊",
             "slug"=>"IT",
-            "imgsrc"=>"ICON_SectionDigital.svg",
+            "imgsrc"=>"computer-communication.svg",
             "subcates"=>array(
                 array("name"=>"手机通讯","slug"=>"mobiles","tname"=>"手機通訊"),
                 array("name"=>"网站网络","slug"=>"website-and-internet","tname"=>"網站網路"),
@@ -151,7 +151,7 @@
             "name"=>"文化教育",
             "tname"=>"文化教育",
             "slug"=>"education-and-arts",
-            "imgsrc"=>"ICON_SectionEducation.svg",
+            "imgsrc"=>"cultural-education.svg",
             "subcates"=>array(
                 array("name"=>"中文学校","slug"=>"chinese-schools","tname"=>"中文學校"),
                 array("name"=>"补习学校","slug"=>"tutoring-schools","tname"=>"補習學校"),
@@ -167,7 +167,7 @@
             "name"=>"娱乐休闲",
             "tname"=>"娛樂休閑",
             "slug"=>"entertainment",
-            "imgsrc"=>"ICON_SectionHoliday.svg",
+            "imgsrc"=>"entertainment.svg",
             "subcates"=>array(
                 array("name"=>"餐馆饭店","slug"=>"restaurants","tname"=>"餐館飯店"),
                 array("name"=>"旅行社","slug"=>"travel-agents","tname"=>"旅行社"),
@@ -181,7 +181,7 @@
             "name"=>"其他行业",
             "tname"=>"其他行業",
             "slug"=>"others",
-            "imgsrc"=>"ICON_SectionOther.svg",
+            "imgsrc"=>"other.svg",
             "subcates"=>array(
                 array("name"=>"婚介服务","slug"=>"dating-and-marriage-and-celebrants","tname"=>"婚介服務"),
                 array("name"=>"翻译服务","slug"=>"translation-services","tname"=>"翻譯服務"),                

@@ -3,6 +3,126 @@
  * @author Sophia???
  */
 get_header(); ?>
+<style>
+    /* ------------ third page ------------------*/
+    .main-company-information {
+    width: 75%;
+    margin: 10px auto;
+    }
+    @media (max-width: 767px) {
+    .main-company-information {
+        width: 90%;
+    }
+    }
+    @media (max-width: 480px) {
+    .main-company-information {
+        width: 100%;
+    }
+    }
+    /* ------------ LOGO ------------------*/
+    .logo {
+    max-width: 175px;
+    max-height: 75px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    float: right;
+    width: auto;
+    height: auto;
+    }
+    /*-------- COMPANY NAME --------*/
+    .company-name {
+    font-weight: 400;
+    margin: 0 -5px 10px -5px;
+    font-size: 20px;
+    background-color: #fff;
+    /*text-transform: uppercase;*/
+    }
+    .en-title {
+    padding-left: 5px;
+    font-weight: bold;
+    }
+    .title {
+    padding-left: 15px;
+    font-weight: 400;
+    }
+    .title small {
+    display: inline-block;
+    }
+    .abstract {
+    font-size: 15px;
+    color: #868585;
+    padding: 5px 15px;
+    }
+    .tag {
+    font-size: 14px;
+    color: #868585;
+    margin-top: -5px;
+    margin-bottom: 10px;
+    }
+    .tag a {
+    padding-right: 5px;
+    }
+    .tag .icon {
+    display: inline-block;
+    padding-left: 25px;
+    text-align: center;
+    font-size: 80%;
+    margin-right: 10px;
+    line-height: 25px;
+    }
+    /*-------- CONTACT --------*/
+    .ad-contact {
+    padding-top: 10px;
+    background-color: #fff;
+    margin: 0 -5px 10px -5px;
+    color: #0582d0;
+    word-break: break-all;
+    }
+    .ad-contact label a,
+    .ad-contact label span {
+    vertical-align: middle;
+    }
+    .icon-small {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    color: #0582d0;
+    margin-right: 10px;
+    line-height: 25px;
+    vertical-align: middle;
+    }
+
+    /*-------- INFORMATION --------*/
+    .ad-information {
+    padding: 10px 20px 15px 20px;
+    }
+    .information {
+    background-color: #fff;
+    color: #000;
+    word-spacing: 5px;
+    margin: 0 -5px 10px -5px;
+    }
+    /* Small phones: from 0 t0 480px */
+    @media only screen and (max-width: 480px) {
+    .logo {
+        margin: 0 auto;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 0px;
+        margin-right: auto;
+        margin-left: auto;
+        float: none;
+    }
+    .title {
+        margin-top: 15px;
+        float: none;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 25px;
+    }
+    }
+</style>
 <main id="main" class="site-main container" role="main">
     <div class="main-company-information">
     <?php while (have_posts()) : the_post(); ?>

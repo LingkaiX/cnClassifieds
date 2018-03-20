@@ -20,7 +20,7 @@ get_header();?>
     #t2 .company-name-t2:after {
         display: block;
         height: 2px;
-        background-color: #F26522;
+        background-color: #ff6363;
         content:" ";
         width: 100px;
         margin: 0 auto;
@@ -47,7 +47,7 @@ get_header();?>
     }
     .contact-icon {
         margin: 6px 10px; 
-        color: #F26522;
+        color: #ff6363;
         font-size: 18px;
     }
     .contact-info {

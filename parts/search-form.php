@@ -1,15 +1,15 @@
 <?php include 'cates-index-with-id.php'; ?>
 <div class="row search-form-container">
     <form role="search" method="get" id="search-form" class="search-form" action=<?php echo get_site_url()?>>
-        <div class="col-md-6 col-sm-6 col-xs-12" style="position:relative;">
+        <div class="col-md-6 col-sm-12 col-xs-12" style="position:relative;">
             <input type="text" id="search-item" class="form-control search-item" placeholder="请选择分类或输入关键字" autocomplete="off">
             <div id="search-suggestion"></div>
         </div>
-        <div class="col-md-5 col-sm-5 col-xs-10">
+        <div class="col-md-5 col-sm-10 col-xs-10">
             <input type="text" id="auto-map" class="form-control auto-map" placeholder="请输入地址或区域" autocomplete="off">
         </div>
-        <div class="col-md-1 col-sm-1 col-xs-2">
-            <button type="submit" class="btn btn-default search-submit theme-color-background theme-color-border"><i class="ionicon ion-search" aria-hidden="true"></i></button>
+        <div class="col-md-1 col-sm-2 col-xs-2">
+            <button type="submit" class="search-submit"></button>
         </div>
         <input type="hidden" id="s-or-cat" name="sorcat" value="">
         <input type="hidden" id="geo-lat" name="lat" value="">
@@ -66,15 +66,19 @@ jQuery(document).ready(function($){
             });
             suggDom+='</div>'
             $("#search-suggestion").replaceWith(suggDom);
-        }else $("#search-suggestion").replaceWith(catesDom);
+            if(suggDom!='<div id="search-suggestion"></div>') $("#search-suggestion").show()
+        }else{
+            $("#search-suggestion").replaceWith(catesDom)
+            $("#search-suggestion").show()
+        }
     }
 
     $("#search-item").focus(addSuggestion);
     $("#search-item").keyup(addSuggestion);
-     $("#search-item").blur(function(){
-         if(!$("#search-suggestion").is(':focus')&&!$("#search-suggestion").is(':hover'))
-             $("#search-suggestion").replaceWith( '<div id="search-suggestion"></div>' );
-     });
+    $("#search-item").blur(function(){
+        if(!$("#search-suggestion").is(':focus')&&!$("#search-suggestion").is(':hover'))
+            $("#search-suggestion").replaceWith( '<div id="search-suggestion"></div>' ).hide();
+    });
 
      //提交前判断是搜索还是类别
     $("#search-form").submit(function(){

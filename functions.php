@@ -174,7 +174,7 @@ function register_my_menus() {
 function putAbnSignal($hasAbn){
 	if($hasAbn){
 		return '<abbr title="ABN Checked" style="margin-right:3px;"><img class="img-abn" src="'
-		.get_template_directory_uri().'/img/ABN-CHECKED.svg"></abbr>';
+		.get_template_directory_uri().'/img/abn-checked.svg"></abbr>';
 	}else{
 		return null;
 	}

@@ -11,7 +11,7 @@ get_header();?>
 <?php while (have_posts()) : 
     the_post();
     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
-    $themeColor=get_field('t3-color')?get_field('t3-color') : "#F26522";
+    $themeColor=get_field('t3-color')?get_field('t3-color') : "#ff6363";
 ?>
 <style>
     .animated {

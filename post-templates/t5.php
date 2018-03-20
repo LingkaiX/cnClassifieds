@@ -38,7 +38,7 @@ get_header();?>
     $characters = get_field('t5-characters');
     $links = get_field('t5-links');
     $reviews = get_field('t5-reviews');
-    $loadingUrl=get_template_directory_uri().'/img/Loader.svg';
+    $loadingUrl=get_template_directory_uri().'/img/loader.svg';
 ?>
 <main id="t5" class="container">
     <style>
@@ -67,7 +67,7 @@ get_header();?>
         ?>
         <?php
             $abn=null;
-            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></abbr>';
+            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg"></abbr>';
             the_title( '<h2 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h2>' );
             $enTitle=get_post_meta($post->ID,'title-en',true);
             if($enTitle) echo '<h3 class="en-title-t4">'.$enTitle.'</h3>'; 
@@ -79,7 +79,7 @@ get_header();?>
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
                 if($hasAbn) echo '<p class="p-abn"><span>ABN CHECKED</span><img class="img-abn" src="'
-                .get_template_directory_uri().'/img/ABN-CHECKED.svg"></p>';
+                .get_template_directory_uri().'/img/abn-checked.svg"></p>';
             ?>
         </div>   
     </div></section>
@@ -147,7 +147,7 @@ get_header();?>
             margin: 0 auto;
         }
         .links h4{
-            color: #f26522;
+            color: #ff6363;
         }
         .links .l-img{
             position: relative;
@@ -165,7 +165,7 @@ get_header();?>
         }
         .questions h4, .questions-mobile h4{
             font-weight: 600;
-            color: #f26522;
+            color: #ff6363;
             margin-left: 30px;
             padding-top: 30px;
             margin-top: 0;
@@ -216,7 +216,7 @@ get_header();?>
             vertical-align: middle;
             margin-top: 10px;
             margin-right: 10px;
-            color: #f26522;
+            color: #ff6363;
             font-weight: 600;
         }
         #read-more i{
