@@ -117,19 +117,19 @@
 <!-- no async loading -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQWClP6rOf55if8uN7jXIs_K2gheMECSw&libraries=places&region=AU&language=en-us" defer></script>
 <!-- Google Analytics -->
-<script>
+<!-- <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
   ga('create', 'UA-104883243-1', 'auto');
   ga('send', 'pageview');
-</script>
+</script> -->
 <!-- Google Analytics -->
 <?php wp_footer(); ?>
 </body>
 </html>
 <script src="<?php echo get_template_directory_uri();?>/js/axios.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/vue.min.js"></script>
-<script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
-<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"1665e4aa7ceb3a6e717fe90ab","lid":"0ebc78af25"}) })</script>
+<!-- <script type="text/javascript" src="//downloads.mailchimp.com/js/signup-forms/popup/embed.js" data-dojo-config="usePlainJson: true, isDebug: false"></script>
+<script type="text/javascript">require(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us16.list-manage.com","uuid":"1665e4aa7ceb3a6e717fe90ab","lid":"0ebc78af25"}) })</script> -->

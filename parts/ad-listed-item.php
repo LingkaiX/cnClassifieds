@@ -3,7 +3,7 @@
 ?>
 <div class="row">
     <div class="col-md-12 col-xs-12">
-        <div class="basic-listing box-round-shadow post-<?php echo $post->ID; ?>">
+        <div class="basic-listing ad-post-<?php echo $post->ID; ?>">
             <div class="row">
                 <div class="col-md-12 col-xs-12 listed-header">                    
                     <?php 
@@ -22,26 +22,29 @@
   
                         //the_title( '<div class="col-md-12 col-xs-12"><h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4></div>' );                       
                     ?>                
-                    <div class="row">
-                        <div class="listed-contact col-md-12 col-xs-12">
-                            <?php
-                            //echo $post->distance;
-                                if($mypost!=null){
-                                    if(!empty($mypost->phone)) echo '<p><i class="ionicon ion-ios-telephone-outline" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
-                                    if(!empty($mypost->email)) echo '<p><i class="ionicon ion-ios-email-outline" aria-hidden="true"></i><span>'.$mypost->email.'</span></p>';
-                                    if(!empty($mypost->website)) echo '<p><i class="ionicon ion-ios-world-outline" aria-hidden="true"></i><a target="_blank" href="'.$mypost->website.'">'.removeScheme($mypost->website).'</a></p>';
-                                    if(!empty($mypost->address)) echo '<p><i class="ionicon ion-ios-navigate-outline" aria-hidden="true"></i><span>'.$mypost->address.'</span></p>';
-                                }
-                            ?>
-                        </div>
-                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-xs-12">
-                    <?php echo apply_filters( 'the_excerpt', $post->post_excerpt ); ?>
+                <div class="col-md-12 col-xs-12 listed-contact">
+                    <?php
+                        if($mypost!=null){
+                            if(!empty($mypost->phone)) echo '<p><i class="ionicon ion-ios-telephone-outline" aria-hidden="true"></i><span>'.$mypost->phone.'</span></p>';
+                            if(!empty($mypost->email)) echo '<p><i class="ionicon ion-ios-email-outline" aria-hidden="true"></i><span>'.$mypost->email.'</span></p>';
+                            if(!empty($mypost->website)) echo '<p><i class="ionicon ion-ios-world-outline" aria-hidden="true"></i><a target="_blank" href="'.$mypost->website.'">'.removeScheme($mypost->website).'</a></p>';
+                            if(!empty($mypost->address)) echo '<p><i class="ionicon ion-ios-navigate-outline" aria-hidden="true"></i><span>'.$mypost->address.'</span></p>';
+                        }
+                    ?>
+                </div>
+                <div class="col-md-12 col-xs-12 listed-excerpt">
+                    <?php echo cutExcerpt($post->post_excerpt); ?>
+                </div>
+                <div class="col-md-12 col-xs-12 listed-btns"><div style="display: inline-block;">
+                    <?php 
+                        $pt=get_post_meta( $post->ID, '_wp_page_template', true );
+                        if($pt&&$pt!='default'):
+                    ?>
+                        <a class="btn btn-more" href="<?php echo get_permalink() ?>">更多详情...</a>
+                    <?php endif; ?>
                     <?php include 'enquiry-form.php'; ?>
-                </div>
+                </div></div>
             </div>
         </div>
     </div>

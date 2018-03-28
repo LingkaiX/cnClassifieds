@@ -149,16 +149,16 @@ function load_custom_wp_admin_style() {
 }
 add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 
-//excerpt: 280 English characters or 140 Chinese characters
-//mb_strimwidth() on ubuntu need 'sudo apt install php-mbstring'
-function chinese_excerpt($text,$lenth=286) {
-	if(is_single()){
-		return $text;
+//excerpt: 200 English characters or Chinese characters
+function cutExcerpt($output){
+	if(strlen($output)>200){
+		return mb_substr($output,0, 200)
+			.'<a href="'.get_the_permalink().'" title="'.get_the_title().'"> ... ... </a>'; 
+	}else{
+		return $output;
 	}
-    return mb_strimwidth($text,0,$lenth,'... ...','utf-8'); //6 prefix, en * 1, ch * 2
-}
-add_filter('the_excerpt', 'chinese_excerpt');
 
+}
 
 //wp_nav_menu( array( 'theme_location' => 'header-menu' ) )
 function register_my_menus() {
@@ -195,69 +195,26 @@ function getBaseUrl(){
 		return $url;
 	}
 }
-// Tab for template 1
-// function xTabStart( $atts ) {
-// 	$id = uniqid('x');
-// 	$a = shortcode_atts( array(
-// 		'id' => $id
-// 	), $atts );
-// 	$s='<script>
-// 	jQuery(document).ready(function($){var app = new Vue({
-// 	 	el: "#'.$a['id'].'",
-// 	  	data: {
-// 			s: "1"
-// 	  	}
-// 		})});
-// 	</script>';
-// 	$s=$s.'<div class="x-tab-wrap" id="'.$a['id'].'"><div v-cloak>';
-// 	return $s;
-// }
-// add_shortcode( 'x-tab-start', 'xTabStart' );
-// function xTabEnd( $atts ) {
-// 	$s='</div></div>';
-// 	return $s;
-// }
-// add_shortcode( 'x-tab-end', 'xTabEnd' );
-// function xTabItemStart( $atts ) {
-// 	$id = uniqid('x');
-// 	$a = shortcode_atts( array(
-// 		'id' => $id,
-// 		'name' => 'x-tab'
-// 	), $atts );
-// 	$s='<div class="x-tab-item-wrap"><div class="x-tab-item-head" v-on:click= "s==';
-// 	$s=$s."'".$a['id']."'?s=0:s=";
-// 	$s=$s."'".$a['id']."'";
-// 	$s=$s.'"><a href="#">'.$a['name'].'</a></div><transition><div class="x-tab-item-body" v-show="s==';
-// 	$s=$s."'".$a['id']."'";
-// 	$s=$s.'">';
-
-// 	//$s=`<a href="#" v-on:click= "s==0?s='`.$a['id'].`':s=0">`.$a['name'].`</a><div v-if="s=='`.$a['id'].`'">`;
-// 	return $s;
-// }
-// add_shortcode( 'x-tab-item-start', 'xTabItemStart' );
-// function xTabItemEnd( $atts ) {
-// 	$s='</div></transition></div><div style="clear:both"></div>';
-// 	return $s;
-// }
-// add_shortcode( 'x-tab-item-end', 'xTabItemEnd' );
-
-// // Tab for template 2
-// function xTab2Start( $atts ) {
-// 	$a = shortcode_atts( array(
-// 		'title' => 'title'
-// 	), $atts );
-// 	$s='<div class="acc-wrap"><button class="company-accordion"><strong>'
-// 		.$a['title'].'</strong></button><div class="t2-panel">';
-// 	return $s;
-// }
-// add_shortcode( 'x-tab2-start', 'xTab2Start' );
-
-// function xTab2End( $atts ) {
-// 	$s='</div></div>';
-// 	return $s;
-// }
-// add_shortcode( 'x-tab2-end', 'xTabEnd' );
-
-// remove_filter( 'the_content', 'wpautop' );
-// add_filter( 'the_content', 'wpautop' , 99 );
-// add_filter( 'the_content', 'shortcode_unautop', 100 );
+function switchCN(){
+	if (isTCN()){
+		return home_url().substr($_SERVER['REQUEST_URI'],6);
+	}else{
+		return home_url().'/zh-tw'.$_SERVER['REQUEST_URI'];
+	}
+}
+//添加或修改经纬度信息到url
+function addGeoToUrl($lat, $long){
+	//$base_url = ( isset($_SERVER['HTTPS']) && $_SERVER['HTTPS']=='on' ? 'https' : 'http' ) . '://' .  $_SERVER['HTTP_HOST'];
+	$url_parts = parse_url($_SERVER['REQUEST_URI']);
+	if(isset($url_parts['query'])) parse_str($url_parts['query'], $params);
+	$params['lat'] = $lat; 
+	$params['long'] = $long;
+	$base_url='//'.$_SERVER['HTTP_HOST'].$url_parts['path'].'?';
+	$flag=false;
+	foreach ($params as $key => $value) {
+		if($flag) $base_url = $base_url.'&';
+		$flag=true;
+		$base_url = $base_url.$key.'='.$value;
+	};
+	return $base_url;
+}

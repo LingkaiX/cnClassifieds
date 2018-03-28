@@ -164,6 +164,7 @@
     float:right;
     margin-top:32px;
     margin-right:48px;
+    margin-bottom: -32px;
     padding: 16px;
 }
 .cn-conv-row .cn-conv:hover{
@@ -171,15 +172,45 @@
     border-radius: 10px;
 }
 @media only screen and (max-width: 480px) {
-  .cn-conv {
-    margin-left: 15px;
-  }
+    .cn-conv {
+        margin-left: 15px;
+    }
+    .cn-conv-row .cn-conv{
+        margin-right:16px;
+    }
+}
+.top-bar {
+    height: 48px;
+    background-color: black;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+.top-bar a{
+    color: white !important;
+}
+.top-bar .links{
+    margin-right:16px;
+}
+.top-bar .cn-conv{
+    margin-right:48px;
+    margin-left: 32px;
 }
 </style>
 </head>
 <body <?php body_class(); ?>>
 <div class="site-content" style="background-color: #fefefe;">
-<?php include 'parts/homepage-banner.php';?>
+<div class="top-bar hidden-xs">
+    <div style="float:right">
+        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/publish-busines">免费发布信息</a>
+        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/about-us">市场解决的方案</a>
+        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/about-us">Marketing Solution</a>
+        <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
+            简体
+            <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right-light.svg":"switch-left-light.svg";?>">
+            繁体
+        </a>
+    </div>
+</div>
 <div class="container logo-and-info hidden-xs">
     <img src="<?php echo get_template_directory_uri();?>/img/logo.svg" class="home-logo">
     <img src="<?php echo get_template_directory_uri();?>/img/top-info.png" class="top-info">
@@ -218,7 +249,7 @@
     <a class="btn-slogan" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">Find Out More</a>
 </div>
 <div class="cate-section container">
-    <?php include 'parts/cate-section.php';?>
+    <?php include 'parts/home-cate-section.php';?>
 </div>
 </div>
 <?php get_footer(); ?>

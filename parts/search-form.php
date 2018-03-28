@@ -1,6 +1,6 @@
 <?php include 'cates-index-with-id.php'; ?>
 <div class="row search-form-container">
-    <form role="search" method="get" id="search-form" class="search-form" action=<?php echo get_site_url()?>>
+    <form target="_blank" role="search" method="get" id="search-form" class="search-form" action=<?php echo get_site_url()?>>
         <div class="col-md-6 col-sm-12 col-xs-12" style="position:relative;">
             <input type="text" id="search-item" class="form-control search-item" placeholder="请选择分类或输入关键字" autocomplete="off">
             <div id="search-suggestion"></div>
