@@ -109,8 +109,7 @@ abbr[title] {
 .center-content {
   text-align: center;
 }
-.box-round-shadow {
-  border-radius: 5px;
+.box-shadow {
   box-shadow: 1px 1px 10px #efefef;
 }
 a.signal:after {

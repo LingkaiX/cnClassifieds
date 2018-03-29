@@ -27,7 +27,7 @@
         color: #f05a24;
         font-size: 30px;
         vertical-align: middle;
-        font-weight: bolder;
+        font-weight: 400;
     }
     .with-ion .phone:before{
         content: "\f4b8";

@@ -121,12 +121,14 @@
     letter-spacing: 2.24px;
     line-height: 75px;
     font-weight: 600;
+    text-shadow: 0px 2px 2px #ff0000;
 }
 .slogan-section .text-2{
     font-size: 32px;
     color: white;
     letter-spacing: 4px;
     line-height: 75px;
+    text-shadow: 0px 2px 2px #ff0000;
 }
 @media (max-width: 767px) {
     .slogan-section img{
@@ -246,7 +248,7 @@
     <p class="text-1">GETTING START YOUR</p>
     <p class="text-2">ONLINE BUSINESS IN <br class="hidden-sm hidden-md hidden-lg">CHINESE MARKET !</p>
     <hr>
-    <a class="btn-slogan" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">Find Out More</a>
+    <a class="btn-slogan box-shadow" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">Find Out More</a>
 </div>
 <div class="cate-section container">
     <?php include 'parts/home-cate-section.php';?>

@@ -4,14 +4,6 @@ jQuery(document).ready(function($) {
     jQuery(this).attr("src", jQuery(this).attr("data-src"));
   });
 });
-/****** Service Worker ******/
-if ("serviceWorker" in navigator) {
-  // register service worker
-  //navigator.serviceWorker.register("/wp-content/themes/cnclassifieds/js/service-worker.js");
-  navigator.serviceWorker.register(
-    "wordpress/wp-content/themes/cnclassifieds/js/service-worker.js"
-  );
-}
 //登陆的时候header下移
 jQuery(document).ready(function($) {
   jQuery("img").on("dragstart", function(event) {
@@ -44,7 +36,7 @@ if (navigator.geolocation) {
       //console.log("got geolocation");
     },
     function(error) {
-      console.log("error:", error);
+      //console.log("error:", error);
     }
   );
 }
