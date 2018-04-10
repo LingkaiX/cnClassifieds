@@ -82,7 +82,7 @@
         echo '<div class="center-content goodman-title"><h3>优秀商家推荐</h3><span></span></div>';
         echo '<div class="goodman-list owl-carousel owl-theme" id="goodmanlist">';
         foreach($gm_query as $key => $post){
-            echo '<div style="padding:10px;"><div class="gm-item" id="gm-item-<?php echo $key; ?>">';
+            echo '<div style="padding:10px;"><div class="gm-item" id="gm-item-'.$key.'">';
                 echo '<div class="gm-img">';
                     echo get_the_post_thumbnail( $post->ID, 'full', null );
                     echo '<div class="decoration-left"><img src="'.get_template_directory_uri().'/img/decoration-left.svg"><span>'.get_field('cate').'</span></div>';

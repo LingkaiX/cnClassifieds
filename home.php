@@ -10,6 +10,18 @@
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "https://auads.com.au/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://auads.com.au/?s={query}",
+      "query-input": "required"
+    }
+}
+</script>
 <?php wp_head(); ?>
 <link href="<?php echo get_template_directory_uri();?>/css/owl.carousel.min.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri();?>/css/owl.theme.default.min.css" rel="stylesheet">
@@ -250,6 +262,9 @@
     <hr>
     <a class="btn-slogan box-shadow" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">Find Out More</a>
 </div>
+<div style="background: #F9F7F7;"><div class="auart-section container">
+    <?php include 'parts/auart-list.php';?>
+</div></div>
 <div class="cate-section container">
     <?php include 'parts/home-cate-section.php';?>
 </div>
