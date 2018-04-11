@@ -428,6 +428,11 @@ a.page-numbers:focus {
   overflow-y: scroll;
   overflow-x: hidden;
 }
+@media (min-width: 768px) {
+  #search-suggestion::-webkit-scrollbar {
+    display: none;
+  }
+}
 #search-suggestion:before,
 .pac-container:before {
   content: "";
