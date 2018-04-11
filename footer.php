@@ -71,17 +71,17 @@
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/about-us"><span>关于我们</span></a>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/contact-us"><span>联系我们</span></a>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers"><span>免责声明</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>About Us???</span></a>
+                        <a target="_blank" rel="nofollow" href="#"><span>About Us</span></a>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>Contact Us</span></a>    
-                        <a target="_blank" rel="nofollow" href="#" style="margin-bottom: 30px;"><span>Terms &Conditions???</span></a>    
+                        <a target="_blank" rel="nofollow" href="#" style="margin-bottom: 30px;"><span>Terms &Conditions</span></a>    
                         <a class="hidden-sm hidden-xs btn-lovely" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a>
                     </div></div>
                     <div class="col-md-6 col-sm-3 col-xs-12"><div class="service-links">
                         <span class="bigger">服务项目</span>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/publish-business"><span>免费信息发布</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>模板制作???</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>页面定制???</span></a>  
-                        <a target="_blank" rel="nofollow" href="#"><span>网站广告???</span></a>  
+                        <a target="_blank" rel="nofollow" href="#"><span>模板制作</span></a>
+                        <a target="_blank" rel="nofollow" href="#"><span>页面定制</span></a>  
+                        <a target="_blank" rel="nofollow" href="#"><span>网站广告</span></a>  
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广方案</span></a>  
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
                     </div></div>
