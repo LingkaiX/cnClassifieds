@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="109px" height="50px" viewBox="0 0 109 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.1 (51147) - http://www.bohemiancoding.com/sketch -->
+    <title>tag-gold</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="100%" y1="-94.6106301%" x2="-6.38441128%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#FDEDBD" offset="0%"></stop>
+            <stop stop-color="#9C7A48" offset="99.8080744%"></stop>
+            <stop stop-color="#9E7C4A" offset="100%"></stop>
+        </linearGradient>
+        <path d="M1,0 L84.7860577,0 C87.5474814,6.85064563e-15 89.7860577,2.23857625 89.7860577,5 L89.7860577,25 C89.7860577,27.7614237 87.5474814,30 84.7860577,30 L1,30 L1,0 Z" id="path-2"></path>
+        <filter x="-14.6%" y="-50.0%" width="138.3%" height="213.3%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="4" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.06 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="97.8481756%" y1="95.6963512%" x2="50%" y2="0%" id="linearGradient-4">
+            <stop stop-color="#F1DEAE" offset="0%"></stop>
+            <stop stop-color="#83673C" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-764.000000, -929.000000)">
+            <g id="card-1-copy" transform="translate(769.000000, 915.000000)">
+                <g id="tag-gold" transform="translate(0.000000, 22.000000)">
+                    <g id="Rectangle-7">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-3)" xlink:href="#path-2"></use>
+                        <use fill="url(#linearGradient-1)" fill-rule="evenodd" xlink:href="#path-2"></use>
+                    </g>
+                    <polyline id="Path-2" fill-opacity="0.9" fill="url(#linearGradient-4)" points="0.77130323 29.7518098 16.7713032 40.0670661 16.7713032 29.7518098"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

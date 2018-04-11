@@ -40,7 +40,7 @@ get_header();?>
     $gallery = get_field('t4-gallery');
     $foot = get_field('t4-foot');
     //print_r($gallery);
-    $loadingUrl=get_template_directory_uri().'/img/Loader.svg';
+    $loadingUrl=get_template_directory_uri().'/img/loader.svg';
 ?>
 <main id="t4" class="container">
     <style>
@@ -73,7 +73,7 @@ get_header();?>
         ?>
         <?php
             $abn=null;
-            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg"></abbr>';
+            //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg"></abbr>';
             the_title( '<h2 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h2>' );
             $enTitle=get_post_meta($post->ID,'title-en',true);
             if($enTitle) echo '<h3 class="en-title-t4">'.$enTitle.'</h3>'; 
@@ -85,7 +85,7 @@ get_header();?>
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
                 if($hasAbn) echo '<p class="hidden-md hidden-lg p-abn"><span>ABN CHECKED</span><img class="img-abn" src="'
-                .get_template_directory_uri().'/img/ABN-CHECKED.svg"></p>';
+                .get_template_directory_uri().'/img/abn-checked.svg"></p>';
             ?>
         </div>
         
@@ -162,7 +162,7 @@ get_header();?>
         display: inline-block;
     }
     .dot-show, .dot:hover{
-        background-color: #f26522!important;
+        background-color: #ff6363!important;
     }
     </style>
     <section class="row sect-contact">
@@ -243,7 +243,7 @@ get_header();?>
             if($hasAbn) echo '<div class="solid-border abn-box"><p class="p-abn">
                 <img class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg">
                 <span>ABN CHECKED</span>
-                <img class="img-abn" src="'.get_template_directory_uri().'/img/ABN-CHECKED.svg">
+                <img class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
                 </p></div>';
             echo '<div class="qr-code" style="margin-top:30px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
         ?>
@@ -285,7 +285,7 @@ get_header();?>
         z-index: 12;
         background-color: rgba(255,255,255,1);
         font-size: 40px;
-        color: #f26522;
+        color: #ff6363;
         opacity: 0.7;
         border-radius: 0;
     }
@@ -296,7 +296,7 @@ get_header();?>
     .card-box h4{
         margin-top:0;
         /* padding-top:10px; */
-        color:#f26522;
+        color:#ff6363;
     }
     </style>
     <section class="row sect-item" style="position:relative;">
@@ -402,7 +402,7 @@ get_header();?>
             font-family : Source Han Sans CN;
             font-weight : bold;
             font-size : 25px;
-            color : #F26522;
+            color : #ff6363;
             text-align: center; 
             width:100%;
             margin-bottom: 30px;
