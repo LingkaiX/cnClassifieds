@@ -260,7 +260,7 @@
     <p class="text-1">GETTING START YOUR</p>
     <p class="text-2">ONLINE BUSINESS IN <br class="hidden-sm hidden-md hidden-lg">CHINESE MARKET !</p>
     <hr>
-    <a class="btn-slogan box-shadow" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">Find Out More</a>
+    <a class="btn-slogan box-shadow" target="_blank" rel="nofollow" href="https://auads.com.au/marketing">Find Out More</a>
 </div>
 <div style="background: #F9F7F7;"><div class="auart-section container">
     <?php include 'parts/auart-list.php';?>

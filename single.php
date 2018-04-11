@@ -28,7 +28,7 @@
             margin: 10px -5px 0 -5px;
         }
     }
-    .ad-header {
+    .info-header {
         font-weight: 400;
         font-size: 20px;
         background-color: #fff;
@@ -140,7 +140,7 @@
     <div class="row" style="overflow:hidden; min-height:600px;">
         <div class="col-md-9 col-sm-12 col-xs-12 main-content">
         <?php while (have_posts()) : the_post(); ?>
-            <section class="row ad-header section-margin">
+            <section class="row info-header section-margin">
                 <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
                 <?php
                     $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));

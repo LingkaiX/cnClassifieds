@@ -66,6 +66,7 @@
         padding-left: 20px;
         margin-top: 30px;
         margin-bottom: 0px;
+        font-weight: 600;
     }
     .gm-text{
         padding: 20px;
