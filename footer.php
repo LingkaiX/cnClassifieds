@@ -13,9 +13,7 @@
         color: white;
         line-height: 27px;
     }
-    .site-footer span.bigger{
-        font-size: 18px;
-    }
+
     .btn-lovely {
         background: #ff6363;
         border-radius: 5px;
@@ -53,6 +51,12 @@
             margin: 0 auto;
             float: none !important;
         }
+    }
+    .company-links span, .service-links span, .footer-contacts span{
+        font-size:15px;
+    }
+    .site-footer span.bigger{
+        font-size: 17px;
     }
 </style>
 <footer id="colophon" class="site-footer" role="contentinfo">

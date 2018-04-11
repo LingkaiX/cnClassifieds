@@ -12,6 +12,7 @@
     }
     .link-list li{
         display: block;
+        padding: 5px;
     }
     @media (min-width:768px){
         .link-list{
@@ -20,6 +21,7 @@
         }
         .link-list li {
             display: inline-block;
+            padding: 0;
             padding-right: 20px;
         }
     }
@@ -110,6 +112,7 @@
     }
     .city-list li{
         display: block;
+        padding: 5px;
     }
     .sub-header .cn-conv{
         display: inline-block;
