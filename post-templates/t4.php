@@ -206,7 +206,7 @@ get_header();?>
     </section>
     <style>
         .article{
-            border-left: 3px solid #F05A24;
+            border-left: 3px solid #ff6363;
             box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
             background-color: #efefef;
             padding: 15px 0;
@@ -214,7 +214,7 @@ get_header();?>
         .article h1,.article h2,.article h3,.article h4,.article h5{
             padding-left: 50px;
             padding-right: 50px;
-            color: #F05A24;
+            color: #ff6363;
         }
         .article h1:first-child,.article h2:first-child,.article h3:first-child,
         .article h4:first-child,.article h5:first-child{
@@ -410,7 +410,7 @@ get_header();?>
         .review-head .line{
             display: inline-block;
             border-style : Solid;
-            border-color : #F05A24;
+            border-color : #ff6363;
             border-width : 1px;
             width: 25%;
         }
