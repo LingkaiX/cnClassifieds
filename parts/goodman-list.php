@@ -13,7 +13,7 @@
         border: 1px solid #FF6363;
     }
     .gm-item{
-        box-shadow: 1px 1px 10px #efefef;
+        box-shadow: 1px 1px 10px lightgrey;
         border-radius: 0 0 5px 5px;
         background-color: white;
     }

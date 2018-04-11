@@ -134,7 +134,7 @@ get_header();?>
             padding-right: 50px;
         }
         .article hr {
-            border-color: #f05a24;
+            border-color: #ff6363;
         }
         .characters .c-img{
             padding-bottom: 20px;
