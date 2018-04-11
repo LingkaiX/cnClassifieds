@@ -20,7 +20,7 @@ get_header();?>
     }
     .solid-border{
         border-style : Solid;
-        border-color : #F16522;
+        border-color : #ff6363;
         border-width : 1px;
     }
     .shadow-border{
