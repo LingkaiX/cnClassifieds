@@ -84,7 +84,7 @@ get_header();?>
                 foreach(get_the_category() as $cate){
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
-                if($hasAbn) echo '<p class="hidden-md hidden-lg p-abn"><span>ABN CHECKED</span><img class="img-abn" src="'
+                if($hasAbn) echo '<p class="hidden-md hidden-lg p-abn"><span>ABN CHECKED</span><img  style="margin-top: 2px;" class="img-abn" src="'
                 .get_template_directory_uri().'/img/abn-checked.svg"></p>';
             ?>
         </div>
@@ -243,7 +243,7 @@ get_header();?>
             if($hasAbn) echo '<div class="solid-border abn-box"><p class="p-abn">
                 <img class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg">
                 <span>ABN CHECKED</span>
-                <img class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
+                <img  style="margin-top: 30px;" class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
                 </p></div>';
             echo '<div class="qr-code" style="margin-top:30px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
         ?>
