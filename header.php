@@ -152,7 +152,7 @@
         <div class="first-header row">
             <div class="col-md-4 col-sm-12 col-xs-12">
                 <button onclick=history.go(-1) class="back-button hidden-md hidden-lg"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
-                <a href=<?php echo getBaseUrl().'/';?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo-light.svg"></a>
+                <a href=<?php echo getBaseUrl().'/';?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo-text-light.svg"></a>
                 <div class="search-button-box hidden-md hidden-lg">
                     <img class="search-button" src="<?php echo get_template_directory_uri();?>/img/search-button.svg">    
                 </div>
