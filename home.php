@@ -216,8 +216,8 @@
 <div class="top-bar hidden-xs">
     <div style="float:right">
         <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/publish-busines">免费发布信息</a>
-        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/about-us">市场解决的方案</a>
-        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/about-us">Marketing Solution</a>
+        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/marketing">市场解决的方案</a>
+        <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/marketing">Marketing Solution</a>
         <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
             简体
             <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right-light.svg":"switch-left-light.svg";?>">
