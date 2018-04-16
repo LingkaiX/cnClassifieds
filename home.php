@@ -101,20 +101,21 @@
     margin-left:4px;
 }
 .goodman-section{
-    margin: 40px auto;
+    padding: 30px 0;
+    background: #F9F7F7;
 }
 .slogan-section{
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     background-image: linear-gradient(45deg, rgba(255,168,99,0.74) 0%, #FF6363 100%);
 }
 .slogan-section img{
     height: 64px;
-    margin: 60px 0 40px 0;
+    margin: 40px 0 30px 0;
 }
 .slogan-section hr{
     border-top: 3px solid white;
     width: 120px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 .btn-slogan{
     display: inline-block;
@@ -128,18 +129,18 @@
     letter-spacing: 0.93px;
 }
 .slogan-section .text-1{
-    font-size: 48px;
+    font-size: 36px;
     color: white;
     letter-spacing: 2.24px;
-    line-height: 75px;
+    line-height: 48px;
     font-weight: 600;
     text-shadow: 0px 2px 2px #ff0000;
 }
 .slogan-section .text-2{
-    font-size: 32px;
+    font-size: 28px;
     color: white;
     letter-spacing: 4px;
-    line-height: 75px;
+    line-height: 48px;
     text-shadow: 0px 2px 2px #ff0000;
 }
 @media (max-width: 767px) {
@@ -195,7 +196,7 @@
 }
 .top-bar {
     height: 48px;
-    background-color: black;
+    background-color: rgba(0,0,0,0.8);
     padding-top: 13px;
     padding-bottom: 13px;
 }
@@ -252,9 +253,12 @@
 <div class="hidden-sm hidden-md hidden-lg mobile-bar">
     <a class="links" target="_blank" rel="nofollow" href="https://auads.com.au/publish-busines"><span>免费发布信息</span></a>
 </div>
-<div class="goodman-section container">
-    <?php include 'parts/goodman-list.php';?>
+<div class="cate-section container">
+    <?php include 'parts/home-cate-section.php';?>
 </div>
+<div style="background: #F9F7F7;"><div class="goodman-section container">
+    <?php include 'parts/goodman-list.php';?>
+</div></div>
 <div class="slogan-section center-content">
     <img src="<?php echo get_template_directory_uri();?>/img/home-laptop-icon.svg">
     <p class="text-1">GETTING START YOUR</p>
@@ -265,9 +269,6 @@
 <div style="background: #F9F7F7;"><div class="auart-section container">
     <?php include 'parts/auart-list.php';?>
 </div></div>
-<div class="cate-section container">
-    <?php include 'parts/home-cate-section.php';?>
-</div>
 </div>
 <?php get_footer(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel.min.js"></script>

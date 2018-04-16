@@ -38,7 +38,7 @@
         right: 0;
         top: 0;
         z-index: 100;
-        background-color: #333333;
+        background-color: rgba(0,0,0,0.8);
     }
     #for-header{
         width:100%;

@@ -97,7 +97,7 @@
 <?php
     $gm_query = get_posts(array( 'post_type' => 'auart', "posts_per_page" => 6));
     if($gm_query!=null){
-        echo '<div class="center-content auart-title"><h3>热门文章推荐</h3><span></span></div><hr>';
+        echo '<div class="center-content auart-title"><h3>热门文章</h3><span></span></div><hr>';
         echo '<div class="row" id="auartlist">';
         foreach($gm_query as $key => $post){
             echo '<div class="col-md-4 col-sm-6 col-xs-12 aa-item" id="aa-item-'.$key.'">';

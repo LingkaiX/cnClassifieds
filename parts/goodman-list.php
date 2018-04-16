@@ -77,10 +77,10 @@
     }
 </style>
 <?php
-    $gm_query = get_posts(array( 'post_type' => 'goodman', "posts_per_page" => 3, "orderby" => "rand"));
+    $gm_query = get_posts(array( 'post_type' => 'goodman', "posts_per_page" => 6, "orderby" => "rand"));
     //get_posts(array( 'post_type' => 'goodman', 'post_status' => 'publish', "posts_per_page" => 3, "orderby" => "rand"));
     if($gm_query!=null){
-        echo '<div class="center-content goodman-title"><h3>优秀商家推荐</h3><span></span></div>';
+        echo '<div class="center-content goodman-title"><h3>商家推荐</h3><span></span></div>';
         echo '<div class="goodman-list owl-carousel owl-theme" id="goodmanlist">';
         foreach($gm_query as $key => $post){
             echo '<div style="padding:10px;"><div class="gm-item" id="gm-item-'.$key.'">';
@@ -122,6 +122,7 @@
                 }
             }
         })
-        console.log(owlGoodman)
-    });
+        setInterval(function(){ 
+            owlGoodman.trigger('next.owl.carousel');
+                }, 5000);    });
 </script>
