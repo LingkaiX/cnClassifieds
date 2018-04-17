@@ -178,6 +178,7 @@ a.page-numbers:focus {
 .home-cate-logo {
   height: 36px;
   width: auto;
+  margin-bottom: 10px;
 }
 .cate-row {
   margin-top: 30px;
