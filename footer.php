@@ -77,7 +77,7 @@
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers"><span>免责声明</span></a>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/about-us"><span>About Us</span></a>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>Contact Us</span></a>    
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers" style="margin-bottom: 30px;"><span>Terms &Conditions</span></a>    
+                        <a target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers" style="margin-bottom: 30px;"><span>Terms & Conditions</span></a>    
                         <a class="hidden-sm hidden-xs btn-lovely" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a>
                     </div></div>
                     <div class="col-md-6 col-sm-3 col-xs-12"><div class="service-links">
