@@ -124,7 +124,7 @@
         <span class="berg-menu hidden-lg hidden-md hidden-sm" tabindex="1" role="button"><i></i></span>
         <ul class="link-list">
             <li><a target="_blank" rel="nofollow" href="https://auads.com.au/publish-business">免费发布信息</a></li>
-            <li><a target="_blank" rel="nofollow" href="https://auads.com.au/marketing">市场解决的方案</a></li>
+            <li><a target="_blank" rel="nofollow" href="https://auads.com.au/marketing">市场推广</a></li>
             <li><a target="_blank" rel="nofollow" href="https://auads.com.au/marketing">Marketing Solution</a></li>
         </ul>
     </div>

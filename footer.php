@@ -86,7 +86,7 @@
                         <a target="_blank" rel="nofollow" href="#"><span>模板制作</span></a>
                         <a target="_blank" rel="nofollow" href="#"><span>页面定制</span></a>  
                         <a target="_blank" rel="nofollow" href="#"><span>网站广告</span></a>  
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广方案</span></a>  
+                        <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广</span></a>  
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
                     </div></div>
                     <div class="hidden-lg hidden-md col-sm-3 hidden-xs"></div>
