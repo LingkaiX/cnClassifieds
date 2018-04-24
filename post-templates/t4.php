@@ -419,7 +419,7 @@ get_header();?>
             vertical-align: -8px;
         }
         .review-box {
-            background : rgba(242, 101, 34, 0.9);;
+            background : rgba(255, 99, 99, 0.9);;
             border-radius : 10px;
             padding: 35px;
             box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
