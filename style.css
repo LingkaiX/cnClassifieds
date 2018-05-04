@@ -380,6 +380,13 @@ a.page-numbers:focus {
 .listed-btns .btn-more:hover {
   opacity: 0.75;
 }
+.listed-more {
+  color: #337ab7;
+}
+.listed-more:after {
+  content: "\f220";
+  margin-left: 4px;
+}
 /*-------- ad signal, copied from Google --------*/
 ._mB {
   background-color: #fff;

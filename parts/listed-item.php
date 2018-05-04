@@ -39,7 +39,7 @@
                     <?php
                         echo cutExcerpt($post->post_excerpt); 
                         if(!isDefaultTemplete($post->ID)){
-                            echo '<a target="_blank" href="'.get_the_permalink().'" title="'.get_the_title().'"> MORE>>> </a>';
+                            echo '<a class="listed-more" target="_blank" href="'.get_the_permalink().'" title="'.get_the_title().'"> more </a>';
                         }
                     ?>
                 </div>
