@@ -152,7 +152,7 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 //excerpt: 200 English characters or Chinese characters
 function cutExcerpt($output){
 	if(strlen($output)>200){
-		return mb_substr($output,0, 200); 
+		return mb_substr($output,0, 200).'...'; 
 	}else{
 		return $output;
 	}
