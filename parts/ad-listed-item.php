@@ -34,12 +34,16 @@
                     ?>
                 </div>
                 <div class="col-md-12 col-xs-12 listed-excerpt">
-                    <?php echo cutExcerpt($post->post_excerpt); ?>
+                    <?php
+                        echo cutExcerpt($post->post_excerpt); 
+                        if(isDefaultTemplete($post->ID)){
+                            echo '<a target="_blank" href="'.get_the_permalink().'" title="'.get_the_title().'"> MORE>>> </a>';
+                        }
+                    ?>
                 </div>
                 <div class="col-md-12 col-xs-12 listed-btns"><div style="display: inline-block;">
                     <?php 
-                        $pt=get_post_meta( $post->ID, '_wp_page_template', true );
-                        if($pt&&$pt!='default'):
+                        if(isDefaultTemplete($post->ID)):
                     ?>
                         <a class="btn btn-more" href="<?php echo get_permalink() ?>">更多详情...</a>
                     <?php endif; ?>
