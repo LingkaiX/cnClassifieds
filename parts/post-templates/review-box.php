@@ -31,17 +31,21 @@
         padding-top: 10px;
         font-size: 14px;
         margin-bottom: 20px;
+        text-align:center;
+    }
+    .shadow-border{
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
     }
 </style>
 <div id="review-box" class="reviews shadow-border"><div v-cloak>
-    <ol class="hidden-sm hidden-xs">
+    <ol class="hidden-xs">
         <ul v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</ul>
     </ol>
     <div v-for="(item, index) in reviews">
-        <div class="hidden-md hidden-lg r-title" v-on:click="showId=index">
+        <div class="hidden-sm hidden-md hidden-lg r-title" v-on:click="showId=index">
             <ul class="btn" v-bind:class="{ selected: showId==index }">{{item.title }}</ul>
         </div>
-        <div class="r-item" v-show="showId==index" v-html="item.content"></div>
+        <div class="r-item"  v-show="showId==index" v-html="item.content"></div>
     </div>
 </div></div>
 
