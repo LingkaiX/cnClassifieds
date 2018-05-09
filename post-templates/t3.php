@@ -601,7 +601,7 @@ get_header();?>
             <?php if($foot!=null): ?>
                 <img data-src="<?php echo $foot['url']; ?>" alt="" class="lazyload special-img" src="<?php echo $loadingUrl; ?>">
             <?php else: ?>
-                <div id="map" style="height: 100%; width: 100%;"></div>
+                <div id="map" class="special-img" style="height: 90%; width: 90%;"></div>
                 <script>
                     jQuery(document).ready(function($){
                         var uluru = {lat: <?php echo $mypost->lat; ?>, lng: <?php echo $mypost->long; ?>};
