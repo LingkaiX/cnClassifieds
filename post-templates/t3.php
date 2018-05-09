@@ -569,10 +569,8 @@ get_header();?>
             padding:30px;
             background : #EFEFEF;
             text-align: center;
-            position:relative;
         }
         .special-img{
-            position: absolute;
             top: 0;
             bottom: 0;
             left: 0;
@@ -580,6 +578,17 @@ get_header();?>
             object-fit: cover;
             margin:  auto;
             vertical-align: middle;
+        }
+        @media (min-width:992px) {
+            .box-left{
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                object-fit: cover;
+                vertical-align: middle;
+            }
         }
         @media (max-width:991px) {
             .box-left{
@@ -615,14 +624,7 @@ get_header();?>
             <?php include dirname(__DIR__).'/parts/post-templates/info-3.php'; ?>
         </div>
     </section>
-    <script>
-        var w = window.innerWidth;
-        if(w>991) jQuery(".box-left").height(jQuery(".info").height()+22)
-        jQuery(window).resize(function() {
-            var w = window.innerWidth;
-            if(w>991) jQuery(".box-left").height(jQuery(".info").height()+22)
-        });
-    </script>
+    
 </main>
 <?php endwhile; ?>
 <?php get_footer(); ?>
