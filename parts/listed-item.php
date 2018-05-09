@@ -20,7 +20,7 @@
                             the_title( '<h4 class="entry-title"><a href="'.get_permalink().'">', '</a>'.$abn.'</h4>' );                                               
                             if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>'; 
                         }                    
-                        echo '<a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;" target="_blank" href="'.get_permalink().'"></a>';
+                        echo '<a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;" href="'.get_permalink().'"></a>';
                         //the_title( '<div class="col-md-12 col-xs-12"><h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4></div>' );                       
                     ?>                
                 </div>
@@ -36,14 +36,18 @@
                     ?>
                 </div>
                 <div class="col-md-12 col-xs-12 listed-excerpt">
-                    <?php echo cutExcerpt($post->post_excerpt); ?>
+                    <?php
+                        echo cutExcerpt($post->post_excerpt); 
+                        if(!isDefaultTemplete($post->ID)){
+                            echo '<a class="listed-more" href="'.get_the_permalink().'" title="'.get_the_title().'">more</a>';
+                        }
+                    ?>
                 </div>
                 <div class="col-md-12 col-xs-12 listed-btns"><div style="display: inline-block;">
                     <?php 
-                        $pt=get_post_meta( $post->ID, '_wp_page_template', true );
-                        if($pt&&$pt!='default'):
+                        if(isDefaultTemplete($post->ID)):
                     ?>
-                        <a target="_blank" class="btn btn-more" href="<?php echo get_permalink() ?>">更多详情...</a>
+                        <a class="btn btn-more" href="<?php echo get_permalink() ?>">更多详情...</a>
                     <?php endif; ?>
                     <?php include 'enquiry-form.php'; ?>
                 </div></div>

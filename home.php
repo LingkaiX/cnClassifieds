@@ -22,6 +22,7 @@
     }
 }
 </script>
+<?php include_once("parts/analyticstracking.php") ?>
 <?php wp_head(); ?>
 <link href="<?php echo get_template_directory_uri();?>/css/owl.carousel.min.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri();?>/css/owl.theme.default.min.css" rel="stylesheet">

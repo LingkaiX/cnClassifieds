@@ -152,7 +152,7 @@
                     <i class="ionicon ion-pricetags icon" aria-hidden="true"></i>
                     <?php 
                         foreach(get_the_category() as $cate){
-                            echo '<a class="needLatAndLong" target="_blank" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
+                            echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                         }
                     ?>
                 </div>

@@ -134,7 +134,7 @@ get_header();?>
         max-height: 100%;
         /* object-fit: cover; */
         opacity: 0;
-        margin: 0 auto;
+        margin: auto;
         vertical-align: middle;
     }
     .img-show{

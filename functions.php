@@ -37,7 +37,7 @@ function add_styles_and_scripts() {
 	wp_enqueue_style( 'ionicons', get_template_directory_uri() . '/css/ionicons.min.css', array(), '4.7.0', 'all' );
 	//wp_enqueue_style( 'select2bs-css', get_template_directory_uri() . '/css/select2-bootstrap.min.css', array('select2-css'), '0.1.0', 'all' );
 	//wp_enqueue_style( 'select2-css', get_template_directory_uri() . '/css/select2.min.css', array(), '4.0.3', 'all' );
-	wp_enqueue_style( 'easylife-style', get_stylesheet_uri(), array(), '1.1.5', 'all');	
+	wp_enqueue_style( 'easylife-style', get_stylesheet_uri(), array(), '1.1.6', 'all');	
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.7', true );
 	//wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array('jquery'), '4.0.3', true );
@@ -152,8 +152,7 @@ add_action( 'admin_enqueue_scripts', 'load_custom_wp_admin_style' );
 //excerpt: 200 English characters or Chinese characters
 function cutExcerpt($output){
 	if(strlen($output)>200){
-		return mb_substr($output,0, 200)
-			.'<a target="_blank" href="'.get_the_permalink().'" title="'.get_the_title().'"> ... ... </a>'; 
+		return mb_substr($output,0, 200).'...'; 
 	}else{
 		return $output;
 	}
@@ -217,4 +216,12 @@ function addGeoToUrl($lat, $long){
 		$base_url = $base_url.$key.'='.$value;
 	};
 	return $base_url;
+}
+function isDefaultTemplete($postId){
+	$pt=get_post_meta( $postId, '_wp_page_template', true );
+	if($pt&&$pt!='default'){
+		return true;
+	}else{
+		return false;
+	}
 }
