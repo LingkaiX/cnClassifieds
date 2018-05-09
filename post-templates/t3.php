@@ -108,7 +108,7 @@ get_header();?>
     <style>
         @media (min-width:992px) {
             .slider, .info{
-                height:500px;
+                min-height: 500px;
             }
         }
         .slider{
@@ -208,6 +208,11 @@ get_header();?>
         <?php endif;?>
         <script>
             var showingId=0;
+            if(!window.matchMedia('(max-width: 992px)').matches) jQuery(".slider").height(jQuery(".info").height()-25)
+            jQuery(window).resize(function() {
+                var w = window.innerWidth;
+                if(w>991) jQuery(".slider").height(jQuery(".info").height()-25)
+            });
             jQuery(document).ready(function($){
                 jQuery("#slider-img-0").addClass("img-show")
                 jQuery("#slider-dot-0").addClass("dot-show")
@@ -347,10 +352,10 @@ get_header();?>
                 </div>
                 <?php endforeach; ?>
             </div>
-            <div class="btn btn-last" onclick="showLast()">
+            <button class="btn btn-last product-card-btn" onclick="showLast()">
                 <i class="ion-android-arrow-back"></i>
-            </div>
-            <button class="btn btn-next" onclick="showNext(1)">
+            </button>
+            <button class="btn btn-next product-card-btn" onclick="showNext(1)">
                 <i class="ion-android-arrow-forward"></i>
             </button>
             <script>
@@ -361,7 +366,8 @@ get_header();?>
                 if(w<768) showCount=1
                 else if(w<992) showCount=2
                 else showCount=4
-
+                if(itemCount>showCount) jQuery(".product-card-btn").show()
+                else jQuery(".product-card-btn").hide()
                 console.log(showCount)
                 jQuery(document).ready(function($){
                     for (var i=showCount; i < 4; i++){
@@ -373,6 +379,8 @@ get_header();?>
                     if(w<768) showCount=1
                     else if(w<992) showCount=2
                     else showCount=4
+                    if(itemCount>showCount) jQuery(".product-card-btn").show()
+                    else jQuery(".product-card-btn").hide()
                     for(var i=0; i<showCount; i++){
                         jQuery("#item-"+i).show()
                     }
@@ -519,7 +527,7 @@ get_header();?>
         </style> 
         <section class="row sect-content">
             <span class="sometext" style="margin: 0 15px;">相关文章</span>
-            <div class="col-md-12 col-sm-12 col-xs-12 links owl-carousel owl-theme" id="links" style="margin: 0 15px; margin-top: 10px;">
+            <div class="col-md-12 col-sm-12 col-xs-12 links owl-carousel owl-theme" id="links" style="margin-top: 10px;">
                 <!-- <h4>相关文章</h4> -->
                 <?php foreach($links as $key => $l): ?>
                     <div class="l-item" id="link-<?php echo $key; ?>">
@@ -561,24 +569,39 @@ get_header();?>
             padding:30px;
             background : #EFEFEF;
             text-align: center;
+            position:relative;
+        }
+        .special-img{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            object-fit: cover;
+            margin:  auto;
+            vertical-align: middle;
         }
         @media (max-width:991px) {
             .box-left{
                 margin-bottom: 30px;
+                min-height: 500px;
             }
         }
         @media (max-width:767px) {
             .sect-bottom .box-left{
                 padding:15px;
             }
+            .box-left{
+                min-height: 500px;  
+            }
         }
     </style>
     <section class="row sect-bottom">
         <div class="col-md-8"><div class="slider box-left">
             <?php if($foot!=null): ?>
-                <img data-src="<?php echo $foot['url']; ?>" alt="" class="lazyload" src="<?php echo $loadingUrl; ?>">
+                <img data-src="<?php echo $foot['url']; ?>" alt="" class="lazyload special-img" src="<?php echo $loadingUrl; ?>">
             <?php else: ?>
-                <div id="map" style="height: 400px;  width: 100%;"></div>
+                <div id="map" style="height: 100%; width: 100%;"></div>
                 <script>
                     jQuery(document).ready(function($){
                         var uluru = {lat: <?php echo $mypost->lat; ?>, lng: <?php echo $mypost->long; ?>};
@@ -592,6 +615,14 @@ get_header();?>
             <?php include dirname(__DIR__).'/parts/post-templates/info-3.php'; ?>
         </div>
     </section>
+    <script>
+        var w = window.innerWidth;
+        if(w>991) jQuery(".box-left").height(jQuery(".info").height()+22)
+        jQuery(window).resize(function() {
+            var w = window.innerWidth;
+            if(w>991) jQuery(".box-left").height(jQuery(".info").height()+22)
+        });
+    </script>
 </main>
 <?php endwhile; ?>
 <?php get_footer(); ?>

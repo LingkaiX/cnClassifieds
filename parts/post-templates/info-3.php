@@ -3,7 +3,7 @@
         padding: 30px 30px;
         position: relative;
         padding-bottom: 50px;
-        height:500px;
+        min-height: 500px;
     }
     @media (max-width:991px) {
         .info{
