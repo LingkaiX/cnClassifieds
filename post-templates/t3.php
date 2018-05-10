@@ -620,7 +620,7 @@ get_header();?>
                 </script>
             <?php endif; ?>
         </div></div>
-        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="box-right col-md-4 col-sm-6 col-xs-12">
             <?php include dirname(__DIR__).'/parts/post-templates/info-3.php'; ?>
         </div>
     </section>
