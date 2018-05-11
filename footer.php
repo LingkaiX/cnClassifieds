@@ -83,9 +83,9 @@
                     <div class="col-md-6 col-sm-3 col-xs-12"><div class="service-links">
                         <span class="bigger">服务项目</span>
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/publish-business"><span>免费信息发布</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>模板制作</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>页面定制</span></a>  
-                        <a target="_blank" rel="nofollow" href="#"><span>网站广告</span></a>  
+                        <a target="_blank" rel="nofollow" href="#"><span>页面升级</span></a>
+                        <a target="_blank" rel="nofollow" href="#"><span>置顶服务</span></a>  
+                        <a target="_blank" rel="nofollow" href="#"><span>首页推荐</span></a>  
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广</span></a>  
                         <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
                     </div></div>
