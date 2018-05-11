@@ -32,9 +32,9 @@
   margin: 0;
 }
 .home-hearder-container {
-  min-height: 400px;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  min-height: 500px;
+  padding-top: 170px;
+  padding-bottom: 170px;
 }
 @media (max-width: 991px) {
   .home-hearder-container {
