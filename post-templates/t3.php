@@ -499,7 +499,7 @@ get_header();?>
                 <span  class="sometext col-sm-4">顾客反馈</span>
                 <div class="line solid-border col-sm-4 hidden-xs"></div>
             </div>
-            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 15px;">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
                 <?php include dirname(__DIR__).'/parts/post-templates/review-box.php'; ?>
             </div>
         </section>
@@ -524,7 +524,7 @@ get_header();?>
         </style> 
         <section class="row sect-content">
             <span class="sometext" style="margin: 0 15px;">相关文章</span>
-            <div class="col-md-12 col-sm-12 col-xs-12 links owl-carousel owl-theme" id="links" style="margin-top: 10px;">
+            <div class="col-md-12 col-sm-12 col-xs-12 links owl-carousel owl-theme" id="links" style="margin-top: 15px;">
                 <!-- <h4>相关文章</h4> -->
                 <?php foreach($links as $key => $l): ?>
                     <div class="l-item" id="link-<?php echo $key; ?>">
