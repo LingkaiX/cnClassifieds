@@ -71,7 +71,7 @@ get_header();?>
         }
     </style>
     <section class="row sect-top"><div class="col-md-12">
-        
+        <div id="topsec">
             <?php          
                 $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );
                 if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
@@ -93,7 +93,17 @@ get_header();?>
                     .get_template_directory_uri().'/img/abn-checked.svg"></p>';
                 ?>
             </div>
-         
+        </div>  
+        <?php if($content!=null):?>
+            <script>
+                jQuery("#ABN").addClass("hidden-md hidden-lg");
+                jQuery("#topsec").addClass("col-md-9");
+            </script>
+            <?php else: echo '<div class="qr-code col-md-3 hidden-sm hidden-xs" style="margin-top:80px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';?>
+                <script>
+                    jQuery("#topsec").addClass("col-md-9");
+                </script> 
+        <?php endif;?> 
     </div></section>
     <style>
         @media (min-width:992px) {
@@ -489,7 +499,7 @@ get_header();?>
                 <span  class="sometext col-sm-4">顾客反馈</span>
                 <div class="line solid-border col-sm-4 hidden-xs"></div>
             </div>
-            <div class="col-md-12 col-sm-12 col-xs-12">
+            <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 15px;">
                 <?php include dirname(__DIR__).'/parts/post-templates/review-box.php'; ?>
             </div>
         </section>
