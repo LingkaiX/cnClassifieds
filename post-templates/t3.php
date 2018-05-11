@@ -545,7 +545,7 @@ get_header();?>
                             }
                 owlLink=jQuery('#links');
                 owlLink.owlCarousel({
-                    loop:true,
+                    loop:false,
                     margin:10,
                     //dots:false,
                     center:false,
@@ -555,10 +555,10 @@ get_header();?>
                             items:1
                         },
                         768:{
-                            items:Linkcount
+                            items:3
                         },
                         1200:{
-                            items:Linkcount
+                            items:4
                         }
                     }
                 })
