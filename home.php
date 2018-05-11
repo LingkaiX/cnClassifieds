@@ -54,7 +54,7 @@
   }
 }
 .search-form-box {
-  background-color: rgba(51, 51, 51, 0.6);
+  background-color: rgba(51, 51, 51, 0.8);
   border-radius: 24px;
   padding: 36px 48px;
 }
