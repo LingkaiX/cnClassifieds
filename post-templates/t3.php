@@ -71,7 +71,7 @@ get_header();?>
         }
     </style>
     <section class="row sect-top"><div class="col-md-12">
-        <div id="topsec">
+        
             <?php          
                 $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );
                 if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
@@ -93,17 +93,7 @@ get_header();?>
                     .get_template_directory_uri().'/img/abn-checked.svg"></p>';
                 ?>
             </div>
-        </div>  
-        <?php if($content!=null):?>
-            <script>
-                jQuery("#ABN").addClass("hidden-md hidden-lg");
-                jQuery("#topsec").addClass("col-md-9");
-            </script>
-            <?php else: echo '<div class="qr-code col-md-3 hidden-sm hidden-xs" style="margin-top:80px;"><img src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';?>
-                <script>
-                    jQuery("#topsec").addClass("col-md-9");
-                </script> 
-        <?php endif;?>
+         
     </div></section>
     <style>
         @media (min-width:992px) {
@@ -494,7 +484,7 @@ get_header();?>
                     margin-top: 15px;
                 }
             </style>
-            <div style="margin: 0 15px;">
+            <div style="margin: 0 15px; margin-bottom:15px;">
                 <div class="line solid-border col-sm-4 hidden-xs"></div>
                 <span  class="sometext col-sm-4">顾客反馈</span>
                 <div class="line solid-border col-sm-4 hidden-xs"></div>
@@ -506,9 +496,6 @@ get_header();?>
     <?php endif; ?>   
     <?php if($links!=null):?>
         <style>
-            #review{
-                margin-bottom:0;
-            }
             .links h4{
             color: #ff6363;
             }
@@ -542,6 +529,7 @@ get_header();?>
         <script>
             jQuery(document).ready(function($){
             var owlLink
+            var itemCount=<?php echo sizeof($links); ?>;
                 owlLink=jQuery('#links');
                 owlLink.owlCarousel({
                     loop:true,
@@ -555,9 +543,15 @@ get_header();?>
                         },
                         768:{
                             items:3
+                            if (itemCount<3) {
+                                items:itemCount 
+                            }
                         },
                         1200:{
                             items:4
+                            if (itemCount<4) {
+                                items:itemCount 
+                            }
                         }
                     }
                 })

@@ -31,7 +31,7 @@
         padding-top: 10px;
         font-size: 14px;
         margin-bottom: 20px;
-        text-align:center;
+      
     }
     .shadow-border{
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
