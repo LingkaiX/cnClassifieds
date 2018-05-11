@@ -539,7 +539,10 @@ get_header();?>
         <script>
             jQuery(document).ready(function($){
             var owlLink
-            var itemCount=<?php echo sizeof($links); ?>;
+            var Linkcount = 4
+                if (<?php echo sizeOf($links); ?><4) {
+                                Linkcount=<?php echo sizeOf($links); ?>
+                            }
                 owlLink=jQuery('#links');
                 owlLink.owlCarousel({
                     loop:true,
@@ -552,16 +555,10 @@ get_header();?>
                             items:1
                         },
                         768:{
-                            items:3
-                            if (itemCount<3) {
-                                items:itemCount 
-                            }
+                            items:Linkcount
                         },
                         1200:{
-                            items:4
-                            if (itemCount<4) {
-                                items:itemCount 
-                            }
+                            items:Linkcount
                         }
                     }
                 })
