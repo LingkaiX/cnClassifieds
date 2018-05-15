@@ -32,39 +32,120 @@
         .container{
             width: 970px;
         }
-        
     }
-    /*@media(Max-width:768px){
-        .right{
-            color: #FFFFFF;
-        }
-    }*/
+    .butt:hover {
+        background-color: rgba(255,99,99,0.3);
+    }
+    .butt2:hover { 
+        background-color: rgba(23,192,169,0.5); 
+    }
+    .b {
+        border: none; 
+        background: rgba(255,99,99,0);
+        font-size: 18px; 
+        letter-spacing: 3px; 
+        font-family:PingFangTC-Light; 
+        color: #FFFFFF;
+    }
+    .b:hover {
+        background: rgba(255,99,99,1); 
+    }
+    .scrollable{
+        overflow: overlay;
+        float:left; 
+        width: 660px; 
+        height: 680px;
+        padding-right:0px; 
+        padding-left: 0px; 
+        margin-top: 40px;
+        margin-right: 10px;
+        border-radius: 10px;
+        position: absolute;
+        position: relative;
+    }
+    
     P{
         padding-left: 3px;
+    }
+    /* Track 
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-track-piece{
+        background-color: transparent;
+        -webkit-border-radius: 6px;
+    }*/
+    /* width */
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: rgba(169,0,0,0.5);
+        border-radius: 20px;
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(169,0,0,1);
     }
 </style>
 <div class="sect-1">
     <div class="background" >
         <div class="container" style="">
-            <p style="font-size: 44px;font-family: PingFangTC-Semibold;margin-bottom: 0; color: #FFFFFF;">ADVERTISE</p>
+            <p id="1" style="font-size: 44px;font-family: PingFangTC-Semibold;margin-bottom: 0; color: #FFFFFF;">ADVERTISE</p>
             <p style="font-size: 18px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">Access to highly targeted AUADS audience</p>
             <div>
-                <div  class="col-md-6 col-sm-6 col-xs-12 " style="float:left; width: 560px; padding-right:0px; padding-left: 0px; padding-top: 40px;">
-                    <img style ="" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
+                <div  class="scrollable">
+                    <img id="img-1" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
+                    <img id="img-2" style= "width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
+                    <img id="img-3" style= "width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
-                <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 360px; padding-left: 100px; padding-top: 30px;" >
+                <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
-                    <span style="font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <span style="font-size: 19px; letter-spacing: 3px; font-family: PingFangTC-Light; color: #FFFFFF;">BASIC LISTING</span>
-                    <P style="font-size: 18px; letter-spacing: 3px; font-family: PingFangTC-Light; margin-top: 15px; margin-bottom: 15px; color: #FFFFFF;">&nbspPREMIUM LISTING</P>
-                    <P style="font-size: 18px; letter-spacing: 3px; font-family: PingFangTC-Light; margin-bottom: 15px; color: #FFFFFF;">&nbspPROFESSIONAL</P>
-                    <a style="display: inline-block; width: 240px; padding: 12px; background: #FFFFFF; color: rgba(255,99,99,0.9); text-align: center;
-                    border-radius: 5px; margin-top: 24px; " href="https://auads.com.au/publish-business-en">Get Free Ad</a>
+                    <span id="line-1" style=" font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
+                    <button class="b" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
+                    </br><span id="line-2" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
+                    <button class="b" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
+                    </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
+                    <button class="b" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
+                    <div style="display: inline-block; width: 240px; padding: 0px; background: #FFFFFF; color: rgba(255,99,99,0.9); text-align: center;
+                    border-radius: 10px; margin-top: 24px; "><a class="butt" style="display: inline-block; width: 240px; padding: 12px; color: rgba(255,99,99,0.9); text-align: center;
+                    border-radius: 10px; " href="https://auads.com.au/publish-business-en">Get Free Ad</a></div>
                 </div>  
             </div>
         </div>
     </div>
 </div>
+<script>
+    function Click(i){
+        if(i==1){
+            document.getElementById("line-1").style.display = "initial";
+            document.getElementById("line-2").style.display = "none";
+            document.getElementById("line-3").style.display = "none";
+            document.getElementById("img-1").style.display = "initial";
+            document.getElementById("img-2").style.display = "none";
+            document.getElementById("img-3").style.display = "none";
+        }
+        else if (i==2){
+            document.getElementById("line-1").style.display = "none";
+            document.getElementById("line-2").style.display = "initial";
+            document.getElementById("line-3").style.display = "none";
+            document.getElementById("img-1").style.display = "none";
+            document.getElementById("img-2").style.display = "initial";
+            document.getElementById("img-3").style.display = "none";
+        }
+        else if (i==3){
+            document.getElementById("line-1").style.display = "none";
+            document.getElementById("line-2").style.display = "none";
+            document.getElementById("line-3").style.display = "initial";
+            document.getElementById("img-1").style.display = "none";
+            document.getElementById("img-2").style.display = "none";
+            document.getElementById("img-3").style.display = "initial";
+        }
+    }
+</script>
 <div class="sect-2">
     <div class="container" style=" padding-top: 50px;" >
         <p style="font-size: 24px; font-weight: 550; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #A90000;">Promote your business using AUADS templates</p>
@@ -100,8 +181,9 @@
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">What's included:</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	Category page top position</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	Multiple impressions</P>
-            <a style="display: inline-block; width: 240px; padding: 12px; background: white; color: rgba(23,192,169,0.7); text-align: center;
-                    border-radius: 5px; margin-top: 24px; " href="https://auads.com.au/publish-business-en">Start Your Ad</a>
+            <div style="display: inline-block; width: 240px; padding: 0px; background: #FFFFFF; color: rgba(255,99,99,0.9); text-align: center;
+                    border-radius: 10px; margin-top: 24px; "><a class="butt2" style="display: inline-block; width: 240px; padding: 12px; color: rgba(23,192,169,0.7); text-align: center;
+                    border-radius: 10px; " href="https://auads.com.au/publish-business-en">Start Your Ad</a></div>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 85px;" >
             <img style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Rank to top sample.png"></img>
