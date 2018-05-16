@@ -33,13 +33,36 @@
             width: 970px;
         }
     }
+    .butt{
+        display: inline-block; 
+        width: 240px; 
+        padding: 12px; 
+        color: rgba(255,99,99,0.9); 
+        text-align: center;
+        background: #FFFFFF;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+    }
     .butt:hover {
-        background-color: rgba(255,99,99,0.3);
-        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.5);
+        color: white;
+        background: rgba(255,99,99,1);
+        transition: background-color 0.3s ease;
+    }
+    .butt2{
+        display: inline-block; 
+        width: 240px; 
+        padding: 12px; 
+        color: rgba(23,192,169,0.7); 
+        background: white;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        border-radius: 10px; 
     }
     .butt2:hover { 
-        background-color: rgba(23,192,169,0.5); 
-        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.5);
+        color: white;
+        background: rgba(23,192,169,1);
+        transition: background-color 0.3s ease;
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.1);
     }
     .b {
         border: none; 
@@ -48,26 +71,43 @@
         letter-spacing: 3px; 
         font-family:PingFangTC-Light; 
         color: #FFFFFF;
+        transition: background-color 0.5s ease;
     }
     .b:hover {
-        background: rgba(255,99,99,1); 
-        box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.5);
+        font-size: 19px;
+        font-weight: 500;
+        background: rgba(255,99,99,0.5); 
+        transition: background-color 0.5s ease;
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
+    }
+    .selected {
+        font-size: 19px;
+        font-weight: 500;
+        background: rgba(255,99,99,0.5); 
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .scrollable{
         overflow: overlay;
         float:left; 
-        width: 660px; 
+        width: 560px; 
         height: 680px;
         padding-right:0px; 
         padding-left: 0px; 
         margin-top: 40px;
-        margin-right: 10px;
+        margin-right: 110px;
+        position: relative;
     }
     .solid-border{
         border-style : Solid;
         border-color : #E7E7E7;
         border-width : 15px;
         border-radius: 15px;
+    }
+    .visibility{
+        transition: visibility 0.5s, opacity 0.5s linear;
+    }
+    .img{
+        transition: visibility 0.5s, opacity 0.5s linear;
     }
     P{
         padding-left: 3px;
@@ -90,7 +130,7 @@
     }
     /* Handle */
     ::-webkit-scrollbar-thumb {
-        background: rgba(169,0,0,0.5);
+        background: #A9A9A9;
         border-radius: 20px;
     }
     /* Handle on hover */
@@ -106,20 +146,18 @@
             <div>
                 <div id="scrollable" class="scrollable">
                     <img id="img-1" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
-                    <img id="img-2" style= " display: none; width: 630px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
-                    <img id="img-3" style= " display: none; width: 630px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
+                    <img id="img-2" style= "display: none; transition: visibility 0s, opacity 0.5s linear; width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
+                    <img id="img-3" style= "display: none; transition: visibility 0s, opacity 0.5s linear; width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
                     <span id="line-1" style=" font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button class="b" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
+                    <button id="b1" class="b" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
                     </br><span id="line-2" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button class="b" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
+                    <button id="b2" class="b" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button class="b" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
-                    <div style="display: inline-block; width: 240px; padding: 0px; background: #FFFFFF; color: rgba(255,99,99,0.9); text-align: center;
-                    border-radius: 10px; margin-top: 24px; "><a class="butt" style="display: inline-block; width: 240px; padding: 12px; color: rgba(255,99,99,0.9); text-align: center;
-                    border-radius: 10px; " href="https://auads.com.au/publish-business-en">Get Free Ad</a></div>
+                    <button id="b3" class="b" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
+                    <a class="butt" style="" href="https://auads.com.au/publish-business-en">Get Free Ad</a>
                 </div>  
             </div>
         </div>
@@ -135,6 +173,9 @@
             document.getElementById("img-2").style.display = "none";
             document.getElementById("img-3").style.display = "none";
             jQuery("#scrollable").removeClass("solid-border");
+            jQuery("#b1").addClass("selected");
+            jQuery("#b2").removeClass("selected");
+            jQuery("#b3").removeClass("selected");
         }
         else if (i==2){
             document.getElementById("line-1").style.display = "none";
@@ -144,6 +185,9 @@
             document.getElementById("img-2").style.display = "initial";
             document.getElementById("img-3").style.display = "none";
             jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b1").removeClass("selected");
+            jQuery("#b2").addClass("selected");
+            jQuery("#b3").removeClass("selected");
         }
         else if (i==3){
             document.getElementById("line-1").style.display = "none";
@@ -153,6 +197,9 @@
             document.getElementById("img-2").style.display = "none";
             document.getElementById("img-3").style.display = "initial";
             jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b1").removeClass("selected");
+            jQuery("#b2").removeClass("selected");
+            jQuery("#b3").addClass("selected");
         }
     }
 </script>
@@ -191,9 +238,7 @@
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">What's included:</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	Category page top position</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	Multiple impressions</P>
-            <div style="display: inline-block; width: 240px; padding: 0px; background: #FFFFFF; color: rgba(255,99,99,0.9); text-align: center;
-                    border-radius: 10px; margin-top: 24px; "><a class="butt2" style="display: inline-block; width: 240px; padding: 12px; color: rgba(23,192,169,0.7); text-align: center;
-                    border-radius: 10px; " href="https://auads.com.au/publish-business-en">Start Your Ad</a></div>
+            <a class="butt2" style="" href="https://auads.com.au/publish-business-en">Start Your Ad</a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 85px;" >
             <img style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Rank to top sample.png"></img>
