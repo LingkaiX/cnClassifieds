@@ -152,7 +152,7 @@
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
                     <span id="line-1" style=" font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b1" class="b" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
+                    <button id="b1" class="b selected" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
                     </br><span id="line-2" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
                     <button id="b2" class="b" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
