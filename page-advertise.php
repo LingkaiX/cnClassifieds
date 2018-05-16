@@ -35,9 +35,11 @@
     }
     .butt:hover {
         background-color: rgba(255,99,99,0.3);
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.5);
     }
     .butt2:hover { 
         background-color: rgba(23,192,169,0.5); 
+        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.5);
     }
     .b {
         border: none; 
@@ -49,6 +51,7 @@
     }
     .b:hover {
         background: rgba(255,99,99,1); 
+        box-shadow: 0 3px 3px 3px rgba(0, 0, 0, 0.5);
     }
     .scrollable{
         overflow: overlay;
@@ -59,18 +62,22 @@
         padding-left: 0px; 
         margin-top: 40px;
         margin-right: 10px;
-        border-radius: 10px;
-        position: absolute;
-        position: relative;
     }
-    
+    .solid-border{
+        border-style : Solid;
+        border-color : #E7E7E7;
+        border-width : 15px;
+        border-radius: 15px;
+    }
     P{
         padding-left: 3px;
     }
-    /* Track 
+    /* Track */
     ::-webkit-scrollbar-track {
-        background-color: transparent;
+        box-shadow: inset 0 0 5px grey; 
+        border-radius: 10px;
     }
+    /* 
     ::-webkit-scrollbar-track-piece{
         background-color: transparent;
         -webkit-border-radius: 6px;
@@ -79,7 +86,7 @@
     ::-webkit-scrollbar {
         width: 10px;
         height: 10px;
-        background-color: transparent;
+        background-color: white;
     }
     /* Handle */
     ::-webkit-scrollbar-thumb {
@@ -97,10 +104,10 @@
             <p id="1" style="font-size: 44px;font-family: PingFangTC-Semibold;margin-bottom: 0; color: #FFFFFF;">ADVERTISE</p>
             <p style="font-size: 18px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">Access to highly targeted AUADS audience</p>
             <div>
-                <div  class="scrollable">
+                <div id="scrollable" class="scrollable">
                     <img id="img-1" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
-                    <img id="img-2" style= " display: none; width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
-                    <img id="img-3" style= "display: none; width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
+                    <img id="img-2" style= " display: none; width: 630px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
+                    <img id="img-3" style= " display: none; width: 630px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
@@ -127,6 +134,7 @@
             document.getElementById("img-1").style.display = "initial";
             document.getElementById("img-2").style.display = "none";
             document.getElementById("img-3").style.display = "none";
+            jQuery("#scrollable").removeClass("solid-border");
         }
         else if (i==2){
             document.getElementById("line-1").style.display = "none";
@@ -135,6 +143,7 @@
             document.getElementById("img-1").style.display = "none";
             document.getElementById("img-2").style.display = "initial";
             document.getElementById("img-3").style.display = "none";
+            jQuery("#scrollable").addClass("solid-border");
         }
         else if (i==3){
             document.getElementById("line-1").style.display = "none";
@@ -143,6 +152,7 @@
             document.getElementById("img-1").style.display = "none";
             document.getElementById("img-2").style.display = "none";
             document.getElementById("img-3").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
         }
     }
 </script>
