@@ -99,8 +99,8 @@
             <div>
                 <div  class="scrollable">
                     <img id="img-1" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
-                    <img id="img-2" style= "width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
-                    <img id="img-3" style= "width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
+                    <img id="img-2" style= " display: none; width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
+                    <img id="img-3" style= "display: none; width: 650px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
