@@ -165,10 +165,10 @@
                         if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-telephone-outline icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
                         if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-email-outline icon-small" aria-hidden="true"></i><a href="mailto:#"><span style="position:relative;top: -2px;">'
                         .$mypost->email.'</span></a></label>';
-                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-world-outline icon-small" aria-hidden="true"></i><a class="signal" target="_blank" href="'
+                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-world-outline icon-small" aria-hidden="true"></i><a class="signal" target="_blank" rel="noopener" href="'
                         .$mypost->website.'"><span style="position:relative;top: -2px;">'.removeScheme($mypost->website).'</span></a></label>';
                         if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-navigate-outline icon-small" aria-hidden="true"></i><span>'.$mypost->address
-                            .'</span><a class="signal" style="margin-left:10px;" target="_blank" href="https://www.google.com/maps?daddr='
+                            .'</span><a class="signal" style="margin-left:10px;" target="_blank" rel="noopener" href="https://www.google.com/maps?daddr='
                             .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></label>';
                     }
                 ?>
@@ -236,7 +236,7 @@
                             echo '</div>';
                             echo '<h4>'.$post->post_title.'</h4>';
                             if(get_field('has-link')){
-                                echo '<a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;" target="_blank" href="'.get_field('link').'"></a>';
+                                echo '<a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;" target="_blank" rel="noopener" href="'.get_field('link').'"></a>';
                             }
                             echo '<div class="gm-text">'. $post->post_content . "</div>";
                             echo '<div class="clearfix"></div>';

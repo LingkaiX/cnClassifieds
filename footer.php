@@ -72,22 +72,22 @@
                     <div class="hidden-lg hidden-md col-sm-3 hidden-xs"></div>
                     <div class="col-md-6 col-sm-3 col-xs-12"><div class="company-links">
                         <span class="bigger">公司集团</span>
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/about-us"><span>关于我们</span></a>
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/contact-us"><span>联系我们</span></a>
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers"><span>免责声明</span></a>
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/about-us"><span>About Us</span></a>
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>Contact Us</span></a>    
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/disclaimers" style="margin-bottom: 30px;"><span>Terms & Conditions</span></a>    
-                        <a class="hidden-sm hidden-xs btn-lovely" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/about-us"><span>关于我们</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/contact-us"><span>联系我们</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/disclaimers"><span>免责声明</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/about-us"><span>About Us</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/contact-us-en"><span>Contact Us</span></a>    
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/disclaimers" style="margin-bottom: 30px;"><span>Terms & Conditions</span></a>    
+                        <a class="hidden-sm hidden-xs btn-lovely" target="_blank" rel="noopener" rel="nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a>
                     </div></div>
                     <div class="col-md-6 col-sm-3 col-xs-12"><div class="service-links">
                         <span class="bigger">服务项目</span>
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/publish-business"><span>免费信息发布</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>页面升级</span></a>
-                        <a target="_blank" rel="nofollow" href="#"><span>置顶服务</span></a>  
-                        <a target="_blank" rel="nofollow" href="#"><span>首页推荐</span></a>  
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广</span></a>  
-                        <a target="_blank" rel="nofollow" href="https://auads.com.au/marketing" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/publish-business"><span>免费信息发布</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="#"><span>页面升级</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="#"><span>置顶服务</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="#"><span>首页推荐</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/marketing" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
                     </div></div>
                     <div class="hidden-lg hidden-md col-sm-3 hidden-xs"></div>
                 </div>
@@ -98,7 +98,7 @@
                     <span><i class="ion-ios-telephone-outline" style="font-size:24px;vertical-align:middle;margin-right: 5px;"></i>1300 638 939</span>
                     <span style="width:100%;display:inline-block;margin-bottom:20px"><i class="ion-ios-email-outline" style="font-size:24px;vertical-align:middle;margin-right: 5px;"></i>service@auads.com.au</span>
                 </div>
-                <a class="hidden-lg hidden-md btn-lovely" target="_blank" rel="nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a><br>
+                <a class="hidden-lg hidden-md btn-lovely" target="_blank" rel="noopener" rel="nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a><br>
                 <div style="text-align: center;"><img style="width:100px; height:auto" src="<?php echo get_template_directory_uri();?>/img/footer-wechat-qrcode.jpg"></div>
             </div></div>
         </div>
