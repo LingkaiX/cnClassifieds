@@ -127,7 +127,7 @@
                             <span>Detailed Profile Page</span></br>
                             <span>(up to 150 wording)</span></br></br></br>
                         </div>
-                        <a class="sign-up" href="#">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 1; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
@@ -152,7 +152,7 @@
                             <span>ABN Checked Sign</span></br>
                             <span>Promote Multiple Deals</span></br>
                         </div>
-                        <a class="sign-up" href="#">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 2; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
@@ -181,7 +181,7 @@
                             <span>Front Page Featured Listing</span></br>
                             <span>(3 months)</span></br>
                         </div>
-                        <a class="sign-up" href="#">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 3; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
@@ -265,7 +265,7 @@
                             <span>生意类型描述</span></br>
                             <span>(不超过150个字)</span></br></br></br>
                         </div>
-                        <a class="sign-up" href="#">点击开始</a>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 1; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
@@ -290,7 +290,7 @@
                             <span>澳洲商业认证标识（ABN）</span></br>
                             <span>多种商品信息推广</span></br>
                         </div>
-                        <a class="sign-up" href="#">点击开始</a>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 2; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
@@ -318,7 +318,7 @@
                             <span>自选颜色</span></br>
                             <span>首页商家推荐（3个月）</span></br>
                         </div>
-                        <a class="sign-up" href="#">点击开始</a>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 3; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
