@@ -46,6 +46,7 @@
         color: white;
         background: rgba(255,99,99,1);
         transition: background-color 0.3s ease;
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .butt2{
         display: inline-block; 
@@ -61,9 +62,9 @@
         color: white;
         background: rgba(23,192,169,1);
         transition: background-color 0.3s ease;
-        box-shadow: 0 5px 5px 3px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
-    .b {
+    .list-potion {
         border: none; 
         background: rgba(255,99,99,0);
         font-size: 18px; 
@@ -72,7 +73,7 @@
         color: #FFFFFF;
         transition: background-color 0.5s ease;
     }
-    .b:hover {
+    .list-potion:hover {
         font-size: 19px;
         font-weight: 500;
         background: rgba(255,99,99,0.5); 
@@ -148,17 +149,17 @@
             <div>
                 <div id="scrollable" class="scrollable">
                     <img id="img-1" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
-                    <img id="img-2" style= "display: none; transition: visibility 0s, opacity 0.5s linear; width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
-                    <img id="img-3" style= "display: none; transition: visibility 0s, opacity 0.5s linear; width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
+                    <img id="img-2" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
+                    <img id="img-3" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
                     <span id="line-1" style=" font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b1" class="b selected" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
+                    <button id="b1" class="list-potion selected" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
                     </br><span id="line-2" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b2" class="b" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
+                    <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b3" class="b" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
+                    <button id="b3" class="list-potion" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
                     <a class="butt" style="" href="https://auads.com.au/publish-business-en">Get Free Ad</a>
                 </div>  
             </div>
