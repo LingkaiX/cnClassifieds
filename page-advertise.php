@@ -18,7 +18,6 @@
         background-color: rgba(23,192,169,0.7);
     }
     .background{
-        min-width: 1140px;
         padding-left: 115px;
         padding-top: 36px;
         background-color: rgba(255,99,99,0.9); 
@@ -103,12 +102,15 @@
         border-width : 15px;
         border-radius: 15px;
     }
-    .visibility{
-        transition: visibility 0.5s, opacity 0.5s linear;
+    /*.visibility{
+        visibility: hidden;
+        -webkit-transition: opacity 600ms, visibility 600ms;
+        transition: opacity 600ms, visibility 600ms;
     }
-    .img{
-        transition: visibility 0.5s, opacity 0.5s linear;
-    }
+    /*.img{
+        visibility: visible;
+        opacity: 1;
+    }*/
     P{
         padding-left: 3px;
     }
