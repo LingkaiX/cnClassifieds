@@ -5,7 +5,6 @@
 <style>
     body{
             min-width: 1080px;
-            text-align: center;
         }
     .background{
         min-width:100%; 
@@ -19,7 +18,7 @@
         padding: 10px;
     }
     .content-sec{
-        
+        text-align: center;
     }
     table{
         margin: 0 auto; 
@@ -50,7 +49,7 @@
     .view-sample:hover{
         text-decoration: underline;
     }
-    a:visited { 
+    .sign-up:visited { 
         color: white;
     }
     .normal{
@@ -236,8 +235,10 @@
         </table></div>
     </div>
 </section>
+<section class="content-sec">
     <span style="font-size:25px; color: #7c7d7f; ">中文</span></br>
     <i class="down"></i>
+</section>
 <section class="content-sec">
 <P style="font-size: 44px; padding-top: 40px; font-family: PingFangTC-Semibold; color: grey; padding-bottom: 50px;">市场推广</P>
     <table class="menu">
