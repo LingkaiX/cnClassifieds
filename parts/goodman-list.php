@@ -90,7 +90,7 @@
                     echo '<img class="decoration-bottom" src="'.get_template_directory_uri().'/img/reward.svg">';
                 echo '</div>';
                 if(get_field('has-link')){
-                    echo '<a target="_blank" href="'.get_field('link').'"><h5>'.$post->post_title.'</h5></a>';
+                    echo '<a target="_blank" rel="noopener" href="'.get_field('link').'"><h5>'.$post->post_title.'</h5></a>';
                 }else{ 
                     echo '<h5>'.$post->post_title.'</h5>';
                 }

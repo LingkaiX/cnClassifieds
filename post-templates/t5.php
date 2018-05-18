@@ -292,7 +292,7 @@ get_header();?>
                     <div class="l-item" id="link-<?php echo $key; ?>">
                         <div class="l-img"><img src="<?php echo $loadingUrl; ?>" data-src="<?php echo $l["img"]["url"]; ?>" 
                             alt="<?php echo $l["img"]["alt"]; ?>" class="lazyload"></div>
-                        <a href="<?php echo $l["url"]; ?>" target="_blank"><h4><?php echo $l["title"]; ?></h4></a>
+                        <a href="<?php echo $l["url"]; ?>" target="_blank" rel="noopener"><h4><?php echo $l["title"]; ?></h4></a>
                         <p><?php echo $l["excerpt"]; ?></p>
                     </div>
                 <?php endforeach; ?>

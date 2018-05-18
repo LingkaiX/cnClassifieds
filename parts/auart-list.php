@@ -106,14 +106,14 @@
                 echo '</div>';
                 echo '<p class="aa-title">'.$post->post_title.'</p>';
                 if(isTCN()){
-                    echo '<a class="aa-link" target="_blank" href="'.get_field('auart-url-zh').'">阅读</a>';
+                    echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_field('auart-url-zh').'">阅读</a>';
                 }else{
-                    echo '<a class="aa-link" target="_blank" href="'.get_field('auart-url').'">阅读</a>';
+                    echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_field('auart-url').'">阅读</a>';
                 }
             echo '</div>';
         }
         echo '</div>';
-        echo '<a class="auart-more" target="_blank" href="https://www.auliving.com.au">更多文章 ...</a>';
+        echo '<a class="auart-more" target="_blank" rel="noopener" href="https://www.auliving.com.au">更多文章 ...</a>';
     }
     wp_reset_postdata();
 ?>
