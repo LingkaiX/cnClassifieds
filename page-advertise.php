@@ -1,3 +1,6 @@
+<?php
+    $var = $_GET['var'];
+?>
 <?php get_header(); ?>
 <style>
     body{
@@ -148,14 +151,14 @@
             <p style="font-size: 18px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">Access to highly targeted AUADS audience</p>
             <div>
                 <div id="scrollable" class="scrollable">
-                    <img id="img-1" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
+                    <img id="img-1" style= "display: none;" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
                     <img id="img-2" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
                     <img id="img-3" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
-                    <span id="line-1" style=" font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b1" class="list-potion selected" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
+                    <span id="line-1" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
+                    <button id="b1" class="list-potion" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
                     </br><span id="line-2" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
                     <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
@@ -206,6 +209,35 @@
         }
     }
 </script>
+<?php if($var==1):?>
+    <script>
+        document.getElementById("line-1").style.display = "initial";
+        document.getElementById("img-1").style.display = "initial";
+        jQuery("#scrollable").removeClass("solid-border");
+        jQuery("#b1").addClass("selected");
+    </script>
+    <?php elseif($var==2):?>
+        <script>
+            document.getElementById("line-2").style.display = "initial";
+            document.getElementById("img-2").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b2").addClass("selected");
+        </script>
+    <?php elseif($var==3):?>
+        <script>
+            document.getElementById("line-3").style.display = "initial";
+            document.getElementById("img-3").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b3").addClass("selected");
+        </script>
+    <?php else:?>
+        <script>
+            document.getElementById("line-1").style.display = "initial";
+            document.getElementById("img-1").style.display = "initial";
+            jQuery("#scrollable").removeClass("solid-border");
+            jQuery("#b1").addClass("selected");
+        </script>
+<?php endif;?> 
 <div class="sect-2">
     <div class="container" style=" padding-top: 50px;" >
         <p style="font-size: 24px; font-weight: 550; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #A90000;">Promote your business using AUADS templates</p>

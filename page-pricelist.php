@@ -128,7 +128,7 @@
                             <span>(up to 150 wording)</span></br></br></br>
                         </div>
                         <a class="sign-up" href="#">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 1; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -153,7 +153,7 @@
                             <span>Promote Multiple Deals</span></br>
                         </div>
                         <a class="sign-up" href="#">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 2; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -182,7 +182,7 @@
                             <span>(3 months)</span></br>
                         </div>
                         <a class="sign-up" href="#">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 3; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -266,7 +266,7 @@
                             <span>(不超过150个字)</span></br></br></br>
                         </div>
                         <a class="sign-up" href="#">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 1; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -291,7 +291,7 @@
                             <span>多种商品信息推广</span></br>
                         </div>
                         <a class="sign-up" href="#">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 2; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -319,7 +319,7 @@
                             <span>首页商家推荐（3个月）</span></br>
                         </div>
                         <a class="sign-up" href="#">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 3; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
             </tr>
