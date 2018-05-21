@@ -2,6 +2,13 @@
     $var = $_GET['var'];
 ?>
 <?php get_header(); ?>
+<script>
+if (document.documentElement.clientWidth < 769) { 
+  document.querySelector("meta[name=viewport]").setAttribute(
+        'content', 
+        'width=1140, initial-scale=1.0, user-scalable=yes');
+}
+</script>
 <style>
     body{
         min-width: 1140px;
