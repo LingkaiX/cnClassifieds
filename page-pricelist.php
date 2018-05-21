@@ -104,7 +104,7 @@ if (document.documentElement.clientWidth < 769) {
         color: white;
     }
     .pricelistsshow{
-        opacity: 1!important;
+        opacity: 1 !important;
         visibility: visible;
     }
 </style>
