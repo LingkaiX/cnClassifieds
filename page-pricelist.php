@@ -81,9 +81,9 @@ if (document.documentElement.clientWidth < 769) {
         bottom: 0;
         left: 0;
         right: 0;
-        opacity: 1;
+        /* opacity: 1;
         visibility: hidden;
-        transition: visibility 0s, opacity 0.5s linear;
+        transition: visibility 0s, opacity 0.5s linear; */
     }
     .pricelists{
         opacity: 0;
