@@ -105,7 +105,7 @@ if (document.documentElement.clientWidth < 769) {
     }
     .pricelistsshow{
         opacity: 1 !important;
-        visibility: visible;
+        visibility: visible !important;
     }
 </style>
 <section  class="content-sec">
