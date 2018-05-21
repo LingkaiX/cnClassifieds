@@ -128,7 +128,7 @@
     <p style="font-size: 42px; font-family: Arial; ">Your Business</p>
     <p style="max-width: 420px;">Advertising your business on AUADS. Attract Chinese from around Australia. Ensure success for your Business. To claim your free ad simply click through and Fill in your business details.</p>
     <a style="display: inline-block; width: 240px; padding: 12px; background: #FE6466; color: white; text-align: center;
-      border-radius: 5px; margin-top: 24px; " target="_blank" href=" https://auads.com.au/advertise">Find Out More</a>
+      border-radius: 5px; margin-top: 24px; " target="_blank" href="https://auads.com.au/pricelist?var=1">Find Out More</a>
   </div>
   <div class="sec-bg"></div>
 </div>
