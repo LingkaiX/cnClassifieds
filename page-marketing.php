@@ -1,11 +1,4 @@
 <?php get_header(); ?>
-<script>
-if (document.documentElement.clientWidth < 769) { 
-  document.querySelector("meta[name=viewport]").setAttribute(
-        'content', 
-        'width=1080, initial-scale=1.0, user-scalable=yes');
-}
-</script>
 <style>
 .sec-1{
   background-image: url(wp-content/themes/cnclassifieds/img/page-marketing/Symbol.svg);
