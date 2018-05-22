@@ -118,7 +118,7 @@ if (document.documentElement.clientWidth < 769) {
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box"><table class="list-options pricelists">
+        <div class="box" style="z-index:10"><table class="list-options pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -194,7 +194,7 @@ if (document.documentElement.clientWidth < 769) {
                 </td>
             </tr>
         </table></div>
-        <div class="box"><table class="rank-to-top pricelists">
+        <div class="box" style="z-index:1"><table class="rank-to-top pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -227,7 +227,7 @@ if (document.documentElement.clientWidth < 769) {
                 </td>
             </tr>
         </table></div>
-        <div class="box"><table class="homepage-list pricelists">
+        <div class="box" style="z-index:1"><table class="homepage-list pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -256,7 +256,7 @@ if (document.documentElement.clientWidth < 769) {
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box"><table class="list-options pricelists" >
+        <div class="box" style="z-index:10"><table class="list-options pricelists" >
             <tr>
                 <td>
                     <div class="pricebox">
@@ -331,7 +331,7 @@ if (document.documentElement.clientWidth < 769) {
                 </td>
             </tr>
         </table></div>
-        <div class="box"><table class="rank-to-top pricelists">
+        <div class="box" style="z-index:1"><table class="rank-to-top pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -363,7 +363,7 @@ if (document.documentElement.clientWidth < 769) {
                 </td>
             </tr>
         </table></div>
-        <div class="box"><table class="homepage-list pricelists">
+        <div class="box" style="z-index:1"><table class="homepage-list pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -388,6 +388,9 @@ if (document.documentElement.clientWidth < 769) {
             jQuery(".list-options").addClass("pricelistsshow");
             jQuery(".rank-to-top").removeClass("pricelistsshow");
             jQuery(".homepage-list").removeClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '10');
+            jQuery(".rank-to-top").parent().css('z-index', '1');
+            jQuery(".homepage-list").parent().css('z-index', '1');
         }
         if(i==2){
             jQuery(".outerbox").css('height', '520px');
@@ -397,6 +400,9 @@ if (document.documentElement.clientWidth < 769) {
             jQuery(".list-options").removeClass("pricelistsshow");
             jQuery(".rank-to-top").addClass("pricelistsshow");
             jQuery(".homepage-list").removeClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '1');
+            jQuery(".rank-to-top").parent().css('z-index', '10');
+            jQuery(".homepage-list").parent().css('z-index', '1');
         }
        if(i==3){
             jQuery(".outerbox").css('height', '350px');
@@ -406,6 +412,9 @@ if (document.documentElement.clientWidth < 769) {
             jQuery(".list-options").removeClass("pricelistsshow");
             jQuery(".rank-to-top").removeClass("pricelistsshow");
             jQuery(".homepage-list").addClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '1');
+            jQuery(".rank-to-top").parent().css('z-index', '1');
+            jQuery(".homepage-list").parent().css('z-index', '10');
         }
     }
 </script>   
