@@ -1,5 +1,9 @@
 <?php
-    $var = $_GET['var'];
+if(isset($_GET['var'])){
+    $var = $_GET['var'];    
+}else{
+    $var = 1;
+}
 ?>
 <?php get_header(); ?>
 <script>
