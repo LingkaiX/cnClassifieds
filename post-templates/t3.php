@@ -28,6 +28,12 @@ get_header();?>
         border-color : #ff6363;
         border-width : 1px;
     }
+    .sometext{
+        color:#ff6363;
+        font-weight:bold;
+        text-align: center;
+        font-size: 24px;
+    }
 </style>
 <?php
     while (have_posts()) : the_post();
@@ -483,12 +489,6 @@ get_header();?>
             <style>
                 #chara{
                     margin-bottom:0;
-                }
-                .sometext{
-                    color:#ff6363;
-                    font-weight:bold;
-                    text-align: center;
-                    font-size: 24px;
                 }
                 .line{
                     margin-top: 15px;
