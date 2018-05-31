@@ -138,15 +138,15 @@
 </style>
 <main id="main" class="container" role="main">
     <div class="row" style="overflow:hidden; min-height:600px;">
-        <div class="col-md-9 col-sm-12 col-xs-12 main-content">
+        <div class="col-md-9 col-sm-12 col-xs-12 main-content" itemscope itemtype="http://schema.org/LocalBusiness">
         <?php while (have_posts()) : the_post(); ?>
             <section class="row info-header section-margin">
-                <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo'] );?>
+                <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo', 'itemprop' => 'logo'] );?>
                 <?php
                     $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
-                    the_title( '<h3 class="title">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;'.$abn.'</small></h3>' );
+                    the_title( '<h3 class="title"><span itemprop="name">', '</span>&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;'.$abn.'</small></h3>' );
                     $enTitle=get_post_meta($post->ID,'title-en',true);
-                    if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>';  
+                    if($enTitle) echo '<h5 class="en-title"><span itemprop="alternateName">'.$enTitle.'</span></h5>';  
                 ?>
                 <div class="tag">
                     <i class="ionicon ion-pricetags icon" aria-hidden="true"></i>
@@ -162,12 +162,12 @@
                 <?php
                     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
                     if($mypost!=null){
-                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-telephone-outline icon-small" aria-hidden="true"></i><span>'.$mypost->phone.'</span></label>';
-                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-email-outline icon-small" aria-hidden="true"></i><a href="mailto:#"><span style="position:relative;top: -2px;">'
+                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-telephone-outline icon-small" aria-hidden="true"></i><span itemprop="telephone">'.$mypost->phone.'</span></label>';
+                        if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-email-outline icon-small" aria-hidden="true"></i><a href="mailto:#"><span itemprop="email" style="position:relative;top: -2px;">'
                         .$mypost->email.'</span></a></label>';
-                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-world-outline icon-small" aria-hidden="true"></i><a class="signal" target="_blank" rel="noopener" href="'
+                        if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-world-outline icon-small" aria-hidden="true"></i><a itemprop="sameAs" class="signal" target="_blank" rel="noopener" href="'
                         .$mypost->website.'"><span style="position:relative;top: -2px;">'.removeScheme($mypost->website).'</span></a></label>';
-                        if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-navigate-outline icon-small" aria-hidden="true"></i><span>'.$mypost->address
+                        if(!empty($mypost->address)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-navigate-outline icon-small" aria-hidden="true"></i><span itemprop="address">'.$mypost->address
                             .'</span><a class="signal" style="margin-left:10px;" target="_blank" rel="noopener" href="https://www.google.com/maps?daddr='
                             .$mypost->lat.','.$mypost->long.'"><small>地图导航</small></a></label>';
                     }
