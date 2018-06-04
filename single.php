@@ -157,6 +157,9 @@
                     ?>
                 </div>
                 <?php include 'parts/enquiry-form.php'; ?>
+
+                <link itemprop="url" href="<?php get_permalink() ?>" />
+                <link itemprop="image" href="<?php echo get_template_directory_uri();?>/img/auads-logo-large.png" />
             </section>
             <section class="row contact-info ad-contact section-margin">
                 <?php
