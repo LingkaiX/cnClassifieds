@@ -51,8 +51,8 @@
   .home-hearder-container {
     background-position: center;
     background-size: 100%;
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 60px;
+    padding-bottom: 40px;
     min-height: 320px;
   }
 }
