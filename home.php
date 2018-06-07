@@ -51,8 +51,9 @@
   .home-hearder-container {
     background-position: center;
     background-size: 100%;
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    min-height: 320px;
   }
 }
 .search-form-box {
