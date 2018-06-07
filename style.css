@@ -138,8 +138,8 @@ a.signal:after {
   /* background-image: linear-gradient(rgba(0, 0, 0, -0.3), rgba(0, 0, 0, 0.2)),
 	url(img/background.png); */
   background-image: url(./img/background2.jpg);
-  background-position: bottom;
-  background-size: cover;
+  background-position: center;
+  background-size: auto 100%;
   background-repeat: no-repeat;
 }
 .site-footer {

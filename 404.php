@@ -1,4 +1,4 @@
-<html lang=zh-cmn-Hans>
+<html lang=cmn-hans>
 <head>
 <meta charset="UTF-8">
 </head>

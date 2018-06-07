@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=zh-cmn-Hans>
+<html lang=cmn-hans>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -51,6 +51,8 @@
   .home-hearder-container {
     background-position: center;
     background-size: 100%;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 .search-form-box {
@@ -75,6 +77,24 @@
     height:100px;
     padding-top:20px;
     padding-bottom:20px;
+}
+@media (max-width: 767px) {
+    .logo-and-info{
+        height: 70px;
+        padding-top: 20px;
+        padding-bottom: 5px;
+    }
+    .mobile-slogan{
+        color:#ff6363;
+        font-weight: 600;
+        position: relative;
+        top: 5px;
+        left: 5px;
+        font-size: 14px;
+    }
+    .home-logo {
+        height: 30px;
+    }
 }
 .home-logo{
     height:60px;
@@ -182,6 +202,8 @@
     margin-right:48px;
     margin-bottom: -32px;
     padding: 16px;
+    color: white;
+    font-weight: 600;
 }
 .cn-conv-row .cn-conv:hover{
     background-color: rgba(51, 51, 51, 0.2);
@@ -227,15 +249,16 @@
         </a>
     </div>
 </div>
-<div class="container logo-and-info hidden-xs">
+<div class="container logo-and-info">
     <img src="<?php echo get_template_directory_uri();?>/img/logo.svg" class="home-logo">
-    <img src="<?php echo get_template_directory_uri();?>/img/top-info.png" class="top-info">
+    <span class="hidden-sm hidden-md hidden-lg mobile-slogan">精准搜索全澳中文商家</span>
+    <img src="<?php echo get_template_directory_uri();?>/img/top-info.png" class="top-info  hidden-xs">
 </div>
 <header class="index-header" id="index-header">
     <div class="container home-hearder-container">
-        <div class="row hidden-sm hidden-md hidden-lg mobile-logo-row">
+        <!-- <div class="row hidden-sm hidden-md hidden-lg mobile-logo-row">
             <img src="<?php echo get_template_directory_uri();?>/img/logo.svg" class="home-logo">
-        </div>
+        </div> -->
         <div class="row">
             <div class="col-md-1 col-sm-1 hidden-xs va-helper"></div>
             <div class="col-md-10 col-sm-10 col-xs-12 search-form-box"> 
