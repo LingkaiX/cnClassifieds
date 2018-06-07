@@ -78,6 +78,14 @@
     padding-top:20px;
     padding-bottom:20px;
 }
+.home-logo{
+    height:60px;
+}
+@media (max-width: 991px) {
+    .home-logo{
+        height:40px;
+    }
+}
 @media (max-width: 767px) {
     .logo-and-info{
         height: 70px;
@@ -94,14 +102,6 @@
     }
     .home-logo {
         height: 30px;
-    }
-}
-.home-logo{
-    height:60px;
-}
-@media (max-width: 991px) {
-    .home-logo{
-        height:40px;
     }
 }
 .top-info{
