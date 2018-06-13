@@ -225,3 +225,12 @@ function isDefaultTemplete($postId){
 		return false;
 	}
 }
+//Change og:locale for Yoast SEO
+function yst_wpseo_change_og_locale( $locale ) {
+	if(isTCN()){
+		return 'zh_tw';
+	}else{
+		return 'zh_cn';
+	}
+}
+add_filter( 'wpseo_locale', 'yst_wpseo_change_og_locale' );
