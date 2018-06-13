@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia & Raymond
 Description: cnclassifieds
-Version: 1.1.7
+Version: 1.1.8
 Text Domain: cnclassifieds
 */
 * {
@@ -139,7 +139,7 @@ a.signal:after {
 	url(img/background.png); */
   background-image: url(./img/background2.jpg);
   background-position: center;
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 .site-footer {
