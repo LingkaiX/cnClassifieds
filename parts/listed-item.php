@@ -37,7 +37,7 @@
                 </div>
                 <div class="col-md-12 col-xs-12 listed-excerpt">
                     <?php
-                        echo cutExcerpt($post->post_excerpt); 
+                        echo cutExcerpt(has_excerpt()?$post->post_excerpt:$post->post_content); 
                         if(!isDefaultTemplete($post->ID)){
                             echo '<a class="listed-more" href="'.get_the_permalink().'" title="'.get_the_title().'">more</a>';
                         }
