@@ -184,7 +184,7 @@
             "slug"=>"others",
             "imgsrc"=>"other.svg",
             "subcates"=>array(
-                array("name"=>"婚介婚礼服务","slug"=>"dating-and-marriage-and-celebrants","tname"=>"婚介婚禮服務"),
+                array("name"=>"婚介婚礼","slug"=>"dating-and-marriage-and-celebrants","tname"=>"婚介婚禮"),
                 array("name"=>"翻译服务","slug"=>"translation-services","tname"=>"翻譯服務"),                
                 array("name"=>"殡葬服务","slug"=>"funeral-services","tname"=>"殯葬服務"),
                 array("name"=>"珠宝行","slug"=>"jewellery","tname"=>"珠寶行"),
