@@ -175,6 +175,7 @@
                 array("name"=>"旅游景点","slug"=>"tour-attraction","tname"=>"旅遊景點"),
                 array("name"=>"俱乐部","slug"=>"clubs","tname"=>"俱樂部"),
                 array("name"=>"礼品店","slug"=>"gift-shop","tname"=>"禮品店"),
+                array("name"=>"花店","slug"=>"florist","tname"=>"花店"),
             ),
         ),
         array(
@@ -183,7 +184,7 @@
             "slug"=>"others",
             "imgsrc"=>"other.svg",
             "subcates"=>array(
-                array("name"=>"婚介服务","slug"=>"dating-and-marriage-and-celebrants","tname"=>"婚介服務"),
+                array("name"=>"婚介婚礼服务","slug"=>"dating-and-marriage-and-celebrants","tname"=>"婚介婚禮服務"),
                 array("name"=>"翻译服务","slug"=>"translation-services","tname"=>"翻譯服務"),                
                 array("name"=>"殡葬服务","slug"=>"funeral-services","tname"=>"殯葬服務"),
                 array("name"=>"珠宝行","slug"=>"jewellery","tname"=>"珠寶行"),
