@@ -86,8 +86,8 @@
                         <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 1; ?>"><span>页面升级</span></a>
                         <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 2; ?>"><span>置顶服务</span></a>  
                         <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 3; ?>"><span>首页推荐</span></a>  
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/marketing"><span>市场推广</span></a>  
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/marketing" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1"><span>市场推广</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
                     </div></div>
                     <div class="hidden-lg hidden-md col-sm-3 hidden-xs"></div>
                 </div>
