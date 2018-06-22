@@ -122,7 +122,7 @@ if(isset($_GET['var'])){
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:10"><table id="list-options1" class="list-options pricelists">
+        <div class="box" style="z-index:1"><table id="list-options1" class="list-options pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
