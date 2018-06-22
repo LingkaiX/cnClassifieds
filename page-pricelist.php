@@ -429,20 +429,25 @@ if(isset($_GET['var'])){
             jQuery(".lists").addClass("selected");
             jQuery(".list-options").addClass("pricelistsshow"); 
         }
-        if(window.location.hash.substr(1)==2){
+        else if(window.location.hash.substr(1)==2){
             jQuery(".outerbox").css('height', '520px');
             jQuery(".ranks").addClass("selected");
             jQuery(".rank-to-top").addClass("pricelistsshow");
         }
-        if(window.location.hash.substr(1)==2){
+        else if(window.location.hash.substr(1)==2){
             jQuery(".outerbox").css('height', '520px');
             jQuery(".ranks").addClass("selected");
             jQuery(".rank-to-top").addClass("pricelistsshow");
         }
-        if(window.location.hash.substr(1)==3){
+        else if(window.location.hash.substr(1)==3){
             jQuery(".outerbox").css('height', '350px');
             jQuery(".homepages").addClass("selected");
             jQuery(".homepage-list").addClass("pricelistsshow");
+        }
+        else{
+            jQuery(".outerbox").css('height', '750px');
+            jQuery(".lists").addClass("selected");
+            jQuery(".list-options").addClass("pricelistsshow");
         }
     </script>
     <?php elseif($var==2):?>
