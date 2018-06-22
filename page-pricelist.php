@@ -7,11 +7,11 @@ if(isset($_GET['var'])){
 ?>
 <?php get_header(); ?>
 <script>
-if (document.documentElement.clientWidth < 769) { 
-  document.querySelector("meta[name=viewport]").setAttribute(
-        'content', 
-        'width=1080, initial-scale=1.0, user-scalable=yes');
-}
+    if (document.documentElement.clientWidth < 769) { 
+    document.querySelector("meta[name=viewport]").setAttribute(
+            'content', 
+            'width=1080, initial-scale=1.0, user-scalable=yes');
+    }
 </script>
 <style>
     body{
@@ -122,7 +122,7 @@ if (document.documentElement.clientWidth < 769) {
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:10"><table class="list-options pricelists">
+        <div class="box" style="z-index:10"><table id="list-options1" class="list-options pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -260,7 +260,7 @@ if (document.documentElement.clientWidth < 769) {
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:10"><table class="list-options pricelists" >
+        <div class="box" style="z-index:10"><table id="list-options2" class="list-options pricelists" >
             <tr>
                 <td>
                     <div class="pricebox">
@@ -421,24 +421,41 @@ if (document.documentElement.clientWidth < 769) {
             jQuery(".homepage-list").parent().css('z-index', '10');
         }
     }
-</script>   
+</script>  
 <?php if($var==1):?>
     <script>
-        jQuery(".outerbox").css('height', '750px');
-        jQuery(".lists").addClass("selected");
-        jQuery(".list-options").addClass("pricelistsshow");
-    </script>
-    <?php elseif($var==2):?>
-        <script>
+        if(window.location.hash.substr(1)==1){
+            jQuery(".outerbox").css('height', '750px');
+            jQuery(".lists").addClass("selected");
+            jQuery(".list-options").addClass("pricelistsshow"); 
+        }
+        if(window.location.hash.substr(1)==2){
             jQuery(".outerbox").css('height', '520px');
             jQuery(".ranks").addClass("selected");
             jQuery(".rank-to-top").addClass("pricelistsshow");
-        </script>
-    <?php elseif($var==3):?>
-        <script>
+        }
+        if(window.location.hash.substr(1)==2){
+            jQuery(".outerbox").css('height', '520px');
+            jQuery(".ranks").addClass("selected");
+            jQuery(".rank-to-top").addClass("pricelistsshow");
+        }
+        if(window.location.hash.substr(1)==3){
             jQuery(".outerbox").css('height', '350px');
             jQuery(".homepages").addClass("selected");
             jQuery(".homepage-list").addClass("pricelistsshow");
+        }
+    </script>
+    <?php elseif($var==2):?>
+        <script>
+          //  jQuery(".outerbox").css('height', '520px');
+          //  jQuery(".ranks").addClass("selected");
+          //  jQuery(".rank-to-top").addClass("pricelistsshow");
+        </script>
+    <?php elseif($var==3):?>
+        <script>
+           // jQuery(".outerbox").css('height', '350px');
+           // jQuery(".homepages").addClass("selected");
+           // jQuery(".homepage-list").addClass("pricelistsshow");
         </script>
 <?php endif;?> 
 <?php get_footer(); ?>  
