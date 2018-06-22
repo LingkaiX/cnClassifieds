@@ -222,31 +222,50 @@ if (document.documentElement.clientWidth < 769) {
 </script>
 <?php if($var==1):?>
     <script>
-        document.getElementById("line-1").style.display = "initial";
-        document.getElementById("img-1").style.display = "initial";
-        jQuery("#scrollable").removeClass("solid-border");
-        jQuery("#b1").addClass("selected");
-    </script>
-    <?php elseif($var==2):?>
-        <script>
-            document.getElementById("line-2").style.display = "initial";
-            document.getElementById("img-2").style.display = "initial";
-            jQuery("#scrollable").addClass("solid-border");
-            jQuery("#b2").addClass("selected");
-        </script>
-    <?php elseif($var==3):?>
-        <script>
-            document.getElementById("line-3").style.display = "initial";
-            document.getElementById("img-3").style.display = "initial";
-            jQuery("#scrollable").addClass("solid-border");
-            jQuery("#b3").addClass("selected");
-        </script>
-    <?php else:?>
-        <script>
+        if(window.location.hash.substr(1)==1){
             document.getElementById("line-1").style.display = "initial";
             document.getElementById("img-1").style.display = "initial";
             jQuery("#scrollable").removeClass("solid-border");
             jQuery("#b1").addClass("selected");
+        }
+        else if(window.location.hash.substr(1)==2){
+            document.getElementById("line-2").style.display = "initial";
+            document.getElementById("img-2").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b2").addClass("selected");
+        }
+        else if(window.location.hash.substr(1)==2){
+            jQuery(".outerbox").css('height', '520px');
+            jQuery(".ranks").addClass("selected");
+            jQuery(".rank-to-top").addClass("pricelistsshow");
+        }
+        else if(window.location.hash.substr(1)==3){
+            document.getElementById("line-3").style.display = "initial";
+            document.getElementById("img-3").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b3").addClass("selected");
+        }
+        else{
+            document.getElementById("line-1").style.display = "initial";
+            document.getElementById("img-1").style.display = "initial";
+            jQuery("#scrollable").removeClass("solid-border");
+            jQuery("#b1").addClass("selected");
+        }
+    </script>
+    <?php elseif($var==2):?>
+        <script>
+            
+        </script>
+    <?php elseif($var==3):?>
+        <script>
+            
+        </script>
+    <?php else:?>
+        <script>
+            //document.getElementById("line-1").style.display = "initial";
+            //document.getElementById("img-1").style.display = "initial";
+            //jQuery("#scrollable").removeClass("solid-border");
+            //jQuery("#b1").addClass("selected");
         </script>
 <?php endif;?> 
 <div class="sect-2">
