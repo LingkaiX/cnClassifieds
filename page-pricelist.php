@@ -122,7 +122,7 @@ if(isset($_GET['var'])){
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:1"><table id="list-options1" class="list-options pricelists">
+        <div class="box" ><table id="list-options1" class="list-options pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -198,7 +198,7 @@ if(isset($_GET['var'])){
                 </td>
             </tr>
         </table></div>
-        <div class="box" style="z-index:1"><table class="rank-to-top pricelists">
+        <div class="box" ><table class="rank-to-top pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -231,7 +231,7 @@ if(isset($_GET['var'])){
                 </td>
             </tr>
         </table></div>
-        <div class="box" style="z-index:1"><table class="homepage-list pricelists">
+        <div class="box" ><table class="homepage-list pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -260,7 +260,7 @@ if(isset($_GET['var'])){
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:1"><table id="list-options2" class="list-options pricelists" >
+        <div class="box" ><table id="list-options2" class="list-options pricelists" >
             <tr>
                 <td>
                     <div class="pricebox">
@@ -335,7 +335,7 @@ if(isset($_GET['var'])){
                 </td>
             </tr>
         </table></div>
-        <div class="box" style="z-index:1"><table class="rank-to-top pricelists">
+        <div class="box" ><table class="rank-to-top pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -367,7 +367,7 @@ if(isset($_GET['var'])){
                 </td>
             </tr>
         </table></div>
-        <div class="box" style="z-index:1"><table class="homepage-list pricelists">
+        <div class="box" ><table class="homepage-list pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
