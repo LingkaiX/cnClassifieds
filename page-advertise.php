@@ -154,7 +154,16 @@ if (document.documentElement.clientWidth < 769) {
     ::-webkit-scrollbar-thumb:hover {
         background: rgba(169,0,0,1);
     }
+    @media (min-width:769px) {
+            .headsup{
+                display: none;
+            }
+        }
 </style>
+<div class="headsup alert alert-info alert-dismissible" style="width: 100vw;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong></strong>Please use a bigger screen or zoom out for a better view.
+</div>
 <div class="sect-1">
     <div class="background" >
         <div class="container" style="">
@@ -284,7 +293,7 @@ if (document.documentElement.clientWidth < 769) {
         </div>
     </div>
 </div>
-<div class="sect-3">
+<div id="s3" class="sect-3">
     <div class="container" style=" padding-top: 50px;">
         <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 30px; color: #A90000;">Homepage List</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 50px; color: #333333 ;">
@@ -292,7 +301,7 @@ if (document.documentElement.clientWidth < 769) {
         <img style ="padding-left: 50px;" src="<?php echo get_template_directory_uri();?>/img/assets/Homepage list sample.png"></img>
     </div>
 </div>
-<div class="sect-4">
+<div id="s4" class="sect-4">
     <div class="container" style=" padding-top: 50px;">
         <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 10px; color: white;">Rank to Top</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 45px; color: white ;">

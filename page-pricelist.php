@@ -112,7 +112,16 @@ if(isset($_GET['var'])){
         opacity: 1 !important;
         visibility: visible !important;
     }
+    @media (min-width:769px) {
+            .headsup{
+                display: none;
+            }
+        }
 </style>
+<div class="headsup alert alert-info alert-dismissible" style="width: 100vw;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong></strong>Please use a bigger screen or zoom out for a better view.
+</div>
 <section  class="content-sec">
 <P style="font-size: 44px; padding-top: 50px; font-family: PingFangTC-Semibold; color: grey; padding-bottom: 50px;">ADVERTISE</P>
     <table class="menu">
@@ -212,7 +221,7 @@ if(isset($_GET['var'])){
                             </br></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">View Samples</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -227,7 +236,7 @@ if(isset($_GET['var'])){
                             </br></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">View Samples</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -240,7 +249,7 @@ if(isset($_GET['var'])){
                         <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$300<span style="color: #545458; font-size:16px ; font-weight:300;">3 months</span></h1>
                         
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s3">View Samples</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -349,7 +358,7 @@ if(isset($_GET['var'])){
                             </br></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">查看范例</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -363,7 +372,7 @@ if(isset($_GET['var'])){
                             </br></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">查看范例</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -376,7 +385,7 @@ if(isset($_GET['var'])){
                         <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$300<span style="color: #545458; font-size:16px ; font-weight:300;">/季度</span></h1>
                         
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s3">查看范例</a></br></br></br>
                     </div>   
                 </td>
             </tr>
