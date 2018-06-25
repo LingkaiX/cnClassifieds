@@ -85,8 +85,9 @@ if(isset($_GET['var'])){
         bottom: 0;
         left: 0;
         right: 0;
+        visibility: hidden !important;
         /* opacity: 1;
-        visibility: hidden;
+        
         transition: visibility 0s, opacity 0.5s linear; */
     }
     .pricelists{
