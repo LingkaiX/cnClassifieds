@@ -56,6 +56,9 @@ if (document.documentElement.clientWidth < 769) {
         border-radius: 10px;
         transition: background-color 0.3s ease;
     }
+    .butt:visited {
+        color: rgba(255,99,99,0.9);
+    }
     .butt:hover {
         color: white;
         background: rgba(255,99,99,1);
@@ -71,6 +74,9 @@ if (document.documentElement.clientWidth < 769) {
         text-align: center;
         transition: background-color 0.3s ease;
         border-radius: 10px; 
+    }
+    .butt2:visited {
+        color:rgba(23,192,169,0.7);
     }
     .butt2:hover { 
         color: white;
