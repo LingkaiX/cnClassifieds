@@ -241,8 +241,8 @@
 <div class="top-bar hidden-xs">
     <div style="float:right">
         <a class="links" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/publish-busines">免费发布信息</a>
-        <a class="links" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1">市场推广</a>
-        <a class="links" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1">Marketing Solution</a>
+        <a class="links" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist">市场推广</a>
+        <a class="links" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist">Marketing Solution</a>
         <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
             简体
             <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right-light.svg":"switch-left-light.svg";?>">
@@ -289,7 +289,7 @@
     <p class="text-1">GETTING START YOUR</p>
     <p class="text-2">ONLINE BUSINESS IN <br class="hidden-sm hidden-md hidden-lg">CHINESE MARKET !</p>
     <hr>
-    <a class="btn-slogan box-shadow" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1">Find Out More</a>
+    <a class="btn-slogan box-shadow" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist">Find Out More</a>
 </div>
 <div style="background: #F9F7F7;"><div class="auart-section container">
     <?php include 'parts/auart-list.php';?>

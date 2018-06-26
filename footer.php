@@ -83,11 +83,11 @@
                     <div class="col-md-6 col-sm-3 col-xs-12"><div class="service-links">
                         <span class="bigger">服务项目</span>
                         <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/publish-business"><span>免费信息发布</span></a>
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 1; ?>"><span>页面升级</span></a>
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 2; ?>"><span>置顶服务</span></a>  
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 3; ?>"><span>首页推荐</span></a>  
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1"><span>市场推广</span></a>  
-                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=1" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#1"><span>页面升级</span></a>
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#2"><span>置顶服务</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#3"><span>首页推荐</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist"><span>市场推广</span></a>  
+                        <a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist" style="margin-bottom: 30px;"><span>Marketing Solutions</span></a>      
                     </div></div>
                     <div class="hidden-lg hidden-md col-sm-3 hidden-xs"></div>
                 </div>

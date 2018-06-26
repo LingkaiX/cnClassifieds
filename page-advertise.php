@@ -56,6 +56,9 @@ if (document.documentElement.clientWidth < 769) {
         border-radius: 10px;
         transition: background-color 0.3s ease;
     }
+    .butt:visited {
+        color: rgba(255,99,99,0.9);
+    }
     .butt:hover {
         color: white;
         background: rgba(255,99,99,1);
@@ -71,6 +74,9 @@ if (document.documentElement.clientWidth < 769) {
         text-align: center;
         transition: background-color 0.3s ease;
         border-radius: 10px; 
+    }
+    .butt2:visited {
+        color:rgba(23,192,169,0.7);
     }
     .butt2:hover { 
         color: white;
@@ -154,7 +160,16 @@ if (document.documentElement.clientWidth < 769) {
     ::-webkit-scrollbar-thumb:hover {
         background: rgba(169,0,0,1);
     }
+    @media (min-width:769px) {
+            .headsup{
+                display: none;
+            }
+        }
 </style>
+<div class="headsup alert alert-info alert-dismissible" style="width: 100vw;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong></strong>Please use a bigger screen or zoom out for a better view.
+</div>
 <div class="sect-1">
     <div class="background" >
         <div class="container" style="">
@@ -174,7 +189,7 @@ if (document.documentElement.clientWidth < 769) {
                     <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
                     <button id="b3" class="list-potion" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
-                    <a class="butt" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 1; ?>">Get Free Ad</a>
+                    <a class="butt" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#<?php echo 1; ?>">Get Free Ad</a>
                 </div>  
             </div>
         </div>
@@ -222,31 +237,50 @@ if (document.documentElement.clientWidth < 769) {
 </script>
 <?php if($var==1):?>
     <script>
-        document.getElementById("line-1").style.display = "initial";
-        document.getElementById("img-1").style.display = "initial";
-        jQuery("#scrollable").removeClass("solid-border");
-        jQuery("#b1").addClass("selected");
-    </script>
-    <?php elseif($var==2):?>
-        <script>
-            document.getElementById("line-2").style.display = "initial";
-            document.getElementById("img-2").style.display = "initial";
-            jQuery("#scrollable").addClass("solid-border");
-            jQuery("#b2").addClass("selected");
-        </script>
-    <?php elseif($var==3):?>
-        <script>
-            document.getElementById("line-3").style.display = "initial";
-            document.getElementById("img-3").style.display = "initial";
-            jQuery("#scrollable").addClass("solid-border");
-            jQuery("#b3").addClass("selected");
-        </script>
-    <?php else:?>
-        <script>
+        if(window.location.hash.substr(1)==1){
             document.getElementById("line-1").style.display = "initial";
             document.getElementById("img-1").style.display = "initial";
             jQuery("#scrollable").removeClass("solid-border");
             jQuery("#b1").addClass("selected");
+        }
+        else if(window.location.hash.substr(1)==2){
+            document.getElementById("line-2").style.display = "initial";
+            document.getElementById("img-2").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b2").addClass("selected");
+        }
+        else if(window.location.hash.substr(1)==2){
+            jQuery(".outerbox").css('height', '520px');
+            jQuery(".ranks").addClass("selected");
+            jQuery(".rank-to-top").addClass("pricelistsshow");
+        }
+        else if(window.location.hash.substr(1)==3){
+            document.getElementById("line-3").style.display = "initial";
+            document.getElementById("img-3").style.display = "initial";
+            jQuery("#scrollable").addClass("solid-border");
+            jQuery("#b3").addClass("selected");
+        }
+        else{
+            document.getElementById("line-1").style.display = "initial";
+            document.getElementById("img-1").style.display = "initial";
+            jQuery("#scrollable").removeClass("solid-border");
+            jQuery("#b1").addClass("selected");
+        }
+    </script>
+    <?php elseif($var==2):?>
+        <script>
+            
+        </script>
+    <?php elseif($var==3):?>
+        <script>
+            
+        </script>
+    <?php else:?>
+        <script>
+            //document.getElementById("line-1").style.display = "initial";
+            //document.getElementById("img-1").style.display = "initial";
+            //jQuery("#scrollable").removeClass("solid-border");
+            //jQuery("#b1").addClass("selected");
         </script>
 <?php endif;?> 
 <div class="sect-2">
@@ -265,7 +299,7 @@ if (document.documentElement.clientWidth < 769) {
         </div>
     </div>
 </div>
-<div class="sect-3">
+<div id="s3" class="sect-3">
     <div class="container" style=" padding-top: 50px;">
         <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 30px; color: #A90000;">Homepage List</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 50px; color: #333333 ;">
@@ -273,7 +307,7 @@ if (document.documentElement.clientWidth < 769) {
         <img style ="padding-left: 50px;" src="<?php echo get_template_directory_uri();?>/img/assets/Homepage list sample.png"></img>
     </div>
 </div>
-<div class="sect-4">
+<div id="s4" class="sect-4">
     <div class="container" style=" padding-top: 50px;">
         <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 10px; color: white;">Rank to Top</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 45px; color: white ;">
@@ -284,7 +318,7 @@ if (document.documentElement.clientWidth < 769) {
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">What's included:</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	Category page top position</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	Multiple impressions</P>
-            <a class="butt2" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist?var=<?php echo 2; ?>">Start Your Ad</a>
+            <a class="butt2" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#<?php echo 2; ?>">Start Your Ad</a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 85px;" >
             <img style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Rank to top sample.png"></img>

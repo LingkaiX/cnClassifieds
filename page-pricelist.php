@@ -7,11 +7,11 @@ if(isset($_GET['var'])){
 ?>
 <?php get_header(); ?>
 <script>
-if (document.documentElement.clientWidth < 769) { 
-  document.querySelector("meta[name=viewport]").setAttribute(
-        'content', 
-        'width=1080, initial-scale=1.0, user-scalable=yes');
-}
+    if (document.documentElement.clientWidth < 769) { 
+    document.querySelector("meta[name=viewport]").setAttribute(
+            'content', 
+            'width=1080, initial-scale=1.0, user-scalable=yes');
+    }
 </script>
 <style>
     body{
@@ -85,8 +85,9 @@ if (document.documentElement.clientWidth < 769) {
         bottom: 0;
         left: 0;
         right: 0;
+        visibility: hidden !important;
         /* opacity: 1;
-        visibility: hidden;
+        
         transition: visibility 0s, opacity 0.5s linear; */
     }
     .pricelists{
@@ -111,7 +112,16 @@ if (document.documentElement.clientWidth < 769) {
         opacity: 1 !important;
         visibility: visible !important;
     }
+    @media (min-width:769px) {
+            .headsup{
+                display: none;
+            }
+        }
 </style>
+<div class="headsup alert alert-info alert-dismissible" style="width: 100vw;" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong></strong>Please use a bigger screen or zoom out for a better view.
+</div>
 <section  class="content-sec">
 <P style="font-size: 44px; padding-top: 50px; font-family: PingFangTC-Semibold; color: grey; padding-bottom: 50px;">ADVERTISE</P>
     <table class="menu">
@@ -122,7 +132,7 @@ if (document.documentElement.clientWidth < 769) {
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:10"><table class="list-options pricelists">
+        <div class="box" style="z-index:10"><table id="list-options1" class="list-options pricelists">
             <tr>
                 <td>
                     <div class="pricebox">
@@ -139,7 +149,7 @@ if (document.documentElement.clientWidth < 769) {
                             <span>(up to 150 wording)</span></br></br></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 1; ?>">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 1; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -164,7 +174,7 @@ if (document.documentElement.clientWidth < 769) {
                             <span>Promote Multiple Deals</span></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 2; ?>">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 2; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -193,7 +203,7 @@ if (document.documentElement.clientWidth < 769) {
                             <span>(3 months)</span></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 3; ?>">View Samples</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 3; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -210,8 +220,8 @@ if (document.documentElement.clientWidth < 769) {
                             <span>for just $34/page</span></br>
                             </br></br>
                         </div>
-                        <a class="sign-up" href="#">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">View Samples</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -225,8 +235,8 @@ if (document.documentElement.clientWidth < 769) {
                             <span>Random locations</span></br>
                             </br></br>
                         </div>
-                        <a class="sign-up" href="#">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">View Samples</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -238,8 +248,8 @@ if (document.documentElement.clientWidth < 769) {
                         <P style="font-size:25px; background:rgba(255,99,99,0.9); width:299px; margin: 30px 0 20px; padding: 10px 0 6px;  color: white; ">Home page Recommendation</P>
                         <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$300<span style="color: #545458; font-size:16px ; font-weight:300;">3 months</span></h1>
                         
-                        <a class="sign-up" href="#">SIGN UP</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">View Samples</a></br></br></br>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s3">View Samples</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -260,7 +270,7 @@ if (document.documentElement.clientWidth < 769) {
         </tr>
     </table>
     <div class="outerbox">
-        <div class="box" style="z-index:10"><table class="list-options pricelists" >
+        <div class="box" style="z-index:10"><table id="list-options2" class="list-options pricelists" >
             <tr>
                 <td>
                     <div class="pricebox">
@@ -277,7 +287,7 @@ if (document.documentElement.clientWidth < 769) {
                             <span>(不超过150个字)</span></br></br></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 1; ?>">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 1; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -302,7 +312,7 @@ if (document.documentElement.clientWidth < 769) {
                             <span>多种商品信息推广</span></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 2; ?>">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 2; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -330,7 +340,7 @@ if (document.documentElement.clientWidth < 769) {
                             <span>首页商家推荐（3个月）</span></br>
                         </div>
                         <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise?var=<?php echo 3; ?>">查看范例</a></br></br></br>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 3; ?>">查看范例</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -347,8 +357,8 @@ if (document.documentElement.clientWidth < 769) {
                             <span>每页仅需$34</span></br>
                             </br></br>
                         </div>
-                        <a class="sign-up" href="#">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">查看范例</a></br></br></br>
                     </div>   
                 </td>
                 <td>
@@ -361,8 +371,8 @@ if (document.documentElement.clientWidth < 769) {
                             <span>位置随机</span></br>
                             </br></br>
                         </div>
-                        <a class="sign-up" href="#">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">查看范例</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -374,8 +384,8 @@ if (document.documentElement.clientWidth < 769) {
                         <P style="font-size:25px; background:rgba(255,99,99,0.9); width:299px; margin: 30px 0 20px; padding: 10px 0 6px;  color: white; ">商家首页推荐</P>
                         <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$300<span style="color: #545458; font-size:16px ; font-weight:300;">/季度</span></h1>
                         
-                        <a class="sign-up" href="#">点击开始</a>
-                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise">查看范例</a></br></br></br>
+                        <a class="sign-up" href="https://auads.com.au/publish-business-en">点击开始</a>
+                        <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s3">查看范例</a></br></br></br>
                     </div>   
                 </td>
             </tr>
@@ -421,24 +431,46 @@ if (document.documentElement.clientWidth < 769) {
             jQuery(".homepage-list").parent().css('z-index', '10');
         }
     }
-</script>   
+</script>  
 <?php if($var==1):?>
     <script>
-        jQuery(".outerbox").css('height', '750px');
-        jQuery(".lists").addClass("selected");
-        jQuery(".list-options").addClass("pricelistsshow");
-    </script>
-    <?php elseif($var==2):?>
-        <script>
+        if(window.location.hash.substr(1)==1){
+            jQuery(".outerbox").css('height', '750px');
+            jQuery(".lists").addClass("selected");
+            jQuery(".list-options").addClass("pricelistsshow"); 
+        }
+        else if(window.location.hash.substr(1)==2){
             jQuery(".outerbox").css('height', '520px');
             jQuery(".ranks").addClass("selected");
             jQuery(".rank-to-top").addClass("pricelistsshow");
-        </script>
-    <?php elseif($var==3):?>
-        <script>
+        }
+        else if(window.location.hash.substr(1)==2){
+            jQuery(".outerbox").css('height', '520px');
+            jQuery(".ranks").addClass("selected");
+            jQuery(".rank-to-top").addClass("pricelistsshow");
+        }
+        else if(window.location.hash.substr(1)==3){
             jQuery(".outerbox").css('height', '350px');
             jQuery(".homepages").addClass("selected");
             jQuery(".homepage-list").addClass("pricelistsshow");
+        }
+        else{
+            jQuery(".outerbox").css('height', '750px');
+            jQuery(".lists").addClass("selected");
+            jQuery(".list-options").addClass("pricelistsshow");
+        }
+    </script>
+    <?php elseif($var==2):?>
+        <script>
+          //  jQuery(".outerbox").css('height', '520px');
+          //  jQuery(".ranks").addClass("selected");
+          //  jQuery(".rank-to-top").addClass("pricelistsshow");
+        </script>
+    <?php elseif($var==3):?>
+        <script>
+           // jQuery(".outerbox").css('height', '350px');
+           // jQuery(".homepages").addClass("selected");
+           // jQuery(".homepage-list").addClass("pricelistsshow");
         </script>
 <?php endif;?> 
 <?php get_footer(); ?>  
