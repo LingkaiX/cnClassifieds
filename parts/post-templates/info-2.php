@@ -120,37 +120,37 @@
         padding: 0 15px;
     }
 </style>
-<div class="row info-2 solid-border">
+<div class="row info-2 solid-border" itemscope itemtype="http://schema.org/LocalBusiness">
     <div class="col-md-7 col-sm-8 info-contacts">
     <?php
         if($mypost!=null){
-            if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span>'.$mypost->phone.'</span></p>';
-            if(!empty($mypost->email)) echo '<p class="with-ion"><a href="mailto:#"><span class="email"></span><span>'
+            if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span itemprop="telephone">'.$mypost->phone.'</span></p>';
+            if(!empty($mypost->email)) echo '<p class="with-ion"><a href="mailto:#"><span class="email"></span><span itemprop="email">'
                 .$mypost->email.'</span></a></p>';
-            if(!empty($mypost->website)) echo '<p class="with-ion"><a target="_blank" rel="noopener" href="'
+            if(!empty($mypost->website)) echo '<p class="with-ion"><a itemprop="sameAs" target="_blank" rel="noopener" href="'
                 .$mypost->website.'"><span class="website"></span><span>'.removeScheme($mypost->website).'</span></a></p>';
-            if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span>'.$mypost->address.'</span></p>';
+            if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span itemprop="address">'.$mypost->address.'</span></p>';
         }
     ?>
     </div>
     <div class="col-md-5 col-sm-4" style="text-align:center;">
-        <div class="hidden-xs qr-code qr-code-small"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <div class="hidden-xs qr-code qr-code-small"><img itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
     </div>
     <div style="margin-top: 20px;" class="row btns">
         <div class="col-md-6 col-sm-6" style="text-align:center;">
             <?php include dirname(__DIR__).'/enquiry-form.php'; ?>
         </div>
         <div class="col-md-6 col-sm-6" style="text-align:center;">
-            <a class="btn goto-google" target="_blank" rel="noopener" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>   
+            <a itemprop="hasMap" class="btn goto-google" target="_blank" rel="noopener" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>   
         </div>
     </div>
     <div class="col-md-12" style="text-align:center;">
-        <div class="hidden-md hidden-lg hidden-sm qr-code qr-code-small"><img src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <div class="hidden-md hidden-lg hidden-sm qr-code qr-code-small"><img itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
     </div>
     <div class="social-box">
-        <a target="_blank" rel="noopener" href="<?php echo $social['has-facebook']?$social["facebook"]:"#"; ?>">
+        <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social['has-facebook']?$social["facebook"]:"#"; ?>">
         <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
-        <a target="_blank" rel="noopener" href="<?php echo $social['has-instagram']?$social["instagram"]:"#"; ?>">
+        <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social['has-instagram']?$social["instagram"]:"#"; ?>">
         <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
     </div>
 </div>
