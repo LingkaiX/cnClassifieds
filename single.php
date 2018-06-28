@@ -233,7 +233,7 @@
                 if($gm_query!=null){
                     echo '<div class="goodman-list">';
                     foreach($gm_query as $key => $post){
-                        echo '<div class="gm-item" id="gm-item-<?php echo $key; ?>">';
+                        echo '<div class="gm-item" id="s-gm-item-<?php echo $key; ?>">';
                             echo '<div class="gm-img">';
                                 echo get_the_post_thumbnail( $post->ID, 'thumbnail',  array( 'class' => 'xasa' ) );
                             echo '</div>';
