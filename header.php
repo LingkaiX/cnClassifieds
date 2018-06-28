@@ -155,7 +155,7 @@
                 <button onclick=goBack() class="back-button hidden-md hidden-lg"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
                 <a href=<?php echo getBaseUrl().'/';?> class="header-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo-text-light.svg"></a>
                 <div class="search-button-box hidden-md hidden-lg">
-                    <img class="search-button" src="<?php echo get_template_directory_uri();?>/img/search-button.svg">    
+                    <img class="search-button" alt="search" src="<?php echo get_template_directory_uri();?>/img/search-button.svg">    
                 </div>
             </div>
             <div id="search-row" class="col-md-8 col-sm-10 col-xs-12">

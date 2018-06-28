@@ -81,7 +81,7 @@ get_header();?>
                 foreach(get_the_category() as $cate){
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
-                if($hasAbn) echo '<p class="p-abn"><span>ABN CHECKED</span><img style="margin-top: 2px;" class="img-abn" src="'
+                if($hasAbn) echo '<p class="p-abn"><span>ABN CHECKED</span><img alt="abn" style="margin-top: 2px;" class="img-abn" src="'
                 .get_template_directory_uri().'/img/abn-checked.svg"></p>';
             ?>
         </div> 
@@ -388,6 +388,6 @@ get_header();?>
     </section>
 </main>
 <?php endwhile; ?>
-<?php get_footer(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel.min.js"></script>
+<?php get_footer(); ?>

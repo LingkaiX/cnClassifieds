@@ -64,7 +64,7 @@
 		<div class="row center-content">
 			<div class="col-md-3 col-xs-12" style="margin:10px 0;">
 				<a href=<?php echo get_site_url();?>>
-					<img src="<?php echo get_template_directory_uri();?>/img/logo-light.svg" alt="logo" style="height:50px;">
+					<img src="<?php echo get_template_directory_uri();?>/img/logo-light.svg" alt="logo" style="height:50px;" alt="logo">
 				</a>
 			</div>
             <div class="col-md-6 col-xs-12 above-line">
@@ -99,16 +99,16 @@
                     <span style="width:100%;display:inline-block;margin-bottom:20px"><i class="ion-ios-email-outline" style="font-size:24px;vertical-align:middle;margin-right: 5px;"></i>service@auads.com.au</span>
                 </div>
                 <a class="hidden-lg hidden-md btn-lovely" target="_blank" rel="noopener nofollow" href="http://eepurl.com/c7FyKj">订阅邮件</a><br>
-                <div style="text-align: center;"><img style="width:100px; height:auto" src="<?php echo get_template_directory_uri();?>/img/footer-wechat-qrcode.jpg"></div>
+                <div style="text-align: center;"><img alt="qrcode" style="width:100px; height:auto" src="<?php echo get_template_directory_uri();?>/img/footer-wechat-qrcode.jpg"></div>
             </div></div>
         </div>
         <div style="border-top: 1px solid rgba(246, 246, 246, 0.7); margin-top: 10px;"></div>
         <div class="row center-content under-line">
             <div class="col-md-3 col-xs-12 col-md-push-5 social-links" style="padding-top: 10px;">
-                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Facebook_White.svg" style="max-height:30px;margin: auto 10px"></a>
-                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Google_White.svg" style="max-height:30px;"></a>
-                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Youtube_White.svg" style="max-height:30px;"></a>
-                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Twitter_White.svg" style="max-height:30px;"></a>
+                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Facebook_White.svg" alt="facebook" style="max-height:30px;margin: auto 10px"></a>
+                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Google_White.svg" alt="google" style="max-height:30px;"></a>
+                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Youtube_White.svg" alt="youtube" style="max-height:30px;"></a>
+                <a style="width:25%;display: inline-block;float: left;" href="#"><img src="<?php echo get_template_directory_uri();?>/img/Twitter_White.svg" alt="twitter" style="max-height:30px;"></a>
             </div>
             <div class="col-md-5 col-xs-12 col-md-pull-3 copy-right" style="padding-top: 12px; padding-bottom:12px;padding-right:10px;">
                 <span class="text-center" style="">&copy; <?php echo date('Y'); ?> auads.com.au</span>

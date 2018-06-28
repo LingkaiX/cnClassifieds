@@ -130,7 +130,7 @@
     </div>
     <a href=<?php echo switchCN();?> class="cn-conv">
         简体
-        <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
+        <img alt="switch" style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
         繁体
     </a>
     <?php if (!is_single()): ?>

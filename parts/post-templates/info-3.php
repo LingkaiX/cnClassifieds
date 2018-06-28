@@ -119,18 +119,18 @@
         <div style="text-align:center;" itemscope itemtype="http://schema.org/LocalBusiness">
             <?php include dirname(__DIR__).'/enquiry-form.php'; ?>
             <a itemprop="hasMap" class="btn goto-google" target="_blank" rel="noopener" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
-            <div class="hidden-md hidden-lg qr-code"><img itemprop="identifier" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+            <div class="hidden-md hidden-lg qr-code"><img alt="qrcode" itemprop="identifier" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
         </div>
     </div>
     <?php if($social['has-facebook']||$social['has-instagram']): ?>
     <div class="social-box" itemscope itemtype="http://schema.org/LocalBusiness">
         <?php if($social['has-facebook']): ?>
             <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social["facebook"]; ?>">
-            <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
+            <img class="img-social" alt="facebook" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
         <?php endif; ?>
         <?php if($social['has-instagram']): ?>
             <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social["instagram"]; ?>">
-            <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
+            <img class="img-social" alt="instagram" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
         <?php endif; ?>
     </div>
     <?php endif; ?>

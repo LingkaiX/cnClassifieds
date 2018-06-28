@@ -95,7 +95,7 @@ get_header();?>
                     foreach(get_the_category() as $cate){
                         echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                     }
-                    if($hasAbn) echo '<p id="ABN" class="p-abn"><span>ABN CHECKED</span><img  style="margin-top: 2px;" class="img-abn" src="'
+                    if($hasAbn) echo '<p id="ABN" class="p-abn"><span>ABN CHECKED</span><img alt="abn" style="margin-top: 2px;" class="img-abn" src="'
                     .get_template_directory_uri().'/img/abn-checked.svg"></p>';
                 ?>
             </div>
@@ -107,7 +107,7 @@ get_header();?>
                 jQuery("#ABN").addClass("hidden-md hidden-lg");
                 jQuery("#topsec").addClass("col-md-9");
             </script>
-            <?php else: echo '<div class="qr-code col-md-3 hidden-sm hidden-xs" style="margin-top:80px;"><img itemprop="image" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';?>
+            <?php else: echo '<div class="qr-code col-md-3 hidden-sm hidden-xs" style="margin-top:80px;"><img alt="qrcode" itemprop="image" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';?>
                 <script>
                     jQuery("#topsec").addClass("col-md-9");
                 </script> 
@@ -600,7 +600,7 @@ get_header();?>
     <section class="row sect-bottom">
         <div class="col-md-8"><div class="slider box-left" itemscope itemtype="http://schema.org/LocalBusiness">
             <?php if($foot!=null): ?>
-                <img data-src="<?php echo $foot['url']; ?>" itemprop="image" alt="" class="lazyload special-img" src="<?php echo $loadingUrl; ?>">
+                <img data-src="<?php echo $foot['url']; ?>" itemprop="image" alt="special-img" class="lazyload special-img" src="<?php echo $loadingUrl; ?>">
             <?php else: ?>
                 <div id="map" itemprop="hasMap" class="special-img" style="height: 90%; width: 90%;"></div>
                 <script>
@@ -626,6 +626,6 @@ get_header();?>
     </script>
 </main>
 <?php endwhile; ?>
-<?php get_footer(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel.min.js"></script>
+<?php get_footer(); ?>

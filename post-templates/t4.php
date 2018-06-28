@@ -84,7 +84,7 @@ get_header();?>
                 foreach(get_the_category() as $cate){
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
-                if($hasAbn) echo '<p class="hidden-md hidden-lg p-abn"><span>ABN CHECKED</span><img  style="margin-top: 2px;" class="img-abn" src="'
+                if($hasAbn) echo '<p class="hidden-md hidden-lg p-abn"><span>ABN CHECKED</span><img alt="abn"  style="margin-top: 2px;" class="img-abn" src="'
                 .get_template_directory_uri().'/img/abn-checked.svg"></p>';
             ?>
         </div>
@@ -242,11 +242,11 @@ get_header();?>
         <div class="col-md-4 hidden-sm hidden-xs"><div style="text-align:center;"itemscope itemtype="http://schema.org/LocalBusiness">           
         <?php 
             if($hasAbn) echo '<div class="solid-border abn-box"><p class="p-abn">
-                <img itemprop="image" class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg">
+                <img itemprop="image" alt="little man" class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg">
                 <span>ABN CHECKED</span>
-                <img itemprop="image" style="margin-top: 30px;" class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
+                <img itemprop="image" alt="abn checked" style="margin-top: 30px;" class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
                 </p></div>';
-            echo '<div class="qr-code" style="margin-top:30px;"><img itemprop="image" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+            echo '<div class="qr-code" style="margin-top:30px;"><img itemprop="image" alt="qrcode" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
         ?>
         </div></div>
         <div class="col-sm-6 visible-sm-inline-block">
@@ -491,6 +491,7 @@ get_header();?>
     </section>
 </main>
 <?php endwhile; ?>
-<?php get_footer(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel.min.js"></script>
+<?php get_footer(); ?>
+

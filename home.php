@@ -245,15 +245,15 @@
         <a class="links" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist">Marketing Solution</a>
         <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
             简体
-            <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right-light.svg":"switch-left-light.svg";?>">
+            <img style="height:8px;margin-bottom:2px;" alt="switch" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right-light.svg":"switch-left-light.svg";?>">
             繁体
         </a>
     </div>
 </div>
 <div class="container logo-and-info">
-    <img src="<?php echo get_template_directory_uri();?>/img/logo.svg" class="home-logo">
+    <img alt="logo" src="<?php echo get_template_directory_uri();?>/img/logo.svg" class="home-logo">
     <span class="hidden-sm hidden-md hidden-lg mobile-slogan">精准搜索全澳中文商家</span>
-    <img src="<?php echo get_template_directory_uri();?>/img/top-info.png" class="top-info  hidden-xs">
+    <img alt="top info" src="<?php echo get_template_directory_uri();?>/img/top-info.png" class="top-info  hidden-xs">
 </div>
 <header class="index-header" id="index-header">
     <div class="container home-hearder-container">
@@ -269,7 +269,7 @@
         <div class="row hidden-sm hidden-md hidden-lg cn-conv-row">
             <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
                 简体
-                <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
+                <img alt="switch" style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
                 繁体
             </a>
         </div>
@@ -285,7 +285,7 @@
     <?php include 'parts/goodman-list.php';?>
 </div></div>
 <div class="slogan-section center-content">
-    <img src="<?php echo get_template_directory_uri();?>/img/home-laptop-icon.svg">
+    <img alt="icon" src="<?php echo get_template_directory_uri();?>/img/home-laptop-icon.svg">
     <p class="text-1">GETTING START YOUR</p>
     <p class="text-2">ONLINE BUSINESS IN <br class="hidden-sm hidden-md hidden-lg">CHINESE MARKET !</p>
     <hr>

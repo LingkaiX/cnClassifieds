@@ -134,7 +134,7 @@
     ?>
     </div>
     <div class="col-md-5 col-sm-4" style="text-align:center;">
-        <div class="hidden-xs qr-code qr-code-small"><img itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <div class="hidden-xs qr-code qr-code-small"><img alt="qrcode" itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
     </div>
     <div style="margin-top: 20px;" class="row btns">
         <div class="col-md-6 col-sm-6" style="text-align:center;">
@@ -145,12 +145,12 @@
         </div>
     </div>
     <div class="col-md-12" style="text-align:center;">
-        <div class="hidden-md hidden-lg hidden-sm qr-code qr-code-small"><img itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <div class="hidden-md hidden-lg hidden-sm qr-code qr-code-small"><img alt="qrcode" itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
     </div>
     <div class="social-box">
         <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social['has-facebook']?$social["facebook"]:"#"; ?>">
-        <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
+        <img alt="faceook" class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
         <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social['has-instagram']?$social["instagram"]:"#"; ?>">
-        <img class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
+        <img alt="instagram" class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
     </div>
 </div>

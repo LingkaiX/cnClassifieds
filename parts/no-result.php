@@ -1,2 +1,2 @@
 <!-- <h4 class="bg-danger search-no-result">不好意思！我们没有找到你要的结果。</h4> -->
-<div class="search-no-result-container"><img src="<?php echo get_template_directory_uri();?>/img/page-404.png" class="search-no-result"></div>
+<div class="search-no-result-container"><img alt="error" src="<?php echo get_template_directory_uri();?>/img/page-404.png" class="search-no-result"></div>
