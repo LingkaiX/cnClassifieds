@@ -39,7 +39,7 @@
 </style>
 <div id="review-box" itemscope itemtype="http://schema.org/LocalBusiness" class="reviews shadow-border"><div v-cloak itemprop="review">
     <ol class="hidden-xs title-box">
-        <li v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</ul>
+        <li v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</li>
     </ol>
     <div v-for="(item, index) in reviews">
         <div class="hidden-sm hidden-md hidden-lg r-title" v-on:click="showId=index">
