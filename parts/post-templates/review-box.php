@@ -6,7 +6,7 @@
         padding-left: 0;
         display: flex;
     }
-    #review-box ul{
+    #review-box li, #review-box ul{
         background-color: gray;
         color: white;
         margin: 0 10px;
@@ -17,7 +17,7 @@
         border-radius: 100px;
     }
     @media (max-width: 991px){
-        #review-box ul{
+        #review-box li, #review-box ul{
             width: 200px;
         }
     }
@@ -39,7 +39,7 @@
 </style>
 <div id="review-box" itemscope itemtype="http://schema.org/LocalBusiness" class="reviews shadow-border"><div v-cloak itemprop="review">
     <ol class="hidden-xs title-box">
-        <ul v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</ul>
+        <li v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</ul>
     </ol>
     <div v-for="(item, index) in reviews">
         <div class="hidden-sm hidden-md hidden-lg r-title" v-on:click="showId=index">

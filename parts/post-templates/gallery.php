@@ -55,7 +55,7 @@
     </style>
     <div class="g-wrap">
         <button class="nav-last" onclick="gLast()"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
-        <div class="gallery owl-carousel owl-theme" id='gallery'itemscope itemtype="http://schema.org/LocalBusiness">
+        <div class="gallery owl-carousel owl-theme" id='gallery' itemscope itemtype="http://schema.org/LocalBusiness">
         <?php foreach( $images as $image ): ?>          
             <a href="<?php echo $image['url']; ?>" data-fancybox="JGJFGJHFJ" class="item" itemprop="image">
                 <img itemprop="image" data-src="<?php echo $image['sizes']['large']; ?>"

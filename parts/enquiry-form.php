@@ -9,13 +9,13 @@
         </div>
         <div class="enquiry-form-body">
             <form action=<?php echo get_site_url().'/wp-json/cnx/v1/mailtobusiness/'.$post->ID?> id="<?php echo 'enquiry-form-'.$post->ID ?>" onSubmit="return submitEnquiry(this,'<?php echo $post->ID ?>')" method="post">
-                <label for="">姓名（必填）:</label>
+                <label for="name">姓名（必填）:</label>
                 <input type="text" name="name" class="form-control input-text" autocomplete="off">
-                <label for="">邮箱（必填）:</label>
+                <label for="email">邮箱（必填）:</label>
                 <input type="email" name="mail" class="form-control input-text" autocomplete="off">
-                <label for="">电话：</label>
+                <label for="phone">电话：</label>
                 <input type="tel" name="phone" class="form-control input-text" autocomplete="off">
-                <label for="">咨询内容（必填）:</label>
+                <label for="discription">咨询内容（必填）:</label>
                 <textarea name="enquiry" cols="40" rows="10" class="form-control input-text" aria-invalid="false"></textarea>
                 <div><button type="submit" class="btn btn-default btn-send">发送</button></div>
             </form>

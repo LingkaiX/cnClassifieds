@@ -342,7 +342,7 @@ get_header();?>
         <section class="row sect-item" style="position:relative;">
             <div itemscope itemtype="http://schema.org/LocalBusiness">
                 <?php foreach( $items as $key => $item ): ?>
-                <div class="col-md-3 col-sm-6 col-xs-12 product-card" data="<?php echo $key; ?>" 
+                <div class="col-md-3 col-sm-6 col-xs-12 product-card" data-item="<?php echo $key; ?>" 
                     id="item-<?php echo $key; ?>" <?php if($key>3) echo 'style="display: none;"'; ?>>
                     <div class="card-img">
                         <?php foreach( $item['img'] as $skey => $image ): ?>
