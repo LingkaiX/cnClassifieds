@@ -64,7 +64,7 @@
 		<div class="row center-content">
 			<div class="col-md-3 col-xs-12" style="margin:10px 0;">
 				<a href=<?php echo get_site_url();?>>
-					<img src="<?php echo get_template_directory_uri();?>/img/logo-light.svg" alt="logo" style="height:50px;" alt="logo">
+					<img src="<?php echo get_template_directory_uri();?>/img/logo-light.svg" alt="logo" style="height:50px;">
 				</a>
 			</div>
             <div class="col-md-6 col-xs-12 above-line">
