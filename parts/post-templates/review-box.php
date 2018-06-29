@@ -37,15 +37,15 @@
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
     }
 </style>
-<div id="review-box" class="reviews shadow-border"><div v-cloak itemprop="review">
+<div id="review-box" class="reviews shadow-border" itemprop="review" itemscope itemtype="http://schema.org/Review"><div v-cloak>
     <ol class="hidden-xs title-box">
-        <li v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</li>
+        <li v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn" itemprop="author">{{item.title }}</li>
     </ol>
     <div v-for="(item, index) in reviews">
         <div class="hidden-sm hidden-md hidden-lg r-title" v-on:click="showId=index">
-            <ul class="btn" v-bind:class="{ selected: showId==index }">{{item.title }}</ul>
+            <ul class="btn" v-bind:class="{ selected: showId==index }" itemprop="name">{{item.title }}</ul>
         </div>
-        <div class="r-item"  v-show="showId==index" v-html="item.content"></div>
+        <div class="r-item"  v-show="showId==index" v-html="item.content" itemprop="reviewBody"></div>
     </div>
 </div></div>
 
