@@ -43,10 +43,11 @@
     </ol>
     <div v-for="(item, index) in reviews">
         <div class="hidden-sm hidden-md hidden-lg r-title" v-on:click="showId=index">
-            <ul class="btn" v-bind:class="{ selected: showId==index }" itemprop="name">{{item.title }}</ul>
+            <ul class="btn" v-bind:class="{ selected: showId==index }">{{item.title }}</ul>
         </div>
         <div class="r-item"  v-show="showId==index" v-html="item.content" itemprop="reviewBody"></div>
     </div>
+    <span  itemprop="name"   style="display:none;">顾客反馈</span>
 </div></div>
 
 <script>
