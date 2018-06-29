@@ -37,7 +37,7 @@
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
     }
 </style>
-<div id="review-box" itemscope itemtype="http://schema.org/LocalBusiness" class="reviews shadow-border"><div v-cloak itemprop="review">
+<div id="review-box" class="reviews shadow-border"><div v-cloak itemprop="review">
     <ol class="hidden-xs title-box">
         <li v-bind:class="{ selected: showId==index }" v-for="(item, index) in reviews" v-on:click="showId=index" class="btn">{{item.title }}</li>
     </ol>

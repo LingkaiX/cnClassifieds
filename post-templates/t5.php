@@ -43,7 +43,7 @@ get_header();?>
     $reviews = get_field('t5-reviews');
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
 ?>
-<main id="t5" class="container">
+<main id="t5" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>
         .sect-top{
             margin-bottom: 10px;
@@ -63,7 +63,7 @@ get_header();?>
             margin-top: 15px;
         }
     </style>
-    <section class="row sect-top"><div class="col-md-12" itemscope itemtype="http://schema.org/LocalBusiness">
+    <section class="row sect-top"><div class="col-md-12">
         <?php          
             $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo', 'itemprop' => 'logo'] );
             if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
@@ -99,7 +99,7 @@ get_header();?>
         <div class="col-md-8">
             <?php include dirname(__DIR__).'/parts/post-templates/info-2.php'; ?>
         </div>
-        <div class="col-md-4 hidden-sm hidden-xs faceimg" itemscope itemtype="http://schema.org/LocalBusiness">
+        <div class="col-md-4 hidden-sm hidden-xs faceimg">
             <img itemprop="photo" src="<?php echo $loadingUrl; ?>" data-src="<?php echo $faceimg['url']; ?>" 
                             alt="<?php echo faceimg["alt"]; ?>" class="lazyload">
         </div>
@@ -246,7 +246,7 @@ get_header();?>
             </div>
             <!-- 人物介绍 -->
             <?php if(get_field('t5-has-characters')==1): ?>
-            <div class="characters owl-carousel owl-theme" id="characters" itemscope itemtype="http://schema.org/LocalBusiness">
+            <div class="characters owl-carousel owl-theme" id="characters">
                 <?php foreach($characters as $key => $c): ?>
                     <div class="c-item" itemprop="member" id="character-<?php echo $key; ?>">
                         <div class="c-img"><img itemprop="image" src="<?php echo $loadingUrl; ?>" data-src="<?php echo $c["img"]["url"]; ?>" 
@@ -288,7 +288,7 @@ get_header();?>
             <?php endif; ?>
             <!-- 文章列表 -->
             <?php if(get_field('t5-has-links')==1): ?>
-            <div class="links owl-carousel owl-theme" id="links" itemscope itemtype="http://schema.org/LocalBusiness">
+            <div class="links owl-carousel owl-theme" id="links">
                 <!-- <h4>相关文章</h4> -->
                 <?php foreach($links as $key => $l): ?>
                     <div class="l-item" itemprop="subjectOf" id="link-<?php echo $key; ?>">

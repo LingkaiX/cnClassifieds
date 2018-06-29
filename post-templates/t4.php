@@ -42,7 +42,7 @@ get_header();?>
     //print_r($gallery);
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
 ?>
-<main id="t4" class="container">
+<main id="t4" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>
         .sect-top{
             margin-bottom: 10px;
@@ -66,7 +66,7 @@ get_header();?>
             margin-top: 15px;
         }
     </style>
-    <section class="row sect-top"><div class="col-md-12" itemscope itemtype="http://schema.org/LocalBusiness">
+    <section class="row sect-top"><div class="col-md-12">
         <?php          
             $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo', 'itemprop' => 'logo'] );
             if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
@@ -169,7 +169,7 @@ get_header();?>
     <section class="row sect-contact">
         <div class="col-md-8"><div class="slider solid-border">
             <div class="va-helper"></div>
-            <div class="img" itemscope itemtype="http://schema.org/LocalBusiness">
+            <div class="img">
             <?php foreach($slider as $key => $img){
                 echo '<img data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">';
             }?>
@@ -236,10 +236,10 @@ get_header();?>
         }
     </style>
     <section class="row sect-content">
-        <div class="col-md-8 col-sm-6 col-xs-12" itemscope itemtype="http://schema.org/LocalBusiness"><div class="article" itemprop="description">
+        <div class="col-md-8 col-sm-6 col-xs-12"><div class="article" itemprop="description">
         <?php the_content(); ?>
         </div></div>
-        <div class="col-md-4 hidden-sm hidden-xs"><div style="text-align:center;"itemscope itemtype="http://schema.org/LocalBusiness">           
+        <div class="col-md-4 hidden-sm hidden-xs"><div style="text-align:center;">           
         <?php 
             if($hasAbn) echo '<div class="solid-border abn-box"><p class="p-abn">
                 <img itemprop="image" alt="little man" class="little-man" src="'.get_template_directory_uri().'/img/little-man.svg">
@@ -301,7 +301,7 @@ get_header();?>
     }
     </style>
     <section class="row sect-item" style="position:relative;">
-        <div itemscope itemtype="http://schema.org/LocalBusiness">
+        <div>
             <?php foreach( $items as $key => $item ): ?>
             <div class="col-md-3 col-sm-6 col-xs-12 product-card" data-item="<?php echo $key; ?>" 
                 id="item-<?php echo $key; ?>" <?php if($key>3) echo 'style="display: none;"'; ?>>
@@ -434,7 +434,7 @@ get_header();?>
             font-size: 20px;
         }
     </style>
-    <section class="row sect-review" itemscope itemtype="http://schema.org/LocalBusiness">
+    <section class="row sect-review">
         <div class="review-head">
             <span style="white-space:pre;">  </span><span class="line"></span>
             <span style="white-space:pre;">  </span><span class="txt">顾客反馈</span>  
@@ -471,7 +471,7 @@ get_header();?>
         }
     </style>
     <section class="row sect-bottom">
-        <div class="col-md-8"><div class="slider box-left" itemscope itemtype="http://schema.org/LocalBusiness">
+        <div class="col-md-8"><div class="slider box-left">
             <?php if($foot["has-img"]==1): ?>
                 <img data-src="<?php echo $foot['img']['url']; ?>" itemprop="image" alt="foot image" class="lazyload" src="<?php echo $loadingUrl; ?>">
             <?php else: ?>

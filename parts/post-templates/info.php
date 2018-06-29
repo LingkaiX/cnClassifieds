@@ -92,7 +92,7 @@
         padding: 0 15px;
     }
 </style>
-<div class="info solid-border" itemscope itemtype="http://schema.org/LocalBusiness">
+<div class="info solid-border">
 <?php
     if($mypost!=null){
         if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span itemprop="telephone">'.$mypost->phone.'</span></p>';
@@ -103,12 +103,12 @@
         if(!empty($mypost->address)) echo '<p class="with-ion"><span class="address"></span><span itemprop="address">'.$mypost->address.'</span></p>';
     }
 ?>
-    <div itemscope itemtype="http://schema.org/LocalBusiness" style="text-align:center;">
+    <div style="text-align:center;">
         <?php include dirname(__DIR__).'/enquiry-form.php'; ?>
         <a itemprop="hasMap" class="btn goto-google" target="_blank" rel="noopener" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
         <div class="hidden-md hidden-lg qr-code"><img alt="qrcode" itemprop="identifier" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
     </div>
-    <div itemscope itemtype="http://schema.org/LocalBusiness" class="social-box">
+    <div  class="social-box">
         <?php if($social['has-facebook']): ?>
             <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social["facebook"]; ?>">
             <img class="img-social" alt="facebook" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>

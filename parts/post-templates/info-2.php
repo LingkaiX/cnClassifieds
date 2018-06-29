@@ -120,7 +120,7 @@
         padding: 0 15px;
     }
 </style>
-<div class="row info-2 solid-border" itemscope itemtype="http://schema.org/LocalBusiness">
+<div class="row info-2 solid-border">
     <div class="col-md-7 col-sm-8 info-contacts">
     <?php
         if($mypost!=null){
