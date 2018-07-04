@@ -106,7 +106,9 @@
     <div style="text-align:center;">
         <?php include dirname(__DIR__).'/enquiry-form.php'; ?>
         <a itemprop="hasMap" class="btn goto-google" target="_blank" rel="noopener" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>
-        <div class="hidden-md hidden-lg qr-code"><img alt="qrcode" itemprop="identifier" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <?php if ($social['wechat-qr']['url']){ ?>
+            <div class="hidden-md hidden-lg qr-code"><img alt="qrcode" itemprop="identifier" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <?php } ?>
     </div>
     <div  class="social-box">
         <?php if($social['has-facebook']): ?>

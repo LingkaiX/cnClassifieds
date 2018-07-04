@@ -144,9 +144,11 @@
             <a itemprop="hasMap" class="btn goto-google" target="_blank" rel="noopener" href="<?php echo 'https://www.google.com/maps?daddr='.$mypost->lat.','.$mypost->long; ?>">地图导航</a>   
         </div>
     </div>
-    <div class="col-md-12" style="text-align:center;">
-        <div class="hidden-md hidden-lg hidden-sm qr-code qr-code-small"><img alt="qrcode" itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
-    </div>
+    <?php if ($social['wechat-qr']['url']){ ?>
+        <div class="col-md-12" style="text-align:center;">
+            <div class="hidden-md hidden-lg hidden-sm qr-code qr-code-small"><img alt="qrcode" itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        </div>
+    <?php } ?>
     <div class="social-box">
         <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social['has-facebook']?$social["facebook"]:"#"; ?>">
         <img alt="faceook" class="img-social" src="<?php echo get_template_directory_uri(); ?>/img/facebook.svg"></a>
