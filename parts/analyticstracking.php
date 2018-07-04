@@ -7,5 +7,5 @@
 
   gtag('config', 'UA-104883243-1');
   gtag('config', 'AW-857068621');
-
+  gtag('event', 'conversion', {'send_to': 'AW-857068621/mDM5CNTXm4UBEM2o15gD'});
 </script>
