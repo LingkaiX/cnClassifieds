@@ -134,7 +134,9 @@
     ?>
     </div>
     <div class="col-md-5 col-sm-4" style="text-align:center;">
-        <div class="hidden-xs qr-code qr-code-small"><img alt="qrcode" itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <?php if ($social['wechat-qr']['url']){ ?>
+            <div class="hidden-xs qr-code qr-code-small"><img alt="qrcode" itemprop="image" src="<?php echo $social['wechat-qr']['url']; ?>" title=""></div>
+        <?php } ?>
     </div>
     <div style="margin-top: 20px;" class="row btns">
         <div class="col-md-6 col-sm-6" style="text-align:center;">
