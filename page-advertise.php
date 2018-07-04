@@ -177,9 +177,9 @@ if (document.documentElement.clientWidth < 769) {
             <p style="font-size: 18px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">Access to highly targeted AUADS audience</p>
             <div>
                 <div id="scrollable" class="scrollable">
-                    <img id="img-1" style= "display: none;" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
-                    <img id="img-2" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
-                    <img id="img-3" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
+                    <img id="img-1" alt="sample" style= "display: none;" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
+                    <img id="img-2" alt="sample" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Premium listing.png"></img>
+                    <img id="img-3" alt="sample" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
                     <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
@@ -189,7 +189,7 @@ if (document.documentElement.clientWidth < 769) {
                     <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
                     <button id="b3" class="list-potion" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
-                    <a class="butt" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#<?php echo 1; ?>">Get Free Ad</a>
+                    <a class="butt" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 1; ?>">Get Free Ad</a>
                 </div>  
             </div>
         </div>
@@ -295,7 +295,7 @@ if (document.documentElement.clientWidth < 769) {
             Further customised options available so you have your own unique website.</P>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 40px;" >
-            <img style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Cards.png"></img>
+            <img alt="img" style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Cards.png"></img>
         </div>
     </div>
 </div>
@@ -304,7 +304,7 @@ if (document.documentElement.clientWidth < 769) {
         <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 30px; color: #A90000;">Homepage List</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 50px; color: #333333 ;">
         Become the recommended business on the home page to increase your exposure.</P>
-        <img style ="padding-left: 50px;" src="<?php echo get_template_directory_uri();?>/img/assets/Homepage list sample.png"></img>
+        <img alt="Homepage list" style ="padding-left: 50px;" src="<?php echo get_template_directory_uri();?>/img/assets/Homepage list sample.png"></img>
     </div>
 </div>
 <div id="s4" class="sect-4">
@@ -318,10 +318,10 @@ if (document.documentElement.clientWidth < 769) {
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">What's included:</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	Category page top position</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	Multiple impressions</P>
-            <a class="butt2" target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist#<?php echo 2; ?>">Start Your Ad</a>
+            <a class="butt2" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 2; ?>">Start Your Ad</a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 85px;" >
-            <img style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Rank to top sample.png"></img>
+            <img alt="Rank to top" style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Rank to top sample.png"></img>
         </div>
     </div>
 </div>

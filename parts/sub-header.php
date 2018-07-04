@@ -123,14 +123,14 @@
     <div class="marketing-links">
         <span class="berg-menu hidden-lg hidden-md hidden-sm" tabindex="1" role="button"><i></i></span>
         <ul class="link-list">
-            <li><a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/publish-business">免费发布信息</a></li>
-            <li><a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist">市场推广</a></li>
-            <li><a target="_blank" rel="noopener" rel="nofollow" href="https://auads.com.au/pricelist">Marketing Solution</a></li>
+            <li><a target="_blank" rel="noopener nofollow" href="https://auads.com.au/publish-business">免费发布信息</a></li>
+            <li><a target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist">市场推广</a></li>
+            <li><a target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist">Marketing Solution</a></li>
         </ul>
     </div>
     <a href=<?php echo switchCN();?> class="cn-conv">
         简体
-        <img style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
+        <img alt="switch" style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
         繁体
     </a>
     <?php if (!is_single()): ?>

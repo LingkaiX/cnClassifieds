@@ -55,10 +55,10 @@
     </style>
     <div class="g-wrap">
         <button class="nav-last" onclick="gLast()"><i class="ionicon ion-chevron-left" aria-hidden="true"></i></button>
-        <div class="gallery owl-carousel owl-theme" id='gallery'>
+        <div class="gallery owl-carousel owl-theme" id='gallery' >
         <?php foreach( $images as $image ): ?>          
-            <a href="<?php echo $image['url']; ?>" data-fancybox="JGJFGJHFJ" class="item">
-                <img data-src="<?php echo $image['sizes']['large']; ?>"
+            <a href="<?php echo $image['url']; ?>" data-fancybox="JGJFGJHFJ" class="item" itemprop="image">
+                <img itemprop="image" data-src="<?php echo $image['sizes']['large']; ?>"
                     alt="<?php echo $image['alt'];?>" title="<?php echo $image['caption']; ?>" 
                     class="lazyload" src="<?php echo $loadingUrl; ?>"/>
             </a>                

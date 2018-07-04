@@ -86,8 +86,8 @@
             echo '<div style="padding:10px;"><div class="gm-item" id="gm-item-'.$key.'">';
                 echo '<div class="gm-img">';
                     echo get_the_post_thumbnail( $post->ID, 'full', null );
-                    echo '<div class="decoration-left"><img src="'.get_template_directory_uri().'/img/decoration-left.svg"><span>'.get_field('cate').'</span></div>';
-                    echo '<img class="decoration-bottom" src="'.get_template_directory_uri().'/img/reward.svg">';
+                    echo '<div class="decoration-left"><img alt="img" src="'.get_template_directory_uri().'/img/decoration-left.svg"><span>'.get_field('cate').'</span></div>';
+                    echo '<img class="decoration-bottom" alt="img" src="'.get_template_directory_uri().'/img/reward.svg">';
                 echo '</div>';
                 if(get_field('has-link')){
                     echo '<a target="_blank" rel="noopener" href="'.get_field('link').'"><h5>'.$post->post_title.'</h5></a>';

@@ -8,7 +8,7 @@
                         echo '<div class="cate-container">';
                             $href=getBaseUrl()."/category/".$cate["slug"];
                             echo '<a href="'.$href.'" class="needLatAndLong">';
-                                echo '<img class="home-cate-logo" src="'.get_template_directory_uri().'/img/cate-icons/'.$cate["imgsrc"].'">';
+                                echo '<img alt="logo" class="home-cate-logo" src="'.get_template_directory_uri().'/img/cate-icons/'.$cate["imgsrc"].'">';
                                 echo '<div class="clearfix"></div>';
                                 echo '<h4 class="cate-h">'.$cate["name"].'</h4>';
                         echo '</a>';

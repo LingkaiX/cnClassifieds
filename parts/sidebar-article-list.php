@@ -3,7 +3,7 @@
 </div>
 <div id="app-article-list">
     <div class="linkToAuliving" v-for="result in results"  v-cloak>
-        <a v-bind:href="result.link" target="_blank" rel="noopener" rel="nofollow">{{ decodeHtml(result.title.rendered) }}</a>
+        <a v-bind:href="result.link" target="_blank" rel="noopener nofollow">{{ decodeHtml(result.title.rendered) }}</a>
         <hr>
     </div>
 </div>

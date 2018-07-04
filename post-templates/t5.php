@@ -43,7 +43,7 @@ get_header();?>
     $reviews = get_field('t5-reviews');
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
 ?>
-<main id="t5" class="container">
+<main id="t5" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>
         .sect-top{
             margin-bottom: 10px;
@@ -65,15 +65,15 @@ get_header();?>
     </style>
     <section class="row sect-top"><div class="col-md-12">
         <?php          
-            $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo'] );
+            $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo', 'itemprop' => 'logo'] );
             if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
         ?>
         <?php
             $abn=null;
             //if($hasAbn) $abn='<abbr title="ABN Checked"><img class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg"></abbr>';
-            the_title( '<h2 class="title-t4">', '&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h2>' );
+            the_title( '<h2 class="title-t4"><span itemprop="name">', '</span>&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;&nbsp;'.$abn.'</small></h2>' );
             $enTitle=get_post_meta($post->ID,'title-en',true);
-            if($enTitle) echo '<h3 class="en-title-t4">'.$enTitle.'</h3>'; 
+            if($enTitle) echo '<h3 class="en-title-t4"><span itemprop="alternateName">'.$enTitle.'</span></h3>'; 
         ?>
         <div class="tag-t4">
             <i class="ionicon ion-pricetags icon" aria-hidden="true"></i>
@@ -81,10 +81,12 @@ get_header();?>
                 foreach(get_the_category() as $cate){
                     echo '<a class="needLatAndLong" href="'.get_category_link($cate->term_id).'">'.$cate->name.'</a>';
                 }
-                if($hasAbn) echo '<p class="p-abn"><span>ABN CHECKED</span><img style="margin-top: 2px;" class="img-abn" src="'
+                if($hasAbn) echo '<p class="p-abn"><span>ABN CHECKED</span><img alt="abn" style="margin-top: 2px;" class="img-abn" src="'
                 .get_template_directory_uri().'/img/abn-checked.svg"></p>';
             ?>
-        </div>   
+        </div> 
+        <link itemprop="url" href="<?php echo get_permalink() ?>" />
+        <link itemprop="image" href="<?php echo get_template_directory_uri();?>/img/auads-logo-large.png" />  
     </div></section>
     <style>
     .faceimg img{
@@ -98,7 +100,7 @@ get_header();?>
             <?php include dirname(__DIR__).'/parts/post-templates/info-2.php'; ?>
         </div>
         <div class="col-md-4 hidden-sm hidden-xs faceimg">
-            <img src="<?php echo $loadingUrl; ?>" data-src="<?php echo $faceimg['url']; ?>" 
+            <img itemprop="photo" src="<?php echo $loadingUrl; ?>" data-src="<?php echo $faceimg['url']; ?>" 
                             alt="<?php echo faceimg["alt"]; ?>" class="lazyload">
         </div>
     </section>
@@ -246,10 +248,10 @@ get_header();?>
             <?php if(get_field('t5-has-characters')==1): ?>
             <div class="characters owl-carousel owl-theme" id="characters">
                 <?php foreach($characters as $key => $c): ?>
-                    <div class="c-item" id="character-<?php echo $key; ?>">
-                        <div class="c-img"><img src="<?php echo $loadingUrl; ?>" data-src="<?php echo $c["img"]["url"]; ?>" 
+                    <div class="c-item" itemprop="member" id="character-<?php echo $key; ?>">
+                        <div class="c-img"><img itemprop="image" src="<?php echo $loadingUrl; ?>" data-src="<?php echo $c["img"]["url"]; ?>" 
                             alt="<?php echo $c["img"]["alt"]; ?>" class="lazyload"></div>
-                        <div class="c-introduction"><?php echo $c["introduction"]; ?></div>
+                        <div itemprop="description" class="c-introduction"><?php echo $c["introduction"]; ?></div>
                     </div>
                 <?php endforeach; ?>
             </div>
@@ -289,7 +291,7 @@ get_header();?>
             <div class="links owl-carousel owl-theme" id="links">
                 <!-- <h4>相关文章</h4> -->
                 <?php foreach($links as $key => $l): ?>
-                    <div class="l-item" id="link-<?php echo $key; ?>">
+                    <div class="l-item" itemprop="subjectOf" id="link-<?php echo $key; ?>">
                         <div class="l-img"><img src="<?php echo $loadingUrl; ?>" data-src="<?php echo $l["img"]["url"]; ?>" 
                             alt="<?php echo $l["img"]["alt"]; ?>" class="lazyload"></div>
                         <a href="<?php echo $l["url"]; ?>" target="_blank" rel="noopener"><h4><?php echo $l["title"]; ?></h4></a>
@@ -301,9 +303,13 @@ get_header();?>
             <div class="row justina-container">
                 <!-- 客户评价 -->
                 <?php if(get_field('t5-has-reviews')==1): ?>
-                <div class="col-md-12 col-sm-6">
-                    <?php include dirname(__DIR__).'/parts/post-templates/review-box.php'; ?>
-                </div>
+                    <div class="col-md-12 col-sm-6">
+                        <?php include dirname(__DIR__).'/parts/post-templates/review-box.php'; ?>
+                        <script>
+                            jQuery(".r-title").removeClass("hidden-sm");
+                            jQuery(".title-box").addClass("hidden-sm");
+                        </script>
+                    </div>
                 <?php endif; ?>
                 <div class="hidden-lg hidden-md col-sm-6 hidden-xs">
                     <?php include dirname(__DIR__).'/parts/post-templates/info.php'; ?>
@@ -382,6 +388,6 @@ get_header();?>
     </section>
 </main>
 <?php endwhile; ?>
-<?php get_footer(); ?>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/js/owl.carousel.min.js"></script>
+<?php get_footer(); ?>

@@ -19,7 +19,7 @@
                             the_title( '<h4 class="entry-title"><a href="'.get_permalink().'">', '</a><span class="_mB">AD</span></h4>' );
                             if($enTitle) echo '<h5 class="en-title">'.$enTitle.'</h5>'; 
                         }                    
-  
+                        echo '<a style="position: absolute;top: 0;bottom: 0;left: 0;right: 0;" href="'.get_permalink().'"></a>';
                         //the_title( '<div class="col-md-12 col-xs-12"><h4 class="entry-title"><a href="'.get_permalink().'">', '</a></h4></div>' );                       
                     ?>                
                 </div>
@@ -35,8 +35,9 @@
                 </div>
                 <div class="col-md-12 col-xs-12 listed-excerpt">
                     <?php
-                        echo cutExcerpt($post->post_excerpt); 
-                        if(isDefaultTemplete($post->ID)){
+                        //echo cutExcerpt($post->post_excerpt);
+                        echo cutExcerpt(has_excerpt()?$post->post_excerpt:strip_tags($post->post_content));
+                        if(!isDefaultTemplete($post->ID)){
                             echo '<a class="listed-more" href="'.get_the_permalink().'" title="'.get_the_title().'">more</a>';
                         }
                     ?>
