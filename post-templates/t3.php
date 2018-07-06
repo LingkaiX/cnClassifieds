@@ -105,9 +105,13 @@ get_header();?>
         <?php if($content!=null):?>
             <script>
                 jQuery("#ABN").addClass("hidden-md hidden-lg");
-                jQuery("#topsec").addClass("col-md-9");
+                jQuery("#topsec").removeClass("col-md-9");
             </script>
-            <?php else: echo '<div class="qr-code col-md-3 hidden-sm hidden-xs" style="margin-top:80px;"><img alt="qrcode" itemprop="image" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';?>
+            <?php else: 
+                if ($social['wechat-qr']['url']){ 
+                    echo '<div class="qr-code col-md-3 hidden-sm hidden-xs" style="margin-top:80px;"><img alt="qr code" itemprop="image" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+                }
+            ?>
                 <script>
                     jQuery("#topsec").addClass("col-md-9");
                 </script> 
@@ -283,7 +287,9 @@ get_header();?>
                 <span>ABN CHECKED</span>
                 <img itemprop="image" alt="abn" style="margin-top: 30px;" class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
                 </p></div>';
-            echo '<div class="qr-code" style="margin-top:30px;"><img itemprop="image" alt="qr-code" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+            if ($social['wechat-qr']['url']){ 
+                echo '<div class="qr-code" style="margin-top:30px;"><img itemprop="image" alt="qr-code" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+            }
         ?>
         </div></div>
         <div class="col-sm-6 visible-sm-inline-block">

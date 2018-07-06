@@ -246,7 +246,9 @@ get_header();?>
                 <span>ABN CHECKED</span>
                 <img itemprop="image" alt="abn checked" style="margin-top: 30px;" class="img-abn" src="'.get_template_directory_uri().'/img/abn-checked.svg">
                 </p></div>';
-            echo '<div class="qr-code" style="margin-top:30px;"><img itemprop="image" alt="qrcode" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+            if ($social['wechat-qr']['url']){
+                echo '<div class="qr-code" style="margin-top:30px;"><img itemprop="image" alt="qrcode" src="'.$social['wechat-qr']['url'].'" title="" class=""></div>';
+            }
         ?>
         </div></div>
         <div class="col-sm-6 visible-sm-inline-block">
