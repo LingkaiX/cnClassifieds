@@ -173,7 +173,7 @@ if(isset($_GET['var'])){
                             <span>ABN Checked Sign</span></br>
                             <span>Promote Multiple Deals</span></br>
                         </div>
-                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/premium-listing-payment">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 2; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
@@ -202,7 +202,7 @@ if(isset($_GET['var'])){
                             <span>Front Page Featured Listing</span></br>
                             <span>(3 months)</span></br>
                         </div>
-                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/professional-package-payment">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#<?php echo 3; ?>">View Samples</a></br></br></br>
                     </div>   
                 </td>
@@ -235,7 +235,7 @@ if(isset($_GET['var'])){
                             <span>Random locations</span></br>
                             </br></br>
                         </div>
-                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/premium-listing-payment">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s4">View Samples</a></br></br></br>
                     </div>   
                 </td>
@@ -248,7 +248,7 @@ if(isset($_GET['var'])){
                         <P style="font-size:25px; background:rgba(255,99,99,0.9); width:299px; margin: 30px 0 20px; padding: 10px 0 6px;  color: white; ">Home page Recommendation</P>
                         <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$300<span style="color: #545458; font-size:16px ; font-weight:300;">3 months</span></h1>
                         
-                        <a class="sign-up" href="https://auads.com.au/publish-business-en">SIGN UP</a>
+                        <a class="sign-up" href="https://auads.com.au/professional-package-payment">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s3">View Samples</a></br></br></br>
                     </div>   
                 </td>
