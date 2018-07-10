@@ -468,7 +468,7 @@ get_header();?>
                 jQuery(document).ready(function($){
                     owlChara=jQuery('#characters');
                     owlChara.owlCarousel({
-                        loop:true,
+                        loop:false,
                         margin:40,
                         center:false,
                         responsive:{
