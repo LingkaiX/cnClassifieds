@@ -226,7 +226,7 @@ if(isset($_GET['var'])){
                 <td>
                     <div class="pricebox">
                         <P style="font-size:25px; background:rgba(255,99,99,0.9); width:299px; margin: 30px 0 20px; padding: 10px 0 6px;  color: white; ">Multiple Impressions</P>
-                        <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$28 <span style="color: #545458; font-size:16px ; font-weight:300;">/each</span></h1>
+                        <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$28<span style="color: #545458; font-size:16px ; font-weight:300;">/each</span></h1>
                         <div style="text-align: left; padding-left: 30px; padding-top: 30px; color: #545458;">
                             <span>Rank to Top for 6 months</span></br></br>
                             <span>Multiple impressions on a</span></br>
@@ -245,7 +245,7 @@ if(isset($_GET['var'])){
                 <td>
                     <div class="pricebox">
                         <P style="font-size:25px; background:rgba(255,99,99,0.9); width:299px; margin: 30px 0 20px; padding: 10px 0 6px;  color: white; ">Home page Recommendation</P>
-                        <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$338<span style="color: #545458; font-size:16px ; font-weight:300;">3 months</span></h1>
+                        <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$338 <span style="color: #545458; font-size:16px ; font-weight:300;">3 months</span></h1>
                         
                         <a class="sign-up" href="https://auads.com.au/home-page-recommendation-payment">SIGN UP</a>
                         <a class="view-sample" style="padding-top:5px; width:299px; display: inline-block; color: #77777a;" href=" https://auads.com.au/advertise#s3">View Samples</a></br></br></br>
@@ -363,7 +363,7 @@ if(isset($_GET['var'])){
                 <td>
                     <div class="pricebox">
                         <P style="font-size:25px; background:rgba(255,99,99,0.9); width:299px; margin: 30px 0 20px; padding: 10px 0 6px;  color: white; ">多页多次显示</P>
-                        <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$28 <span style="color: #545458; font-size:16px ; font-weight:300;">/每个</span></h1>
+                        <h1 style="font-size:40px ; font-family: initial; font-weight:900; color: #545458;">$28<span style="color: #545458; font-size:16px ; font-weight:300;">/每个</span></h1>
                         <div style="text-align: left; padding-left: 30px; padding-top: 30px; color: #545458;">
                             <span>服务期限六个月</span></br></br>
                             <span>可多页多次显示</span></br></br>
