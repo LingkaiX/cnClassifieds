@@ -8,13 +8,16 @@
 			<main class="col-md-9 col-sm-12 col-xs-12"> <!-- listing box-->
 				<?php
 					if(isset($_GET['cat'])){
-						$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => $_GET['cat']));
+						$ad_query = new WP_Query( array( 'tag' => 'ad-top-'.get_category_by_slug($cate_name)->name, 'category__in' => $_GET['cat']));
+						$rand_query = new WP_Query( array( 'tag' => 'random-location', 'category__in' => $_GET['cat']));
 					}
 					else{				
 						$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
 						if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
 						//echo $cate_name;
-						$ad_query = new WP_Query( array( 'tag' => 'ad-top', 'category__in' => get_category_by_slug($cate_name)->term_id));
+						$addtop = array('AddTop-'.get_category_by_slug($cate_name)->name, 'AddTop-ALL');
+						$ad_query = new WP_Query( array( 'tag' => $addtop, 'category__in' => get_category_by_slug($cate_name)->term_id));
+						//$rand_query = new WP_Query( array( 'tag' => 'random-location', 'category__in' => get_category_by_slug($cate_name)->term_id));
 					}
 					if ( $ad_query->have_posts() ) {
 						while ( $ad_query->have_posts() ) {
@@ -22,11 +25,26 @@
 							include 'parts/ad-listed-item.php';
 						}
 					}
+					$addtop_ids = wp_list_pluck($ad_query->posts, 'ID');
+					
 					wp_reset_postdata();
+					//$post_ids_string = implode( ',', $post_ids );
+					//$count=0; $rand=rand(1,9);
 					if ( have_posts() ) : 
 						while ( have_posts() ) : 
+							//随机投放
+							//$count++;
+							//if($count==$rand){
+								//while ( $rand_query->have_posts() ) {
+									//$post = get_post();
+									//include 'parts/ad-listed-item.php';
+								//}
+							//}
 							the_post();
-							include 'parts/listed-item.php';
+							$id=get_the_ID();
+							if(!in_array($id , $addtop_ids)){
+								include 'parts/listed-item.php';
+							}
 						endwhile;
 					else:
 						include 'parts/no-result.php';
