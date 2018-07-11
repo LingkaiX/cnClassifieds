@@ -8,8 +8,9 @@
 			<main class="col-md-9 col-sm-12 col-xs-12"> <!-- listing box-->
 				<?php
 					if(isset($_GET['cat'])){
-						$ad_query = new WP_Query( array( 'tag' => 'ad-top-'.get_category_by_slug($cate_name)->name, 'category__in' => $_GET['cat']));
-						$rand_query = new WP_Query( array( 'tag' => 'random-location', 'category__in' => $_GET['cat']));
+						$addtop = array('AddTop-'.get_category_by_slug($cate_name)->name, 'AddTop-ALL');
+						$ad_query = new WP_Query( array( 'tag' => $addtop, 'category__in' => $_GET['cat']));
+						//$rand_query = new WP_Query( array( 'tag' => 'random-location', 'category__in' => $_GET['cat']));
 					}
 					else{				
 						$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
@@ -22,6 +23,7 @@
 					if ( $ad_query->have_posts() ) {
 						while ( $ad_query->have_posts() ) {
 							$ad_query->the_post();
+							
 							include 'parts/ad-listed-item.php';
 						}
 					}
