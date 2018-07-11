@@ -85,10 +85,9 @@ if(isset($_GET['var'])){
         bottom: 0;
         left: 0;
         right: 0;
-        visibility: hidden ;
-        /* opacity: 1; */
-        
-        transition: visibility 0s, opacity 0.5s linear;
+        /* visibility: hidden ;
+        opacity: 1; 
+        transition: visibility 0s, opacity 0.5s linear;*/
     }
     .pricelists{
         opacity: 0;
@@ -437,27 +436,35 @@ if(isset($_GET['var'])){
         if(window.location.hash.substr(1)==1){
             jQuery(".outerbox").css('height', '750px');
             jQuery(".lists").addClass("selected");
-            jQuery(".list-options").addClass("pricelistsshow"); 
+            jQuery(".list-options").addClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '10');
+            jQuery(".rank-to-top").parent().css('z-index', '1');
+            jQuery(".homepage-list").parent().css('z-index', '1');
         }
         else if(window.location.hash.substr(1)==2){
             jQuery(".outerbox").css('height', '520px');
             jQuery(".ranks").addClass("selected");
             jQuery(".rank-to-top").addClass("pricelistsshow");
-        }
-        else if(window.location.hash.substr(1)==2){
-            jQuery(".outerbox").css('height', '520px');
-            jQuery(".ranks").addClass("selected");
-            jQuery(".rank-to-top").addClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '1');
+            jQuery(".rank-to-top").parent().css('z-index', '10');
+            jQuery(".homepage-list").parent().css('z-index', '1');
+            
         }
         else if(window.location.hash.substr(1)==3){
             jQuery(".outerbox").css('height', '350px');
             jQuery(".homepages").addClass("selected");
             jQuery(".homepage-list").addClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '1');
+            jQuery(".rank-to-top").parent().css('z-index', '1');
+            jQuery(".homepage-list").parent().css('z-index', '10');
         }
         else{
             jQuery(".outerbox").css('height', '750px');
             jQuery(".lists").addClass("selected");
             jQuery(".list-options").addClass("pricelistsshow");
+            jQuery(".list-options").parent().css('z-index', '10');
+            jQuery(".rank-to-top").parent().css('z-index', '1');
+            jQuery(".homepage-list").parent().css('z-index', '1');
         }
     </script>
     <?php elseif($var==2):?>
