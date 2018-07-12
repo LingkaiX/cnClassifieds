@@ -34,7 +34,7 @@ if (document.documentElement.clientWidth < 769) {
     .background{
         padding-left: 115px;
         padding-top: 36px;
-        background-color: rgba(255,99,99,0.9); 
+        background-color: rgba(249, 111, 18,0.9); 
         min-width:100%; 
         height:613px;
     }
@@ -50,18 +50,18 @@ if (document.documentElement.clientWidth < 769) {
         display: inline-block; 
         width: 240px; 
         padding: 12px; 
-        color: rgba(255,99,99,0.9); 
+        color: rgba(249, 111, 18,0.9); 
         text-align: center;
         background: #FFFFFF;
         border-radius: 10px;
         transition: background-color 0.3s ease;
     }
     .butt:visited {
-        color: rgba(255,99,99,0.9);
+        color: rgba(249, 111, 18,0.9);
     }
     .butt:hover {
         color: white;
-        background: rgba(255,99,99,1);
+        background: rgba(249, 111, 18,1);
         transition: background-color 0.3s ease;
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
@@ -86,7 +86,7 @@ if (document.documentElement.clientWidth < 769) {
     }
     .list-potion {
         border: none; 
-        background: rgba(255,99,99,0);
+        background: rgba(249,111,18,0);
         font-size: 18px; 
         letter-spacing: 3px; 
         font-family:PingFangTC-Light; 
@@ -96,14 +96,14 @@ if (document.documentElement.clientWidth < 769) {
     .list-potion:hover {
         font-size: 19px;
         font-weight: 500;
-        background: rgba(255,99,99,0.5); 
+        background: rgba(249,111,18,0.5); 
         transition: background-color 0.5s ease;
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .selected {
         font-size: 19px;
         font-weight: 500;
-        background: rgba(255,99,99,0.5); 
+        background: rgba(249,111,18,0.5); 
         box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.1);
     }
     .scrollable{
