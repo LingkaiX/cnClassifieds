@@ -2,7 +2,7 @@
 Theme Name: cnclassifieds
 Author: Simon & Sophia & Raymond
 Description: cnclassifieds
-Version: 1.1.8
+Version: 1.1.9
 Text Domain: cnclassifieds
 */
 * {
@@ -47,23 +47,23 @@ a:visited {
 }
 ::selection {
   color: white;
-  background: rgba(255, 99, 99, 0.9);
+  background: rgba(249, 111, 18, 0.9);
 }
 .theme-color-font {
-  color: #ff6363;
+  color: #f96f12;
 }
 .theme-color-background {
-  background-color: #ff6363;
+  background-color: #f96f12;
 }
 .theme-color-border {
-  border-color: #ff6363;
+  border-color: #f96f12;
 }
 .fa {
-  color: #ff6363;
+  color: #f96f12;
   /* font-size: large; */
 }
 .ionicon {
-  color: #ff6363;
+  color: #f96f12;
   display: inline-block;
   font: normal normal normal 24px/1 Ionicons;
   /* font-size: inherit; */
@@ -118,7 +118,7 @@ a.signal:after {
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-  background: #ff6363 !important;
+  background: #f96f12 !important;
   border: 1px solid #979797;
 }
 /*-------- site & header & footer --------*/
@@ -157,7 +157,7 @@ a.signal:after {
   float: left;
   padding: 3px 9px 3px 9px;
   margin-right: 3px;
-  color: #ff6363;
+  color: #f96f12;
   background: #fff;
   border-radius: 5px;
   border: solid 1px;
@@ -165,14 +165,14 @@ a.signal:after {
 }
 span.page-numbers.current {
   color: #fff;
-  background-color: #ff6363;
-  border: solid 1px #ff6363;
+  background-color: #f96f12;
+  border: solid 1px #f96f12;
 }
 a.page-numbers:hover,
 a.page-numbers:focus {
   color: #fff;
-  background-color: #ff6363;
-  border: solid 1px #ff6363;
+  background-color: #f96f12;
+  border: solid 1px #f96f12;
 }
 /*-------- cate-section.php --------*/
 .home-cate-logo {
@@ -294,7 +294,7 @@ a.page-numbers:focus {
 }
 .listed-header {
   position: relative;
-  border-bottom: 3px solid #ff6363;
+  border-bottom: 3px solid #f96f12;
   padding: 15px 35px 5px;
   overflow: hidden;
 }
@@ -509,8 +509,8 @@ a.page-numbers:focus {
   border: none;
 }
 .search-submit:hover {
-  background-color: rgba(255, 99, 99, 0.8);
-  border: 2px solid rgba(255, 99, 99, 1);
+  background-color: rgba(249, 111, 18, 0.8);
+  border: 2px solid rgba(249, 111, 18, 1);
   border-radius: 5px;
 }
 /*-------- enquiry-form --------*/
@@ -534,7 +534,7 @@ a.page-numbers:focus {
   margin: 0 auto;
   margin-top: 100px;
   background-color: #f5f5f5;
-  border: 1px solid #ff6363;
+  border: 1px solid #f96f12;
   text-align: left;
 }
 .enquiry-form-header {
@@ -616,7 +616,7 @@ form.wpcf7-form label {
   display: block;
 }
 .wpcf7-form-control.wpcf7-submit.btn {
-  background-color: #ff6363;
+  background-color: #f96f12;
   color: #fff;
   float: right;
   margin-right: 15%;
@@ -635,7 +635,7 @@ form.wpcf7-form label {
   /* box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2); */
   padding: 10px 10px 0;
   /* background-color: white;
-  border-bottom: 4px solid #ff6363; */
+  border-bottom: 4px solid #f96f12; */
 }
 #app-article-list .linkToAuliving {
   /* border-bottom: 1px solid #e2e2e2; */

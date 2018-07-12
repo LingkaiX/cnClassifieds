@@ -135,7 +135,7 @@
     </a>
     <?php if (!is_single()): ?>
         <div class="switch-city">
-            <span tabindex="1" role="button">切换城市<i class="ion-ios-arrow-down" style="color: #ff6363;"></i></span>
+            <span tabindex="1" role="button">切换城市<i class="ion-ios-arrow-down" style="color: #f96f12;"></i></span>
             <ul class="city-list">
                 <li><a href="<?php echo addGeoToUrl('-37.820038','145.126977'); ?>">墨尔本</a></li>
                 <li><a href="<?php echo addGeoToUrl('-33.876145','151.207652'); ?>">悉尼</a></li>

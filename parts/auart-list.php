@@ -67,7 +67,7 @@
     letter-spacing: 0.92px;
 }
 .auart-section hr{
-    border: 1px solid #FF6363;
+    border: 1px solid #f96f12;
     width: 120px;
 }
 .auart-title{

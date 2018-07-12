@@ -25,11 +25,11 @@ get_header();?>
     }
     .solid-border{
         border-style : Solid;
-        border-color : #ff6363;
+        border-color : #f96f12;
         border-width : 1px;
     }
     .sometext{
-        color:#ff6363;
+        color:#f96f12;
         font-weight:bold;
         text-align: center;
         font-size: 24px;
@@ -190,7 +190,7 @@ get_header();?>
             display: inline-block;
         }
         .dot-show, .dot:hover{
-            background-color: #ff6363!important;
+            background-color: #f96f12!important;
         }
     </style>
     <section class="row sect-contact">
@@ -247,7 +247,7 @@ get_header();?>
     </section>
     <style>
         .article{
-            border-left: 3px solid #ff6363;
+            border-left: 3px solid #f96f12;
             box-shadow: 0 1px 2px 1px rgba(0, 0, 0, 0.2);
             background-color: #efefef;
             padding: 15px 0;
@@ -255,7 +255,7 @@ get_header();?>
         .article h1,.article h2,.article h3,.article h4,.article h5{
             padding-left: 50px;
             padding-right: 50px;
-            color: #ff6363;
+            color: #f96f12;
         }
         .article h1:first-child,.article h2:first-child,.article h3:first-child,
         .article h4:first-child,.article h5:first-child{
@@ -266,7 +266,7 @@ get_header();?>
             padding-right: 50px;
         }
         .article hr {
-            border-color: #ff6363;
+            border-color: #f96f12;
         }
         img.little-man{
             height: 60px;
@@ -331,7 +331,7 @@ get_header();?>
                 z-index: 12;
                 background-color: rgba(255,255,255,1);
                 font-size: 40px;
-                color: #ff6363;
+                color: #f96f12;
                 opacity: 0.7;
                 border-radius: 0;
             }
@@ -342,7 +342,7 @@ get_header();?>
             .card-box h4{
                 margin-top:0;
                 /* padding-top:10px; */
-                color:#ff6363;
+                color:#f96f12;
             }
         </style>
         <section class="row sect-item" style="position:relative;">
@@ -513,7 +513,7 @@ get_header();?>
     <?php if($links!=null):?>
         <style>
             .links h4{
-            color: #ff6363;
+            color: #f96f12;
             }
             .links .l-img{
                 position: relative;

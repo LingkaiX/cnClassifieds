@@ -1,7 +1,7 @@
 <style type="text/css">
 
 </style>
-<div style="position:fixed; bottom:0; left:0; right:0; min-height:50px; z-index:666; vertical-align:middle; background-color:#ff6363;">
+<div style="position:fixed; bottom:0; left:0; right:0; min-height:50px; z-index:666; vertical-align:middle; background-color:#f96f12;">
     <div class="container">
         <div class="row">
             <div class="col-md-12">

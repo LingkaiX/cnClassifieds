@@ -25,7 +25,7 @@
         text-align:center;
     }
     #review-box .selected{
-        background-color: #ff6363 !important;
+        background-color: #f96f12 !important;
     }
     #review-box .r-item{
         padding-top: 10px;

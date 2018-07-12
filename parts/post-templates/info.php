@@ -24,7 +24,7 @@
     }
     .with-ion span:before {
         font-family: "Ionicons";
-        color: #ff6363;
+        color: #f96f12;
         font-size: 30px;
         vertical-align: middle;
         font-weight: 400;

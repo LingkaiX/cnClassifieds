@@ -147,7 +147,7 @@
 </div></div></div>
 <div class="sec-3"><div class="container">
   <h3 style="font-size: 36px;font-weight: 800;font-family: Arial;margin-bottom: 12px;">What You can get from us?</h3>
-  <hr style="border: 3px solid #FF6363; width: 80px;">
+  <hr style="border: 3px solid #f96f12; width: 80px;">
   <div class="row">
     <div class="col-md-6 col-sm-6 col-xs-12 ">
       <img src="<?php echo get_template_directory_uri();?>/img/page-marketing/membership.svg"></img>

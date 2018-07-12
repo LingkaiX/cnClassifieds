@@ -4,9 +4,9 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
 <link rel="profile" href="http://gmpg.org/xfn/11">
-<meta name="theme-color" content="#ff6363" />
+<meta name="theme-color" content="#f96f12" />
 <!-- Windows Phone -->
-<meta name="msapplication-navbutton-color" content="#ff6363">
+<meta name="msapplication-navbutton-color" content="#f96f12">
 <!-- iOS Safari -->
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -94,7 +94,7 @@
         padding-bottom: 5px;
     }
     .mobile-slogan{
-        color:#ff6363;
+        color:#f96f12;
         font-weight: 600;
         position: relative;
         top: 5px;
@@ -128,7 +128,7 @@
 }
 .slogan-section{
     padding-bottom: 40px;
-    background-image: linear-gradient(45deg, rgba(255,168,99,0.74) 0%, #FF6363 100%);
+    background-image: linear-gradient(45deg, rgba(255,168,99,0.74) 0%, #f96f12 100%);
 }
 .slogan-section img{
     height: 64px;
@@ -147,7 +147,7 @@
     border-radius: 30px;
     padding: 12px;
     font-size: 20px;
-    color: #FF6363;
+    color: #f96f12;
     letter-spacing: 0.93px;
 }
 .slogan-section .text-1{

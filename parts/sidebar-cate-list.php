@@ -42,7 +42,7 @@
 #accordion .panel-title a:last-child:before {
     content: "\f3d8";
     font-family: "Ionicons";
-    color: #ff6363;
+    color: #f96f12;
     display: block;
     width: 36px;
     padding-top: 2px;
@@ -74,7 +74,7 @@
   margin: 0 auto;
 }
 .selected-item {
-  color: #ff6363;
+  color: #f96f12;
   font-weight: 900;
 }
 </style>

@@ -10,7 +10,7 @@
     .goodman-title span{
         width: 110px;
         display: inline-block;
-        border: 1px solid #FF6363;
+        border: 1px solid #f96f12;
     }
     .gm-item{
         box-shadow: 1px 1px 10px lightgrey;

@@ -37,7 +37,7 @@
     }
     #primary .site-main strong {
         font-size: large;
-        color: #ff6363;
+        color: #f96f12;
         margin-bottom: 20px;
     }
 </style> 
