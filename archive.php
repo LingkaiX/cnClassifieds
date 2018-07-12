@@ -23,8 +23,38 @@
 					if ( $ad_query->have_posts() ) {
 						while ( $ad_query->have_posts() ) {
 							$ad_query->the_post();
-							
-							include 'parts/ad-listed-item.php';
+							$cate = get_the_category();
+							$catename = wp_list_pluck($cate,'slug');
+							$mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".get_the_ID());
+							//echo $mypost->lat.  $mypost->long;
+							if(isset($_GET['lat'])&&isset($_GET['long'])){
+								$lat=$_GET['lat'];
+								$long=$_GET['long'];
+								if($lat&&$long){
+									if(distance($mypost->lat, $mypost->long, $lat, $long)<200){
+										include 'parts/ad-listed-item.php';
+									}
+									else if(distance(-37.820038, 145.126977, $lat, $long)<200){
+										if(in_array("melbourne", $catename)){
+											include 'parts/ad-listed-item.php';
+										}
+									}
+									else if(distance(-33.876145, 151.207652, $lat, $long)<200){
+										if(in_array("sydney", $catename)){
+											include 'parts/ad-listed-item.php';
+										}
+									}
+									else if(distance(-31.945046,115.841828, $lat, $long)<200){
+										if(in_array("perth", $catename)){
+											include 'parts/ad-listed-item.php';
+										}
+									}
+									else include 'parts/ad-listed-item.php';
+								}
+							}
+							else{
+								include 'parts/ad-listed-item.php';
+							}
 						}
 					}
 					$addtop_ids = wp_list_pluck($ad_query->posts, 'ID');
