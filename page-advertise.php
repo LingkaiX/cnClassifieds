@@ -189,7 +189,7 @@ if (document.documentElement.clientWidth < 769) {
                     <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">商家页面制作</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
                     <button id="b3" class="list-potion" onclick="Click(3)" style="margin-bottom: 15px;">专业级页面制作</button>
-                    <a class="butt" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 1; ?>">Get Free Ad</a>
+                    <a class="butt" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 1; ?>">免费发布信息</a>
                 </div>  
             </div>
         </div>
@@ -317,7 +317,7 @@ if (document.documentElement.clientWidth < 769) {
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">可选项目:</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	分类页面中置顶</P>
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	多次展示</P>
-            <a class="butt2" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 2; ?>">Start Your Ad</a>
+            <a class="butt2" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 2; ?>">开始广告</a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 85px;" >
             <img alt="Rank to top" style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Rank to top sample.png"></img>
