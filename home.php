@@ -128,7 +128,7 @@
 }
 .slogan-section{
     padding-bottom: 40px;
-    background-image: linear-gradient(45deg, rgba(255,168,99,0.74) 0%, #f96f12 100%);
+    background-image: linear-gradient(45deg, rgba(249, 111, 18,0.74) 0%, #f96f12 100%);
 }
 .slogan-section img{
     height: 64px;
