@@ -173,8 +173,8 @@ if (document.documentElement.clientWidth < 769) {
 <div class="sect-1">
     <div class="background" >
         <div class="container" style="">
-            <p id="1" style="font-size: 44px;font-family: PingFangTC-Semibold;margin-bottom: 0; color: #FFFFFF;">ADVERTISE</p>
-            <p style="font-size: 18px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">Access to highly targeted AUADS audience</p>
+            <p id="1" style="font-size: 44px;font-family: PingFangTC-Semibold;margin-bottom: 0; color: #FFFFFF;">市场推广</p>
+            <p style="font-size: 18px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">帮您获得高针对性的受众群体</p>
             <div>
                 <div id="scrollable" class="scrollable">
                     <img id="img-1" alt="sample" style= "display: none;" src="<?php echo get_template_directory_uri();?>/img/assets/basic listing sample.png"></img>
@@ -182,13 +182,13 @@ if (document.documentElement.clientWidth < 769) {
                     <img id="img-3" alt="sample" style= "display: none;  width: 530px;" src="<?php echo get_template_directory_uri();?>/img/assets/Professional.png"></img>
                 </div> 
                 <div class="col-xs-1 "style=" width: 250px; padding-left: 0px; padding-right:0px; padding-top: 30px;" >
-                    <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">List Options</h3></br></br>
+                    <h3 class="right" style="font-size: 36px; letter-spacing: 3px;font-family: PingFangTC-Regular; margin-bottom: 0; color: #FFFFFF;">页面升级</h3></br></br>
                     <span id="line-1" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b1" class="list-potion" onclick="Click(1)" style="margin-bottom: 15px;">BASIC LISTING</button>
+                    <button id="b1" class="list-potion" onclick="Click(1)" style="margin-bottom: 15px;">商家信息登记</button>
                     </br><span id="line-2" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">PREMIUM LISTING</button>
+                    <button id="b2" class="list-potion" onclick="Click(2)" style="margin-bottom: 15px;">商家页面制作</button>
                     </br><span id="line-3" style="display: none; font-size: 25px; letter-spacing: 3px;font-family:PingFangTC-Medium; color: #FFFFFF;">|</span>
-                    <button id="b3" class="list-potion" onclick="Click(3)" style="margin-bottom: 15px;">PROFESSIONAL</button>
+                    <button id="b3" class="list-potion" onclick="Click(3)" style="margin-bottom: 15px;">专业级页面制作</button>
                     <a class="butt" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 1; ?>">Get Free Ad</a>
                 </div>  
             </div>
@@ -285,14 +285,13 @@ if (document.documentElement.clientWidth < 769) {
 <?php endif;?> 
 <div class="sect-2">
     <div class="container" style=" padding-top: 50px;" >
-        <p style="font-size: 24px; font-weight: 550; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #A90000;">Promote your business using AUADS templates</p>
+        <p style="font-size: 24px; font-weight: 550; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #F96F12;">AUADS帮助您推广生意</p>
         <div class="col-md-6 col-sm-6 col-xs-12 " style="float:left; width: 340px; padding-right:0px; padding-left: 0px; padding-top: 40px;">
             <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 20px; color: #4A4A4A;">
-            AUADS provides basic templates for easy-to-use digital promotion for your business. Choose the most suitable for you and customise your own web page. 
-            This is the fastest and most efficient way to make your mark on the world wide web.</P>
-            <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 20px; color: #4A4A4A;">Make your business more reputable.</P>
+            AUADS为您提供易于使用的商家页面来帮助您做推广。选择并制作最适合您的商家页面，以最快捷有效的方式帮助您在网络上进行推广。</P>
+            <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 20px; color: #4A4A4A;">有助于提升企业的信誉度。</P>
             <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 20px; color: #4A4A4A;">
-            Further customised options available so you have your own unique website.</P>
+            专业级的页面制作，让您拥有自己的网站页面。</P>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 40px;" >
             <img alt="img" style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Cards.png"></img>
@@ -301,23 +300,23 @@ if (document.documentElement.clientWidth < 769) {
 </div>
 <div id="s3" class="sect-3">
     <div class="container" style=" padding-top: 50px;">
-        <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 30px; color: #A90000;">Homepage List</p>
+        <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 30px; color: #F96F12;">首页推荐</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 50px; color: #333333 ;">
-        Become the recommended business on the home page to increase your exposure.</P>
+        成为主页上的推荐商家，获得高质高效率的推广。</P>
         <img alt="Homepage list" style ="padding-left: 50px;" src="<?php echo get_template_directory_uri();?>/img/assets/Homepage list sample.png"></img>
     </div>
 </div>
 <div id="s4" class="sect-4">
     <div class="container" style=" padding-top: 50px;">
-        <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 10px; color: white;">Rank to Top</p>
+        <p style="font-size: 36px; font-family: PingFangTC-Regular; margin-bottom: 10px; color: white;">置顶服务</p>
         <P style="font-size: 18px;  font-family: PingFangTC-Regular; margin-bottom: 45px; color: white ;">
-        Maximise exposure to your targeted audience</P>
+        最大限度地吸引目标受众</P>
         <div class="col-md-6 col-sm-6 col-xs-12 " style="float:left; width: 340px; padding-right:0px; padding-left: 0px; padding-top: 0px;">
             <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 30px; line-height: 30px; color: #FFFFFF;">
-            AUADS can help your business to be always ranked on top within the category pages or header page.</P>
-            <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">What's included:</P>
-            <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	Category page top position</P>
-            <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	Multiple impressions</P>
+            AUADS可以帮您在分类页面中将您的商家信息置顶。</P>
+            <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Medium; margin-bottom: 15px; color: #FFFFFF;">可选项目:</P>
+            <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 10px; color:#FFFFFF;">   &nbsp&nbsp• 	分类页面中置顶</P>
+            <P style="font-size: 18px; letter-spacing: 0.72px; font-family: PingFangTC-Regular; margin-bottom: 15px; color:#FFFFFF;">   &nbsp&nbsp• 	多次展示</P>
             <a class="butt2" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist#<?php echo 2; ?>">Start Your Ad</a>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 85px;" >

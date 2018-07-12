@@ -295,7 +295,7 @@ if (document.documentElement.clientWidth < 769) {
             Further customised options available so you have your own unique website.</P>
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12 "style=" width: 580px; padding-left: 90px; padding-top: 40px;" >
-            <img alt="img" style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Cards.png"></img>
+            <img alt="img" style ="padding-left: 20px;" src="<?php echo get_template_directory_uri();?>/img/assets/Cards en.png"></img>
         </div>
     </div>
 </div>
