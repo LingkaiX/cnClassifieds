@@ -253,7 +253,7 @@
 <div class="container logo-and-info">
     <img alt="logo" src="<?php echo get_template_directory_uri();?>/img/logo.svg" class="home-logo">
     <span class="hidden-sm hidden-md hidden-lg mobile-slogan">精准搜索全澳中文商家</span>
-    <img alt="top info" src="<?php echo get_template_directory_uri();?>/img/top-info.png" class="top-info  hidden-xs">
+    <img alt="top info" src="<?php echo get_template_directory_uri();?>/img/call.png" class="top-info  hidden-xs">
 </div>
 <header class="index-header" id="index-header">
     <div class="container home-hearder-container">
