@@ -57,8 +57,6 @@
 							}
 						}
 					}
-					$addtop_ids = wp_list_pluck($ad_query->posts, 'ID');
-					
 					wp_reset_postdata();
 					//$post_ids_string = implode( ',', $post_ids );
 					//$count=0; $rand=rand(1,9);
