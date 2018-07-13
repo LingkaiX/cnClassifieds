@@ -7,72 +7,52 @@
 			</div>
 			<main class="col-md-9 col-sm-12 col-xs-12"> <!-- listing box-->
 				<?php
-					
-					
 					if(isset($_GET['cat'])){
-						$addtop = array('AddTop-'.get_category_by_slug($cate_name)->name, 'AddTop-ALL');
-						$ad_query = new WP_Query( array( 'tag' => $addtop, 'category__in' => $_GET['cat']));
-						//$rand_query = new WP_Query( array( 'tag' => 'random-location', 'category__in' => $_GET['cat']));
+						$cate_name = &get_category($_GET['cat'])->name;
 					}
 					else{				
 						$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
 						if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
+						$cate_name=get_category_by_slug($cate_name)->name;
 						//echo $cate_name;
-						$addtop = array('AddTop-'.get_category_by_slug($cate_name)->name, 'AddTop-ALL');
-						$ad_query = new WP_Query( array( 'tag' => $addtop, 'category__in' => get_category_by_slug($cate_name)->term_id));
-						//$rand_query = new WP_Query( array( 'tag' => 'random-location', 'category__in' => get_category_by_slug($cate_name)->term_id));
 					}
+					if(isset($_GET['lat'])&&isset($_GET['long'])){
+						$lat=$_GET['lat'];
+						$long=$_GET['long'];
+						if($lat&&$long){
+							if(geodistance(-37.820038, 145.126977, $lat, $long)<200){
+								$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name,'AddTop-Allcat-melbourne', 'AddTop-all');
+							}
+							else if(geodistance(-33.876145, 151.207652, $lat, $long)<200){
+								$addtop = array('AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name,'AddTop-Allcat-sydney', 'AddTop-all');
+							}
+							else if(geodistance(-31.945046,115.841828, $lat, $long)<200){
+								$addtop = array('AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-perth', 'AddTop-all');
+							}
+							else{
+								$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-sydney','AddTop-Allcat-perth','AddTop-Allcat-melbourne','AddTop-all');
+							};
+						}
+					}
+					else{
+						$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-sydney','AddTop-Allcat-perth','AddTop-Allcat-melbourne','AddTop-all');
+					}
+					$ad_query = new WP_Query( array('tag' => $addtop));
 					if ( $ad_query->have_posts() ) {
 						while ( $ad_query->have_posts() ) {
 							$ad_query->the_post();
-							$cate = get_the_category();
-							$catename = wp_list_pluck($cate,'slug');
-							$mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".get_the_ID());
+							//$cate = get_the_category();
+							//$catename = wp_list_pluck($cate,'slug');
+							//$mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".get_the_ID());
 							//echo $mypost->lat.  $mypost->long;
-							if(isset($_GET['lat'])&&isset($_GET['long'])){
-								$lat=$_GET['lat'];
-								$long=$_GET['long'];
-								if($lat&&$long){
-									if(geodistance($mypost->lat, $mypost->long, $lat, $long)<200){
-										include 'parts/ad-listed-item.php';
-									}
-									else if(geodistance(-37.820038, 145.126977, $lat, $long)<200){
-										if(in_array("melbourne", $catename)){
-											include 'parts/ad-listed-item.php';
-										}
-									}
-									else if(geodistance(-33.876145, 151.207652, $lat, $long)<200){
-										if(in_array("sydney", $catename)){
-											include 'parts/ad-listed-item.php';
-										}
-									}
-									else if(geodistance(-31.945046,115.841828, $lat, $long)<200){
-										if(in_array("perth", $catename)){
-											include 'parts/ad-listed-item.php';
-										}
-									}
-									else include 'parts/ad-listed-item.php';
-								}
-							}
-							else{
-								include 'parts/ad-listed-item.php';
-							}
+							include 'parts/ad-listed-item.php';
 						}
 					}
 					$topad_ids = wp_list_pluck($ad_query->posts, 'ID');
 					wp_reset_postdata();
-					//$post_ids_string = implode( ',', $post_ids );
 					//$count=0; $rand=rand(1,9);
 					if ( have_posts() ) : 
 						while ( have_posts() ) : 
-							//随机投放
-							//$count++;
-							//if($count==$rand){
-								//while ( $rand_query->have_posts() ) {
-									//$post = get_post();
-									//include 'parts/ad-listed-item.php';
-								//}
-							//}
 							the_post();
 							$id=get_the_ID();
 							if(!in_array($id , $topad_ids)){
