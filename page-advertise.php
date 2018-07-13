@@ -34,7 +34,7 @@ if (document.documentElement.clientWidth < 769) {
     .background{
         padding-left: 115px;
         padding-top: 36px;
-        background-color: rgba(249,111,18,0.9); 
+        background-color: rgba(249,111,18,0.8); 
         min-width:100%; 
         height:613px;
     }
