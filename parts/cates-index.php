@@ -191,6 +191,7 @@
                 array("name"=>"拍卖行","slug"=>"auctioneer","tname"=>"拍賣行"),
                 array("name"=>"食品批零","slug"=>"food-distributors-and-retailers","tname"=>"食品批零"),
                 array("name"=>"各类超市","slug"=>"supermarkets","tname"=>"各類超市"),
+                array("name"=>"招聘","slug"=>"recruit","tname"=>"招聘"),
             ),
         ),
     
