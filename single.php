@@ -191,15 +191,21 @@
             <section class="row disqus-container section-margin"><?php include 'parts/disqus.php'; ?></section>
             <div class="row" style="padding-bottom:20px">
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                <!-- single page bottom ad -->
+                <!-- single page bottom ad 
                 <ins class="adsbygoogle"
                     style="display:block"
                     data-ad-client="ca-pub-9173929910659094"
                     data-ad-slot="3923311372"
                     data-ad-format="auto"></ins>
                 <script>
-                (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
+                //(adsbygoogle = window.adsbygoogle || []).push({});
+                </script>-->
+                <!-- /21666183985/single-page-bottom-ad-728x90 -->
+                <div id='div-gpt-ad-1533175072543-0' style='margin:auto;height:90px; width:728px;'>
+                    <script>
+                        googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533175072543-0'); });
+                    </script>
+                </div>
             </div>
             <?php endwhile; ?>
         </div>

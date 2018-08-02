@@ -134,6 +134,20 @@
         }
     }
 </style>
+<script async='async' src='https://www.googletagservices.com/tag/js/gpt.js'></script>
+<script>
+  var googletag = googletag || {};
+  googletag.cmd = googletag.cmd || [];
+</script>
+
+<script>
+  googletag.cmd.push(function() {
+    //googletag.defineSlot('/21666183985/below-sidebar-article-300x600', [300, 600], 'div-gpt-ad-1533174357200-0').addService(googletag.pubads());
+    googletag.defineSlot('/21666183985/single-page-bottom-ad-728x90', [728, 90], 'div-gpt-ad-1533175072543-0').addService(googletag.pubads());
+    googletag.pubads().enableSingleRequest();
+    googletag.enableServices();
+  });
+</script>
 </head>
 <body <?php body_class(); ?>>
 <!-- The end is in th footer.php --><div class="site-content">
