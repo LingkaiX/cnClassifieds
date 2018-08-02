@@ -78,13 +78,13 @@
 		</div></div>
 		<div class="col-md-3 col-sm-3 col-xs-12 result-right">
 			<?php include 'parts/sidebar-article-list.php'; ?>
-			<!-- <ins class="adsbygoogle"
+			<ins class="adsbygoogle"
 				style="display:block"
 				data-ad-client="ca-pub-9173929910659094"
 				data-ad-slot="8848782100"
 				data-ad-format="auto"></ins>
 			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-			 /21666183985/below-sidebar-article-300x600 -->
+			<!-- /21666183985/below-sidebar-article-300x600 -->
 			<div id='div-gpt-ad-1533174357200-0' style='margin:auto; height:600px; width:300px;'>
 				<script>
 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533174357200-0'); });
