@@ -84,10 +84,10 @@
 				data-ad-slot="8848782100"
 				data-ad-format="auto"></ins>
 			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-			<!-- /21666183985/below-sidebar-article-300x600 -->
-			<div id='div-gpt-ad-1533174357200-0' style='margin:auto; height:600px; width:300px;'>
+			<!-- /21666183985/below-sidebar-article-160x600 -->
+			<div id='div-gpt-ad-1533184413052-0' style='margin:auto; height:600px; width:160px;'>
 				<script>
-					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533174357200-0'); });
+					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533184413052-0'); });
 				</script>
 			</div>
 		</div>

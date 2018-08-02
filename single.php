@@ -190,7 +190,7 @@
             </article>
             <section class="row disqus-container section-margin"><?php include 'parts/disqus.php'; ?></section>
             <div class="row" style="padding-bottom:20px">
-               <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
+                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> 
                 <!-- single page bottom ad -->
                 <!-- <ins class="adsbygoogle"
                     style="display:block"

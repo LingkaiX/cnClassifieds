@@ -20,7 +20,7 @@
 
 <script>
   googletag.cmd.push(function() {
-    //googletag.defineSlot('/21666183985/below-sidebar-article-300x600', [300, 600], 'div-gpt-ad-1533174357200-0').addService(googletag.pubads());
+    googletag.defineSlot('/21666183985/below-sidebar-article-300x600', [160, 600], 'div-gpt-ad-1533184413052-0').addService(googletag.pubads());
     googletag.defineSlot('/21666183985/single-page-bottom-ad-728x90', [728, 90], 'div-gpt-ad-1533175072543-0').addService(googletag.pubads());
     googletag.pubads().enableSingleRequest();
     googletag.enableServices();
