@@ -190,9 +190,9 @@
             </article>
             <section class="row disqus-container section-margin"><?php include 'parts/disqus.php'; ?></section>
             <div class="row" style="padding-bottom:20px">
-                <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+               <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
                 <!-- single page bottom ad -->
-                <ins class="adsbygoogle"
+                <!-- <ins class="adsbygoogle"
                     style="display:block"
                     data-ad-client="ca-pub-9173929910659094"
                     data-ad-slot="3923311372"
@@ -201,12 +201,12 @@
                     //(adsbygoogle = window.adsbygoogle || []).push({});
                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533175072543-0'); });
                 </script>
-                <!-- /21666183985/single-page-bottom-ad-728x90 
+                <!-- /21666183985/single-page-bottom-ad-728x90 -->
                 <div id='div-gpt-ad-1533175072543-0' style='margin:auto;height:90px; width:728px;'>
                     <script>
                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533175072543-0'); });
                     </script>
-                </div>-->
+                </div>
             </div>
             <?php endwhile; ?>
         </div>

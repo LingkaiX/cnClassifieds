@@ -78,7 +78,7 @@
 		</div></div>
 		<div class="col-md-3 col-sm-3 col-xs-12 result-right">
 			<?php include 'parts/sidebar-article-list.php'; ?>
-			<ins class="adsbygoogle"
+			<!--<ins class="adsbygoogle"
 				style="display:block"
 				data-ad-client="ca-pub-9173929910659094"
 				data-ad-slot="8848782100"
