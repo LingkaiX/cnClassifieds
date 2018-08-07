@@ -202,13 +202,14 @@
     margin-top:32px;
     margin-right:48px;
     margin-bottom: -32px;
-    padding: 16px;
+    padding: 10px;
     color: white;
     font-weight: 600;
+    background-color: rgba(51, 51, 51, 0.6);
+    border-radius: 10px;
 }
 .cn-conv-row .cn-conv:hover{
-    background-color: rgba(51, 51, 51, 0.2);
-    border-radius: 10px;
+    background-color: rgba(51, 51, 51, 0.9);
 }
 @media only screen and (max-width: 480px) {
     .cn-conv {
