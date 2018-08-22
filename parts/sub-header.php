@@ -128,11 +128,11 @@
             <li><a target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist">Marketing Solution</a></li>
         </ul>
     </div>
-    <a href=<?php echo switchCN();?> class="cn-conv">
+    <!--WPCC_NC_START--><a href=<?php echo switchCN();?> class="cn-conv">
         简体
         <img alt="switch" style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
-        繁体
-    </a>
+        繁體
+    </a><!--WPCC_NC_END-->
     <?php if (!is_single()): ?>
         <div class="switch-city">
             <span tabindex="1" role="button">切换城市<i class="ion-ios-arrow-down" style="color: #f96f12;"></i></span>

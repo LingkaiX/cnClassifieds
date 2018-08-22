@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=cmn-hans>
+<html lang=<?php echo isTCN()? 'cmn-hant':'cmn-hans'; ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
@@ -244,11 +244,11 @@
         <a class="links" target="_blank" rel="noopener nofollow" href="https://auads.com.au/publish-busines">免费发布信息</a>
         <a class="links" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist">市场推广</a>
         <a class="links" target="_blank" rel="noopener nofollow" href="https://auads.com.au/pricelist">Marketing Solution</a>
-        <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
+        <!--WPCC_NC_START--><a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
             简体
             <img style="height:8px;margin-bottom:2px;" alt="switch" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right-light.svg":"switch-left-light.svg";?>">
-            繁体
-        </a>
+            繁體
+        </a><!--WPCC_NC_END-->
     </div>
 </div>
 <div class="container logo-and-info">
@@ -268,11 +268,11 @@
             </div>
         </div>
         <div class="row hidden-sm hidden-md hidden-lg cn-conv-row">
-            <a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
+            <!--WPCC_NC_START--><a href=<?php echo isTCN()?home_url():home_url().'/zh-tw'.'/';?> class="cn-conv">
                 简体
                 <img alt="switch" style="height:8px;margin-bottom:2px;" src="<?php echo get_template_directory_uri().'/img/'; echo isTCN()?"switch-right.svg":"switch-left.svg";?>">
-                繁体
-            </a>
+                繁體
+            </a><!--WPCC_NC_END-->
         </div>
     </div>
 </header>
