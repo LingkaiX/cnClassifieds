@@ -91,7 +91,7 @@ get_header();?>
     <style>
     .faceimg img{
         width: 100%;
-        height: 420px;
+        height: auto;
         object-fit: cover;
     }
     </style>
