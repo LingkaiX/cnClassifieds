@@ -198,7 +198,7 @@ get_header();?>
             <div class="va-helper"></div>
             <div class="img">
             <?php foreach($slider as $key => $img){
-                echo '<img data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">';
+                echo '<img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">';
             }?>
             </div>
             <div class="dots">
