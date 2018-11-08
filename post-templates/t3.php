@@ -164,6 +164,7 @@ get_header();?>
             opacity: 0;
             margin:  auto;
             vertical-align: middle;
+            cursor: pointer;
         }
         .img-show{
             /* z-index:10!important; */
