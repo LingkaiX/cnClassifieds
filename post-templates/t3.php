@@ -165,9 +165,10 @@ get_header();?>
             margin:  auto;
             vertical-align: middle;
             cursor: pointer;
+            z-index:auto;
         }
         .img-show{
-            /* z-index:10!important; */
+            z-index:10!important;
             opacity: 1!important;
         }
         .dots{
@@ -202,11 +203,14 @@ get_header();?>
                 echo '<img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">';
             }?>
             </div>
+            <?php if(count($slider)>1): ?>
             <div class="dots">
             <?php foreach($slider as $key => $img){
                 echo '<span class="dot" onclick="showImg('.$key.')" id="slider-dot-'.$key.'"></span>';
             }?>
             </div>
+            <?php endif; ?>
+
         </div></div>
         <div class="col-md-4 hidden-sm">
             <?php include dirname(__DIR__).'/parts/post-templates/info-3.php'; ?>
@@ -231,15 +235,16 @@ get_header();?>
                 jQuery("#slider-dot-0").addClass("dot-show")
             });
             function showImg(id){
-                jQuery("#slider-img-"+id).addClass("img-show")
-                jQuery("#slider-dot-"+id).addClass("dot-show")
                 jQuery("#slider-img-"+showingId).removeClass("img-show")
                 jQuery("#slider-dot-"+showingId).removeClass("dot-show")
+                jQuery("#slider-img-"+id).addClass("img-show")
+                jQuery("#slider-dot-"+id).addClass("dot-show")
                 showingId=id
             }
             var sliderCount=<?php echo sizeof($slider); ?>;
             var nextToShow=1
             setInterval(function(){ 
+                if(nextToShow >= sliderCount) nextToShow=0; //check for when only one cover image
                 showImg(nextToShow)
                 nextToShow++;
                 if(nextToShow >= sliderCount) nextToShow=0
