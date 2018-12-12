@@ -114,7 +114,6 @@
                 array("name"=>"地产开发","slug"=>"property-development","tname"=>"地產開發"),
                 array("name"=>"商业地产","slug"=>"commercial-property","tname"=>"商業地產"),
                 array("name"=>"房屋租赁","slug"=>"leasing","tname"=>"房屋租賃"),
-                array("name"=>"生意买卖","slug"=>"business-for-sale","tname"=>"生意買賣"),
                 array("name"=>"房屋贷款","slug"=>"home-loans","tname"=>"房屋貸款"),
                 array("name"=>"过户律师","slug"=>"conveyance","tname"=>"過戶律師"),
             ),
@@ -191,7 +190,9 @@
                 array("name"=>"拍卖行","slug"=>"auctioneer","tname"=>"拍賣行"),
                 array("name"=>"食品批零","slug"=>"food-distributors-and-retailers","tname"=>"食品批零"),
                 array("name"=>"各类超市","slug"=>"supermarkets","tname"=>"各類超市"),
+                array("name"=>"生意买卖","slug"=>"business-for-sale","tname"=>"生意買賣"),
                 array("name"=>"招聘","slug"=>"recruit","tname"=>"招聘"),
+                
             ),
         ),
     
