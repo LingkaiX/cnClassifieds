@@ -92,7 +92,7 @@
         padding: 0 15px;
     }
 </style>
-<?php if(!$social['has-facebook'] && !$social['has-instagram']): ?>
+<?php if(!$social['has-facebook'] && !$social['has-instagram'] && !$social['has-pinterest']): ?>
     <style>
         .no-social-box{
             width:100%;
@@ -124,7 +124,7 @@
             <?php } ?>
         </div>
     </div>
-    <?php if($social['has-facebook']||$social['has-instagram']): ?>
+    <?php if($social['has-facebook']||$social['has-instagram']||$social['has-pinterest']): ?>
     <div class="social-box">
         <?php if($social['has-facebook']): ?>
             <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social["facebook"]; ?>">
@@ -133,6 +133,10 @@
         <?php if($social['has-instagram']): ?>
             <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social["instagram"]; ?>">
             <img class="img-social" alt="instagram" src="<?php echo get_template_directory_uri(); ?>/img/instagram.svg"></a>
+        <?php endif; ?>
+        <?php if($social['has-pinterest']): ?>
+            <a itemprop="sameAs" target="_blank" rel="noopener" href="<?php echo $social["pinterest"]; ?>">
+            <img class="img-social" alt="pinterest" src="<?php echo get_template_directory_uri(); ?>/img/pinterest-icon.png"></a>
         <?php endif; ?>
     </div>
     <?php endif; ?>
