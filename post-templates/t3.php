@@ -9,6 +9,7 @@ get_header();?>
 <link href='<?php echo get_template_directory_uri();?>/css/animate.css' rel='stylesheet' />
 <link href="<?php echo get_template_directory_uri();?>/css/owl.carousel.min.css" rel="stylesheet">
 <link href="<?php echo get_template_directory_uri();?>/css/owl.theme.default.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
 <style>
     html, body{
         background-color: #fff;

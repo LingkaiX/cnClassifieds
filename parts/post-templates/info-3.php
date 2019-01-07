@@ -108,7 +108,7 @@
     <div class="no-social-box" >
         <?php
             if($mypost!=null){
-                if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><span itemprop="telephone">'.$mypost->phone.'</span></p>';
+                if(!empty($mypost->phone)) echo '<p class="with-ion"><span class="phone"></span><a href="tel:'.$mypost->phone.'" itemprop="telephone">'.$mypost->phone.'</a></p>';
                 if(!empty($mypost->email)) echo '<p class="with-ion"><a href="mailto:#"><span class="email"></span><span itemprop="email">'
                     .$mypost->email.'</span></a></p>';
                 if(!empty($mypost->website)) echo '<p class="with-ion"><a itemprop="sameAs" target="_blank" rel="noopener" href="'
