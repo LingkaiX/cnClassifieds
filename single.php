@@ -165,7 +165,7 @@
                 <?php
                     $mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".$post->ID );
                     if($mypost!=null){
-                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-telephone-outline icon-small" aria-hidden="true"></i><span itemprop="telephone">'.$mypost->phone.'</span></label>';
+                        if(!empty($mypost->phone)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-telephone-outline icon-small" aria-hidden="true"></i><a href="tel:'.$mypost->phone.'" itemprop="telephone">'.$mypost->phone.'</a></label>';
                         if(!empty($mypost->email)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-email-outline icon-small" aria-hidden="true"></i><a href="mailto:#"><span itemprop="email" style="position:relative;top: -2px;">'
                         .$mypost->email.'</span></a></label>';
                         if(!empty($mypost->website)) echo '<label class="col-xs-12 col-sm-12 col-md-6"><i class="ionicon ion-ios-world-outline icon-small" aria-hidden="true"></i><a itemprop="sameAs" class="signal" target="_blank" rel="noopener" href="'
