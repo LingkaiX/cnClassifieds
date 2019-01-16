@@ -304,7 +304,7 @@ get_header();?>
         </div>
     </section>
     <?php endif; ?>
-    <?php if($items!=null):?>
+    <?php if(get_field('t3-has-item')==1):?>
         <style>
             .product-card{
                 transition: opacity 1s;
@@ -444,7 +444,7 @@ get_header();?>
             </div>
         </section>
     <?php endif; ?>  
-    <?php if($characters!=null):?>
+    <?php if(get_field('t3-has-characters')==1): ?>
         <style>
             .characters, .links, .reviews{
                 margin-bottom:30px;
