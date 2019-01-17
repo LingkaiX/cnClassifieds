@@ -199,7 +199,7 @@ get_header();?>
     <section class="row sect-contact">
         <div class="col-md-8"><div class="slider solid-border">
         <?php 
-            if(get_field('t3-has_video')==1): include dirname(__DIR__).'/parts/post-templates/t3-video.php'?>
+            if(get_field('has_video')==1): include dirname(__DIR__).'/parts/post-templates/video.php'?>
         <?php else:?>
             <div class="va-helper"></div>
             <div class="img">
