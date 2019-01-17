@@ -198,6 +198,9 @@ get_header();?>
     </style>
     <section class="row sect-contact">
         <div class="col-md-8"><div class="slider solid-border">
+        <?php 
+            if(get_field('t3-has_video')==1): include dirname(__DIR__).'/parts/post-templates/t3-video.php'?>
+        <?php else:?>
             <div class="va-helper"></div>
             <div class="img">
             <?php foreach($slider as $key => $img){
@@ -211,7 +214,7 @@ get_header();?>
             }?>
             </div>
             <?php endif; ?>
-
+        <?php endif; ?>
         </div></div>
         <div class="col-md-4 hidden-sm">
             <?php include dirname(__DIR__).'/parts/post-templates/info-3.php'; ?>
