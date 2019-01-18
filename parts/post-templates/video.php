@@ -15,7 +15,7 @@
     position: relative;
     display: block;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 66.25%;
     overflow: hidden;
     background-position: center;
     background-size: cover;
