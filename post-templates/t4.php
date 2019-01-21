@@ -41,7 +41,16 @@ get_header();?>
     $foot = get_field('t4-foot');
     //print_r($gallery);
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
-    wp_set_post_tags($post->ID,'t4',true);
+    $tags = get_the_tags();
+    $tags_to_delete = array( 't3', 't5' );
+    $tags_to_keep = array();
+    foreach ( $tags as $t ) {
+        if ( !in_array( $t->name, $tags_to_delete ) ) {
+            $tags_to_keep[] = $t->name;
+        }
+    }
+    array_push($tags_to_keep,'t4');
+    wp_set_post_tags($post->ID,$tags_to_keep,false);
 ?>
 <main id="t4" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>

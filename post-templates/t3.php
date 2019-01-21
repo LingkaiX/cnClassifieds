@@ -52,7 +52,16 @@ get_header();?>
     $content = get_the_content();   
     //print_r($gallery);
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
-    wp_set_post_tags($post->ID,'t3',true);
+    $tags = get_the_tags();
+    $tags_to_delete = array( 't5', 't4' );
+    $tags_to_keep = array();
+    foreach ( $tags as $t ) {
+        if ( !in_array( $t->name, $tags_to_delete ) ) {
+            $tags_to_keep[] = $t->name;
+        }
+    }
+    array_push($tags_to_keep,'t3');
+    wp_set_post_tags($post->ID,$tags_to_keep,false);
 ?>
 <main id="t3" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>

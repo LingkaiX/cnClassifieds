@@ -42,7 +42,16 @@ get_header();?>
     $links = get_field('t5-links');
     $reviews = get_field('t5-reviews');
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
-    wp_set_post_tags($post->ID,'t5',true);
+    $tags = get_the_tags();
+    $tags_to_delete = array( 't3', 't4' );
+    $tags_to_keep = array();
+    foreach ( $tags as $t ) {
+        if ( !in_array( $t->name, $tags_to_delete ) ) {
+            $tags_to_keep[] = $t->name;
+        }
+    }
+    array_push($tags_to_keep,'t5');
+    wp_set_post_tags($post->ID,$tags_to_keep,false);
 ?>
 <main id="t5" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>
@@ -65,7 +74,7 @@ get_header();?>
         }
     </style>
     <section class="row sect-top"><div class="col-md-12">
-        <?php          
+        <?php     
             $logo=get_the_post_thumbnail( null, 'full', ['class' => 'logo-img', 'title' => 'Logo', 'itemprop' => 'logo'] );
             if($logo) echo '<div class="logo-t4">'.$logo.'</div>';
         ?>
