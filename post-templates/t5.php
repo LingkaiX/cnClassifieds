@@ -42,6 +42,7 @@ get_header();?>
     $links = get_field('t5-links');
     $reviews = get_field('t5-reviews');
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
+    wp_set_post_tags($post->ID,'t5',true);
 ?>
 <main id="t5" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>

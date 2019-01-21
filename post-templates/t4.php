@@ -41,6 +41,7 @@ get_header();?>
     $foot = get_field('t4-foot');
     //print_r($gallery);
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
+    wp_set_post_tags($post->ID,'t4',true);
 ?>
 <main id="t4" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>

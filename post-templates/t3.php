@@ -52,6 +52,7 @@ get_header();?>
     $content = get_the_content();   
     //print_r($gallery);
     $loadingUrl=get_template_directory_uri().'/img/loader.svg';
+    wp_set_post_tags($post->ID,'t3',true);
 ?>
 <main id="t3" class="container" itemscope itemtype="http://schema.org/LocalBusiness">
     <style>
