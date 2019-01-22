@@ -135,11 +135,12 @@ get_header();?>
             }
         }
         .slider{
-            padding: 45px 30px 60px 30px
+            display: flex;
+            justify-content: center;
+            align-items: center; 
         }
         @media (max-width:767px) {
             .slider{
-                padding: 10px 0;
                 margin-bottom: 30px;
             }
             .va-helper{
@@ -155,75 +156,14 @@ get_header();?>
                 font-weight: 200;
             }
         }
-        .img {
-            width: 99%;
-            padding-top: 60%;
-            position: relative;
-            vertical-align: middle;
-            display: inline-block;
-        }
-        .img img {
-            transition: all 1s;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            max-width: 100%;
-            max-height: 100%;
-            /* object-fit: cover; */
-            opacity: 0;
-            margin:  auto;
-            vertical-align: middle;
-            cursor: pointer;
-            z-index:auto;
-        }
-        .img-show{
-            z-index:10!important;
-            opacity: 1!important;
-        }
-        .dots{
-            bottom: 10px;
-            position: absolute;
-            left: 15px;
-            right: 15px;
-            text-align: center;
-        }
-        .dot{
-            height: 13px;
-            width: 13px;
-            padding: 0;
-            margin: 0 5px;
-            cursor: pointer;
-            color: #000!important;
-            border: 1px solid #ccc!important;
-            border-radius: 50%;
-            text-align: center;
-            background-color: lightgray;
-            display: inline-block;
-        }
-        .dot-show, .dot:hover{
-            background-color: #f96f12!important;
-        }
     </style>
     <section class="row sect-contact">
-        <div class="col-md-8"><div class="slider solid-border">
+        <div class="col-md-8"><div class="slider">
         <?php 
             if(get_field('has_video')==1): include dirname(__DIR__).'/parts/post-templates/video.php'?>
         <?php else:?>
             <div class="va-helper"></div>
-            <div class="img">
-            <?php foreach($slider as $key => $img){
-                echo '<img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">';
-            }?>
-            </div>
-            <?php if(count($slider)>1): ?>
-            <div class="dots">
-            <?php foreach($slider as $key => $img){
-                echo '<span class="dot" onclick="showImg('.$key.')" id="slider-dot-'.$key.'"></span>';
-            }?>
-            </div>
-            <?php endif; ?>
+            <?php include dirname(__DIR__).'/parts/post-templates/slider.php'?>
         <?php endif; ?>
         </div></div>
         <div class="col-md-4 hidden-sm">
@@ -238,31 +178,11 @@ get_header();?>
             </script> 
         <?php endif;?>
         <script>
-            var showingId=0;
             if(!window.matchMedia('(max-width: 992px)').matches) jQuery(".slider").height(jQuery(".info").height()-25)
             jQuery(window).resize(function() {
                 var w = window.innerWidth;
                 if(w>991) jQuery(".slider").height(jQuery(".info").height()-25)
             });
-            jQuery(document).ready(function($){
-                jQuery("#slider-img-0").addClass("img-show")
-                jQuery("#slider-dot-0").addClass("dot-show")
-            });
-            function showImg(id){
-                jQuery("#slider-img-"+showingId).removeClass("img-show")
-                jQuery("#slider-dot-"+showingId).removeClass("dot-show")
-                jQuery("#slider-img-"+id).addClass("img-show")
-                jQuery("#slider-dot-"+id).addClass("dot-show")
-                showingId=id
-            }
-            var sliderCount=<?php echo sizeof($slider); ?>;
-            var nextToShow=1
-            setInterval(function(){ 
-                if(nextToShow >= sliderCount) nextToShow=0; //check for when only one cover image
-                showImg(nextToShow)
-                nextToShow++;
-                if(nextToShow >= sliderCount) nextToShow=0
-             }, 5000);
         </script>
     </section>
     <style>
