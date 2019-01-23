@@ -45,13 +45,13 @@
     }
     /* Caption text */
     .text {
-        color: #f2f2f2;
+        color: #f96f12;
         font-size: 15px;
-        padding: 8px 12px;
+        padding: 0px 12px;
         position: absolute;
-        bottom: 8px;
+        bottom: 5px;
         width: 100%;
-        text-align: center;
+        text-align: right;
     }
 
     /* The dots/bullets/indicators */
@@ -69,7 +69,7 @@
         background-color: #717171;
     }
     /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 300px) {
+    @media only screen and (max-width: 420px) {
         .text {font-size: 11px}
     }
     .mySlides img {
@@ -94,6 +94,7 @@
                     <div id="'.$key.'" class="mySlides">
                         <div class="slidesBackground" style="opacity: 0.4; position: absolute; left:0; top: 0;height: 100%; width: 100%; filter: blur(10px); -webkit-filter: blur(10px); background-image: url('.$img['url'].'); background-position: center; background-repeat: no-repeat;background-size: cover;"></div>
                         <img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">
+                        <span class="text">'.($key + 1).'/'.sizeof($slider).'<span>
                     </div>
                 
             ';
