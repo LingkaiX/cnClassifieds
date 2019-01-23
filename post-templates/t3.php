@@ -158,14 +158,14 @@ get_header();?>
         }
     </style>
     <section class="row sect-contact">
-        <div class="col-md-8"><div class="slider">
+        <div class="col-md-8 slider">
         <?php 
             if(get_field('has_video')==1): include dirname(__DIR__).'/parts/post-templates/video.php'?>
         <?php else:?>
             <div class="va-helper"></div>
             <?php include dirname(__DIR__).'/parts/post-templates/slider.php'?>
         <?php endif; ?>
-        </div></div>
+        </div>
         <div class="col-md-4 hidden-sm">
             <?php include dirname(__DIR__).'/parts/post-templates/info-3.php'; ?>
         </div>

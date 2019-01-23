@@ -1,12 +1,14 @@
 <style>
    #slide{
 	    width:100%;
+        height:100%;
         margin: auto;
 	}
     *{box-sizing: border-box}
     .mySlides {
         display: none;
         width: 100%;
+        height:100%;
         padding-top: 60%;
         position: relative;
         vertical-align: middle;
@@ -14,7 +16,7 @@
     }
     .slideshow-container {
         width: 100%;
-        position: relative;
+        height: 100%;
         margin: auto;
 
     }
@@ -34,7 +36,7 @@
     }
     /* Position the "next button" to the right */
     .next {
-        right: 0;
+        right: 15px;
         border-radius: 3px 0 0 3px;
     }
     /* On hover, add a black background color with a little bit see-through */
@@ -79,7 +81,6 @@
         right: 0;
         max-width: 100%;
         max-height: 100%;
-        padding: auto;
         margin: auto;
         vertical-align: middle;
     }
@@ -89,9 +90,12 @@
     <div class="slideshow-container">
         <?php foreach($slider as $key => $img){
             echo'
-                <div class="mySlides">
-                    <img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">
-                </div>
+                
+                    <div id="'.$key.'" class="mySlides">
+                        <div class="slidesBackground" style="position: absolute; left:0; top: 0;height: 100%; width: 100%; filter: blur(8px); -webkit-filter: blur(8px); background-image: url('.$img['url'].'); background-position: center; background-repeat: no-repeat;background-size: cover;"></div>
+                        <img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">
+                    </div>
+                
             ';
         }?>
         <?php if(count($slider)>1): ?>
