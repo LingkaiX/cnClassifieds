@@ -92,7 +92,7 @@
             echo'
                 
                     <div id="'.$key.'" class="mySlides">
-                        <div class="slidesBackground" style="position: absolute; left:0; top: 0;height: 100%; width: 100%; filter: blur(8px); -webkit-filter: blur(8px); background-image: url('.$img['url'].'); background-position: center; background-repeat: no-repeat;background-size: cover;"></div>
+                        <div class="slidesBackground" style="opacity: 0.4; position: absolute; left:0; top: 0;height: 100%; width: 100%; filter: blur(10px); -webkit-filter: blur(10px); background-image: url('.$img['url'].'); background-position: center; background-repeat: no-repeat;background-size: cover;"></div>
                         <img data-fancybox="cover-imgs" data-src="'.$img['url'].'" alt="'.$img['alt'].'" id="slider-img-'.$key.'" class="lazyload" src="'.$loadingUrl.'" itemprop="image">
                     </div>
                 
