@@ -26,11 +26,11 @@
         position: absolute;
         top: 50%;
         width: auto;
-        padding: 16px;
-        margin-top: -22px;
+        padding: 7px;
+        margin-top: -40px;
         color: #f96f12;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 45px;
         transition: 0.6s ease;
         border-radius: 0 3px 3px 0;
     }
@@ -69,8 +69,13 @@
         background-color: #717171;
     }
     /* On smaller screens, decrease text size */
-    @media only screen and (max-width: 420px) {
+    @media (max-width:767px) {
         .text {font-size: 11px}
+        .prev, .next {
+            padding: 16px;
+            margin-top: -24px;
+            font-size: 20px;
+        }
     }
     .mySlides img {
         transition: all 1s;
