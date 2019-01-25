@@ -201,7 +201,7 @@
                     //(adsbygoogle = window.adsbygoogle || []).push({});
                     googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533175072543-0'); });
                 </script>
-                <!-- /21666183985/single-page-bottom-ad-728x90 -->
+                /21666183985/single-page-bottom-ad-728x90 -->
                 <div id='div-gpt-ad-1533175072543-0' style='margin:auto;height:90px; width:728px;'>
                     <script>
                         googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533175072543-0'); });
