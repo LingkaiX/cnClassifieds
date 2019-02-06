@@ -166,6 +166,9 @@
                     <?php echo apply_filters( 'the_excerpt', $post->post_excerpt); ?>
                     <?php the_content(); ?>
                 </article>
+                <?php if(get_field('auart-url')!=null):?>
+                    <span class="tag">文章来源：<?php echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_field('auart-url').'">'.get_field('auart-url').'</a>';?> </span>
+                <?php endif?>
             </section>
             <section class="row disqus-container section-margin"><?php include 'parts/disqus.php'; ?></section>
             <div class="row" style="padding-bottom:20px">
