@@ -13,6 +13,7 @@
 					else{				
 						$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
 						if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
+						$cate_slug=$cate_name;
 						$cate_name=get_category_by_slug($cate_name)->name;
 						//echo $cate_name;
 					}
@@ -84,7 +85,7 @@
 				data-ad-slot="8848782100"
 				data-ad-format="auto"></ins>
 			<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-			<!-- /21666183985/below-sidebar-article-160x600 -->
+			/21666183985/below-sidebar-article-160x600 -->
 			<div id='div-gpt-ad-1533184413052-0' style='margin:auto; height:600px; width:160px;'>
 				<script>
 					googletag.cmd.push(function() { googletag.display('div-gpt-ad-1533184413052-0'); });

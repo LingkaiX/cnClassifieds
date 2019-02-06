@@ -95,9 +95,9 @@
 }
 </style>
 <?php
-    $gm_query = get_posts(array( 'post_type' => 'auart', "posts_per_page" => 6));
+    $gm_query = get_posts(array( 'post_type' => 'auart', "posts_per_page" => -1));
     if($gm_query!=null){
-        echo '<div class="center-content auart-title"><h3>热门文章</h3><span></span></div><hr>';
+        echo '<div id="arts-sec" class="center-content auart-title"><h3>热门文章</h3><span></span></div><hr>';
         echo '<div class="row" id="auartlist">';
         foreach($gm_query as $key => $post){
             echo '<div class="col-md-4 col-sm-6 col-xs-12 aa-item" id="aa-item-'.$key.'">';
@@ -105,15 +105,36 @@
                     echo get_the_post_thumbnail( $post->ID, 'thumbnail', null );
                 echo '</div>';
                 echo '<p class="aa-title">'.$post->post_title.'</p>';
-                if(isTCN()){
-                    echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_field('auart-url-zh').'">阅读</a>';
-                }else{
-                    echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_field('auart-url').'">阅读</a>';
-                }
+                echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_post_permalink($post->ID).'">阅读</a>';
             echo '</div>';
         }
         echo '</div>';
-        echo '<a class="auart-more" target="_blank" rel="noopener" href="https://www.auliving.com.au">更多文章 ...</a>';
+        if(sizeof($gm_query)>6){
+            echo '<div class="center-content"><a id="more_posts" class="auart-more center-content" onclick="aaLoadMore(6)" rel="noopener">更多文章 ...</a></div>';
+        }
     }
     wp_reset_postdata();
 ?>
+
+
+
+<script>
+    showAaItem();
+    var aaItemIndex=6, aaItem;
+    function showAaItem() {
+        aaItem = document.getElementsByClassName("aa-item");
+        for (i = 6; i < aaItem.length; i++) {
+            aaItem[i].style.display = "none";
+        }
+    }
+    function aaLoadMore(num) {
+        aaItemIndex += num;
+        if (aaItemIndex > aaItem.length) {
+            aaItemIndex = aaItem.length;
+            document.getElementById("more_posts").innerHTML = "没有更多了";
+        }
+        for (i = 6; i < aaItemIndex; i++) {
+            aaItem[i].style.display = "block";  
+        }
+    }
+</script>

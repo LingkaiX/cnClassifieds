@@ -37,7 +37,7 @@ function add_styles_and_scripts() {
 	wp_enqueue_style( 'ionicons', get_template_directory_uri() . '/css/ionicons.min.css', array(), '4.7.0', 'all' );
 	//wp_enqueue_style( 'select2bs-css', get_template_directory_uri() . '/css/select2-bootstrap.min.css', array('select2-css'), '0.1.0', 'all' );
 	//wp_enqueue_style( 'select2-css', get_template_directory_uri() . '/css/select2.min.css', array(), '4.0.3', 'all' );
-	wp_enqueue_style( 'easylife-style', get_stylesheet_uri(), array(), '1.1.9', 'all');	
+	wp_enqueue_style( 'easylife-style', get_stylesheet_uri(), array(), '1.2.0', 'all');	
 
 	wp_enqueue_script( 'bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '3.3.7', true );
 	//wp_enqueue_script( 'select2-js', get_template_directory_uri() . '/js/select2.min.js', array('jquery'), '4.0.3', true );
@@ -244,3 +244,60 @@ function geodistance($lat1, $lon1, $lat2, $lon2) {
 	$Km = $dist * 60 * 1.1515 * 1.609344;
 	return $Km;
   }
+
+function reg_cat() {
+	register_taxonomy_for_object_type('category','auart');
+}
+add_action('init', 'reg_cat');
+
+//$datetime: PLEASE input GMT/UTC +0 TIME
+function timeElapsedString($datetime, $isTraditionalChinese = false, $full = false)
+{
+	$now = new DateTime('now', new DateTimeZone('GMT'));
+	$ago = new DateTime($datetime);
+	$diff = $now->diff($ago);
+	// print_r($diff);
+
+	//when more than 1 month ago, output: x年x月x日
+	if (($diff->y + $diff->m) > 0) {
+		$ago->setTimezone(new DateTimeZone('Australia/Melbourne'));
+		return $ago->format('Y年m月d日');
+	}
+	//when less than 1 minute ago
+	if (($diff->d + $diff->h + $diff->i) == 0) {
+		return $isTraditionalChinese ? '剛剛' : '刚刚';
+	}
+
+	$diff->w = floor($diff->d / 7);
+	$diff->d -= $diff->w * 7;
+
+	$string = $isTraditionalChinese ? array(
+		'y' => '年',
+		'm' => '個月',
+		'w' => '週',
+		'd' => '天',
+		'h' => '小時',
+		'i' => '分鐘',
+		's' => '秒',
+	) : array(
+		'y' => '年',
+		'm' => '个月',
+		'w' => '周',
+		'd' => '天',
+		'h' => '小时',
+		'i' => '分钟',
+		's' => '秒',
+	);
+	foreach ($string as $k => &$v) {
+		if ($diff->$k) {
+		    //$v = $diff->$k . ' ' . $v . ($diff->$k > 1 ? 's' : '');
+			$v = $diff->$k . $v;
+		} else {
+			unset($string[$k]);
+		}
+	}
+	//output:4 months ago
+	if (!$full) $string = array_slice($string, 0, 1);
+	//full output: 4 months, 2 weeks, 3 days, 1 hour, 49 minutes, 15 seconds ago
+	return $string ? implode(', ', $string) . '前' : '刚刚';
+}
