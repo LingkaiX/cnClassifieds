@@ -104,7 +104,7 @@
                 echo '<div class="aa-img">';
                     echo get_the_post_thumbnail( $post->ID, 'thumbnail', null );
                 echo '</div>';
-                echo '<p class="aa-title">'.$post->post_title.'</p>';
+                echo '<p class="aa-title"><a target="_blank" rel="noopener" href="'.get_post_permalink($post->ID).'">'.$post->post_title.'</a></p>';
                 echo '<a class="aa-link" target="_blank" rel="noopener" href="'.get_post_permalink($post->ID).'">阅读</a>';
             echo '</div>';
         }
