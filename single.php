@@ -130,6 +130,9 @@
         padding: 15px 20px 15px 20px;
         background-color: #fff;
     }
+    .ad-information img{
+        max-width:100%;
+    }
     .disqus-container{
         background-color: #fff;
         padding:20px;
