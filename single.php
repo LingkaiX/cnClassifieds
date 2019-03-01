@@ -132,6 +132,7 @@
     }
     .ad-information img{
         max-width:100%;
+        height:auto;
     }
     .disqus-container{
         background-color: #fff;
