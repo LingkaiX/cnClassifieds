@@ -9,52 +9,55 @@
 				<?php
 					$topad_ids = array();
 					$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-					if($paged==1){ //only show addtop on first page
-						if(isset($_GET['cat'])){
-							$cate_name = &get_category($_GET['cat'])->name;
-						}
-						else{				
-							$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
-							if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
-							$cate_slug=$cate_name;
-							$cate_name=get_category_by_slug($cate_name)->name;
-							//echo $cate_name;
-						}
-						if(isset($_GET['lat'])&&isset($_GET['long'])){
-							$lat=$_GET['lat'];
-							$long=$_GET['long'];
-							if($lat&&$long){
-								if(geodistance(-37.820038, 145.126977, $lat, $long)<200){
-									$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name,'AddTop-Allcat-melbourne', 'AddTop-all');
-								}
-								else if(geodistance(-33.876145, 151.207652, $lat, $long)<200){
-									$addtop = array('AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name,'AddTop-Allcat-sydney', 'AddTop-all');
-								}
-								else if(geodistance(-31.945046,115.841828, $lat, $long)<200){
-									$addtop = array('AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-perth', 'AddTop-all');
-								}
-								else{
-									$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-sydney','AddTop-Allcat-perth','AddTop-Allcat-melbourne','AddTop-all');
-								};
+					
+					if(isset($_GET['cat'])){
+						$cate_name = &get_category($_GET['cat'])->name;
+					}
+					else{				
+						$cate_name=parsePath($_SERVER['REQUEST_URI'],'category',1)?parsePath($_SERVER['REQUEST_URI'],'category',1):parsePath($_SERVER['REQUEST_URI'],'category');
+						if($cate_name=='page') $cate_name=parsePath($_SERVER['REQUEST_URI'],'category');
+						$cate_slug=$cate_name;
+						$cate_name=get_category_by_slug($cate_name)->name;
+						//echo $cate_name;
+					}
+					if(isset($_GET['lat'])&&isset($_GET['long'])){
+						$lat=$_GET['lat'];
+						$long=$_GET['long'];
+						if($lat&&$long){
+							if(geodistance(-37.820038, 145.126977, $lat, $long)<200){
+								$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name,'AddTop-Allcat-melbourne', 'AddTop-all');
 							}
+							else if(geodistance(-33.876145, 151.207652, $lat, $long)<200){
+								$addtop = array('AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name,'AddTop-Allcat-sydney', 'AddTop-all');
+							}
+							else if(geodistance(-31.945046,115.841828, $lat, $long)<200){
+								$addtop = array('AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-perth', 'AddTop-all');
+							}
+							else{
+								$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-sydney','AddTop-Allcat-perth','AddTop-Allcat-melbourne','AddTop-all');
+							};
 						}
-						else{
-							$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-sydney','AddTop-Allcat-perth','AddTop-Allcat-melbourne','AddTop-all');
-						}
-						$ad_query = new WP_Query( array('tag' => $addtop));
-						if ( $ad_query->have_posts() ) {
-							while ( $ad_query->have_posts() ) {
-								$ad_query->the_post();
-								//$cate = get_the_category();
-								//$catename = wp_list_pluck($cate,'slug');
-								//$mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".get_the_ID());
-								//echo $mypost->lat.  $mypost->long;
+					}
+					else{
+						$addtop = array('AddTop-'.$cate_name.'-melbourne','AddTop-'.$cate_name.'-sydney','AddTop-'.$cate_name.'-perth','AddTop-'.$cate_name,'AddTop-Allcat-sydney','AddTop-Allcat-perth','AddTop-Allcat-melbourne','AddTop-all');
+					}
+					$ad_query = new WP_Query( array('tag' => $addtop));
+					if ( $ad_query->have_posts() ) {
+						while ( $ad_query->have_posts() ) {
+							$ad_query->the_post();
+							$top_page_num = get_field('top_page_num');
+							//$cate = get_the_category();
+							//$catename = wp_list_pluck($cate,'slug');
+							//$mypost = $wpdb->get_row( "SELECT * FROM wp_places_locator where post_id=".get_the_ID());
+							//echo $mypost->lat.  $mypost->long;
+							if($paged<=$top_page_num){ //only show on page that it was assign to
 								include 'parts/ad-listed-item.php';
 							}
+							
 						}
-						$topad_ids = wp_list_pluck($ad_query->posts, 'ID');
-						wp_reset_postdata();
 					}
+					$topad_ids = wp_list_pluck($ad_query->posts, 'ID');
+					wp_reset_postdata();
 					
 					
 					//$count=0; $rand=rand(1,9);
