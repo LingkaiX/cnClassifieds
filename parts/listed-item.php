@@ -10,6 +10,9 @@
                         $img=get_the_post_thumbnail( null, 'full', ['class' => 'listed-logo', 'title' => 'Logo'] );
                         $enTitle=get_post_meta($post->ID,'title-en',true);
                         $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
+                        if($abn!=null){
+                            $abn.='<span class="_nB">abn认证</span>';
+                        }
                         if($img!=null){
                             echo $img;
                             echo '<div>';
