@@ -148,6 +148,9 @@
                 <?php echo get_the_post_thumbnail( null, 'full', ['class' => 'logo', 'title' => 'Logo', 'itemprop' => 'logo'] );?>
                 <?php
                     $abn=putAbnSignal(get_post_meta($post->ID,'abn',true));
+                    if($abn!=null){
+                        $abn.='<span class="_nB">abn认证</span>';
+                    }
                     the_title( '<h3 class="title"><span itemprop="name">', '</span>&nbsp;&nbsp;<small>ID: '.$post->ID.'&nbsp;'.$abn.'</small></h3>' );
                     $enTitle=get_post_meta($post->ID,'title-en',true);
                     if($enTitle) echo '<h5 class="en-title"><span itemprop="alternateName">'.$enTitle.'</span></h5>';  
