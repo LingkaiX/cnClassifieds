@@ -46,7 +46,6 @@ get_header();?>
     $items = get_field('t3-item');
     $gallery = get_field('t3-gallery');
     $characters =  get_field('t3-characters');
-    $custom_headline =  get_field('custom_headline');
     $custom_section = get_field('custom_section');
     $sectitle = get_field('sectitle');
     $reviews = get_field('t3-reviews');
@@ -405,8 +404,6 @@ get_header();?>
                 background-color: white !important;
             }
         </style>
-        <?php endif; ?>
-       
         <section id="chara" class="row  sect-content">
             <div id="characters" class="col-md-8 col-sm-12 col-xs-12 characters owl-carousel owl-theme">
                 <?php foreach($characters as $key => $c): ?>
