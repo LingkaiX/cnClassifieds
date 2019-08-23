@@ -46,6 +46,8 @@ get_header();?>
     $items = get_field('t3-item');
     $gallery = get_field('t3-gallery');
     $characters =  get_field('t3-characters');
+    $custom_section = get_field('custom_section');
+    $sectitle = get_field('sectitle');
     $reviews = get_field('t3-reviews');
     $links = get_field('t3-links');
     $foot = get_field('t3-special-image');
@@ -430,7 +432,7 @@ get_header();?>
             </script>
         </section>
     <?php endif; ?>
-    <?php if($reviews!=null):?>  
+    <?php if($custom_section):?>  
         <section id="review" class="row sect-content">
             <style>
                 #chara{
@@ -442,7 +444,7 @@ get_header();?>
             </style>
             <div style="margin: 0 15px; margin-bottom:15px;">
                 <div class="line solid-border col-sm-4 hidden-xs"></div>
-                <span  class="sometext col-sm-4">顾客反馈</span>
+                <span  class="sometext col-sm-4"><?php echo $sectitle; ?></span>
                 <div class="line solid-border col-sm-4 hidden-xs"></div>
             </div>
             <div class="col-md-12 col-sm-12 col-xs-12" style="margin-top: 30px;">
