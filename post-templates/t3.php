@@ -394,13 +394,24 @@ get_header();?>
                 width: 150px;
                 margin: 0 auto;
             }
+            .characters .c-img img{
+                border-radius: 50%;
+                height: 150px;
+                width: 150px;
+                margin: 0 auto;
+            }
+            .characters .active {
+                background-color: white;
+            }
         </style>
-        <section id="chara" class="row sect-content">
+        <section id="chara" class="row  sect-content">
             <div id="characters" class="col-md-8 col-sm-12 col-xs-12 characters owl-carousel owl-theme">
                 <?php foreach($characters as $key => $c): ?>
                     <div class="c-item" itemprop="member" id="character-<?php echo $key; ?>">
-                        <div class="c-img"><img itemprop="image" src="<?php echo $loadingUrl; ?>" data-src="<?php echo $c["img"]["url"]; ?>" 
-                            alt="<?php echo $c["img"]["alt"]; ?>" class="lazyload"></div>
+                        <?php if($c["img"]!=null): ?>
+                            <div class="c-img"><img itemprop="image" src="<?php echo $loadingUrl; ?>" data-src="<?php echo $c["img"]["url"]; ?>" 
+                                alt="<?php echo $c["img"]["alt"]; ?>" class="lazyload"></div>
+                        <?php endif; ?>
                         <div itemprop="description" class="c-introduction"><?php echo $c["introduction"]; ?></div>
                     </div>
                 <?php endforeach; ?>
