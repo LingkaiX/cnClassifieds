@@ -400,8 +400,8 @@ get_header();?>
                 width: 150px;
                 margin: 0 auto;
             }
-            .characters .active {
-                background-color: white;
+            .characters .active, .c-item{
+                background-color: white !important;
             }
         </style>
         <section id="chara" class="row  sect-content">
