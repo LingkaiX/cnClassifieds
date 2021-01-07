@@ -113,7 +113,7 @@
             <div class="col-md-5 col-xs-12 col-md-pull-3 copy-right" style="padding-top: 12px; padding-bottom:12px;padding-right:10px;">
                 <span class="text-center" style="">&copy; <?php echo date('Y'); ?> auads.com.au</span>
                 <br class="hidden-sm hidden-md hidden-lg">
-                <span> Made with <i class="ion-ios-heart" style="color:#f96f12;"></i> from Auads.</span>
+                <span> Made with <i class="ion-ios-heart" style="color:#f96f12;"></i> from Auads~</span>
             </div>
         </div>
 	</div>
